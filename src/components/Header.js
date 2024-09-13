@@ -11,6 +11,7 @@ import {
   Typography,
 } from "@mui/material";
 import React, { useState } from "react";
+import { Link } from "react-router-dom"; // Import Link from react-router-dom
 
 const Header = () => {
   const [drawerOpen, setDrawerOpen] = useState(false);
@@ -21,12 +22,12 @@ const Header = () => {
 
   // Navigation links for the top menu and drawer
   const navItems = [
-    "Home",
-    "Programs",
-    "Membership",
-    "Careers",
-    "About Us",
-    "Contact Us",
+    { text: "Home", path: "/" },
+    { text: "Programs", path: "/programs" },
+    { text: "Membership", path: "/membership" },
+    { text: "Careers", path: "/careers" },
+    { text: "About Us", path: "/about-us" },
+    { text: "Contact Us", path: "/contact-us" },
   ];
 
   const drawerList = () => (
@@ -37,9 +38,9 @@ const Header = () => {
       onKeyDown={toggleDrawer(false)}
     >
       <List>
-        {navItems.map((text, index) => (
-          <ListItem button key={index}>
-            <ListItemText primary={text} />
+        {navItems.map((item, index) => (
+          <ListItem button component={Link} to={item.path} key={index}>
+            <ListItemText primary={item.text} />
           </ListItem>
         ))}
       </List>
@@ -69,9 +70,16 @@ const Header = () => {
             <Typography
               key={index}
               variant="body2"
-              sx={{ color: "#fff", ml: 2, cursor: "pointer" }}
+              component={Link} // Use Link component from react-router-dom
+              to={item.path} // Navigate to the corresponding path
+              sx={{
+                color: "#fff",
+                ml: 2,
+                cursor: "pointer",
+                textDecoration: "none", // Remove underline from link
+              }}
             >
-              {item}
+              {item.text}
             </Typography>
           ))}
         </Box>

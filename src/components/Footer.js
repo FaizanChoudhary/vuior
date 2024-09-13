@@ -1,8 +1,9 @@
-import { Grid, Typography, Box, Link } from "@mui/material";
-import { styled } from "@mui/system";
-import TwitterIcon from "@mui/icons-material/Twitter";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import TwitterIcon from "@mui/icons-material/Twitter";
+import { Box, Grid, Typography } from "@mui/material";
+import { styled } from "@mui/system";
+import { Link } from "react-router-dom"; // Import Link from react-router-dom
 
 // Container for the entire footer
 const FooterContainer = styled(Box)(({ theme }) => ({
@@ -103,12 +104,12 @@ const Footer = () => {
           <Typography variant="h6" gutterBottom>
             Pages
           </Typography>
-          <FooterLink href="#">Home</FooterLink>
-          <FooterLink href="#">Programs</FooterLink>
-          <FooterLink href="#">Membership</FooterLink>
-          <FooterLink href="#">Careers</FooterLink>
-          <FooterLink href="#">About Us</FooterLink>
-          <FooterLink href="#">Contact Us</FooterLink>
+          <FooterLink to="/">Home</FooterLink>
+          <FooterLink to="/programs">Programs</FooterLink>
+          <FooterLink to="/membership">Membership</FooterLink>
+          <FooterLink to="/careers">Careers</FooterLink>
+          <FooterLink to="/about-us">About Us</FooterLink>
+          <FooterLink to="/contact-us">Contact Us</FooterLink>
         </Grid>
 
         {/* Programs & Services Links */}
@@ -116,8 +117,10 @@ const Footer = () => {
           <Typography variant="h6" gutterBottom>
             Programs & Services
           </Typography>
-          <FooterLink href="#">Loan Programs</FooterLink>
-          <FooterLink href="#">Household Bill Consolidation</FooterLink>
+          <FooterLink to="/loan-programs">Loan Programs</FooterLink>
+          <FooterLink to="/bill-consolidation">
+            Household Bill Consolidation
+          </FooterLink>
         </Grid>
       </Grid>
 
@@ -132,10 +135,12 @@ const Footer = () => {
         <Box
           sx={{ display: "flex", flexWrap: "wrap", justifyContent: "center" }}
         >
-          <LegalLink href="#">Privacy Policy</LegalLink>
-          <LegalLink href="#">Terms of Service</LegalLink>
-          <LegalLink href="#">Cookie Policy</LegalLink>
-          <LegalLink href="#">Data Protection Policy</LegalLink>
+          <LegalLink to="/privacy-policy">Privacy Policy</LegalLink>
+          <LegalLink to="/terms-of-service">Terms of Service</LegalLink>
+          <LegalLink to="/cookie-policy">Cookie Policy</LegalLink>
+          <LegalLink to="/data-protection-policy">
+            Data Protection Policy
+          </LegalLink>
         </Box>
       </BottomLegal>
     </FooterContainer>
