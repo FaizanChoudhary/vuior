@@ -117,7 +117,7 @@ const Footer = () => {
           <Typography variant="h6" gutterBottom>
             Programs & Services
           </Typography>
-          <FooterLink to="/loan-programs">Loan Programs</FooterLink>
+          <FooterLink to="/programs/loan-programs">Loan Programs</FooterLink>
           <FooterLink to="/bill-consolidation">
             Household Bill Consolidation
           </FooterLink>
