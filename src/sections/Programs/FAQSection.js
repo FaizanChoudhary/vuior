@@ -36,7 +36,7 @@ const FAQSection = () => {
           <Box display="flex" justifyContent="center">
             <img
               src="/assets/program_faq.png"
-              alt="FAQ Image"
+              alt="FAQ"
               style={{
                 width: "100%",
                 borderRadius: "8px",

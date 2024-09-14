@@ -1,12 +1,5 @@
+import { Box, Card, CardContent, Grid, Typography } from "@mui/material";
 import React from "react";
-import {
-  Box,
-  Typography,
-  Grid,
-  Card,
-  CardContent,
-  CardMedia,
-} from "@mui/material";
 
 // Card component for each step
 const StepCard = ({ number, title, description, imageSrc }) => {
