@@ -89,7 +89,7 @@ const Header = () => {
                 transition: "transform 0.3s ease, color 0.3s ease", // Smooth transition for zoom and color
                 "&:hover": {
                   color: "#4CAF50", // Green on hover
-                  transform: "scale(1.2)", // Zoom in on hover,
+                  // transform: "scale(1.2)", // Zoom in on hover,
                   transition: "transform 0.1s ease, color 0.1s ease", // Smooth transition for zoom and color
                 },
               }}
