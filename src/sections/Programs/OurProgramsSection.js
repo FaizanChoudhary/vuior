@@ -4,7 +4,7 @@ import { styled } from "@mui/system";
 // Section container for the whole section background
 const SectionContainer = styled(Box)(({ theme }) => ({
   padding: theme.spacing(8, 0),
-  backgroundColor: "#f8f8f8", // Section background color
+  background: "linear-gradient(135deg, #f8f8f8 0%, #e8f7f0 100%)",
   [theme.breakpoints.down("md")]: {
     padding: theme.spacing(4, 0),
   },
@@ -13,20 +13,24 @@ const SectionContainer = styled(Box)(({ theme }) => ({
 // Card container with shadow and rounded corners
 const CardContainer = styled(Box)(({ theme }) => ({
   backgroundColor: "#ffffff",
-  borderRadius: theme.spacing(2), // Rounded corners
-  boxShadow: "0px 8px 16px rgba(0, 0, 0, 0.1)", // Card shadow
-  overflow: "hidden", // To keep image and content within bounds
-  margin: theme.spacing(4, 0), // Spacing between cards
+  borderRadius: theme.spacing(2),
+  boxShadow: "0px 8px 16px rgba(0, 0, 0, 0.1)",
+  overflow: "hidden",
+  margin: theme.spacing(4, 0),
   padding: theme.spacing(4),
   display: "flex",
   flexDirection: "row",
   justifyContent: "space-between",
+  transition: "transform 0.3s, box-shadow 0.3s",
+  "&:hover": {
+    transform: "translateY(-10px)",
+    boxShadow: "0px 12px 24px rgba(0, 0, 0, 0.2)",
+  },
   [theme.breakpoints.down("md")]: {
-    flexDirection: "column", // Stack content on smaller screens
+    flexDirection: "column",
     padding: theme.spacing(2),
   },
 }));
-
 // Image container to handle responsive behavior and shape
 const ImageContainer = styled(Box)(({ theme }) => ({
   display: "flex",
@@ -76,14 +80,15 @@ const OurProgramsSection = () => {
         align="center"
         gutterBottom
         sx={{ fontWeight: 700 }}
+        data-aos="fade-up"
       >
         Our Programs
       </Typography>
 
       {/* First Program - Household Bills Consolidation */}
-      <Box sx={{ position: "relative", mb: 4 }}>
+      <Box sx={{ position: "relative" }}>
         <BackgroundShape />
-        <CardContainer>
+        <CardContainer data-aos="fade-up">
           {/* Image on the left */}
           <ImageContainer>
             <img
@@ -109,7 +114,13 @@ const OurProgramsSection = () => {
             <Button
               variant="contained"
               color="primary"
-              sx={{ alignSelf: "start", mt: 2 }}
+              sx={{
+                mt: 2,
+                "&:hover": {
+                  transform: "scale(1.01)",
+                },
+                transition: "transform 0.3s ease-in-out",
+              }}
             >
               Learn More
             </Button>
@@ -122,7 +133,7 @@ const OurProgramsSection = () => {
         <BackgroundShape
           sx={{ left: 0, right: "auto", transform: "scaleX(-1)" }}
         />
-        <CardContainer>
+        <CardContainer data-aos="fade-up">
           {/* Image on the right */}
           <ImageContainer>
             <img src="/assets/loan_program.png" alt="Loan Programs" />
@@ -144,7 +155,13 @@ const OurProgramsSection = () => {
             <Button
               variant="contained"
               color="primary"
-              sx={{ alignSelf: "start", mt: 2 }}
+              sx={{
+                mt: 2,
+                "&:hover": {
+                  transform: "scale(1.01)",
+                },
+                transition: "transform 0.3s ease-in-out",
+              }}
             >
               Learn More
             </Button>

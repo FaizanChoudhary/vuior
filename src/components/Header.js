@@ -11,16 +11,16 @@ import {
   Typography,
 } from "@mui/material";
 import React, { useState } from "react";
-import { Link } from "react-router-dom"; // Import Link from react-router-dom
+import { Link, useLocation } from "react-router-dom";
 
 const Header = () => {
   const [drawerOpen, setDrawerOpen] = useState(false);
+  const location = useLocation();
 
   const toggleDrawer = (open) => () => {
     setDrawerOpen(open);
   };
 
-  // Navigation links for the top menu and drawer
   const navItems = [
     { text: "Home", path: "/" },
     { text: "Programs", path: "/programs" },
@@ -48,7 +48,14 @@ const Header = () => {
   );
 
   return (
-    <AppBar position="static" sx={{ backgroundColor: "#004d40", padding: 1 }}>
+    <AppBar
+      position="sticky" // Make header sticky
+      sx={{
+        backgroundColor: "#004d40",
+        padding: 1,
+        zIndex: 1200, // Ensure header stays above content
+      }}
+    >
       <Toolbar sx={{ justifyContent: "space-between" }}>
         {/* Left Section: Logo */}
         <Box display="flex" alignItems="center">
@@ -63,20 +70,28 @@ const Header = () => {
           </Box>
         </Box>
 
-        {/* Right Section: Phone Icon and Menu for large screens */}
-        <Box display={{ xs: "none", md: "flex" }} alignItems="center">
-          {/* Navigation Links */}
+        {/* Navigation Links with hover and active effects */}
+        <Box display={{ xs: "none", md: "flex", gap: 2 }} alignItems="center">
           {navItems.map((item, index) => (
             <Typography
               key={index}
               variant="body2"
-              component={Link} // Use Link component from react-router-dom
-              to={item.path} // Navigate to the corresponding path
+              component={Link}
+              to={item.path}
               sx={{
-                color: "#fff",
+                color: location.pathname === item.path ? "#4CAF50" : "#fff", // Green for active item
                 ml: 2,
                 cursor: "pointer",
-                textDecoration: "none", // Remove underline from link
+                textDecoration: "none",
+                fontWeight: location.pathname === item.path ? "bold" : "normal", // Bold for active item
+                transform:
+                  location.pathname === item.path ? "scale(1.2)" : "scale(1)", // Zoomed for active
+                transition: "transform 0.3s ease, color 0.3s ease", // Smooth transition for zoom and color
+                "&:hover": {
+                  color: "#4CAF50", // Green on hover
+                  transform: "scale(1.2)", // Zoom in on hover,
+                  transition: "transform 0.1s ease, color 0.1s ease", // Smooth transition for zoom and color
+                },
               }}
             >
               {item.text}

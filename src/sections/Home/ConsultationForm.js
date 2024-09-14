@@ -1,14 +1,12 @@
-import { Box, Button, Grid, TextField, Typography } from "@mui/material";
+import { Box, Button, Grid, Stack, TextField, Typography } from "@mui/material";
 import { styled } from "@mui/system";
 
 // Custom styles for the container to handle background
 const ConsultationContainer = styled(Box)(({ theme }) => ({
   backgroundColor: "#e6f4f1",
-  padding: theme.spacing(4),
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
-  minHeight: "80vh",
 }));
 
 // Responsive image container with gradient fade
@@ -19,7 +17,6 @@ const ImageContainer = styled(Box)(({ theme }) => ({
   img: {
     width: "100%",
     height: "auto",
-    maxHeight: "600px",
     objectFit: "cover",
     [theme.breakpoints.down("sm")]: {
       width: "100%", // Adjust width for small screens
@@ -38,47 +35,71 @@ const ImageContainer = styled(Box)(({ theme }) => ({
   },
 }));
 
+const StyledTextField = styled(TextField)(({ theme }) => ({
+  backgroundColor: "white",
+  boxShadow: "rgba(99, 99, 99, 0.2) 0px 2px 8px 0px",
+  borderRadius: "10px",
+  "& .MuiOutlinedInput-root": {
+    border: "none",
+    "& fieldset": {
+      border: "none",
+    },
+  },
+}));
+
 const ConsultationForm = () => {
   return (
     <ConsultationContainer>
       <Grid container spacing={4} alignItems="center">
         {/* Left column - Image */}
         <Grid item xs={12} md={6}>
-          <ImageContainer>
+          <ImageContainer data-aos="fade-up">
+            {" "}
+            {/* Add AOS animation */}
             <img src="/assets/consultation_image.png" alt="Customer Support" />
           </ImageContainer>
         </Grid>
 
         {/* Right column - Form */}
         <Grid item xs={12} md={6}>
-          <Box sx={{ padding: 2, position: "relative", zIndex: 2 }}>
-            <Typography variant="h4" gutterBottom>
-              Request A Free Consultation Call
-            </Typography>
-            <Typography variant="body1" gutterBottom>
-              Schedule Your Free Consultation With Vuior Today And Save Up To
-              25% On Household Bills While Accessing Our Exclusive Loan
-              Programs!
-            </Typography>
+          <Stack
+            sx={{
+              padding: 5,
+              alignItems: "center",
+            }}
+            data-aos="fade-up" // AOS animation for the form
+          >
+            <Box px={10} textAlign="center">
+              <Typography variant="h4" gutterBottom>
+                Request A Free Consultation Call
+              </Typography>
+              <Typography variant="body1" gutterBottom>
+                Schedule Your Free Consultation With Vuior Today And Save Up To
+                25% On Household Bills While Accessing Our Exclusive Loan
+                Programs!
+              </Typography>
+            </Box>
             <Box component="form" noValidate autoComplete="off" mt={2}>
-              <TextField
+              <StyledTextField
                 label="Name"
                 variant="outlined"
                 fullWidth
                 margin="normal"
               />
-              <TextField
+              <StyledTextField
                 label="Email"
                 variant="outlined"
                 fullWidth
                 margin="normal"
               />
-              <TextField
+              <StyledTextField
                 label="Phone Number"
                 variant="outlined"
                 fullWidth
                 margin="normal"
-                InputProps={{ startAdornment: <Box sx={{ mr: 1 }}>+1</Box> }}
+                // InputProps={{
+                //   startAdornment: <Box sx={{ mr: 1 }}>+1</Box>,
+                // }}
               />
               <Button
                 variant="contained"
@@ -89,7 +110,7 @@ const ConsultationForm = () => {
                 Schedule a Call
               </Button>
             </Box>
-          </Box>
+          </Stack>
         </Grid>
       </Grid>
     </ConsultationContainer>

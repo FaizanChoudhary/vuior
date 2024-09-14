@@ -4,11 +4,11 @@ import { styled } from "@mui/system";
 // Container to style the module background and spacing
 const WelcomeContainer = styled(Box)(({ theme }) => ({
   backgroundColor: "#fff", // Background color of the section
-  padding: theme.spacing(6),
+  // padding: theme.spacing(6),
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
-  minHeight: "70vh", // Adjust height as needed
+  // minHeight: "70vh", // Adjust height as needed
   [theme.breakpoints.down("sm")]: {
     padding: theme.spacing(3),
   },
@@ -46,8 +46,8 @@ const WelcomeSection = () => {
     <WelcomeContainer>
       <Grid container spacing={4} alignItems="center">
         {/* Left Column - Text Content */}
-        <Grid item xs={12} md={6}>
-          <Box sx={{ zIndex: 2, textAlign: { xs: "center", md: "left" } }}>
+        <Grid item xs={12} md={6} data-aos="fade-up">
+          <Box sx={{ textAlign: { xs: "center", md: "left" }, px: 5 }}>
             <Typography
               variant="h3"
               component="h1"
@@ -77,7 +77,7 @@ const WelcomeSection = () => {
 
         {/* Right Column - Image */}
         <Grid item xs={12} md={6}>
-          <ImageContainer>
+          <ImageContainer data-aos="fade-up">
             <img src="/assets/welcome_image.png" alt="Financial Empowerment" />
           </ImageContainer>
         </Grid>

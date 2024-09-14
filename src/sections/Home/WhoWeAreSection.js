@@ -26,8 +26,8 @@ const InfoBox = styled(Box)(({ theme }) => ({
     content: '""',
     position: "absolute",
     top: "50px", // Adjust based on icon size
-    left: "32px", // Adjust based on icon position
-    width: "2px",
+    left: "47px", // Adjust based on icon position
+    width: "4px",
     height: "100%",
     backgroundColor: theme.palette.primary.main,
     zIndex: -1, // Behind the icon
@@ -51,14 +51,14 @@ const IconBox = styled(Box)(({ theme }) => ({
 const WhoWeAreSection = () => {
   return (
     <WhoWeAreContainer>
-      <Typography variant="h4" align="center" gutterBottom>
+      <Typography variant="h3" align="center" gutterBottom data-aos="fade-up">
         Who We Are
       </Typography>
 
-      <Grid container spacing={4} alignItems="center">
+      <Grid container spacing={4} mt={2}>
         {/* Left Column - Image */}
         <Grid item xs={12} md={6}>
-          <Box>
+          <Box data-aos="fade-up">
             <img
               src="/assets/family_image.png" // Path to your image
               alt="Family"
@@ -68,9 +68,9 @@ const WhoWeAreSection = () => {
         </Grid>
 
         {/* Right Column - Text Content */}
-        <Grid item xs={12} md={6}>
+        <Grid item xs={12} md={6} data-aos="fade-up">
           {/* Our Work */}
-          <InfoBox>
+          <InfoBox sx={{ minHeight: { xs: "auto", md: 300 } }}>
             <IconBox>
               <WorkIcon fontSize="large" />
             </IconBox>
@@ -93,7 +93,7 @@ const WhoWeAreSection = () => {
           </InfoBox>
 
           {/* Our Mission */}
-          <InfoBox>
+          <InfoBox sx={{ minHeight: { xs: "auto", md: 120 } }}>
             <IconBox>
               <LightbulbIcon fontSize="large" />
             </IconBox>

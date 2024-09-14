@@ -20,14 +20,64 @@ const ProgramsContainer = styled(Box)(({ theme }) => ({
 }));
 
 // Styling for individual program cards
-const ProgramCard = styled(Card)(({ theme }) => ({
-  boxShadow: "0px 10px 30px rgba(0, 0, 0, 0.1)",
-  borderRadius: "15px",
-  overflow: "hidden",
+const FlipCard = styled("div")({
+  perspective: "1000px",
+  width: "100%",
   height: "100%",
+  position: "relative",
+  borderRadius: "20px",
+});
+
+const FlipCardInner = styled("div")({
+  transition: "transform 0.6s ease-in-out",
+  transformStyle: "preserve-3d",
+  position: "relative",
+  width: "100%",
+  height: "100%",
+  transformOrigin: "center",
+  "&:hover": {
+    transform: "rotateY(180deg)",
+  },
+  transform: "translateZ(0)", // Force hardware acceleration
+});
+
+const FlipCardSide = styled(Card)({
+  position: "absolute",
+  width: "100%",
+  height: "100%",
+  backfaceVisibility: "hidden",
   display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
   flexDirection: "column",
-  justifyContent: "space-between",
+});
+
+const FlipCardFront = styled(FlipCardSide)({
+  zIndex: 2,
+  transform: "rotateY(0deg)",
+});
+
+const FlipCardBack = styled(FlipCardSide)(({ image }) => ({
+  transform: "rotateY(180deg)",
+  backgroundImage: `url(${image})`,
+  backgroundSize: "cover",
+  backgroundPosition: "center",
+  color: "white",
+  padding: "30px",
+  position: "relative",
+  "&::before": {
+    content: '""',
+    position: "absolute",
+    top: 0,
+    left: 0,
+    width: "100%",
+    height: "100%",
+    backgroundColor: "rgba(0, 0, 0, 0.6)", // Blackish overlay
+    zIndex: 1,
+  },
+  "& > *": {
+    zIndex: 2,
+  },
 }));
 
 // Custom button with an arrow icon
@@ -41,76 +91,113 @@ const LearnMoreButton = styled(Button)(({ theme }) => ({
 const ProgramsSection = () => {
   return (
     <ProgramsContainer>
-      <Typography variant="h4" align="center" gutterBottom>
+      <Typography variant="h3" align="center" gutterBottom data-aos="fade-up">
         Our Programs
       </Typography>
 
-      <Grid container spacing={4}>
-        {/* Program 1 - Loan Programs */}
-        <Grid item xs={12} md={6}>
-          <ProgramCard>
-            {/* Program Image */}
-            <CardMedia
-              component="img"
-              image="/assets/loan_program.png" // Path to your image
-              alt="Loan Programs"
-              sx={{ height: "200px", objectFit: "cover" }}
-            />
-            <CardContent>
-              {/* Program Title */}
-              <Typography variant="h5" gutterBottom sx={{ fontWeight: "bold" }}>
-                Loan Programs
-              </Typography>
-              {/* Program Description */}
-              <Typography variant="body1" color="textSecondary" paragraph>
-                Unlock the financial support you need with Vuior's
-                member-focused loan programs. Designed to cater to all credit
-                profiles, our loan options provide flexible terms, competitive
-                rates, and quick approval. With in-house and special financing,
-                we ensure personalized solutions for every member. Join Vuior
-                and take advantage of our commitment to diversity, equity, and
-                inclusion, fostering lifelong relationships and building a
-                supportive community.
-              </Typography>
-              {/* Learn More Button */}
-              <LearnMoreButton variant="contained" color="primary">
-                Learn More <ArrowForwardIcon sx={{ ml: 1 }} />
-              </LearnMoreButton>
-            </CardContent>
-          </ProgramCard>
+      <Grid container spacing={2} mt={2}>
+        <Grid
+          item
+          xs={12}
+          md={6}
+          sx={{ height: "600px" }}
+          data-aos="fade-up"
+          data-aos-duration="1000"
+        >
+          <FlipCard>
+            <FlipCardInner>
+              <FlipCardFront>
+                <CardMedia
+                  component="img"
+                  image="/assets/loan_program.png"
+                  alt="Loan Programs"
+                  sx={{ height: "100%", objectFit: "cover" }}
+                />
+                <CardContent>
+                  <Typography
+                    variant="h5"
+                    gutterBottom
+                    sx={{ fontWeight: "bold" }}
+                  >
+                    Loan Programs
+                  </Typography>
+                  <Typography variant="body1" color="textSecondary" paragraph>
+                    Unlock the financial support you need with Vuior's
+                    member-focused loan programs.
+                  </Typography>
+                </CardContent>
+              </FlipCardFront>
+              <FlipCardBack image="/assets/loan_program.png">
+                <Typography variant="h4" gutterBottom>
+                  More About This Program
+                </Typography>
+                <Typography variant="h6" paragraph>
+                  Unlock the financial support you need with Vuior's
+                  member-focused loan programs. Designed to cater to all credit
+                  profiles, our loan options provide flexible terms, competitive
+                  rates, and quick approval. With in-house and special
+                  financing, we ensure personalized solutions for every member.
+                  Join vuior and take advantage of our commitment to diversity,
+                  equity, and inclusion,fostering lifelong relationships and
+                  building a supportive communityu
+                </Typography>
+                <LearnMoreButton variant="contained" color="primary">
+                  Learn More <ArrowForwardIcon sx={{ ml: 1 }} />
+                </LearnMoreButton>
+              </FlipCardBack>
+            </FlipCardInner>
+          </FlipCard>
         </Grid>
-
-        {/* Program 2 - Household Bills Consolidation */}
-        <Grid item xs={12} md={6}>
-          <ProgramCard>
-            {/* Program Image */}
-            <CardMedia
-              component="img"
-              image="/assets/house_hold.png" // Path to your image
-              alt="Household Bills Consolidation Program"
-              sx={{ height: "200px", objectFit: "cover" }}
-            />
-            <CardContent>
-              {/* Program Title */}
-              <Typography variant="h5" gutterBottom sx={{ fontWeight: "bold" }}>
-                Household Bills Consolidation Program
-              </Typography>
-              {/* Program Description */}
-              <Typography variant="body1" color="textSecondary" paragraph>
-                Save up to 25% on your household bills with Vuior's
-                group-negotiated discounts through top-tier providers. Our
-                member-driven program continuously adapts to meet your needs,
-                delivering innovative and relevant services. Become a Vuior
-                member and experience our dedication to diversity, equity, and
-                inclusion, focusing on your needs and building a strong,
-                supportive community. Schedule a free consultation today!
-              </Typography>
-              {/* Learn More Button */}
-              <LearnMoreButton variant="contained" color="primary">
-                Learn More <ArrowForwardIcon sx={{ ml: 1 }} />
-              </LearnMoreButton>
-            </CardContent>
-          </ProgramCard>
+        <Grid
+          item
+          xs={12}
+          md={6}
+          sx={{ height: "600px" }}
+          data-aos="fade-up"
+          data-aos-duration="3000"
+        >
+          <FlipCard>
+            <FlipCardInner>
+              <FlipCardFront>
+                <CardMedia
+                  component="img"
+                  image="/assets/house_hold.png"
+                  alt="Household Bills Consolidation Program"
+                  sx={{ height: "100%", objectFit: "cover" }}
+                />
+                <CardContent>
+                  <Typography
+                    variant="h5"
+                    gutterBottom
+                    sx={{ fontWeight: "bold" }}
+                  >
+                    Household Bills Consolidation Program
+                  </Typography>
+                  <Typography variant="body1" color="textSecondary" paragraph>
+                    Unlock the financial support you need with Vuior's
+                    member-focused loan programs.
+                  </Typography>
+                </CardContent>
+              </FlipCardFront>
+              <FlipCardBack image="/assets/house_hold.png">
+                <Typography variant="h4" gutterBottom>
+                  More About This Program
+                </Typography>
+                <Typography variant="h6" paragraph>
+                  Save up to 25% on your household bills with vuior's
+                  group-negotiated discounts through top-tier providers. Our
+                  member-driven program continuously adapts to meet your needs,
+                  delivering innovative and relevant services. Become a vuior
+                  member and experience our dedication to diversity, equity, and
+                  inclusion, focusing on your needs and building a strong,
+                  supportive community. Schedule a free consultation today!
+                </Typography>
+                <LearnMoreButton variant="contained" color="primary">
+                  Learn More <ArrowForwardIcon sx={{ ml: 1 }} />
+                </LearnMoreButton>
+              </FlipCardBack>
+            </FlipCardInner>
+          </FlipCard>
         </Grid>
       </Grid>
     </ProgramsContainer>

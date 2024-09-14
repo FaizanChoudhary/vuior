@@ -8,6 +8,7 @@ import {
 } from "@mui/material";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import { styled } from "@mui/system";
+import { useState } from "react";
 
 // Container for the whole section
 const SectionContainer = styled(Box)(({ theme }) => ({
@@ -22,16 +23,51 @@ const PrinciplesSection = styled(Box)(({ theme }) => ({
   marginBottom: theme.spacing(4),
 }));
 
+// Styling for the FAQ section
 const FaqsSection = styled(Box)(({ theme }) => ({
-  marginTop: theme.spacing(4),
+  backgroundColor: "#f9f9f9", // Subtle background color
+  borderRadius: "10px",
+  padding: theme.spacing(3),
+}));
+
+// Styling for each FAQ accordion
+const StyledAccordion = styled(Accordion)(({ theme }) => ({
+  boxShadow: "rgba(0, 0, 0, 0.1) 0px 4px 12px",
+  marginBottom: theme.spacing(2), // Space between accordions
+  "&:hover": {
+    transform: "translateY(-2px)", // Slight lift on hover
+    transition: "transform 0.3s ease",
+  },
+}));
+
+// Styling for accordion summary
+const StyledAccordionSummary = styled(AccordionSummary)(({ theme }) => ({
+  backgroundColor: "#E6F4F1", // Light teal background
+  "& .MuiAccordionSummary-content": {
+    display: "flex",
+    alignItems: "center",
+  },
+  "& .MuiSvgIcon-root": {
+    color: "#004d40", // Customize icon color
+  },
+}));
+
+// Styling for accordion details
+const StyledAccordionDetails = styled(AccordionDetails)(({ theme }) => ({
+  padding: theme.spacing(2),
 }));
 
 const OurBasicPrinciplesSection = () => {
+  const [expanded, setExpanded] = useState(false);
+
+  const handleChange = (panel) => (event, isExpanded) => {
+    setExpanded(isExpanded ? panel : false);
+  };
   return (
     <SectionContainer>
-      <Grid container spacing={4}>
+      <Grid container spacing={4} alignItems="flex-start">
         {/* Left Column - Basic Principles */}
-        <Grid item xs={12} md={6}>
+        <Grid item xs={12} md={6} data-aos="fade-up">
           <PrinciplesSection>
             <Typography
               variant="h4"
@@ -67,78 +103,91 @@ const OurBasicPrinciplesSection = () => {
         </Grid>
 
         {/* Right Column - FAQ Section */}
-        <Grid item xs={12} md={6}>
+        <Grid item xs={12} md={6} data-aos="fade-up">
           <FaqsSection>
             <Typography
               variant="h4"
               gutterBottom
-              sx={{ fontWeight: "bold", color: "#004d40" }}
+              sx={{ fontWeight: "bold", color: "#004d40", textAlign: "center" }}
             >
               FAQs
             </Typography>
+
             {/* FAQ 1 */}
-            <Accordion>
-              <AccordionSummary expandIcon={<ExpandMoreIcon />}>
+            <StyledAccordion
+              expanded={expanded === "panel1"}
+              onChange={handleChange("panel1")}
+            >
+              <StyledAccordionSummary expandIcon={<ExpandMoreIcon />}>
                 <Typography variant="body1" sx={{ fontWeight: "bold" }}>
                   How do I sign up for Vuior?
                 </Typography>
-              </AccordionSummary>
-              <AccordionDetails>
+              </StyledAccordionSummary>
+              <StyledAccordionDetails>
                 <Typography variant="body1">
                   Simply click on the "Sign Up" button and fill out the
                   registration form. Fund your account with a minimum balance of
                   $25 to activate your membership.
                 </Typography>
-              </AccordionDetails>
-            </Accordion>
+              </StyledAccordionDetails>
+            </StyledAccordion>
 
             {/* FAQ 2 */}
-            <Accordion>
-              <AccordionSummary expandIcon={<ExpandMoreIcon />}>
+            <StyledAccordion
+              expanded={expanded === "panel2"}
+              onChange={handleChange("panel2")}
+            >
+              <StyledAccordionSummary expandIcon={<ExpandMoreIcon />}>
                 <Typography variant="body1" sx={{ fontWeight: "bold" }}>
                   What is Vuior?
                 </Typography>
-              </AccordionSummary>
-              <AccordionDetails>
+              </StyledAccordionSummary>
+              <StyledAccordionDetails>
                 <Typography variant="body1">
                   Vuior is a platform that provides financial tools and services
                   to help individuals and families achieve financial stability
                   and independence.
                 </Typography>
-              </AccordionDetails>
-            </Accordion>
+              </StyledAccordionDetails>
+            </StyledAccordion>
 
             {/* FAQ 3 */}
-            <Accordion>
-              <AccordionSummary expandIcon={<ExpandMoreIcon />}>
+            <StyledAccordion
+              expanded={expanded === "panel3"}
+              onChange={handleChange("panel3")}
+            >
+              <StyledAccordionSummary expandIcon={<ExpandMoreIcon />}>
                 <Typography variant="body1" sx={{ fontWeight: "bold" }}>
                   How do I become a member of Vuior?
                 </Typography>
-              </AccordionSummary>
-              <AccordionDetails>
+              </StyledAccordionSummary>
+              <StyledAccordionDetails>
                 <Typography variant="body1">
                   To become a member of Vuior, simply sign up on our website and
                   activate your account by depositing the minimum balance
                   required.
                 </Typography>
-              </AccordionDetails>
-            </Accordion>
+              </StyledAccordionDetails>
+            </StyledAccordion>
 
             {/* FAQ 4 */}
-            <Accordion>
-              <AccordionSummary expandIcon={<ExpandMoreIcon />}>
+            <StyledAccordion
+              expanded={expanded === "panel4"}
+              onChange={handleChange("panel4")}
+            >
+              <StyledAccordionSummary expandIcon={<ExpandMoreIcon />}>
                 <Typography variant="body1" sx={{ fontWeight: "bold" }}>
                   What are the benefits of Vuior membership?
                 </Typography>
-              </AccordionSummary>
-              <AccordionDetails>
+              </StyledAccordionSummary>
+              <StyledAccordionDetails>
                 <Typography variant="body1">
                   Vuior members enjoy exclusive financial services, personalized
                   advice, and access to a supportive community focused on
                   financial well-being.
                 </Typography>
-              </AccordionDetails>
-            </Accordion>
+              </StyledAccordionDetails>
+            </StyledAccordion>
           </FaqsSection>
         </Grid>
       </Grid>
