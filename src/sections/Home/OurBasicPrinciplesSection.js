@@ -26,7 +26,6 @@ const PrinciplesSection = styled(Box)(({ theme }) => ({
 // Styling for the FAQ section
 const FaqsSection = styled(Box)(({ theme }) => ({
   // backgroundColor: "#f9f9f9", // Subtle background color
-  borderRadius: "10px",
   padding: theme.spacing(3),
 }));
 
@@ -34,12 +33,9 @@ const FaqsSection = styled(Box)(({ theme }) => ({
 const StyledAccordion = styled(Accordion)(({ theme }) => ({
   boxShadow: "rgba(0, 0, 0, 0.1) 0px 4px 12px",
   marginBottom: theme.spacing(2), // Space between accordions
-  borderRadius: "10px",
+  borderRadius: 5,
   overflow: "hidden", // Hide overflow to make the animation smoother
   transition: "background-color 0.3s ease",
-  "&:hover": {
-    // No scale effect on hover
-  },
 }));
 
 // Styling for accordion summary

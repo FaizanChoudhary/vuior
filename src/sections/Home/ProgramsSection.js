@@ -41,8 +41,9 @@ const HeadingOnImage = styled(Box)(({ theme }) => ({
   zIndex: 1,
   width: "100%",
   padding: theme.spacing(2),
-  backgroundColor: "rgba(0, 0, 0, 0.5)", // Slightly dark background for text readability
+  // backgroundColor: "rgba(0, 0, 0, 0.5)", // Slightly dark background for text readability
   transition: "opacity 0.3s ease", // Smooth fade-out effect
+  backgroundColor: "rgba(0, 77, 64, 0.5)",
 }));
 
 const Overlay = styled(Box)(({ theme }) => ({
@@ -51,7 +52,7 @@ const Overlay = styled(Box)(({ theme }) => ({
   left: 0,
   width: "100%",
   height: "100%",
-  backgroundColor: "rgba(0, 0, 0, 0.6)", // Blackish overlay
+  backgroundColor: "rgba(0, 77, 64, 0.7)",
   color: "white",
   display: "flex",
   flexDirection: "column",
@@ -101,13 +102,11 @@ const ProgramsSection = () => {
           <ProgramCard>
             <CardImage
               component="img"
-              image="/assets/loan_program.png"
+              image="/assets/loan.jpg"
               alt="Loan Programs"
             />
             <HeadingOnImage className="heading-on-image">
-              <Typography variant="h4" gutterBottom>
-                Loan Programs
-              </Typography>
+              <Typography variant="h3">Loan Programs</Typography>
             </HeadingOnImage>
             <Overlay className="overlay">
               <OverlayContent>
@@ -139,11 +138,11 @@ const ProgramsSection = () => {
           <ProgramCard>
             <CardImage
               component="img"
-              image="/assets/house_hold.png"
+              image="/assets/Consolidation.webp"
               alt="Household Bills Consolidation Program"
             />
             <HeadingOnImage className="heading-on-image">
-              <Typography variant="h4" gutterBottom>
+              <Typography variant="h3">
                 Household Bills Consolidation
               </Typography>
             </HeadingOnImage>
