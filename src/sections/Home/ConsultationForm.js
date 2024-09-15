@@ -24,13 +24,7 @@ const ConsultationContainer = styled(Box)(({ theme }) => ({
   alignItems: "center",
   justifyContent: "center",
   overflow: "hidden", // Ensures no overflow from the background images
-}));
-
-// Background image swiper with fade in/out effect
-const SwiperWrapper = styled(Box)(({ theme }) => ({
-  position: "relative",
-  width: "100%",
-  height: "100%",
+  boxShadow: "rgba(99, 99, 99, 0.2) 0px 2px 8px 0px",
 }));
 
 const BackgroundSwiper = styled(Swiper)(({ theme }) => ({
@@ -40,26 +34,23 @@ const BackgroundSwiper = styled(Swiper)(({ theme }) => ({
   width: "100%",
   height: "100%",
   zIndex: -1, // Ensure the background is behind the overlay
+  "& .swiper-slide": {
+    transition: "transform 0.5s ease-in-out, opacity 0.5s ease-in-out", // Smooth transition
+  },
   "& .swiper-slide img": {
     width: "100%",
     height: "100%",
     objectFit: "cover",
     opacity: 0, // Initially set opacity to 0
-    transition: "opacity 2s ease-in-out", // Smooth transition effect
+    transform: "scale(1.1)", // Slightly zoomed in for inactive slides
   },
   "& .swiper-slide-active img": {
     opacity: 1, // Fade in the active slide
+    transform: "scale(1)", // Normal scale for the active slide
   },
-}));
-
-const Overlay = styled(Box)(({ theme }) => ({
-  position: "absolute",
-  top: 0,
-  left: 0,
-  width: "100%",
-  height: "100%",
-  backgroundColor: "rgba(0, 0, 0, 0.5)", // Semi-transparent dark overlay
-  zIndex: 0, // Ensure it's above the Swiper images but behind the form
+  "& .swiper-slide-next img, & .swiper-slide-prev img": {
+    opacity: 0.5, // Slightly dim the next and previous slides
+  },
 }));
 
 // Form container with glassmorphism effect
@@ -73,7 +64,9 @@ const FormContainer = styled(Stack)(({ theme }) => ({
   maxWidth: "500px", // Control form width
   width: "100%",
   position: "absolute",
-  right: "5vw",
+  [theme.breakpoints.up("md")]: {
+    right: "5vw",
+  },
 }));
 
 // Styling for text fields
@@ -100,29 +93,27 @@ const StyledButton = styled(Button)(({ theme }) => ({
 
 // Background image swiper component
 const BackgroundImageSwiper = () => (
-  <SwiperWrapper>
-    <BackgroundSwiper
-      spaceBetween={0}
-      slidesPerView={1}
-      autoplay={{
-        delay: 3000, // Smooth 3-second delay for each slide
-        disableOnInteraction: false,
-      }}
-      loop={true} // Continuous loop for the background
-      effect="fade" // Using fade effect for smooth transitions
-      modules={[Autoplay, EffectFade]} // Adding fade effect module
-    >
-      <SwiperSlide>
-        <img src="/assets/consultation_image.png" alt="Consultation1" />
-      </SwiperSlide>
-      <SwiperSlide>
-        <img src="/assets/consultation_image_2.webp" alt="Consultation2" />
-      </SwiperSlide>
-      <SwiperSlide>
-        <img src="/assets/consultation_image_3.jpg" alt="Consultation3" />
-      </SwiperSlide>
-    </BackgroundSwiper>
-  </SwiperWrapper>
+  <BackgroundSwiper
+    spaceBetween={0}
+    slidesPerView={1}
+    autoplay={{
+      delay: 3000, // Smooth 3-second delay for each slide
+      disableOnInteraction: false,
+    }}
+    loop={true} // Continuous loop for the background
+    effect="fade"
+    modules={[Autoplay, EffectFade]} // Adding fade effect module
+  >
+    <SwiperSlide>
+      <img src="/assets/consultation_image.png" alt="Consultation1" />
+    </SwiperSlide>
+    <SwiperSlide>
+      <img src="/assets/consultation_image_2.webp" alt="Consultation2" />
+    </SwiperSlide>
+    <SwiperSlide>
+      <img src="/assets/consultation_image_3.jpg" alt="Consultation3" />
+    </SwiperSlide>
+  </BackgroundSwiper>
 );
 
 const ConsultationForm = () => {
@@ -130,7 +121,6 @@ const ConsultationForm = () => {
     <ConsultationContainer>
       {/* Background Image Swiper */}
       <BackgroundImageSwiper />
-      <Overlay />
 
       {/* Foreground Form */}
       <FormContainer data-aos="fade-up">
