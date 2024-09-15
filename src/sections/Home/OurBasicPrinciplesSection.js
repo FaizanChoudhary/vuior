@@ -25,7 +25,7 @@ const PrinciplesSection = styled(Box)(({ theme }) => ({
 
 // Styling for the FAQ section
 const FaqsSection = styled(Box)(({ theme }) => ({
-  backgroundColor: "#f9f9f9", // Subtle background color
+  // backgroundColor: "#f9f9f9", // Subtle background color
   borderRadius: "10px",
   padding: theme.spacing(3),
 }));
@@ -44,16 +44,16 @@ const StyledAccordion = styled(Accordion)(({ theme }) => ({
 
 // Styling for accordion summary
 const StyledAccordionSummary = styled(AccordionSummary)(({ theme }) => ({
-  backgroundColor: "#E6F4F1", // Light teal background
+  // backgroundColor: "#E6F4F1", // Light teal background
   borderRadius: "10px",
   "& .MuiAccordionSummary-content": {
     display: "flex",
     alignItems: "center",
     transition: "background-color 0.3s ease",
   },
-  "&:hover": {
-    backgroundColor: "#cce7e1", // Darker teal on hover
-  },
+  // "&:hover": {
+  //   backgroundColor: "#cce7e1", // Darker teal on hover
+  // },
   "& .MuiSvgIcon-root": {
     color: "#004d40", // Customize icon color
   },
