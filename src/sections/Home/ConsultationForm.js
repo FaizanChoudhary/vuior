@@ -43,14 +43,10 @@ const BackgroundSwiper = styled(Swiper)(({ theme }) => ({
     height: "100%",
     objectFit: "cover",
     opacity: 0, // Initially set opacity to 0
-    transform: "scale(1.1)", // Slightly zoomed in for inactive slides
+    transition: "opacity 2s ease-in-out", // Slightly zoomed in for inactive slides
   },
   "& .swiper-slide-active img": {
     opacity: 1, // Fade in the active slide
-    transform: "scale(1)", // Normal scale for the active slide
-  },
-  "& .swiper-slide-next img, & .swiper-slide-prev img": {
-    opacity: 0.5, // Slightly dim the next and previous slides
   },
 }));
 
