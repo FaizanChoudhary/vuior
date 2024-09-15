@@ -1,43 +1,53 @@
-import { Box, Button, Grid, Stack, TextField, Typography } from "@mui/material";
+import {
+  Box,
+  Button,
+  Grid,
+  Stack,
+  TextField,
+  Typography,
+  InputAdornment,
+} from "@mui/material";
 import { styled } from "@mui/system";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Pagination, Navigation } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+import PersonIcon from "@mui/icons-material/Person";
+import EmailIcon from "@mui/icons-material/Email";
+import PhoneIcon from "@mui/icons-material/Phone";
 
 // Custom styles for the container to handle background
 const ConsultationContainer = styled(Box)(({ theme }) => ({
   backgroundColor: "#e6f4f1",
-  display: "flex",
-  alignItems: "center",
-  justifyContent: "center",
+  height: "90%",
 }));
 
 // Responsive image container with gradient fade
 const ImageContainer = styled(Box)(({ theme }) => ({
   display: "flex",
   justifyContent: "center",
-  position: "relative", // For positioning gradient overlay
+  position: "relative",
+  width: "100%",
   img: {
     width: "100%",
     height: "auto",
     objectFit: "cover",
-    [theme.breakpoints.down("sm")]: {
-      width: "100%", // Adjust width for small screens
-      height: "auto",
-    },
-  },
-  "&::after": {
-    content: '""',
-    position: "absolute",
-    top: 0,
-    right: 0,
-    bottom: 0,
-    left: "50%", // Start gradient from the center for fade effect
-    background: "linear-gradient(to right, transparent, #e6f4f1 100%)",
-    zIndex: 1, // Ensure gradient is over the image
   },
 }));
 
+// Form container with gradient background
+const FormContainer = styled(Stack)(({ theme }) => ({
+  background: "linear-gradient(135deg, #E6F4F1 0%, #ffffff 100%)",
+  borderRadius: "10px",
+  padding: theme.spacing(6),
+  boxShadow: "0px 4px 12px rgba(0, 0, 0, 0.1)",
+}));
+
+// Styling for text fields
 const StyledTextField = styled(TextField)(({ theme }) => ({
   backgroundColor: "white",
-  boxShadow: "rgba(99, 99, 99, 0.2) 0px 2px 8px 0px",
+  boxShadow: "rgba(99, 99, 99, 0.2) 0px 2px 8px",
   borderRadius: "10px",
   "& .MuiOutlinedInput-root": {
     border: "none",
@@ -47,24 +57,65 @@ const StyledTextField = styled(TextField)(({ theme }) => ({
   },
 }));
 
+// Styling for the button with hover effects
+const StyledButton = styled(Button)(({ theme }) => ({
+  backgroundColor: "#004d40",
+  color: "white",
+  "&:hover": {
+    backgroundColor: "#00332d",
+    transform: "scale(1.05)",
+    transition: "transform 0.3s ease",
+  },
+}));
+
+// Image swiper component
+const ImageSwiper = () => (
+  <Swiper
+    spaceBetween={30}
+    centeredSlides={true}
+    autoplay={{
+      delay: 2000,
+      disableOnInteraction: false,
+    }}
+    pagination={{
+      clickable: true,
+    }}
+    style={{
+      "--swiper-pagination-color": "#004D40",
+      "--swiper-pagination-bullet-inactive-color": "#999999",
+      "--swiper-pagination-bullet-inactive-opacity": "1",
+      "--swiper-pagination-bullet-size": "16px",
+      "--swiper-pagination-bullet-horizontal-gap": "6px",
+    }}
+    modules={[Autoplay, Pagination, Navigation]}
+  >
+    <SwiperSlide>
+      <img src="/assets/consultation_image.png" alt="Consultation1" />
+    </SwiperSlide>
+    <SwiperSlide>
+      <img src="/assets/consultation_image_2.jpg" alt="Consultation2" />
+    </SwiperSlide>
+    <SwiperSlide>
+      <img src="/assets/consultation_image_3.jpg" alt="Consultation3" />
+    </SwiperSlide>
+  </Swiper>
+);
+
 const ConsultationForm = () => {
   return (
     <ConsultationContainer>
       <Grid container spacing={4} alignItems="center">
-        {/* Left column - Image */}
-        <Grid item xs={12} md={6}>
+        {/* Left column - Swiper */}
+        <Grid item xs={12} lg={6}>
           <ImageContainer data-aos="fade-up">
-            {" "}
-            {/* Add AOS animation */}
-            <img src="/assets/consultation_image.png" alt="Customer Support" />
+            <ImageSwiper />
           </ImageContainer>
         </Grid>
 
         {/* Right column - Form */}
-        <Grid item xs={12} md={6}>
-          <Stack
+        <Grid item xs={12} lg={6} sx={{ p: 6 }}>
+          <FormContainer
             sx={{
-              padding: 5,
               alignItems: "center",
             }}
             data-aos="fade-up" // AOS animation for the form
@@ -85,32 +136,45 @@ const ConsultationForm = () => {
                 variant="outlined"
                 fullWidth
                 margin="normal"
+                InputProps={{
+                  startAdornment: (
+                    <InputAdornment position="start">
+                      <PersonIcon />
+                    </InputAdornment>
+                  ),
+                }}
               />
               <StyledTextField
                 label="Email"
                 variant="outlined"
                 fullWidth
                 margin="normal"
+                InputProps={{
+                  startAdornment: (
+                    <InputAdornment position="start">
+                      <EmailIcon />
+                    </InputAdornment>
+                  ),
+                }}
               />
               <StyledTextField
                 label="Phone Number"
                 variant="outlined"
                 fullWidth
                 margin="normal"
-                // InputProps={{
-                //   startAdornment: <Box sx={{ mr: 1 }}>+1</Box>,
-                // }}
+                InputProps={{
+                  startAdornment: (
+                    <InputAdornment position="start">
+                      <PhoneIcon />
+                    </InputAdornment>
+                  ),
+                }}
               />
-              <Button
-                variant="contained"
-                color="primary"
-                fullWidth
-                sx={{ mt: 2 }}
-              >
+              <StyledButton variant="contained" fullWidth sx={{ mt: 2 }}>
                 Schedule a Call
-              </Button>
+              </StyledButton>
             </Box>
-          </Stack>
+          </FormContainer>
         </Grid>
       </Grid>
     </ConsultationContainer>
