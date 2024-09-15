@@ -10,11 +10,12 @@ import {
   Toolbar,
   Typography,
 } from "@mui/material";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 
 const Header = () => {
   const [drawerOpen, setDrawerOpen] = useState(false);
+  const [isSticky, setIsSticky] = useState(false);
   const location = useLocation();
 
   const toggleDrawer = (open) => () => {
@@ -29,6 +30,17 @@ const Header = () => {
     { text: "About Us", path: "/about-us" },
     { text: "Contact Us", path: "/contact-us" },
   ];
+
+  const handleScroll = () => {
+    setIsSticky(window.scrollY > 150); // Adjust threshold as needed
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   const drawerList = () => (
     <Box
@@ -49,11 +61,15 @@ const Header = () => {
 
   return (
     <AppBar
-      position="sticky" // Make header sticky
+      position={isSticky ? "sticky" : "absolute"} // Make header sticky
       sx={{
         backgroundColor: "#004d40",
         padding: 1,
         zIndex: 1200, // Ensure header stays above content
+        transition: "transform 0.3s ease, opacity 0.3s ease",
+        transform: isSticky ? "translateY(0)" : "translateY(-100%)", // Slide in/out
+        // opacity: isSticky ? 1 : 0, // Fade in/out
+        top: isSticky ? 0 : 150, //
       }}
     >
       <Toolbar sx={{ justifyContent: "space-between" }}>
@@ -89,8 +105,6 @@ const Header = () => {
                 transition: "transform 0.3s ease, color 0.3s ease", // Smooth transition for zoom and color
                 "&:hover": {
                   color: "#4CAF50", // Green on hover
-                  // transform: "scale(1.2)", // Zoom in on hover,
-                  transition: "transform 0.1s ease, color 0.1s ease", // Smooth transition for zoom and color
                 },
               }}
             >

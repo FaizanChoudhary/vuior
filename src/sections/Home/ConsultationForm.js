@@ -20,6 +20,7 @@ const ConsultationContainer = styled(Box)(({ theme }) => ({
   position: "relative",
   height: "80vh", // Full viewport height
   // width: "100vw", // Full viewport width
+  marginTop: "77px !important",
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
