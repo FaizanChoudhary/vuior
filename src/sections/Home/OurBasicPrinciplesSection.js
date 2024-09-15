@@ -34,18 +34,25 @@ const FaqsSection = styled(Box)(({ theme }) => ({
 const StyledAccordion = styled(Accordion)(({ theme }) => ({
   boxShadow: "rgba(0, 0, 0, 0.1) 0px 4px 12px",
   marginBottom: theme.spacing(2), // Space between accordions
+  borderRadius: "10px",
+  overflow: "hidden", // Hide overflow to make the animation smoother
+  transition: "background-color 0.3s ease",
   "&:hover": {
-    transform: "translateY(-2px)", // Slight lift on hover
-    transition: "transform 0.3s ease",
+    // No scale effect on hover
   },
 }));
 
 // Styling for accordion summary
 const StyledAccordionSummary = styled(AccordionSummary)(({ theme }) => ({
   backgroundColor: "#E6F4F1", // Light teal background
+  borderRadius: "10px",
   "& .MuiAccordionSummary-content": {
     display: "flex",
     alignItems: "center",
+    transition: "background-color 0.3s ease",
+  },
+  "&:hover": {
+    backgroundColor: "#cce7e1", // Darker teal on hover
   },
   "& .MuiSvgIcon-root": {
     color: "#004d40", // Customize icon color
@@ -55,6 +62,8 @@ const StyledAccordionSummary = styled(AccordionSummary)(({ theme }) => ({
 // Styling for accordion details
 const StyledAccordionDetails = styled(AccordionDetails)(({ theme }) => ({
   padding: theme.spacing(2),
+  overflow: "hidden", // Ensure smooth overflow transition
+  transition: "max-height 0.3s ease-in-out",
 }));
 
 const OurBasicPrinciplesSection = () => {
@@ -63,6 +72,7 @@ const OurBasicPrinciplesSection = () => {
   const handleChange = (panel) => (event, isExpanded) => {
     setExpanded(isExpanded ? panel : false);
   };
+
   return (
     <SectionContainer>
       <Grid container spacing={4} alignItems="flex-start">
