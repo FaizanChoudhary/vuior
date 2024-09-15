@@ -26,7 +26,7 @@ const ContactInfoItem = ({ iconSrc, label, value }) => (
       />
     </Box>
     <Box>
-      <Typography variant="body1" sx={{ fontWeight: "bold", color: "#2E7D32" }}>
+      <Typography variant="body1" sx={{ fontWeight: "bold", color: "#064E3B" }}>
         {label}
       </Typography>
       <Typography variant="body2">{value}</Typography>
@@ -56,7 +56,7 @@ const InquirySupportSection = () => {
           <Typography
             variant="h5"
             component="h2"
-            sx={{ fontWeight: "bold", color: "#2E7D32", marginBottom: 4 }}
+            sx={{ fontWeight: "bold", color: "#064E3B", marginBottom: 4 }}
           >
             Contact Information
           </Typography>
@@ -85,7 +85,7 @@ const InquirySupportSection = () => {
           <Typography
             variant="h5"
             component="h2"
-            sx={{ fontWeight: "bold", color: "#2E7D32", marginBottom: 4 }}
+            sx={{ fontWeight: "bold", color: "#064E3B", marginBottom: 4 }}
           >
             Inquiry and Support
           </Typography>
@@ -171,7 +171,7 @@ const InquirySupportSection = () => {
                   variant="contained"
                   color="primary"
                   sx={{
-                    backgroundColor: "#2E7D32",
+                    backgroundColor: "#064E3B",
                     paddingX: 4,
                     paddingY: 1,
                     borderRadius: "20px",

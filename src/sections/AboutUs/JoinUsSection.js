@@ -9,7 +9,7 @@ const Step = ({ number, title, description }) => (
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
-        backgroundColor: "#2E7D32",
+        backgroundColor: "#064E3B",
         color: "#fff",
         borderRadius: "50%",
         minWidth: 50,
@@ -24,7 +24,7 @@ const Step = ({ number, title, description }) => (
     <Box>
       <Typography
         variant="h6"
-        sx={{ fontWeight: "bold", color: "#2E7D32", marginBottom: 1 }}
+        sx={{ fontWeight: "bold", color: "#064E3B", marginBottom: 1 }}
       >
         {title}
       </Typography>
@@ -43,7 +43,7 @@ const JoinUsSection = () => {
           <Typography
             variant="h4"
             component="h1"
-            sx={{ fontWeight: "bold", color: "#2E7D32", marginBottom: 4 }}
+            sx={{ fontWeight: "bold", color: "#064E3B", marginBottom: 4 }}
           >
             Join Us
           </Typography>

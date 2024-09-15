@@ -10,10 +10,10 @@ const LoanProgramsSection = () => {
         <Grid item xs={12} md={6}>
           <Typography
             variant="h4"
-            sx={{ fontWeight: "bold", color: "#2E7D32", marginBottom: 2 }}
+            sx={{ fontWeight: "bold", color: "#064E3B", marginBottom: 2 }}
           >
             Vuoir Member{" "}
-            <span style={{ color: "#2E7D32", fontWeight: "bold" }}>
+            <span style={{ color: "#064E3B", fontWeight: "bold" }}>
               Loan Programs
             </span>
           </Typography>
@@ -32,7 +32,7 @@ const LoanProgramsSection = () => {
             variant="contained"
             color="primary"
             sx={{
-              backgroundColor: "#2E7D32",
+              backgroundColor: "#064E3B",
               paddingX: 4,
               paddingY: 1,
               borderRadius: "20px",
@@ -47,13 +47,13 @@ const LoanProgramsSection = () => {
           <Box sx={{ display: "flex", gap: 2, marginTop: 2 }}>
             <Typography
               variant="body2"
-              sx={{ cursor: "pointer", color: "#2E7D32" }}
+              sx={{ cursor: "pointer", color: "#064E3B" }}
             >
               Privacy Policy
             </Typography>
             <Typography
               variant="body2"
-              sx={{ cursor: "pointer", color: "#2E7D32" }}
+              sx={{ cursor: "pointer", color: "#064E3B" }}
             >
               Terms and Conditions
             </Typography>

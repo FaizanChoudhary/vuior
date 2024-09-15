@@ -11,9 +11,7 @@ const CareerPage = Loadable(lazy(() => import("./pages/CareerPage")));
 const AboutUsPage = Loadable(lazy(() => import("./pages/AboutUsPage")));
 const ContactUsPage = Loadable(lazy(() => import("./pages/ContactUsPage")));
 const LoanProgramPage = Loadable(lazy(() => import("./pages/LoanProgramPage")));
-// const HouseholdBillConsolidation = Loadable(
-//   lazy(() => import("./pages/HouseholdBillConsolidation.js"))
-// );
+const HouseHoldPage = Loadable(lazy(() => import("./pages/HouseHoldPage")));
 // const PrivacyPolicy = Loadable(lazy(() => import("./pages/PrivacyPolicy")));
 // const TermsOfService = Loadable(lazy(() => import("./pages/TermsOfService")));
 // const CookiePolicy = Loadable(lazy(() => import("./pages/CookiePolicy")));
@@ -34,10 +32,10 @@ const routes = [
       { path: "/about-us", element: <AboutUsPage /> },
       { path: "/contact-us", element: <ContactUsPage /> },
       { path: "/programs/loan-programs", element: <LoanProgramPage /> },
-      // {
-      //   path: "/household-bill-consolidation",
-      //   element: <HouseholdBillConsolidation />,
-      // },
+      {
+        path: "/programs/household-programs",
+        element: <HouseHoldPage />,
+      },
 
       //   { path: "/privacy-policy", element: <PrivacyPolicy /> },
       //   { path: "/terms-of-service", element: <TermsOfService /> },

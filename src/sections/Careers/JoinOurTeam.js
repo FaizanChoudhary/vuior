@@ -20,7 +20,7 @@ const JoinOurTeam = () => {
           <Typography
             variant="h4"
             component="h1"
-            sx={{ fontWeight: "bold", color: "#2E7D32", marginBottom: 2 }}
+            sx={{ fontWeight: "bold", color: "#064E3B", marginBottom: 2 }}
           >
             Join Our Team!
           </Typography>
@@ -47,7 +47,7 @@ const JoinOurTeam = () => {
               <ListItem key={index}>
                 <ListItemIcon>
                   <FiberManualRecordIcon
-                    sx={{ color: "#2E7D32", fontSize: 12 }}
+                    sx={{ color: "#064E3B", fontSize: 12 }}
                   />
                 </ListItemIcon>
                 <ListItemText primary={job} />
@@ -58,8 +58,7 @@ const JoinOurTeam = () => {
           {/* Apply Button */}
           <Button
             variant="contained"
-            color="primary"
-            sx={{ backgroundColor: "#2E7D32", paddingX: 3, marginTop: 3 }}
+            sx={{ backgroundColor: "#064E3B", paddingX: 3, marginTop: 3 }}
           >
             Apply Now &rarr;
           </Button>

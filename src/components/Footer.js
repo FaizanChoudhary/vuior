@@ -118,7 +118,7 @@ const Footer = () => {
             Programs & Services
           </Typography>
           <FooterLink to="/programs/loan-programs">Loan Programs</FooterLink>
-          <FooterLink to="/bill-consolidation">
+          <FooterLink to="/programs/household-programs">
             Household Bill Consolidation
           </FooterLink>
         </Grid>

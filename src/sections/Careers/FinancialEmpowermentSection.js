@@ -26,7 +26,7 @@ const FinancialEmpowermentSection = () => {
           <Typography
             variant="h4"
             component="h1"
-            sx={{ fontWeight: "bold", color: "#2E7D32", marginBottom: 2 }}
+            sx={{ fontWeight: "bold", color: "#064E3B", marginBottom: 2 }}
           >
             Join Us In Driving The Financial Empowerment Revolution Forward
           </Typography>

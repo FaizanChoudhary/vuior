@@ -91,7 +91,7 @@ const LoanCalculator = () => {
             sx={{
               padding: 3,
               borderRadius: "16px",
-              backgroundColor: "#EAF7F7",
+              backgroundColor: "#EEF9F6",
             }}
           >
             <CardContent>
@@ -174,7 +174,7 @@ const LoanCalculator = () => {
               </Typography>
               <Typography
                 variant="h3"
-                sx={{ fontWeight: "bold", color: "#2E7D32" }}
+                sx={{ fontWeight: "bold", color: "#064E3B" }}
               >
                 ${monthlyPayment}
               </Typography>

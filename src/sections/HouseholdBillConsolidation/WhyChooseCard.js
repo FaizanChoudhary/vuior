@@ -1,7 +1,7 @@
 import React from "react";
 import { Box, Typography, Card, CardContent, Grid } from "@mui/material";
 
-const HowItWorksCard = ({ number, title, description, imageSrc }) => {
+const WhyChooseCard = ({ number, title, description, imageSrc }) => {
   return (
     <Card
       sx={{
@@ -70,28 +70,35 @@ const HowItWorksCard = ({ number, title, description, imageSrc }) => {
   );
 };
 
-const HowItWorks = () => {
-  const steps = [
+const WhyChoose = () => {
+  const benefits = [
     {
       number: "1",
-      title: "No Credit Check",
+      title: "Group Negotiated Discounts",
       description:
-        "We welcome applicants from all credit backgrounds. Our loans do not require a credit check, making it easier for everyone to access the funds they need.",
-      imageSrc: "/assets/loanworks1.png",
+        "Through our strategic partnerships, we negotiate group discounts on your behalf, helping you save up to 25% on your household bills.",
+      imageSrc: "/assets/choose1.png", // Update the image source accordingly
     },
     {
       number: "2",
-      title: "In-House And Special Financing",
+      title: "Comprehensive Coverage",
       description:
-        "vuior offers both in-house financing and special financing options to provide additional flexibility and support.",
-      imageSrc: "/assets/loanworks2.png",
+        "We cover all types of household bills, including utilities, internet, phone, cable, insurance, and more. Our goal is to simplify your finances and reduce your monthly expenses.",
+      imageSrc: "/assets/choose2.png",
     },
     {
       number: "3",
+      title: "No Credit Check",
+      description:
+        "All credit backgrounds are welcomed. There are no credit checks required to join our program, making it accessible to everyone.",
+      imageSrc: "/assets/choose3.png",
+    },
+    {
+      number: "4",
       title: "Membership Requirement",
       description:
-        "While anyone can apply for our loans, becoming a vuior member is necessary to take full advantage of our programs. Membership is free to join, and maintaining an account balance of $25 ensures continuous access to all benefits.",
-      imageSrc: "/assets/loanworks3.png",
+        "Anyone can apply for our household bill consolidation program. Membership is free, but maintaining an account balance of $25 is required to keep your membership active.",
+      imageSrc: "/assets/choose4.png",
     },
   ];
 
@@ -106,18 +113,18 @@ const HowItWorks = () => {
           textAlign: "center",
         }}
       >
-        How It Works
+        Why Choose vuior?
       </Typography>
 
       {/* Responsive Grid */}
       <Grid container spacing={4}>
-        {steps.map((step, index) => (
-          <Grid item xs={12} sm={6} md={4} key={index}>
-            <HowItWorksCard
-              number={step.number}
-              title={step.title}
-              description={step.description}
-              imageSrc={step.imageSrc}
+        {benefits.map((benefit, index) => (
+          <Grid item xs={12} sm={6} md={3} key={index}>
+            <WhyChooseCard
+              number={benefit.number}
+              title={benefit.title}
+              description={benefit.description}
+              imageSrc={benefit.imageSrc}
             />
           </Grid>
         ))}
@@ -126,4 +133,4 @@ const HowItWorks = () => {
   );
 };
 
-export default HowItWorks;
+export default WhyChoose;

@@ -49,7 +49,7 @@ const WhyJoinSection = () => {
         component="h1"
         align="center"
         gutterBottom
-        sx={{ marginBottom: 4, fontWeight: "bold", color: "#2E7D32" }}
+        sx={{ marginBottom: 4, fontWeight: "bold", color: "#064E3B" }}
       >
         Why Join Vuoir?
       </Typography>

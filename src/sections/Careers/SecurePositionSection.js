@@ -6,7 +6,7 @@ const SecurePositionSection = () => {
     <Box
       sx={{
         padding: { xs: 4, md: 6 },
-        backgroundColor: "#E0F2F1",
+        backgroundColor: "#EEF9F6",
         textAlign: "center",
       }}
     >
@@ -14,7 +14,7 @@ const SecurePositionSection = () => {
       <Typography
         variant="h4"
         component="h2"
-        sx={{ fontWeight: "bold", color: "#2E7D32", marginBottom: 2 }}
+        sx={{ fontWeight: "bold", color: "#064E3B", marginBottom: 2 }}
       >
         Secure Your Position
       </Typography>
@@ -30,7 +30,7 @@ const SecurePositionSection = () => {
         variant="contained"
         color="primary"
         sx={{
-          backgroundColor: "#2E7D32",
+          backgroundColor: "#064E3B",
           paddingX: 4,
           paddingY: 1,
           borderRadius: "20px",

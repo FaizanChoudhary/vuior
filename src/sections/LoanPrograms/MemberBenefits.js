@@ -64,12 +64,12 @@ const MemberBenefits = () => {
   ];
 
   return (
-    <Box sx={{ padding: { xs: 4, md: 6 }, backgroundColor: "#F7F7F7" }}>
+    <Box sx={{ padding: { xs: 4, md: 6 }, backgroundColor: "#EEF9F6" }}>
       <Typography
         variant="h4"
         sx={{
           fontWeight: "bold",
-          color: "#2E7D32",
+          color: "#064E3B",
           marginBottom: 4,
           textAlign: "center",
         }}
