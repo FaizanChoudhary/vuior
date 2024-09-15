@@ -1,4 +1,4 @@
-import { Grid, Typography, Button, Box } from "@mui/material";
+import { Box, Button, Grid, Typography } from "@mui/material";
 import { styled } from "@mui/system";
 
 // Custom Container for the section
@@ -48,7 +48,7 @@ const WelcomeMembershipSection = () => {
           <Box display="flex" justifyContent="center">
             <img
               src="/assets/welcome_membership_image.png" // Replace with actual image path
-              alt="Membership Image"
+              alt="Membership"
               style={{
                 width: "100%",
                 maxWidth: "500px",

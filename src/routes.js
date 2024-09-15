@@ -4,15 +4,13 @@ import Loadable from "./shared/Loadable"; // Assuming you place Loadable in a `s
 
 // Lazy load components
 const MainLayout = Loadable(lazy(() => import("./layouts/MainLayout")));
-const Home = Loadable(lazy(() => import("./pages/HomePage.js")));
-const ProgramPage = Loadable(lazy(() => import("./pages/ProgramPage.js")));
-const MembershipPage = Loadable(
-  lazy(() => import("./pages/MembershipPage.js"))
-);
-const CareerPage = Loadable(lazy(() => import("./pages/CareerPage.js")));
-const AboutUsPage = Loadable(lazy(() => import("./pages/AboutUsPage.js")));
-const ContactUsPage = Loadable(lazy(() => import("./pages/ContactUsPage.js")));
-// const LoanPrograms = Loadable(lazy(() => import("./shared/Loadable.js")));
+const Home = Loadable(lazy(() => import("./pages/HomePage")));
+const ProgramPage = Loadable(lazy(() => import("./pages/ProgramPage")));
+const MembershipPage = Loadable(lazy(() => import("./pages/MembershipPage")));
+const CareerPage = Loadable(lazy(() => import("./pages/CareerPage")));
+const AboutUsPage = Loadable(lazy(() => import("./pages/AboutUsPage")));
+const ContactUsPage = Loadable(lazy(() => import("./pages/ContactUsPage")));
+const LoanProgramPage = Loadable(lazy(() => import("./pages/LoanProgramPage")));
 // const HouseholdBillConsolidation = Loadable(
 //   lazy(() => import("./pages/HouseholdBillConsolidation.js"))
 // );
@@ -35,7 +33,7 @@ const routes = [
       { path: "/careers", element: <CareerPage /> },
       { path: "/about-us", element: <AboutUsPage /> },
       { path: "/contact-us", element: <ContactUsPage /> },
-      // { path: "/loan-programs", element: <LoanPrograms /> },
+      { path: "/programs/loan-programs", element: <LoanProgramPage /> },
       // {
       //   path: "/household-bill-consolidation",
       //   element: <HouseholdBillConsolidation />,
