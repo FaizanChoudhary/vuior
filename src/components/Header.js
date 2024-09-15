@@ -16,6 +16,7 @@ import { Link, useLocation } from "react-router-dom";
 const Header = () => {
   const [drawerOpen, setDrawerOpen] = useState(false);
   const [isSticky, setIsSticky] = useState(false);
+  const [isVisible, setIsVisible] = useState(true); // Start with visible (opacity: 1)
   const location = useLocation();
 
   const toggleDrawer = (open) => () => {
@@ -32,7 +33,15 @@ const Header = () => {
   ];
 
   const handleScroll = () => {
-    setIsSticky(window.scrollY > 150); // Adjust threshold as needed
+    if (window.scrollY > 200 && window.scrollY < 400) {
+      setIsVisible(false); // Fade out before sticky
+    } else if (window.scrollY >= 400) {
+      setIsSticky(true);
+      setIsVisible(true); // Once sticky, fade back in
+    } else {
+      setIsSticky(false); // Reset to non-sticky state
+      setIsVisible(true); // Make visible before sticky
+    }
   };
 
   useEffect(() => {
@@ -61,15 +70,15 @@ const Header = () => {
 
   return (
     <AppBar
-      position={isSticky ? "sticky" : "absolute"} // Make header sticky
+      position={isSticky ? "fixed" : "absolute"} // Make header sticky when required
       sx={{
         backgroundColor: "#004d40",
         padding: 1,
-        zIndex: 1200, // Ensure header stays above content
+        zIndex: 1200,
         transition: "transform 0.3s ease, opacity 0.3s ease",
-        transform: isSticky ? "translateY(0)" : "translateY(-100%)", // Slide in/out
-        // opacity: isSticky ? 1 : 0, // Fade in/out
-        top: isSticky ? 0 : 150, //
+        transform: isSticky ? "translateY(0)" : "translateY(-100%)", // Sliding effect when sticky
+        opacity: isVisible ? 1 : 0, // Manage opacity effect with new isVisible state
+        top: isSticky ? 0 : 150, // Adjust position when sticky
       }}
     >
       <Toolbar sx={{ justifyContent: "space-between" }}>
