@@ -10,7 +10,7 @@ const AboutVuoirSection = () => {
           <Typography
             variant="h4"
             component="h1"
-            sx={{ fontWeight: "bold", color: "#2E7D32", marginBottom: 2 }}
+            sx={{ fontWeight: "bold", color: "#064E3B", marginBottom: 2 }}
           >
             About Vuoir
           </Typography>
@@ -27,7 +27,7 @@ const AboutVuoirSection = () => {
             variant="contained"
             color="primary"
             sx={{
-              backgroundColor: "#2E7D32",
+              backgroundColor: "#064E3B",
               paddingX: 4,
               paddingY: 1,
               borderRadius: "20px",

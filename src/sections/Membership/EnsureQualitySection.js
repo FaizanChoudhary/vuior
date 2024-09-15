@@ -6,7 +6,7 @@ const EnsureQualitySection = () => {
     <Box
       sx={{
         padding: { xs: 4, md: 6 },
-        backgroundColor: "#E0F2F1", // Light green background
+        backgroundColor: "#EEF9F6", // Light green background
         textAlign: "center",
       }}
     >
@@ -15,7 +15,7 @@ const EnsureQualitySection = () => {
         variant="h4"
         component="h1"
         gutterBottom
-        sx={{ fontWeight: "bold", color: "#2E7D32" }}
+        sx={{ fontWeight: "bold", color: "#064E3B" }}
       >
         How We Ensure Quality
       </Typography>
@@ -42,7 +42,7 @@ const EnsureQualitySection = () => {
         sx={{
           paddingX: 4,
           paddingY: 1,
-          backgroundColor: "#2E7D32",
+          backgroundColor: "#064E3B",
           borderRadius: "20px",
           fontWeight: "bold",
         }}

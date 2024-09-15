@@ -26,7 +26,7 @@ const BenefitCard = ({ iconSrc, title, description }) => (
           width: 56,
           height: 56,
           marginBottom: 2,
-          backgroundColor: "#2E7D32",
+          backgroundColor: "#064E3B",
         }}
       />
       <Typography variant="h6" component="h2" sx={{ fontWeight: "bold" }}>
@@ -49,7 +49,7 @@ const MembershipBenefits = () => {
         component="h1"
         align="center"
         gutterBottom
-        sx={{ marginBottom: 4, fontWeight: "bold", color: "#2E7D32" }}
+        sx={{ marginBottom: 4, fontWeight: "bold", color: "#064E3B" }}
       >
         Membership Benefits
       </Typography>

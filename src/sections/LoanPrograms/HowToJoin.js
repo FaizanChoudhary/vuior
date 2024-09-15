@@ -40,7 +40,7 @@ const StepCard = ({ number, title, description, imageSrc }) => {
             transform: "translateX(-50%)",
             width: "50px",
             height: "50px",
-            backgroundColor: "#2E7D32",
+            backgroundColor: "#064E3B",
             color: "#fff",
             borderRadius: "50%",
             display: "flex",
@@ -98,12 +98,12 @@ const HowToJoin = () => {
   ];
 
   return (
-    <Box sx={{ padding: { xs: 4, md: 6 }, backgroundColor: "#EAF7F7" }}>
+    <Box sx={{ padding: { xs: 4, md: 6 }, backgroundColor: "#EEF9F6" }}>
       <Typography
         variant="h4"
         sx={{
           fontWeight: "bold",
-          color: "#2E7D32",
+          color: "#064E3B",
           marginBottom: 4,
           textAlign: "center",
         }}

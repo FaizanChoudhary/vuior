@@ -21,7 +21,7 @@ const CommitmentCard = ({ imageSrc, title, description }) => (
     <CardContent sx={{ textAlign: "center", padding: 3 }}>
       <Typography
         variant="h6"
-        sx={{ fontWeight: "bold", color: "#2E7D32", marginBottom: 2 }}
+        sx={{ fontWeight: "bold", color: "#064E3B", marginBottom: 2 }}
       >
         {title}
       </Typography>
@@ -41,7 +41,7 @@ const OurCommitmentSection = () => {
         variant="h4"
         component="h1"
         align="center"
-        sx={{ fontWeight: "bold", color: "#2E7D32", marginBottom: 4 }}
+        sx={{ fontWeight: "bold", color: "#064E3B", marginBottom: 4 }}
       >
         Our Commitment
       </Typography>

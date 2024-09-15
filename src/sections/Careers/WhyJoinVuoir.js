@@ -39,7 +39,7 @@ const BenefitCard = ({ iconSrc, title, description, benefits }) => (
       {benefits.map((benefit, index) => (
         <ListItem key={index} disableGutters>
           <ListItemIcon>
-            <CheckCircleIcon sx={{ color: "#2E7D32", fontSize: 20 }} />
+            <CheckCircleIcon sx={{ color: "#064E3B", fontSize: 20 }} />
           </ListItemIcon>
           <ListItemText primary={benefit} />
         </ListItem>
@@ -51,14 +51,14 @@ const BenefitCard = ({ iconSrc, title, description, benefits }) => (
 // Main Component for Why Join Vuoir Section
 const WhyJoinVuoir = () => {
   return (
-    <Box sx={{ padding: { xs: 2, md: 6 }, backgroundColor: "#E0F2F1" }}>
+    <Box sx={{ padding: { xs: 2, md: 6 }, backgroundColor: "#EEF9F6" }}>
       {/* Section Title */}
       <Typography
         variant="h4"
         component="h1"
         align="center"
         gutterBottom
-        sx={{ fontWeight: "bold", color: "#2E7D32", marginBottom: 4 }}
+        sx={{ fontWeight: "bold", color: "#064E3B", marginBottom: 4 }}
       >
         Why Join Vuoir?
       </Typography>

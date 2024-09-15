@@ -62,7 +62,7 @@ const LoanOfferCard = ({ title, description, iconSrc }) => {
           variant="contained"
           color="primary"
           sx={{
-            backgroundColor: "#2E7D32",
+            backgroundColor: "#064E3B",
             paddingX: 4,
             paddingY: 1,
             borderRadius: "20px",
@@ -164,7 +164,7 @@ const LoanProgramOffers = () => {
         variant="h4"
         sx={{
           fontWeight: "bold",
-          color: "#2E7D32",
+          color: "#064E3B",
           marginBottom: 4,
           textAlign: "center",
         }}
