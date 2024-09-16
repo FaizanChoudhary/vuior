@@ -6,12 +6,12 @@ import Loadable from "./shared/Loadable"; // Assuming you place Loadable in a `s
 const MainLayout = Loadable(lazy(() => import("./layouts/MainLayout")));
 const Home = Loadable(lazy(() => import("./pages/HomePage")));
 const ProgramPage = Loadable(lazy(() => import("./pages/ProgramPage")));
-const MembershipPage = Loadable(lazy(() => import("./pages/MembershipPage")));
-const CareerPage = Loadable(lazy(() => import("./pages/CareerPage")));
-const AboutUsPage = Loadable(lazy(() => import("./pages/AboutUsPage")));
-const ContactUsPage = Loadable(lazy(() => import("./pages/ContactUsPage")));
-const LoanProgramPage = Loadable(lazy(() => import("./pages/LoanProgramPage")));
-const HouseHoldPage = Loadable(lazy(() => import("./pages/HouseHoldPage")));
+// const MembershipPage = Loadable(lazy(() => import("./pages/MembershipPage")));
+// const CareerPage = Loadable(lazy(() => import("./pages/CareerPage")));
+// const AboutUsPage = Loadable(lazy(() => import("./pages/AboutUsPage")));
+// const ContactUsPage = Loadable(lazy(() => import("./pages/ContactUsPage")));
+// const LoanProgramPage = Loadable(lazy(() => import("./pages/LoanProgramPage")));
+// const HouseHoldPage = Loadable(lazy(() => import("./pages/HouseHoldPage")));
 // const PrivacyPolicy = Loadable(lazy(() => import("./pages/PrivacyPolicy")));
 // const TermsOfService = Loadable(lazy(() => import("./pages/TermsOfService")));
 // const CookiePolicy = Loadable(lazy(() => import("./pages/CookiePolicy")));
