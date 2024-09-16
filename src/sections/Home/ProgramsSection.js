@@ -1,10 +1,16 @@
 import { Grid, Typography, Button, CardMedia, Box } from "@mui/material";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import { styled } from "@mui/system";
+import BGTopRight from "../../components/BGTopRight";
+import BGBottomLeft from "../../components/BGBottomLeft";
 
 // Styling for the container
 const ProgramsContainer = styled(Box)(({ theme }) => ({
   backgroundColor: "#fff",
+  display: "flex",
+  flexDirection: "column",
+  position: "relative",
+  alignItems: "center",
   padding: theme.spacing(6),
   [theme.breakpoints.down("sm")]: {
     padding: theme.spacing(3),
@@ -86,7 +92,15 @@ const LearnMoreButton = styled(Button)(({ theme }) => ({
 const ProgramsSection = () => {
   return (
     <ProgramsContainer>
-      <Typography variant="h3" align="center" gutterBottom data-aos="fade-up">
+      <BGTopRight src="/assets/backgrounds/bg1-top-right.png" />
+      <BGBottomLeft src="/assets/backgrounds/bg1-bottom-left.png" />
+      <Typography
+        variant="h3"
+        align="center"
+        gutterBottom
+        sx={{ borderBottom: "3px solid #23AB84" }}
+        data-aos="fade-up"
+      >
         Our Programs
       </Typography>
 

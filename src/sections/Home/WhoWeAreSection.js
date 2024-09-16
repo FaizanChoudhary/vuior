@@ -3,10 +3,16 @@ import { styled } from "@mui/system";
 import WorkIcon from "@mui/icons-material/Work";
 import LightbulbIcon from "@mui/icons-material/Lightbulb";
 import VisibilityIcon from "@mui/icons-material/Visibility";
+import BGTopRight from "../../components/BGTopRight";
+import BGBottomLeft from "../../components/BGBottomLeft";
 
 // Styling for the container
 const WhoWeAreContainer = styled(Box)(({ theme }) => ({
   backgroundColor: "#fff",
+  display: "flex",
+  flexDirection: "column",
+  alignItems: "center",
+  position: "relative",
   padding: theme.spacing(6),
   [theme.breakpoints.down("sm")]: {
     padding: theme.spacing(3),
@@ -51,7 +57,15 @@ const IconBox = styled(Box)(({ theme }) => ({
 const WhoWeAreSection = () => {
   return (
     <WhoWeAreContainer>
-      <Typography variant="h3" align="center" gutterBottom data-aos="fade-up">
+      <BGTopRight src="/assets/backgrounds/bg2-top-right.png" />
+      <BGBottomLeft src="/assets/backgrounds/bg2-bottom-left.png" />
+      <Typography
+        variant="h3"
+        align="center"
+        gutterBottom
+        data-aos="fade-up"
+        sx={{ borderBottom: "3px solid #23AB84" }}
+      >
         Who We Are
       </Typography>
 

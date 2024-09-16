@@ -20,19 +20,24 @@ const SectionContainer = styled(Box)(({ theme }) => ({
 }));
 
 const PrinciplesSection = styled(Box)(({ theme }) => ({
+  display: "flex",
+  flexDirection: "column",
+  alignItems: "flex-start",
   marginBottom: theme.spacing(4),
 }));
 
 // Styling for the FAQ section
 const FaqsSection = styled(Box)(({ theme }) => ({
   // backgroundColor: "#f9f9f9", // Subtle background color
-  padding: theme.spacing(3),
+  display: "flex",
+  flexDirection: "column",
+  alignItems: "flex-start",
 }));
 
 // Styling for each FAQ accordion
 const StyledAccordion = styled(Accordion)(({ theme }) => ({
   boxShadow: "rgba(0, 0, 0, 0.1) 0px 4px 12px",
-  marginBottom: theme.spacing(2), // Space between accordions
+  marginBottom: theme.spacing(3), // Space between accordions
   borderRadius: 5,
   overflow: "hidden", // Hide overflow to make the animation smoother
   transition: "background-color 0.3s ease",
@@ -78,7 +83,11 @@ const OurBasicPrinciplesSection = () => {
             <Typography
               variant="h4"
               gutterBottom
-              sx={{ fontWeight: "bold", color: "#004d40" }}
+              sx={{
+                fontWeight: "bold",
+                color: "#004d40",
+                borderBottom: "3px solid #23AB84",
+              }}
             >
               Our Basic Principles
             </Typography>
@@ -114,7 +123,11 @@ const OurBasicPrinciplesSection = () => {
             <Typography
               variant="h4"
               gutterBottom
-              sx={{ fontWeight: "bold", color: "#004d40", textAlign: "center" }}
+              sx={{
+                fontWeight: "bold",
+                color: "#004d40",
+                borderBottom: "3px solid #23AB84",
+              }}
             >
               FAQs
             </Typography>
