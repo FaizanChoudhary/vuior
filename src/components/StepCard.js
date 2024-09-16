@@ -82,13 +82,7 @@ const StepCard = ({ stepNumber, title, description, imgSrc, alt }) => (
       {/* Step number positioned half on the image, half outside */}
       <StepNumber>{stepNumber}</StepNumber>
     </Box>
-    <Typography
-      variant="h5"
-      mt={4}
-      color="primary"
-      fontSize={24}
-      margin={"auto"}
-    >
+    <Typography variant="h5" my={7} color="primary" fontSize={24}>
       {title}
     </Typography>
 
