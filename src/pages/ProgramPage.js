@@ -5,17 +5,18 @@ import HowToBecomeMember from "../sections/Programs/HowToBecomeMember";
 import ConsultationForm from "../sections/Home/ConsultationForm";
 import FAQSection from "../sections/Programs/FAQSection";
 import EnsureQualitySection from "../sections/Membership/EnsureQualitySection";
+import { Stack } from "@mui/material";
 
 const ProgramPage = () => {
   return (
-    <div>
+    <Stack spacing={10}>
       <FinancialFreedomSection />
       <OurProgramsSection />
       <HowToBecomeMember />
       <EnsureQualitySection />
       <ConsultationForm />
       <FAQSection />
-    </div>
+    </Stack>
   );
 };
 

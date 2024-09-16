@@ -10,17 +10,18 @@ import {
   Toolbar,
   Typography,
 } from "@mui/material";
-import React, { useState } from "react";
-import { Link } from "react-router-dom"; // Import Link from react-router-dom
+import React, { useState, useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
 
 const Header = () => {
   const [drawerOpen, setDrawerOpen] = useState(false);
+  const [isSticky, setIsSticky] = useState(false);
+  const location = useLocation();
 
   const toggleDrawer = (open) => () => {
     setDrawerOpen(open);
   };
 
-  // Navigation links for the top menu and drawer
   const navItems = [
     { text: "Home", path: "/" },
     { text: "Programs", path: "/programs" },
@@ -29,6 +30,17 @@ const Header = () => {
     { text: "About Us", path: "/about-us" },
     { text: "Contact Us", path: "/contact-us" },
   ];
+
+  const handleScroll = () => {
+    setIsSticky(window.scrollY > 150); // Adjust threshold as needed
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   const drawerList = () => (
     <Box
@@ -48,7 +60,18 @@ const Header = () => {
   );
 
   return (
-    <AppBar position="static" sx={{ backgroundColor: "#004d40", padding: 1 }}>
+    <AppBar
+      position={isSticky ? "sticky" : "absolute"} // Make header sticky
+      sx={{
+        backgroundColor: "#004d40",
+        padding: 1,
+        zIndex: 1200, // Ensure header stays above content
+        transition: "transform 0.3s ease, opacity 0.3s ease",
+        transform: isSticky ? "translateY(0)" : "translateY(-100%)", // Slide in/out
+        // opacity: isSticky ? 1 : 0, // Fade in/out
+        top: isSticky ? 0 : 150, //
+      }}
+    >
       <Toolbar sx={{ justifyContent: "space-between" }}>
         {/* Left Section: Logo */}
         <Box display="flex" alignItems="center">
@@ -63,20 +86,26 @@ const Header = () => {
           </Box>
         </Box>
 
-        {/* Right Section: Phone Icon and Menu for large screens */}
-        <Box display={{ xs: "none", md: "flex" }} alignItems="center">
-          {/* Navigation Links */}
+        {/* Navigation Links with hover and active effects */}
+        <Box display={{ xs: "none", md: "flex", gap: 2 }} alignItems="center">
           {navItems.map((item, index) => (
             <Typography
               key={index}
               variant="body2"
-              component={Link} // Use Link component from react-router-dom
-              to={item.path} // Navigate to the corresponding path
+              component={Link}
+              to={item.path}
               sx={{
-                color: "#fff",
+                color: location.pathname === item.path ? "#4CAF50" : "#fff", // Green for active item
                 ml: 2,
                 cursor: "pointer",
-                textDecoration: "none", // Remove underline from link
+                textDecoration: "none",
+                fontWeight: location.pathname === item.path ? "bold" : "normal", // Bold for active item
+                transform:
+                  location.pathname === item.path ? "scale(1.2)" : "scale(1)", // Zoomed for active
+                transition: "transform 0.3s ease, color 0.3s ease", // Smooth transition for zoom and color
+                "&:hover": {
+                  color: "#4CAF50", // Green on hover
+                },
               }}
             >
               {item.text}

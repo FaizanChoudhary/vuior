@@ -3,35 +3,45 @@ import { styled } from "@mui/system";
 
 // Container for the section
 const SectionContainer = styled(Box)(({ theme }) => ({
-  padding: theme.spacing(8),
   backgroundColor: "#e6f4f1",
-  [theme.breakpoints.down("md")]: {
-    padding: theme.spacing(4),
-  },
+  // padding: theme.spacing(4),
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
 }));
 
 // Image container to handle responsive behavior
 const ImageContainer = styled(Box)(({ theme }) => ({
   display: "flex",
   justifyContent: "center",
+  position: "relative", // For positioning gradient overlay
   img: {
     width: "100%",
     height: "auto",
-    borderRadius: theme.spacing(1),
-    maxHeight: "600px",
     objectFit: "cover",
-    [theme.breakpoints.down("md")]: {
-      width: "100%",
+    [theme.breakpoints.down("sm")]: {
+      width: "100%", // Adjust width for small screens
+      height: "auto",
     },
+  },
+  "&::after": {
+    content: '""',
+    position: "absolute",
+    top: 0,
+    left: 0,
+    bottom: 0,
+    right: "50%", // Start gradient from the center for fade effect
+    background: "linear-gradient(to left, transparent, #e6f4f1 100%)",
+    zIndex: 1, // Ensure gradient is over the image
   },
 }));
 
 const FinancialFreedomSection = () => {
   return (
     <SectionContainer>
-      <Grid container spacing={4} alignItems="center">
+      <Grid container alignItems="center">
         {/* Left side text content */}
-        <Grid item xs={12} md={6}>
+        <Grid item xs={12} md={6} data-aos="fade-up" sx={{ padding: 10 }}>
           <Typography variant="h4" gutterBottom>
             Get Financial Freedom With Our Expertise
           </Typography>
@@ -53,7 +63,7 @@ const FinancialFreedomSection = () => {
 
         {/* Right side image */}
         <Grid item xs={12} md={6}>
-          <ImageContainer>
+          <ImageContainer data-aos="fade-up">
             <img src="/assets/family_image.png" alt="Financial Freedom" />
           </ImageContainer>
         </Grid>

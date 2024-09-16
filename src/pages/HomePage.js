@@ -4,15 +4,16 @@ import OurBasicPrinciplesSection from "../sections/Home/OurBasicPrinciplesSectio
 import ProgramsSection from "../sections/Home/ProgramsSection";
 import WelcomeSection from "../sections/Home/WelcomeSection";
 import WhoWeAreSection from "../sections/Home/WhoWeAreSection";
+import { Stack } from "@mui/material";
 
 const HomePage = () => (
-  <div>
+  <Stack spacing={10}>
     <ConsultationForm />
     <WelcomeSection />
     <ProgramsSection />
     <WhoWeAreSection />
     <OurBasicPrinciplesSection />
-  </div>
+  </Stack>
 );
 
 export default HomePage;

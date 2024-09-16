@@ -3,7 +3,7 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import { Box, Grid, Typography } from "@mui/material";
 import { styled } from "@mui/system";
-import { Link } from "react-router-dom"; // Import Link from react-router-dom
+import { NavLink } from "react-router-dom";
 
 // Container for the entire footer
 const FooterContainer = styled(Box)(({ theme }) => ({
@@ -33,7 +33,7 @@ const SocialMediaIcons = styled(Box)(({ theme }) => ({
 }));
 
 // Links for pages and services
-const FooterLink = styled(Link)(({ theme }) => ({
+const FooterLink = styled(NavLink)(({ theme }) => ({
   color: "#e6f4f1",
   textDecoration: "none",
   display: "block",
@@ -41,6 +41,10 @@ const FooterLink = styled(Link)(({ theme }) => ({
   "&:hover": {
     color: "#00bfa5", // Hover effect on links
     textDecoration: "underline",
+  },
+  "&.active": {
+    color: "#00bfa5", // Green color for active link
+    fontWeight: "bold",
   },
 }));
 
@@ -59,7 +63,7 @@ const BottomLegal = styled(Box)(({ theme }) => ({
 }));
 
 // Link styles for legal links
-const LegalLink = styled(Link)(({ theme }) => ({
+const LegalLink = styled(NavLink)(({ theme }) => ({
   color: "#e6f4f1",
   margin: theme.spacing(0, 1), // Add margin between links
   textDecoration: "none",
