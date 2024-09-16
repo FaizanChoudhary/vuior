@@ -71,7 +71,7 @@ const Header = () => {
         padding: 1,
         zIndex: 1200,
         transition: isSticky
-          ? "transform 0.3s ease, opacity 0.3s ease"
+          ? "transform 0.7s ease, opacity 0.7s ease"
           : "none",
         transform: isSticky ? "translateY(0)" : "translateY(-100%)", // Sliding effect when sticky
         top: isSticky ? 0 : 150, // Adjust position when sticky
@@ -103,13 +103,24 @@ const Header = () => {
                 color: location.pathname === item.path ? "#4CAF50" : "#fff", // Green for active item
                 ml: 2,
                 cursor: "pointer",
-                textDecoration: "none",
+                position: "relative", // Necessary for positioning the pseudo-element
                 fontWeight: location.pathname === item.path ? "bold" : "normal", // Bold for active item
+                textDecoration: "none",
                 transform:
                   location.pathname === item.path ? "scale(1.2)" : "scale(1)", // Zoomed for active
                 transition: "transform 0.3s ease, color 0.3s ease", // Smooth transition for zoom and color
-                "&:hover": {
-                  color: "#4CAF50", // Green on hover
+                "&::after": {
+                  content: '""',
+                  position: "absolute",
+                  left: 0,
+                  bottom: "-4px", // Adjust the gap between the text and underline
+                  width: "100%",
+                  height: "2px", // Height of the underline
+                  backgroundColor: "#4CAF50", // Color of the underline
+                  transform:
+                    location.pathname === item.path ? "scaleX(1)" : "scaleX(0)", // Show underline for active
+                  transformOrigin: "left",
+                  transition: "transform 0.3s ease", // Animation for the underline
                 },
               }}
             >

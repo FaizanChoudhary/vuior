@@ -1,8 +1,5 @@
 import { Grid, Typography, Box } from "@mui/material";
 import { styled } from "@mui/system";
-import WorkIcon from "@mui/icons-material/Work";
-import LightbulbIcon from "@mui/icons-material/Lightbulb";
-import VisibilityIcon from "@mui/icons-material/Visibility";
 import BGTopRight from "../../components/BGTopRight";
 import BGBottomLeft from "../../components/BGBottomLeft";
 
@@ -32,7 +29,7 @@ const InfoBox = styled(Box)(({ theme }) => ({
     content: '""',
     position: "absolute",
     top: "50px", // Adjust based on icon size
-    left: "47px", // Adjust based on icon position
+    left: "44px", // Adjust based on icon position
     width: "4px",
     height: "100%",
     backgroundColor: theme.palette.primary.main,
@@ -40,34 +37,24 @@ const InfoBox = styled(Box)(({ theme }) => ({
   },
 }));
 
-// Styling for the icon box with vertical line
-const IconBox = styled(Box)(({ theme }) => ({
-  backgroundColor: theme.palette.primary.main,
-  color: "#fff",
-  padding: theme.spacing(2),
-  borderRadius: "50%",
-  marginRight: theme.spacing(2),
-  display: "flex",
-  alignItems: "center",
-  justifyContent: "center",
-  fontSize: "2rem",
-  position: "relative",
-}));
-
 const WhoWeAreSection = () => {
   return (
     <WhoWeAreContainer>
       <BGTopRight src="/assets/backgrounds/bg2-top-right.png" />
       <BGBottomLeft src="/assets/backgrounds/bg2-bottom-left.png" />
-      <Typography
-        variant="h3"
-        align="center"
-        gutterBottom
-        data-aos="fade-up"
-        sx={{ borderBottom: "3px solid #23AB84" }}
-      >
-        Who We Are
-      </Typography>
+      <Box data-aos="fade-up">
+        <Typography variant="h4" fontWeight="bold" color="primary">
+          Who We Are
+        </Typography>
+        <Box
+          sx={{
+            mt: "5px",
+            width: "90%",
+            margin: "0",
+            borderBottom: "3px solid #23AB84",
+          }}
+        />
+      </Box>
 
       <Grid container spacing={4} mt={2}>
         {/* Left Column - Image */}
@@ -85,10 +72,8 @@ const WhoWeAreSection = () => {
         <Grid item xs={12} md={6} data-aos="fade-up">
           {/* Our Work */}
           <InfoBox sx={{ minHeight: { xs: "auto", md: 300 } }}>
-            <IconBox>
-              <WorkIcon fontSize="large" />
-            </IconBox>
-            <Box>
+            <img src="/assets/icons/ourwork.svg" alt="work" />
+            <Box ml={3}>
               <Typography variant="h5" sx={{ fontWeight: "bold" }}>
                 Our Work
               </Typography>
@@ -108,10 +93,9 @@ const WhoWeAreSection = () => {
 
           {/* Our Mission */}
           <InfoBox sx={{ minHeight: { xs: "auto", md: 120 } }}>
-            <IconBox>
-              <LightbulbIcon fontSize="large" />
-            </IconBox>
-            <Box>
+            <img src="/assets/icons/mission.svg" alt="mission" />
+
+            <Box ml={3}>
               <Typography variant="h5" sx={{ fontWeight: "bold" }}>
                 Our Mission
               </Typography>
@@ -124,10 +108,9 @@ const WhoWeAreSection = () => {
 
           {/* Our Vision */}
           <InfoBox>
-            <IconBox>
-              <VisibilityIcon fontSize="large" />
-            </IconBox>
-            <Box>
+            <img src="/assets/icons/vision.svg" alt="vision" />
+
+            <Box ml={3}>
               <Typography variant="h5" sx={{ fontWeight: "bold" }}>
                 Our Vision
               </Typography>

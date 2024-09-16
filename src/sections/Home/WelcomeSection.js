@@ -49,10 +49,9 @@ const WelcomeSection = () => {
         <Grid item xs={12} md={6} data-aos="fade-up">
           <Box sx={{ textAlign: { xs: "center", md: "left" }, px: 5 }}>
             <Typography
-              variant="h3"
-              component="h1"
+              variant="h4"
               gutterBottom
-              sx={{ fontWeight: "bold" }}
+              sx={{ color: "#004d40", fontWeight: "bold" }}
             >
               Welcome To Vuior!
             </Typography>

@@ -80,18 +80,25 @@ const OurBasicPrinciplesSection = () => {
         {/* Left Column - Basic Principles */}
         <Grid item xs={12} md={6} data-aos="fade-up">
           <PrinciplesSection>
+            <Box>
+              <Typography variant="h4" fontWeight="bold" color="primary">
+                Our Basic Principles
+              </Typography>
+              <Box
+                sx={{
+                  width: "90%",
+                  margin: "0",
+                  mt: "5px",
+                  borderBottom: "3px solid #23AB84",
+                }}
+              />
+            </Box>
+
             <Typography
-              variant="h4"
+              variant="h6"
               gutterBottom
-              sx={{
-                fontWeight: "bold",
-                color: "#004d40",
-                borderBottom: "3px solid #23AB84",
-              }}
+              sx={{ fontWeight: "bold", mt: 2 }}
             >
-              Our Basic Principles
-            </Typography>
-            <Typography variant="h6" gutterBottom sx={{ fontWeight: "bold" }}>
               Financial security and safety for our clients
             </Typography>
             <Typography variant="body1" paragraph>
@@ -120,93 +127,95 @@ const OurBasicPrinciplesSection = () => {
         {/* Right Column - FAQ Section */}
         <Grid item xs={12} md={6} data-aos="fade-up">
           <FaqsSection>
-            <Typography
-              variant="h4"
-              gutterBottom
-              sx={{
-                fontWeight: "bold",
-                color: "#004d40",
-                borderBottom: "3px solid #23AB84",
-              }}
-            >
-              FAQs
-            </Typography>
-
+            <Box>
+              <Typography variant="h4" fontWeight="bold" color="primary">
+                FAQs
+              </Typography>
+              <Box
+                sx={{
+                  width: "90%",
+                  margin: "0",
+                  borderBottom: "3px solid #23AB84",
+                }}
+              />
+            </Box>
             {/* FAQ 1 */}
-            <StyledAccordion
-              expanded={expanded === "panel1"}
-              onChange={handleChange("panel1")}
-            >
-              <StyledAccordionSummary expandIcon={<ExpandMoreIcon />}>
-                <Typography variant="body1" sx={{ fontWeight: "bold" }}>
-                  How do I sign up for Vuior?
-                </Typography>
-              </StyledAccordionSummary>
-              <StyledAccordionDetails>
-                <Typography variant="body1">
-                  Simply click on the "Sign Up" button and fill out the
-                  registration form. Fund your account with a minimum balance of
-                  $25 to activate your membership.
-                </Typography>
-              </StyledAccordionDetails>
-            </StyledAccordion>
+            <Box mt={2}>
+              <StyledAccordion
+                expanded={expanded === "panel1"}
+                onChange={handleChange("panel1")}
+              >
+                <StyledAccordionSummary expandIcon={<ExpandMoreIcon />}>
+                  <Typography variant="body1" sx={{ fontWeight: "bold" }}>
+                    How do I sign up for Vuior?
+                  </Typography>
+                </StyledAccordionSummary>
+                <StyledAccordionDetails>
+                  <Typography variant="body1">
+                    Simply click on the "Sign Up" button and fill out the
+                    registration form. Fund your account with a minimum balance
+                    of $25 to activate your membership.
+                  </Typography>
+                </StyledAccordionDetails>
+              </StyledAccordion>
 
-            {/* FAQ 2 */}
-            <StyledAccordion
-              expanded={expanded === "panel2"}
-              onChange={handleChange("panel2")}
-            >
-              <StyledAccordionSummary expandIcon={<ExpandMoreIcon />}>
-                <Typography variant="body1" sx={{ fontWeight: "bold" }}>
-                  What is Vuior?
-                </Typography>
-              </StyledAccordionSummary>
-              <StyledAccordionDetails>
-                <Typography variant="body1">
-                  Vuior is a platform that provides financial tools and services
-                  to help individuals and families achieve financial stability
-                  and independence.
-                </Typography>
-              </StyledAccordionDetails>
-            </StyledAccordion>
+              {/* FAQ 2 */}
+              <StyledAccordion
+                expanded={expanded === "panel2"}
+                onChange={handleChange("panel2")}
+              >
+                <StyledAccordionSummary expandIcon={<ExpandMoreIcon />}>
+                  <Typography variant="body1" sx={{ fontWeight: "bold" }}>
+                    What is Vuior?
+                  </Typography>
+                </StyledAccordionSummary>
+                <StyledAccordionDetails>
+                  <Typography variant="body1">
+                    Vuior is a platform that provides financial tools and
+                    services to help individuals and families achieve financial
+                    stability and independence.
+                  </Typography>
+                </StyledAccordionDetails>
+              </StyledAccordion>
 
-            {/* FAQ 3 */}
-            <StyledAccordion
-              expanded={expanded === "panel3"}
-              onChange={handleChange("panel3")}
-            >
-              <StyledAccordionSummary expandIcon={<ExpandMoreIcon />}>
-                <Typography variant="body1" sx={{ fontWeight: "bold" }}>
-                  How do I become a member of Vuior?
-                </Typography>
-              </StyledAccordionSummary>
-              <StyledAccordionDetails>
-                <Typography variant="body1">
-                  To become a member of Vuior, simply sign up on our website and
-                  activate your account by depositing the minimum balance
-                  required.
-                </Typography>
-              </StyledAccordionDetails>
-            </StyledAccordion>
+              {/* FAQ 3 */}
+              <StyledAccordion
+                expanded={expanded === "panel3"}
+                onChange={handleChange("panel3")}
+              >
+                <StyledAccordionSummary expandIcon={<ExpandMoreIcon />}>
+                  <Typography variant="body1" sx={{ fontWeight: "bold" }}>
+                    How do I become a member of Vuior?
+                  </Typography>
+                </StyledAccordionSummary>
+                <StyledAccordionDetails>
+                  <Typography variant="body1">
+                    To become a member of Vuior, simply sign up on our website
+                    and activate your account by depositing the minimum balance
+                    required.
+                  </Typography>
+                </StyledAccordionDetails>
+              </StyledAccordion>
 
-            {/* FAQ 4 */}
-            <StyledAccordion
-              expanded={expanded === "panel4"}
-              onChange={handleChange("panel4")}
-            >
-              <StyledAccordionSummary expandIcon={<ExpandMoreIcon />}>
-                <Typography variant="body1" sx={{ fontWeight: "bold" }}>
-                  What are the benefits of Vuior membership?
-                </Typography>
-              </StyledAccordionSummary>
-              <StyledAccordionDetails>
-                <Typography variant="body1">
-                  Vuior members enjoy exclusive financial services, personalized
-                  advice, and access to a supportive community focused on
-                  financial well-being.
-                </Typography>
-              </StyledAccordionDetails>
-            </StyledAccordion>
+              {/* FAQ 4 */}
+              <StyledAccordion
+                expanded={expanded === "panel4"}
+                onChange={handleChange("panel4")}
+              >
+                <StyledAccordionSummary expandIcon={<ExpandMoreIcon />}>
+                  <Typography variant="body1" sx={{ fontWeight: "bold" }}>
+                    What are the benefits of Vuior membership?
+                  </Typography>
+                </StyledAccordionSummary>
+                <StyledAccordionDetails>
+                  <Typography variant="body1">
+                    Vuior members enjoy exclusive financial services,
+                    personalized advice, and access to a supportive community
+                    focused on financial well-being.
+                  </Typography>
+                </StyledAccordionDetails>
+              </StyledAccordion>
+            </Box>
           </FaqsSection>
         </Grid>
       </Grid>

@@ -94,15 +94,17 @@ const ProgramsSection = () => {
     <ProgramsContainer>
       <BGTopRight src="/assets/backgrounds/bg1-top-right.png" />
       <BGBottomLeft src="/assets/backgrounds/bg1-bottom-left.png" />
-      <Typography
-        variant="h3"
-        align="center"
-        gutterBottom
-        sx={{ borderBottom: "3px solid #23AB84" }}
-        data-aos="fade-up"
-      >
-        Our Programs
-      </Typography>
+      <Box data-aos="fade-up">
+        <Typography variant="h4" fontWeight="bold" color="primary">
+          Our Programs
+        </Typography>
+        <Box
+          sx={{
+            width: "90%",
+            borderBottom: "3px solid #23AB84",
+          }}
+        />
+      </Box>
 
       <Grid container spacing={2} mt={2}>
         <Grid
@@ -120,7 +122,7 @@ const ProgramsSection = () => {
               alt="Loan Programs"
             />
             <HeadingOnImage className="heading-on-image">
-              <Typography variant="h3">Loan Programs</Typography>
+              <Typography variant="h4">Loan Programs</Typography>
             </HeadingOnImage>
             <Overlay className="overlay">
               <OverlayContent>
@@ -156,7 +158,7 @@ const ProgramsSection = () => {
               alt="Household Bills Consolidation Program"
             />
             <HeadingOnImage className="heading-on-image">
-              <Typography variant="h3">
+              <Typography variant="h4">
                 Household Bills Consolidation
               </Typography>
             </HeadingOnImage>

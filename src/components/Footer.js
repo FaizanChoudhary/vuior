@@ -33,18 +33,38 @@ const SocialMediaIcons = styled(Box)(({ theme }) => ({
 }));
 
 // Links for pages and services
+// Links for pages and services
 const FooterLink = styled(NavLink)(({ theme }) => ({
   color: "#e6f4f1",
   textDecoration: "none",
-  display: "block",
   marginBottom: theme.spacing(1),
+  position: "relative",
+  paddingBottom: "5px", // Space between text and underline
+  display: "inline-block", // Ensures underline is the width of the text
+  width: "fit-content", // Makes the element only as wide as the text
   "&:hover": {
-    color: "#00bfa5", // Hover effect on links
-    textDecoration: "underline",
+    color: "#00bfa5", // Hover color
+    "&::after": {
+      width: "100%", // Expand underline on hover
+    },
   },
   "&.active": {
-    color: "#00bfa5", // Green color for active link
-    fontWeight: "bold",
+    color: "#00bfa5", // Active color
+    fontWeight: "bold", // Bold active link
+    "&::after": {
+      width: "100%", // Underline takes full width of the text for active link
+    },
+  },
+  "&::after": {
+    content: '""',
+    position: "absolute",
+    left: 0,
+    bottom: 0,
+    height: "2px",
+    width: "0", // Default underline width is 0
+    backgroundColor: "#00bfa5", // Underline color
+    transition: "width 0.3s ease", // Smooth width transition
+    display: "block", // Ensures the underline appears as a block element
   },
 }));
 
@@ -108,12 +128,14 @@ const Footer = () => {
           <Typography variant="h6" gutterBottom>
             Pages
           </Typography>
-          <FooterLink to="/">Home</FooterLink>
-          <FooterLink to="/programs">Programs</FooterLink>
-          <FooterLink to="/membership">Membership</FooterLink>
-          <FooterLink to="/careers">Careers</FooterLink>
-          <FooterLink to="/about-us">About Us</FooterLink>
-          <FooterLink to="/contact-us">Contact Us</FooterLink>
+          <Box display="flex" flexDirection="column">
+            <FooterLink to="/">Home</FooterLink>
+            <FooterLink to="/programs">Programs</FooterLink>
+            <FooterLink to="/membership">Membership</FooterLink>
+            <FooterLink to="/careers">Careers</FooterLink>
+            <FooterLink to="/about-us">About Us</FooterLink>
+            <FooterLink to="/contact-us">Contact Us</FooterLink>
+          </Box>
         </Grid>
 
         {/* Programs & Services Links */}
@@ -121,10 +143,12 @@ const Footer = () => {
           <Typography variant="h6" gutterBottom>
             Programs & Services
           </Typography>
-          <FooterLink to="/programs/loan-programs">Loan Programs</FooterLink>
-          <FooterLink to="/programs/household-programs">
-            Household Bill Consolidation
-          </FooterLink>
+          <Box display="flex" flexDirection="column">
+            <FooterLink to="/programs/loan-programs">Loan Programs</FooterLink>
+            <FooterLink to="/programs/household-programs">
+              Household Bill Consolidation
+            </FooterLink>
+          </Box>
         </Grid>
       </Grid>
 

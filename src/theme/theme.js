@@ -10,10 +10,11 @@ const theme = createTheme({
     },
   },
   typography: {
-    fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif',
+    fontFamily: '"Poppins", "Roboto", "Helvetica", "Arial", sans-serif',
     h5: {
       fontWeight: 600,
     },
+    color: "#004d40",
     body2: {
       color: "#666",
     },
