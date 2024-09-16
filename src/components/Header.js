@@ -32,7 +32,11 @@ const Header = () => {
   ];
 
   const handleScroll = () => {
-    setIsSticky(window.scrollY > 150); // Adjust threshold as needed
+    if (window.scrollY >= 400) {
+      setIsSticky(true);
+    } else {
+      setIsSticky(false);
+    }
   };
 
   useEffect(() => {
@@ -61,15 +65,16 @@ const Header = () => {
 
   return (
     <AppBar
-      position={isSticky ? "sticky" : "absolute"} // Make header sticky
+      position={isSticky ? "fixed" : "absolute"} // Make header sticky when required
       sx={{
         backgroundColor: "#004d40",
         padding: 1,
-        zIndex: 1200, // Ensure header stays above content
-        transition: "transform 0.3s ease, opacity 0.3s ease",
-        transform: isSticky ? "translateY(0)" : "translateY(-100%)", // Slide in/out
-        // opacity: isSticky ? 1 : 0, // Fade in/out
-        top: isSticky ? 0 : 150, //
+        zIndex: 1200,
+        transition: isSticky
+          ? "transform 0.3s ease, opacity 0.3s ease"
+          : "none",
+        transform: isSticky ? "translateY(0)" : "translateY(-100%)", // Sliding effect when sticky
+        top: isSticky ? 0 : 150, // Adjust position when sticky
       }}
     >
       <Toolbar sx={{ justifyContent: "space-between" }}>
