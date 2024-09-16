@@ -47,12 +47,17 @@ const FAQAccordion = ({ expanded, handleChange, faqs }) => {
           onChange={handleChange(faq.id)}
         >
           <StyledAccordionSummary expandIcon={<ExpandMoreIcon />}>
-            <Typography variant="body1" sx={{ fontWeight: "bold" }}>
+            <Typography
+              variant="body1"
+              sx={{ fontWeight: "bold", fontSize: 16 }}
+            >
               {faq.question}
             </Typography>
           </StyledAccordionSummary>
           <StyledAccordionDetails>
-            <Typography variant="body1">{faq.answer}</Typography>
+            <Typography variant="body1" fontSize={14}>
+              {faq.answer}
+            </Typography>
           </StyledAccordionDetails>
         </StyledAccordion>
       ))}

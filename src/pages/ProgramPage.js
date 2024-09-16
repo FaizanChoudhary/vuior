@@ -9,7 +9,7 @@ import { Stack } from "@mui/material";
 
 const ProgramPage = () => {
   return (
-    <Stack spacing={10}>
+    <Stack spacing={1}>
       <FinancialFreedomSection />
       <OurProgramsSection />
       <HowToBecomeMember />

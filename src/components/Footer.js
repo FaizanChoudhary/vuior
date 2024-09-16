@@ -38,6 +38,7 @@ const FooterLink = styled(NavLink)(({ theme }) => ({
   textDecoration: "none",
   marginBottom: theme.spacing(1),
   position: "relative",
+  fontSize: 14,
   paddingBottom: "5px", // Space between text and underline
   display: "inline-block", // Ensures underline is the width of the text
   width: "fit-content", // Makes the element only as wide as the text
@@ -86,6 +87,7 @@ const LegalLink = styled(NavLink)(({ theme }) => ({
   color: "#e6f4f1",
   margin: theme.spacing(0, 1), // Add margin between links
   textDecoration: "none",
+  fontSize: 14,
   "&:hover": {
     color: "#23ab84", // Hover effect
     textDecoration: "underline",
@@ -109,7 +111,7 @@ const Footer = () => {
               alt="Vuior Logo"
               style={{ width: "150px", marginBottom: "1rem" }}
             />
-            <Typography variant="body1" gutterBottom>
+            <Typography variant="body1" gutterBottom fontSize={16}>
               Empowering Communities, One Member at a Time
             </Typography>
             {/* Social Media Icons */}
@@ -123,7 +125,7 @@ const Footer = () => {
 
         {/* Pages Links */}
         <Grid item xs={12} md={3}>
-          <Typography variant="h5" sx={{ mb: 4 }}>
+          <Typography variant="h5" sx={{ mb: 4, fontSize: 24 }}>
             Pages
           </Typography>
           <Box display="flex" flexDirection="column">
@@ -138,7 +140,7 @@ const Footer = () => {
 
         {/* Programs & Services Links */}
         <Grid item xs={12} md={3}>
-          <Typography variant="h5" sx={{ mb: 4 }}>
+          <Typography variant="h5" sx={{ mb: 4, fontSize: 24 }}>
             Programs & Services
           </Typography>
           <Box display="flex" flexDirection="column">
@@ -153,7 +155,7 @@ const Footer = () => {
       {/* Bottom copyright and legal links */}
       <BottomLegal>
         {/* Copyright text */}
-        <Typography variant="body2">
+        <Typography variant="body2" fontSize={14}>
           © Copyright 2024. All Rights Reserved by VUIOR
         </Typography>
 

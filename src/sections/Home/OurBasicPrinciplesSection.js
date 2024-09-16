@@ -68,7 +68,12 @@ const OurBasicPrinciplesSection = () => {
         <Grid item xs={12} md={6} data-aos="fade-up">
           <PrinciplesSection>
             <Box>
-              <Typography variant="h4" fontWeight="bold" color="primary">
+              <Typography
+                variant="h4"
+                fontWeight="bold"
+                color="primary"
+                fontSize={30}
+              >
                 Our Basic Principles
               </Typography>
               <Box
@@ -84,26 +89,26 @@ const OurBasicPrinciplesSection = () => {
             <Typography
               variant="h6"
               gutterBottom
-              sx={{ fontWeight: "bold", mt: 2 }}
+              sx={{ fontWeight: "bold", mt: 2, fontSize: 16 }}
             >
               Financial security and safety for our clients
             </Typography>
-            <Typography variant="body1" paragraph>
+            <Typography variant="body1" paragraph fontSize={14}>
               1. <strong>Empowerment</strong> : By giving you the necessary
               resources and tools to manage your journey, we enable you to take
               control of your financial future.
             </Typography>
-            <Typography variant="body1" paragraph>
+            <Typography variant="body1" paragraph fontSize={14}>
               2. <strong>Innovation</strong> : Vuior thrives on innovation,
               leveraging cutting-edge technology to create efficient and
               effective solutions for our users.
             </Typography>
-            <Typography variant="body1" paragraph>
+            <Typography variant="body1" paragraph fontSize={14}>
               3. <strong>Community</strong> : The fundamental unit of Vuior is
               its community. Together, we establish a nurturing atmosphere
               wherein financial prosperity is reciprocated.
             </Typography>
-            <Typography variant="body1" paragraph>
+            <Typography variant="body1" paragraph fontSize={14}>
               4. <strong>Transparency</strong> : We believe in transparency.
               From our services to our company culture, we aim to be open and
               honest in everything we do.
@@ -115,7 +120,12 @@ const OurBasicPrinciplesSection = () => {
         <Grid item xs={12} md={6} data-aos="fade-up">
           <FaqsSection>
             <Box>
-              <Typography variant="h4" fontWeight="bold" color="primary">
+              <Typography
+                variant="h4"
+                fontWeight="bold"
+                color="primary"
+                fontSize={30}
+              >
                 FAQs
               </Typography>
               <Box

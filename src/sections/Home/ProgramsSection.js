@@ -95,7 +95,12 @@ const ProgramsSection = () => {
       <BGTopRight src="/assets/backgrounds/bg1-top-right.png" />
       <BGBottomLeft src="/assets/backgrounds/bg1-bottom-left.png" />
       <Box data-aos="fade-up">
-        <Typography variant="h4" fontWeight="bold" color="primary">
+        <Typography
+          variant="h4"
+          fontWeight="bold"
+          color="primary"
+          fontSize={30}
+        >
           Our Programs
         </Typography>
         <Box
@@ -111,7 +116,7 @@ const ProgramsSection = () => {
           item
           xs={12}
           md={6}
-          sx={{ height: "600px" }}
+          sx={{ height: "500px" }}
           data-aos="fade-up"
           data-aos-duration="1000"
         >
@@ -122,14 +127,16 @@ const ProgramsSection = () => {
               alt="Loan Programs"
             />
             <HeadingOnImage className="heading-on-image">
-              <Typography variant="h4">Loan Programs</Typography>
+              <Typography variant="h4" fontSize={30}>
+                Loan Programs
+              </Typography>
             </HeadingOnImage>
             <Overlay className="overlay">
               <OverlayContent>
-                <Typography variant="h4" gutterBottom>
+                <Typography variant="h4" gutterBottom fontSize={30}>
                   More About This Program
                 </Typography>
-                <Typography variant="body1" paragraph>
+                <Typography variant="body1" paragraph fontSize={14}>
                   Unlock the financial support you need with Vuior's
                   member-focused loan programs. Designed to cater to all credit
                   profiles, our loan options provide flexible terms, competitive
@@ -147,7 +154,7 @@ const ProgramsSection = () => {
           item
           xs={12}
           md={6}
-          sx={{ height: "600px" }}
+          sx={{ height: "500px" }}
           data-aos="fade-up"
           data-aos-duration="3000"
         >
@@ -158,16 +165,16 @@ const ProgramsSection = () => {
               alt="Household Bills Consolidation Program"
             />
             <HeadingOnImage className="heading-on-image">
-              <Typography variant="h4">
+              <Typography variant="h4" fontSize={30}>
                 Household Bills Consolidation
               </Typography>
             </HeadingOnImage>
             <Overlay className="overlay">
               <OverlayContent>
-                <Typography variant="h4" gutterBottom>
+                <Typography variant="h4" gutterBottom fontSize={30}>
                   More About This Program
                 </Typography>
-                <Typography variant="body1" paragraph>
+                <Typography variant="body1" paragraph fontSize={14}>
                   Save up to 25% on your household bills with Vuior's
                   group-negotiated discounts through top-tier providers. Our
                   member-driven program continuously adapts to meet your needs,

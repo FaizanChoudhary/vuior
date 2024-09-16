@@ -122,10 +122,10 @@ const ConsultationForm = () => {
       {/* Foreground Form */}
       <FormContainer data-aos="fade-up">
         <Box textAlign="center" mb={2}>
-          <Typography variant="h4" gutterBottom>
+          <Typography variant="h4" gutterBottom fontSize={24}>
             Request A Free Consultation Call
           </Typography>
-          <Typography variant="body1" gutterBottom>
+          <Typography variant="body1" gutterBottom fontSize={14}>
             Schedule Your Free Consultation With Vuior Today And Save Up To 25%
             On Household Bills While Accessing Our Exclusive Loan Programs!
           </Typography>

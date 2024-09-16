@@ -72,7 +72,12 @@ const OurProgramsSection = () => {
       <BGTopRight src="/assets/backgrounds/bg1-top-right.png" />
       <BGBottomLeft src="/assets/backgrounds/bg1-bottom-left.png" />
       <Box data-aos="fade-up">
-        <Typography variant="h4" fontWeight="bold" color="primary">
+        <Typography
+          variant="h4"
+          fontWeight="bold"
+          color="primary"
+          fontSize={30}
+        >
           Our Programs
         </Typography>
         <Box
@@ -96,10 +101,18 @@ const OurProgramsSection = () => {
 
           {/* Text on the right */}
           <TextContent>
-            <Typography variant="h5" gutterBottom sx={{ fontWeight: 600 }}>
+            <Typography
+              variant="h5"
+              gutterBottom
+              sx={{ fontWeight: 600, fontSize: 24 }}
+            >
               Household Bills Consolidation Program
             </Typography>
-            <Typography variant="body1" gutterBottom sx={{ lineHeight: 1.8 }}>
+            <Typography
+              variant="body1"
+              gutterBottom
+              sx={{ lineHeight: 1.8, fontSize: 14 }}
+            >
               Save up to 25% on your household bills with Vuoir's
               group-negotiated discounts through top-tier providers. Our
               member-driven program continuously adapts to meet your needs,
@@ -135,10 +148,18 @@ const OurProgramsSection = () => {
 
           {/* Text on the left */}
           <TextContent>
-            <Typography variant="h5" gutterBottom sx={{ fontWeight: 600 }}>
+            <Typography
+              variant="h5"
+              gutterBottom
+              sx={{ fontWeight: 600, fontSize: 24 }}
+            >
               Loan Programs
             </Typography>
-            <Typography variant="body1" gutterBottom sx={{ lineHeight: 1.8 }}>
+            <Typography
+              variant="body1"
+              gutterBottom
+              sx={{ lineHeight: 1.8, fontSize: 14 }}
+            >
               Unlock the financial support you need with Vuoir's member-focused
               loan programs. Designed to cater to all credit profiles, our loan
               options provide flexible terms, competitive rates, and quick

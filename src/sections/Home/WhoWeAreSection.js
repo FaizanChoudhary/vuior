@@ -22,9 +22,9 @@ const InfoBox = styled(Box)(({ theme }) => ({
   alignItems: "flex-start",
   position: "relative",
   paddingLeft: theme.spacing(2),
-  "&:not(:last-child)": {
-    marginBottom: theme.spacing(4),
-  },
+  // "&:not(:last-child)": {
+  //   marginBottom: theme.spacing(4),
+  // },
   "&:not(:last-child)::after": {
     content: '""',
     position: "absolute",
@@ -43,7 +43,12 @@ const WhoWeAreSection = () => {
       <BGTopRight src="/assets/backgrounds/bg2-top-right.png" />
       <BGBottomLeft src="/assets/backgrounds/bg2-bottom-left.png" />
       <Box data-aos="fade-up">
-        <Typography variant="h4" fontWeight="bold" color="primary">
+        <Typography
+          variant="h4"
+          fontWeight="bold"
+          color="primary"
+          fontSize={30}
+        >
           Who We Are
         </Typography>
         <Box
@@ -65,6 +70,7 @@ const WhoWeAreSection = () => {
               alt="Family"
               style={{
                 width: "100%",
+                height: "100%",
                 maxHeight: 500,
                 objectFit: "cover",
                 borderRadius: "15px",
@@ -79,10 +85,13 @@ const WhoWeAreSection = () => {
           <InfoBox sx={{ minHeight: { xs: "auto", md: 200 } }}>
             <img src="/assets/icons/ourwork.svg" alt="work" />
             <Box ml={3}>
-              <Typography variant="h5" sx={{ fontWeight: "bold" }}>
+              <Typography
+                variant="h5"
+                sx={{ fontWeight: "bold", fontSize: 16 }}
+              >
                 Our Work
               </Typography>
-              <Typography variant="body1" sx={{ color: "#666" }}>
+              <Typography variant="body1" sx={{ color: "#666", fontSize: 14 }}>
                 At Vuior, we work to empower people and families to attain
                 financial independence by offering all-inclusive debt relief
                 options. With years of experience in the field, we are aware of
@@ -101,10 +110,13 @@ const WhoWeAreSection = () => {
             <img src="/assets/icons/mission.svg" alt="mission" />
 
             <Box ml={3}>
-              <Typography variant="h5" sx={{ fontWeight: "bold" }}>
+              <Typography
+                variant="h5"
+                sx={{ fontWeight: "bold", fontSize: 16 }}
+              >
                 Our Mission
               </Typography>
-              <Typography variant="body1" sx={{ color: "#666" }}>
+              <Typography variant="body1" sx={{ color: "#666", fontSize: 14 }}>
                 Empower individuals and families to achieve financial stability
                 by consolidating household bills and providing access to credit.
               </Typography>
@@ -116,10 +128,13 @@ const WhoWeAreSection = () => {
             <img src="/assets/icons/vision.svg" alt="vision" />
 
             <Box ml={3}>
-              <Typography variant="h5" sx={{ fontWeight: "bold" }}>
+              <Typography
+                variant="h5"
+                sx={{ fontWeight: "bold", fontSize: 16 }}
+              >
                 Our Vision
               </Typography>
-              <Typography variant="body1" sx={{ color: "#666" }}>
+              <Typography variant="body1" sx={{ color: "#666", fontSize: 14 }}>
                 To become a trusted partner in your financial journey, fostering
                 a community where financial well-being is accessible to all.
               </Typography>

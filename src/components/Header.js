@@ -56,7 +56,7 @@ const Header = () => {
       <List>
         {navItems.map((item, index) => (
           <ListItem button component={Link} to={item.path} key={index}>
-            <ListItemText primary={item.text} />
+            <ListItemText primary={item.text} sx={{ fontSize: 14 }} />
           </ListItem>
         ))}
       </List>
@@ -104,6 +104,7 @@ const Header = () => {
                 color: location.pathname === item.path ? "#23AB84" : "#fff", // Green for active item
                 ml: 2,
                 cursor: "pointer",
+                fontSize: 14,
                 position: "relative", // Necessary for positioning the pseudo-element
                 fontWeight: location.pathname === item.path ? "bold" : "normal", // Bold for active item
                 textDecoration: "none",

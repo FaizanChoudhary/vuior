@@ -90,14 +90,14 @@ const HouseholdBillConsolidation = () => {
             <Link
               href="#"
               underline="hover"
-              sx={{ color: "#064e3b", fontWeight: "bold" }}
+              sx={{ color: "#064e3b", fontWeight: "bold", fontSize: 14 }}
             >
               Privacy Policy
             </Link>
             <Link
               href="#"
               underline="hover"
-              sx={{ color: "#064e3b", fontWeight: "bold" }}
+              sx={{ color: "#064e3b", fontWeight: "bold", fontSize: 14 }}
             >
               Terms And Condition
             </Link>
