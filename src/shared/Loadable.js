@@ -1,5 +1,16 @@
-import { CircularProgress, Box } from "@mui/material";
+import { Box } from "@mui/material";
 import { Suspense } from "react";
+import Lottie from "react-lottie";
+import animationData from "../lottie/Animation - 1726493504745.json";
+
+const defaultOptions = {
+  loop: true,
+  autoplay: true,
+  animationData: animationData,
+  rendererSettings: {
+    preserveAspectRatio: "xMidYMid slice",
+  },
+};
 
 const Loadable = (Component) => (props) => {
   return (
@@ -13,7 +24,7 @@ const Loadable = (Component) => (props) => {
             minHeight: "100vh",
           }}
         >
-          <CircularProgress />
+          <Lottie options={defaultOptions} height={150} width={150} />
         </Box>
       }
     >

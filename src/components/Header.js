@@ -16,7 +16,6 @@ import { Link, useLocation } from "react-router-dom";
 const Header = () => {
   const [drawerOpen, setDrawerOpen] = useState(false);
   const [isSticky, setIsSticky] = useState(false);
-  const [isVisible, setIsVisible] = useState(true); // Start with visible (opacity: 1)
   const location = useLocation();
 
   const toggleDrawer = (open) => () => {
@@ -33,14 +32,10 @@ const Header = () => {
   ];
 
   const handleScroll = () => {
-    if (window.scrollY > 200 && window.scrollY < 400) {
-      setIsVisible(false); // Fade out before sticky
-    } else if (window.scrollY >= 400) {
+    if (window.scrollY >= 400) {
       setIsSticky(true);
-      setIsVisible(true); // Once sticky, fade back in
     } else {
-      setIsSticky(false); // Reset to non-sticky state
-      setIsVisible(true); // Make visible before sticky
+      setIsSticky(false);
     }
   };
 
@@ -75,9 +70,10 @@ const Header = () => {
         backgroundColor: "#004d40",
         padding: 1,
         zIndex: 1200,
-        transition: "transform 0.3s ease, opacity 0.3s ease",
+        transition: isSticky
+          ? "transform 0.3s ease, opacity 0.3s ease"
+          : "none",
         transform: isSticky ? "translateY(0)" : "translateY(-100%)", // Sliding effect when sticky
-        opacity: isVisible ? 1 : 0, // Manage opacity effect with new isVisible state
         top: isSticky ? 0 : 150, // Adjust position when sticky
       }}
     >
