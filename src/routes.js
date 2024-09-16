@@ -27,15 +27,15 @@ const routes = [
     children: [
       { path: "/", element: <Home /> },
       { path: "/programs", element: <ProgramPage /> },
-      { path: "/membership", element: <MembershipPage /> },
-      { path: "/careers", element: <CareerPage /> },
-      { path: "/about-us", element: <AboutUsPage /> },
-      { path: "/contact-us", element: <ContactUsPage /> },
-      { path: "/programs/loan-programs", element: <LoanProgramPage /> },
-      {
-        path: "/programs/household-programs",
-        element: <HouseHoldPage />,
-      },
+      // { path: "/membership", element: <MembershipPage /> },
+      // { path: "/careers", element: <CareerPage /> },
+      // { path: "/about-us", element: <AboutUsPage /> },
+      // { path: "/contact-us", element: <ContactUsPage /> },
+      // { path: "/programs/loan-programs", element: <LoanProgramPage /> },
+      // {
+      //   path: "/programs/household-programs",
+      //   element: <HouseHoldPage />,
+      // },
 
       //   { path: "/privacy-policy", element: <PrivacyPolicy /> },
       //   { path: "/terms-of-service", element: <TermsOfService /> },

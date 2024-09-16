@@ -25,10 +25,10 @@ const Header = () => {
   const navItems = [
     { text: "Home", path: "/" },
     { text: "Programs", path: "/programs" },
-    { text: "Membership", path: "/membership" },
-    { text: "Careers", path: "/careers" },
-    { text: "About Us", path: "/about-us" },
-    { text: "Contact Us", path: "/contact-us" },
+    { text: "Membership" },
+    { text: "Careers" },
+    { text: "About Us" },
+    { text: "Contact Us" },
   ];
 
   const handleScroll = () => {
