@@ -20,7 +20,7 @@ const ConsultationContainer = styled(Box)(({ theme }) => ({
   position: "relative",
   height: "80vh", // Full viewport height
   // width: "100vw", // Full viewport width
-  marginTop: "77px !important",
+  marginTop: "70px !important",
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
@@ -79,7 +79,7 @@ const StyledTextField = styled(TextField)(({ theme }) => ({
 
 // Styling for the button with hover effects
 const StyledButton = styled(Button)(({ theme }) => ({
-  backgroundColor: "#004d40",
+  backgroundColor: "#0F4A3F",
   color: "white",
   "&:hover": {
     backgroundColor: "#00332d",

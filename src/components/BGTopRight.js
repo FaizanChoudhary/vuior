@@ -9,10 +9,10 @@ const BGTopRight = ({ src }) => {
       alt="Background Top Right"
       sx={{
         position: "absolute",
-        top: 0,
+        top: 100,
         right: 0,
-        width: "auto",
         objectFit: "cover",
+        maxWidth: 200,
       }}
     />
   );

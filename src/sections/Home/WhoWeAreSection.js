@@ -10,9 +10,9 @@ const WhoWeAreContainer = styled(Box)(({ theme }) => ({
   flexDirection: "column",
   alignItems: "center",
   position: "relative",
-  padding: theme.spacing(6),
+  padding: `${theme.spacing(8)} ${theme.spacing(20)}`, // paddingY, paddingX
   [theme.breakpoints.down("sm")]: {
-    padding: theme.spacing(3),
+    padding: `${theme.spacing(3)} ${theme.spacing(2)}`, // smaller paddingY, paddingX for small screens
   },
 }));
 
@@ -58,20 +58,25 @@ const WhoWeAreSection = () => {
 
       <Grid container spacing={4} mt={2}>
         {/* Left Column - Image */}
-        <Grid item xs={12} md={6}>
+        <Grid item xs={12} md={5}>
           <Box data-aos="fade-up">
             <img
               src="/assets/family_image.png" // Path to your image
               alt="Family"
-              style={{ width: "100%", height: "auto", borderRadius: "15px" }}
+              style={{
+                width: "100%",
+                maxHeight: 500,
+                objectFit: "cover",
+                borderRadius: "15px",
+              }}
             />
           </Box>
         </Grid>
 
         {/* Right Column - Text Content */}
-        <Grid item xs={12} md={6} data-aos="fade-up">
+        <Grid item xs={12} md={7} data-aos="fade-up">
           {/* Our Work */}
-          <InfoBox sx={{ minHeight: { xs: "auto", md: 300 } }}>
+          <InfoBox sx={{ minHeight: { xs: "auto", md: 200 } }}>
             <img src="/assets/icons/ourwork.svg" alt="work" />
             <Box ml={3}>
               <Typography variant="h5" sx={{ fontWeight: "bold" }}>

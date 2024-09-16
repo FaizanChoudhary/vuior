@@ -67,14 +67,13 @@ const Header = () => {
     <AppBar
       position={isSticky ? "fixed" : "absolute"} // Make header sticky when required
       sx={{
-        backgroundColor: "#004d40",
+        height: "70px !important",
+        backgroundColor: "#0F4A3F",
         padding: 1,
         zIndex: 1200,
-        transition: isSticky
-          ? "transform 0.7s ease, opacity 0.7s ease"
-          : "none",
+        transition: "transform 0.7s ease, opacity 0.7s ease",
         transform: isSticky ? "translateY(0)" : "translateY(-100%)", // Sliding effect when sticky
-        top: isSticky ? 0 : 150, // Adjust position when sticky
+        top: isSticky ? 0 : 130, // Adjust position when sticky
       }}
     >
       <Toolbar sx={{ justifyContent: "space-between" }}>
@@ -92,15 +91,17 @@ const Header = () => {
         </Box>
 
         {/* Navigation Links with hover and active effects */}
-        <Box display={{ xs: "none", md: "flex", gap: 2 }} alignItems="center">
+        <Box
+          display={{ xs: "none", md: "flex", gap: 5, paddingBottom: 10 }}
+          alignItems="center"
+        >
           {navItems.map((item, index) => (
             <Typography
               key={index}
-              variant="body2"
               component={Link}
               to={item.path}
               sx={{
-                color: location.pathname === item.path ? "#4CAF50" : "#fff", // Green for active item
+                color: location.pathname === item.path ? "#23AB84" : "#fff", // Green for active item
                 ml: 2,
                 cursor: "pointer",
                 position: "relative", // Necessary for positioning the pseudo-element
@@ -116,7 +117,7 @@ const Header = () => {
                   bottom: "-4px", // Adjust the gap between the text and underline
                   width: "100%",
                   height: "2px", // Height of the underline
-                  backgroundColor: "#4CAF50", // Color of the underline
+                  backgroundColor: "#23AB84", // Color of the underline
                   transform:
                     location.pathname === item.path ? "scaleX(1)" : "scaleX(0)", // Show underline for active
                   transformOrigin: "left",

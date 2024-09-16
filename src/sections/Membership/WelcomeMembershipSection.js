@@ -36,7 +36,7 @@ const WelcomeMembershipSection = () => {
               variant="contained"
               color="primary"
               size="large"
-              sx={{ mt: 3, backgroundColor: "#004d40", borderRadius: "25px" }}
+              sx={{ mt: 3, backgroundColor: "#0F4A3F", borderRadius: "25px" }}
             >
               Join For Free
             </Button>

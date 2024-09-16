@@ -7,7 +7,7 @@ import { NavLink } from "react-router-dom";
 
 // Container for the entire footer
 const FooterContainer = styled(Box)(({ theme }) => ({
-  backgroundColor: "#002822", // Darker background color
+  backgroundColor: "#051A16", // Darker background color
   color: "#e6f4f1", // Light text color for contrast
   padding: theme.spacing(6),
   [theme.breakpoints.down("sm")]: {
@@ -20,14 +20,13 @@ const FooterContainer = styled(Box)(({ theme }) => ({
 const SocialMediaIcons = styled(Box)(({ theme }) => ({
   marginTop: theme.spacing(2),
   display: "flex",
-  justifyContent: "center", // Centered under logo and tagline
   "& svg": {
-    fontSize: "2rem",
+    fontSize: "3rem",
     marginRight: theme.spacing(2),
     color: "#fff",
     cursor: "pointer",
     "&:hover": {
-      color: "#00bfa5", // Hover effect on social icons
+      color: "#23ab84", // Hover effect on social icons
     },
   },
 }));
@@ -43,13 +42,13 @@ const FooterLink = styled(NavLink)(({ theme }) => ({
   display: "inline-block", // Ensures underline is the width of the text
   width: "fit-content", // Makes the element only as wide as the text
   "&:hover": {
-    color: "#00bfa5", // Hover color
+    color: "#23ab84", // Hover color
     "&::after": {
       width: "100%", // Expand underline on hover
     },
   },
   "&.active": {
-    color: "#00bfa5", // Active color
+    color: "#23ab84", // Active color
     fontWeight: "bold", // Bold active link
     "&::after": {
       width: "100%", // Underline takes full width of the text for active link
@@ -62,7 +61,7 @@ const FooterLink = styled(NavLink)(({ theme }) => ({
     bottom: 0,
     height: "2px",
     width: "0", // Default underline width is 0
-    backgroundColor: "#00bfa5", // Underline color
+    backgroundColor: "#23ab84", // Underline color
     transition: "width 0.3s ease", // Smooth width transition
     display: "block", // Ensures the underline appears as a block element
   },
@@ -71,7 +70,7 @@ const FooterLink = styled(NavLink)(({ theme }) => ({
 // Bottom text and legal links
 const BottomLegal = styled(Box)(({ theme }) => ({
   marginTop: theme.spacing(4),
-  borderTop: "1px solid #004d40", // Subtle line separator
+  borderTop: "1px solid #0F4A3F", // Subtle line separator
   paddingTop: theme.spacing(2),
   display: "flex",
   justifyContent: "space-between",
@@ -88,7 +87,7 @@ const LegalLink = styled(NavLink)(({ theme }) => ({
   margin: theme.spacing(0, 1), // Add margin between links
   textDecoration: "none",
   "&:hover": {
-    color: "#00bfa5", // Hover effect
+    color: "#23ab84", // Hover effect
     textDecoration: "underline",
   },
 }));
@@ -98,12 +97,11 @@ const Footer = () => {
     <FooterContainer>
       <Grid container spacing={4}>
         {/* Logo and Tagline */}
-        <Grid item xs={12} md={4}>
+        <Grid item xs={12} md={6}>
           <Box
             sx={{
               display: "flex",
               flexDirection: "column",
-              alignItems: "center",
             }}
           >
             <img
@@ -124,8 +122,8 @@ const Footer = () => {
         </Grid>
 
         {/* Pages Links */}
-        <Grid item xs={12} md={4}>
-          <Typography variant="h6" gutterBottom>
+        <Grid item xs={12} md={3}>
+          <Typography variant="h5" sx={{ mb: 4 }}>
             Pages
           </Typography>
           <Box display="flex" flexDirection="column">
@@ -139,8 +137,8 @@ const Footer = () => {
         </Grid>
 
         {/* Programs & Services Links */}
-        <Grid item xs={12} md={4}>
-          <Typography variant="h6" gutterBottom>
+        <Grid item xs={12} md={3}>
+          <Typography variant="h5" sx={{ mb: 4 }}>
             Programs & Services
           </Typography>
           <Box display="flex" flexDirection="column">

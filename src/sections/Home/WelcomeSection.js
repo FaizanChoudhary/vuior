@@ -4,7 +4,7 @@ import { styled } from "@mui/system";
 // Container to style the module background and spacing
 const WelcomeContainer = styled(Box)(({ theme }) => ({
   backgroundColor: "#fff", // Background color of the section
-  // padding: theme.spacing(6),
+  padding: theme.spacing(6),
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
@@ -51,14 +51,14 @@ const WelcomeSection = () => {
             <Typography
               variant="h4"
               gutterBottom
-              sx={{ color: "#004d40", fontWeight: "bold" }}
+              sx={{ color: "#0F4A3F", fontWeight: "bold" }}
             >
               Welcome To Vuior!
             </Typography>
             <Typography
               variant="h5"
               gutterBottom
-              sx={{ color: "#004d40", fontWeight: "bold" }}
+              sx={{ color: "#0F4A3F", fontWeight: "bold" }}
             >
               Your Partner In Financial Empowerment
             </Typography>

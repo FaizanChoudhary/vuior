@@ -1,12 +1,18 @@
 import { Box, Button, Typography } from "@mui/material";
 import { styled } from "@mui/system";
+import BGTopRight from "../../components/BGTopRight";
+import BGBottomLeft from "../../components/BGBottomLeft";
 
 // Section container for the whole section background
 const SectionContainer = styled(Box)(({ theme }) => ({
-  padding: theme.spacing(8, 0),
-  background: "linear-gradient(135deg, #f8f8f8 0%, #e8f7f0 100%)",
-  [theme.breakpoints.down("md")]: {
-    padding: theme.spacing(4, 0),
+  // background: "linear-gradient(135deg, #f8f8f8 0%, #e8f7f0 100%)",
+  display: "flex",
+  flexDirection: "column",
+  position: "relative",
+  alignItems: "center",
+  padding: `${theme.spacing(8)} ${theme.spacing(20)}`, // paddingY, paddingX
+  [theme.breakpoints.down("sm")]: {
+    padding: `${theme.spacing(3)} ${theme.spacing(2)}`, // smaller paddingY, paddingX for small screens
   },
 }));
 
@@ -60,34 +66,25 @@ const TextContent = styled(Box)(({ theme }) => ({
   justifyContent: "center",
 }));
 
-// Shaped background behind each card (optional)
-const BackgroundShape = styled(Box)(({ theme }) => ({
-  position: "absolute",
-  top: 0,
-  right: 0,
-  height: "100%",
-  width: "30%",
-  backgroundColor: "#e6f4f1", // Light green for shape
-  borderRadius: "50%", // Shape style
-  zIndex: -1, // Keep it behind the card
-}));
-
 const OurProgramsSection = () => {
   return (
     <SectionContainer>
-      <Typography
-        variant="h4"
-        align="center"
-        gutterBottom
-        sx={{ fontWeight: 700 }}
-        data-aos="fade-up"
-      >
-        Our Programs
-      </Typography>
+      <BGTopRight src="/assets/backgrounds/bg1-top-right.png" />
+      <BGBottomLeft src="/assets/backgrounds/bg1-bottom-left.png" />
+      <Box data-aos="fade-up">
+        <Typography variant="h4" fontWeight="bold" color="primary">
+          Our Programs
+        </Typography>
+        <Box
+          sx={{
+            width: "90%",
+            borderBottom: "3px solid #23AB84",
+          }}
+        />
+      </Box>
 
       {/* First Program - Household Bills Consolidation */}
       <Box sx={{ position: "relative" }}>
-        <BackgroundShape />
         <CardContainer data-aos="fade-up">
           {/* Image on the left */}
           <ImageContainer>
@@ -130,9 +127,6 @@ const OurProgramsSection = () => {
 
       {/* Second Program - Loan Programs */}
       <Box sx={{ position: "relative" }}>
-        <BackgroundShape
-          sx={{ left: 0, right: "auto", transform: "scaleX(-1)" }}
-        />
         <CardContainer data-aos="fade-up">
           {/* Image on the right */}
           <ImageContainer>

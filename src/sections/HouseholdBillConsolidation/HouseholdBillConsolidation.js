@@ -37,7 +37,7 @@ const ApplyButton = styled(Button)(({ theme }) => ({
   padding: theme.spacing(1.5, 3),
   marginTop: theme.spacing(4),
   "&:hover": {
-    backgroundColor: "#004d40",
+    backgroundColor: "#0F4A3F",
   },
   borderRadius: "25px",
 }));

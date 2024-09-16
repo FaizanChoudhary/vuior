@@ -11,8 +11,8 @@ const BGBottomLeft = ({ src }) => {
         position: "absolute",
         bottom: 0,
         left: 0,
-        width: "auto",
         objectFit: "cover",
+        maxWidth: 200,
       }}
     />
   );

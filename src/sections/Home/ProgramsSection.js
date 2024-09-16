@@ -11,9 +11,9 @@ const ProgramsContainer = styled(Box)(({ theme }) => ({
   flexDirection: "column",
   position: "relative",
   alignItems: "center",
-  padding: theme.spacing(6),
+  padding: `${theme.spacing(8)} ${theme.spacing(20)}`, // paddingY, paddingX
   [theme.breakpoints.down("sm")]: {
-    padding: theme.spacing(3),
+    padding: `${theme.spacing(3)} ${theme.spacing(2)}`, // smaller paddingY, paddingX for small screens
   },
 }));
 

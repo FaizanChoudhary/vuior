@@ -5,7 +5,7 @@ import { styled } from "@mui/system";
 const SectionContainer = styled(Box)(({ theme }) => ({
   backgroundColor: "#e6f4f1",
   // padding: theme.spacing(4),
-  marginTop: "77px !important",
+  marginTop: "70px !important",
   display: "flex",
   alignItems: "center",
   justifyContent: "center",

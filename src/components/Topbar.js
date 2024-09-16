@@ -12,7 +12,7 @@ const Topbar = () => {
       direction="row"
       justifyContent="space-between"
       alignItems="center"
-      sx={{ px: 3, py: 2, backgroundColor: "#ffffff" }}
+      sx={{ px: { xs: 2, md: 5 }, py: "10px", backgroundColor: "#ffffff" }}
     >
       {/* Address and Phone Number Section */}
       <Stack direction="row" spacing={2} alignItems="center">

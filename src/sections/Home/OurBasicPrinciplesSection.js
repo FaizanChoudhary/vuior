@@ -1,14 +1,7 @@
-import {
-  Grid,
-  Typography,
-  Box,
-  Accordion,
-  AccordionSummary,
-  AccordionDetails,
-} from "@mui/material";
-import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import { Grid, Typography, Box } from "@mui/material";
 import { styled } from "@mui/system";
 import { useState } from "react";
+import FAQAccordion from "../../components/FAQAccordion";
 
 // Container for the whole section
 const SectionContainer = styled(Box)(({ theme }) => ({
@@ -34,38 +27,32 @@ const FaqsSection = styled(Box)(({ theme }) => ({
   alignItems: "flex-start",
 }));
 
-// Styling for each FAQ accordion
-const StyledAccordion = styled(Accordion)(({ theme }) => ({
-  boxShadow: "rgba(0, 0, 0, 0.1) 0px 4px 12px",
-  marginBottom: theme.spacing(3), // Space between accordions
-  borderRadius: 5,
-  overflow: "hidden", // Hide overflow to make the animation smoother
-  transition: "background-color 0.3s ease",
-}));
-
-// Styling for accordion summary
-const StyledAccordionSummary = styled(AccordionSummary)(({ theme }) => ({
-  // backgroundColor: "#E6F4F1", // Light teal background
-  borderRadius: "10px",
-  "& .MuiAccordionSummary-content": {
-    display: "flex",
-    alignItems: "center",
-    transition: "background-color 0.3s ease",
+const faqs = [
+  {
+    id: "panel1",
+    question: "How do I sign up for Vuior?",
+    answer:
+      'Simply click on the "Sign Up" button and fill out the registration form. Fund your account with a minimum balance of $25 to activate your membership.',
   },
-  // "&:hover": {
-  //   backgroundColor: "#cce7e1", // Darker teal on hover
-  // },
-  "& .MuiSvgIcon-root": {
-    color: "#004d40", // Customize icon color
+  {
+    id: "panel2",
+    question: "What is Vuior?",
+    answer:
+      "Vuior is a platform that provides financial tools and services to help individuals and families achieve financial stability and independence.",
   },
-}));
-
-// Styling for accordion details
-const StyledAccordionDetails = styled(AccordionDetails)(({ theme }) => ({
-  padding: theme.spacing(2),
-  overflow: "hidden", // Ensure smooth overflow transition
-  transition: "max-height 0.3s ease-in-out",
-}));
+  {
+    id: "panel3",
+    question: "How do I become a member of Vuior?",
+    answer:
+      "To become a member of Vuior, simply sign up on our website and activate your account by depositing the minimum balance required.",
+  },
+  {
+    id: "panel4",
+    question: "What are the benefits of Vuior membership?",
+    answer:
+      "Vuior members enjoy exclusive financial services, personalized advice, and access to a supportive community focused on financial well-being.",
+  },
+];
 
 const OurBasicPrinciplesSection = () => {
   const [expanded, setExpanded] = useState(false);
@@ -141,80 +128,11 @@ const OurBasicPrinciplesSection = () => {
             </Box>
             {/* FAQ 1 */}
             <Box mt={2}>
-              <StyledAccordion
-                expanded={expanded === "panel1"}
-                onChange={handleChange("panel1")}
-              >
-                <StyledAccordionSummary expandIcon={<ExpandMoreIcon />}>
-                  <Typography variant="body1" sx={{ fontWeight: "bold" }}>
-                    How do I sign up for Vuior?
-                  </Typography>
-                </StyledAccordionSummary>
-                <StyledAccordionDetails>
-                  <Typography variant="body1">
-                    Simply click on the "Sign Up" button and fill out the
-                    registration form. Fund your account with a minimum balance
-                    of $25 to activate your membership.
-                  </Typography>
-                </StyledAccordionDetails>
-              </StyledAccordion>
-
-              {/* FAQ 2 */}
-              <StyledAccordion
-                expanded={expanded === "panel2"}
-                onChange={handleChange("panel2")}
-              >
-                <StyledAccordionSummary expandIcon={<ExpandMoreIcon />}>
-                  <Typography variant="body1" sx={{ fontWeight: "bold" }}>
-                    What is Vuior?
-                  </Typography>
-                </StyledAccordionSummary>
-                <StyledAccordionDetails>
-                  <Typography variant="body1">
-                    Vuior is a platform that provides financial tools and
-                    services to help individuals and families achieve financial
-                    stability and independence.
-                  </Typography>
-                </StyledAccordionDetails>
-              </StyledAccordion>
-
-              {/* FAQ 3 */}
-              <StyledAccordion
-                expanded={expanded === "panel3"}
-                onChange={handleChange("panel3")}
-              >
-                <StyledAccordionSummary expandIcon={<ExpandMoreIcon />}>
-                  <Typography variant="body1" sx={{ fontWeight: "bold" }}>
-                    How do I become a member of Vuior?
-                  </Typography>
-                </StyledAccordionSummary>
-                <StyledAccordionDetails>
-                  <Typography variant="body1">
-                    To become a member of Vuior, simply sign up on our website
-                    and activate your account by depositing the minimum balance
-                    required.
-                  </Typography>
-                </StyledAccordionDetails>
-              </StyledAccordion>
-
-              {/* FAQ 4 */}
-              <StyledAccordion
-                expanded={expanded === "panel4"}
-                onChange={handleChange("panel4")}
-              >
-                <StyledAccordionSummary expandIcon={<ExpandMoreIcon />}>
-                  <Typography variant="body1" sx={{ fontWeight: "bold" }}>
-                    What are the benefits of Vuior membership?
-                  </Typography>
-                </StyledAccordionSummary>
-                <StyledAccordionDetails>
-                  <Typography variant="body1">
-                    Vuior members enjoy exclusive financial services,
-                    personalized advice, and access to a supportive community
-                    focused on financial well-being.
-                  </Typography>
-                </StyledAccordionDetails>
-              </StyledAccordion>
+              <FAQAccordion
+                expanded={expanded}
+                handleChange={handleChange}
+                faqs={faqs}
+              />
             </Box>
           </FaqsSection>
         </Grid>
