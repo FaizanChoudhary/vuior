@@ -53,7 +53,12 @@ const HowToBecomeMember = () => {
   return (
     <SectionContainer>
       <Box data-aos="fade-up">
-        <Typography variant="h4" fontWeight="bold" color="primary">
+        <Typography
+          variant="h4"
+          fontWeight="bold"
+          color="primary"
+          fontSize={30}
+        >
           How To Become A Member
         </Typography>
         <Box

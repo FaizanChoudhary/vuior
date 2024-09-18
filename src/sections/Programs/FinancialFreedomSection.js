@@ -42,14 +42,17 @@ const FinancialFreedomSection = () => {
     <SectionContainer>
       <Grid container alignItems="center">
         {/* Left side text content */}
-        <Grid item xs={12} md={6} data-aos="fade-up" sx={{ padding: 10 }}>
+        <Grid
+          item
+          xs={12}
+          md={6}
+          data-aos="fade-up"
+          sx={{ padding: 10, fontSize: 30 }}
+        >
           <Typography variant="h4" gutterBottom>
-            Get Financial Freedom With Our Expertise
+            Get Financial Freedom With Our Expertise Debt Relief Programs
           </Typography>
-          <Typography variant="h4" gutterBottom>
-            Debt Relief Programs
-          </Typography>
-          <Typography variant="body1" gutterBottom>
+          <Typography variant="body1" gutterBottom fontSize={16}>
             Achieve financial freedom by utilizing our professional debt
             reduction solutions, which are intended to lessen your financial
             obligations and clear the path to a stable future. Our skilled

@@ -7,7 +7,7 @@ import WhoWeAreSection from "../sections/Home/WhoWeAreSection";
 import { Stack } from "@mui/material";
 
 const HomePage = () => (
-  <Stack spacing={10}>
+  <Stack spacing={1}>
     <ConsultationForm />
     <WelcomeSection />
     <ProgramsSection />

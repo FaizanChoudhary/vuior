@@ -5,7 +5,7 @@ import FAQAccordion from "../../components/FAQAccordion";
 
 // Custom Container for FAQ Section
 const FaqsSection = styled(Box)(({ theme }) => ({
-  backgroundColor: "#f9f9f9", // Subtle background color
+  backgroundColor: "#e6f4f1",
   borderRadius: "10px",
   marginTop: 20,
   marginBottom: 20,
@@ -69,7 +69,12 @@ const FAQSection = () => {
         {/* Right column - FAQs */}
         <Grid item xs={12} md={6}>
           <Box>
-            <Typography variant="h4" fontWeight="bold" color="primary">
+            <Typography
+              variant="h4"
+              fontWeight="bold"
+              color="primary"
+              fontSize={30}
+            >
               FAQs
             </Typography>
             <Box

@@ -44,7 +44,7 @@ const LoanProgramsSection = () => {
           </Button>
 
           {/* Privacy Policy and Terms Links */}
-          <Box sx={{ display: "flex", gap: 2, marginTop: 2 }}>
+          <Box sx={{ display: "flex", gap: 2, marginTop: 2, fontSize: 14 }}>
             <Typography
               variant="body2"
               sx={{ cursor: "pointer", color: "#064E3B" }}
@@ -53,7 +53,7 @@ const LoanProgramsSection = () => {
             </Typography>
             <Typography
               variant="body2"
-              sx={{ cursor: "pointer", color: "#064E3B" }}
+              sx={{ cursor: "pointer", color: "#064E3B", fontSize: 14 }}
             >
               Terms and Conditions
             </Typography>

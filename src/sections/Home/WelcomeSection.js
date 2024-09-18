@@ -51,18 +51,22 @@ const WelcomeSection = () => {
             <Typography
               variant="h4"
               gutterBottom
-              sx={{ color: "#0F4A3F", fontWeight: "bold" }}
+              sx={{ color: "#0F4A3F", fontWeight: "bold", fontSize: 30 }}
             >
               Welcome To Vuior!
             </Typography>
             <Typography
               variant="h5"
               gutterBottom
-              sx={{ color: "#0F4A3F", fontWeight: "bold" }}
+              sx={{ color: "#0F4A3F", fontWeight: "bold", fontSize: 16 }}
             >
               Your Partner In Financial Empowerment
             </Typography>
-            <Typography variant="body1" paragraph sx={{ color: "#666" }}>
+            <Typography
+              variant="body1"
+              paragraph
+              sx={{ color: "#666", fontSize: 14 }}
+            >
               Vuior is committed to helping individuals and families achieve
               financial stability through innovative debt management solutions
               and household bill consolidation programs. Join our community

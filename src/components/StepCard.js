@@ -27,7 +27,7 @@ const StepCardContainer = styled(Box)(({ theme }) => ({
   position: "relative", // Important for the overlay to position itself
   backgroundColor: "#ffffff",
   borderRadius: theme.spacing(2),
-  minHeight: 400,
+  minHeight: 350,
   boxShadow: "0px 4px 12px rgba(0, 0, 0, 0.1)",
   textAlign: "center",
   display: "flex",
@@ -82,7 +82,7 @@ const StepCard = ({ stepNumber, title, description, imgSrc, alt }) => (
       {/* Step number positioned half on the image, half outside */}
       <StepNumber>{stepNumber}</StepNumber>
     </Box>
-    <Typography variant="h5" mt={4} color="primary">
+    <Typography variant="h5" my={7} color="primary" fontSize={24}>
       {title}
     </Typography>
 
@@ -90,10 +90,12 @@ const StepCard = ({ stepNumber, title, description, imgSrc, alt }) => (
 
     {/* Overlay for description */}
     <Overlay className="overlay">
-      <Typography variant="h4" gutterBottom>
+      <Typography variant="h4" gutterBottom fontSize={30}>
         {title}
       </Typography>
-      <Typography variant="h6">{description}</Typography>
+      <Typography variant="h6" fontSize={14}>
+        {description}
+      </Typography>
     </Overlay>
   </StepCardContainer>
 );

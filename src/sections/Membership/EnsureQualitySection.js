@@ -15,7 +15,7 @@ const EnsureQualitySection = () => {
         variant="h4"
         component="h1"
         gutterBottom
-        sx={{ fontWeight: "bold", color: "#064E3B" }}
+        sx={{ fontWeight: "bold", color: "#064E3B", fontSize: 30 }}
       >
         How We Ensure Quality
       </Typography>
@@ -25,7 +25,7 @@ const EnsureQualitySection = () => {
         variant="body1"
         component="p"
         gutterBottom
-        sx={{ marginBottom: 3, color: "#333" }}
+        sx={{ marginBottom: 3, color: "#333", fontSize: 16 }}
       >
         Each program at Vuoir is carefully monitored by our dedicated member
         committees. These committees work tirelessly to ensure that as needs and

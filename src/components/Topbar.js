@@ -20,7 +20,7 @@ const Topbar = () => {
           <LocationOnIcon />
           <Typography
             variant="body2"
-            sx={{ fontSize: { xs: "10px", md: "16px" } }}
+            sx={{ fontSize: { xs: "10px", md: "14px" } }}
           >
             70240 Avenue of the Moon, California
           </Typography>
@@ -29,7 +29,7 @@ const Topbar = () => {
           <PhoneIcon />
           <Typography
             variant="body2"
-            sx={{ fontSize: { xs: "10px", sm: "16px" } }}
+            sx={{ fontSize: { xs: "10px", sm: "14px" } }}
           >
             (833) 569-3941
           </Typography>
