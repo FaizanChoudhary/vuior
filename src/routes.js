@@ -6,7 +6,7 @@ import Loadable from "./shared/Loadable"; // Assuming you place Loadable in a `s
 const MainLayout = Loadable(lazy(() => import("./layouts/MainLayout")));
 const Home = Loadable(lazy(() => import("./pages/HomePage")));
 const ProgramPage = Loadable(lazy(() => import("./pages/ProgramPage")));
-const MembershipPage = Loadable(lazy(() => import("./pages/MembershipPage")));
+// const MembershipPage = Loadable(lazy(() => import("./pages/MembershipPage")));
 const CareerPage = Loadable(lazy(() => import("./pages/CareerPage")));
 const AboutUsPage = Loadable(lazy(() => import("./pages/AboutUsPage")));
 const ContactUsPage = Loadable(lazy(() => import("./pages/ContactUsPage")));
@@ -27,7 +27,7 @@ const routes = [
     children: [
       { path: "/", element: <Home /> },
       { path: "/programs", element: <ProgramPage /> },
-      { path: "/membership", element: <MembershipPage /> },
+      // { path: "/membership", element: <MembershipPage /> },
       { path: "/careers", element: <CareerPage /> },
       { path: "/about-us", element: <AboutUsPage /> },
       { path: "/contact-us", element: <ContactUsPage /> },

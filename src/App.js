@@ -6,6 +6,7 @@ import theme from "./theme/theme";
 import Router from "./routes"; // Import the routes
 import AOS from "aos";
 import "aos/dist/aos.css";
+import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
   useEffect(() => {
@@ -17,6 +18,7 @@ function App() {
   const routing = useRoutes(Router);
   return (
     <ThemeProvider theme={theme}>
+      <ScrollToTop />
       <CssBaseline />
       {routing}
     </ThemeProvider>

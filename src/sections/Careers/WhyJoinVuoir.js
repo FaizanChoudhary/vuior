@@ -9,6 +9,7 @@ import {
   ListItemText,
 } from "@mui/material";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
+// import { styled } from "@mui/system";
 
 // Custom Card Component
 const BenefitCard = ({ iconSrc, title, description, benefits }) => (
@@ -19,6 +20,12 @@ const BenefitCard = ({ iconSrc, title, description, benefits }) => (
       borderRadius: "16px",
       backgroundColor: "#fff",
       textAlign: "left",
+      transition: "transform 0.3s ease, box-shadow 0.3s ease",
+      minHeight: 500,
+      "&:hover": {
+        transform: "scale(1.05)",
+        boxShadow: "0px 12px 24px rgba(0, 0, 0, 0.2)",
+      },
     }}
   >
     <Box sx={{ display: "flex", justifyContent: "center", marginBottom: 2 }}>
@@ -39,7 +46,7 @@ const BenefitCard = ({ iconSrc, title, description, benefits }) => (
       {benefits.map((benefit, index) => (
         <ListItem key={index} disableGutters>
           <ListItemIcon>
-            <CheckCircleIcon sx={{ color: "#064E3B", fontSize: 20 }} />
+            <CheckCircleIcon sx={{ color: "#23AB84", fontSize: 20 }} />
           </ListItemIcon>
           <ListItemText primary={benefit} />
         </ListItem>
@@ -51,99 +58,119 @@ const BenefitCard = ({ iconSrc, title, description, benefits }) => (
 // Main Component for Why Join Vuoir Section
 const WhyJoinVuoir = () => {
   return (
-    <Box sx={{ padding: { xs: 2, md: 6 }, backgroundColor: "#EEF9F6" }}>
+    <Box
+      sx={{
+        padding: { xs: 3, md: 6 },
+        backgroundColor: "#EEF9F6",
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+      }}
+    >
       {/* Section Title */}
-      <Typography
-        variant="h4"
-        component="h1"
-        align="center"
-        gutterBottom
-        sx={{ fontWeight: "bold", color: "#064E3B", marginBottom: 4 }}
-      >
-        Why Join Vuoir?
-      </Typography>
+      <Box data-aos="fade-up" sx={{ textAlign: "center", marginBottom: 4 }}>
+        <Typography
+          variant="h4"
+          fontWeight="bold"
+          color="primary"
+          fontSize={{ xs: 24, md: 30 }}
+          sx={{ marginBottom: 1 }}
+        >
+          Why Join Vuoir?
+        </Typography>
+        <Box
+          sx={{
+            width: "90%",
+            borderBottom: "3px solid #23AB84",
+            margin: "0",
+          }}
+        />
+      </Box>
 
       {/* Grid Layout for Cards */}
-      <Grid container spacing={4}>
-        {/* Card 1: Fully Remote Positions */}
-        <Grid item xs={12} md={4}>
-          <BenefitCard
-            iconSrc="/assets/icons/remote.png" // Replace with actual path to the icon
-            title="Fully Remote Positions"
-            description="Enjoy the freedom of working from anywhere while contributing to vuoir’s success."
-            benefits={[
+      <Grid container spacing={4} mt={2}>
+        {[
+          {
+            iconSrc: "/assets/icons/remote.png",
+            title: "Fully Remote Positions",
+            description:
+              "Enjoy the freedom of working from anywhere while contributing to Vuoir’s success.",
+            benefits: [
               "Reduced Commute",
               "Cost Savings",
               "Global Talent Pool",
               "Job Satisfaction",
               "Increased Productivity",
-            ]}
-          />
-        </Grid>
-
-        {/* Card 2: Competitive Salaries */}
-        <Grid item xs={12} md={4}>
-          <BenefitCard
-            iconSrc="/assets/icons/competitive.png" // Replace with actual path to the icon
-            title="Competitive Salaries"
-            description="Unlock your unlimited earning potential with competitive commissions and bonuses."
-            benefits={[
+            ],
+          },
+          {
+            iconSrc: "/assets/icons/competitive.png",
+            title: "Competitive Salaries",
+            description:
+              "Unlock your unlimited earning potential with competitive commissions and bonuses.",
+            benefits: [
               "Increased Financial Security",
               "Debt Reduction",
               "Reduced Stress And Anxiety",
               "Ability To Invest",
               "Spending Power",
-            ]}
-          />
-        </Grid>
-
-        {/* Card 3: Comprehensive Benefits */}
-        <Grid item xs={12} md={4}>
-          <BenefitCard
-            iconSrc="/assets/icons/comprehensive.svg" // Replace with actual path to the icon
-            title="Comprehensive Benefits"
-            description="Vuoir offers comprehensive benefits, including debt management plans to help you regain control of your finances."
-            benefits={[
+            ],
+          },
+          {
+            iconSrc: "/assets/icons/comprehensive.svg",
+            title: "Comprehensive Benefits",
+            description:
+              "Vuoir offers comprehensive benefits, including debt management plans to help you regain control of your finances.",
+            benefits: [
               "Lower Monthly Payments",
               "Reduced Interest Rates",
               "Waived Fees And Penalties",
               "Debt Consolidation",
               "Legal Protection",
-            ]}
-          />
-        </Grid>
-
-        {/* Card 4: Professional Development Opportunities */}
-        <Grid item xs={12} md={6}>
-          <BenefitCard
-            iconSrc="/assets/icons/professional.png" // Replace with actual path to the icon
-            title="Professional Development Opportunities"
-            description="Our specialists stay up to date on industry standards and laws by their participation in our professional development programs."
-            benefits={[
+            ],
+          },
+          {
+            iconSrc: "/assets/icons/professional.png",
+            title: "Professional Development Opportunities",
+            description:
+              "Our specialists stay up to date on industry standards and laws by their participation in our professional development programs.",
+            benefits: [
               "Increased Efficiency",
               "Career Advancement",
               "Boosted Confidence",
               "Improved Client Outcomes",
               "Job Satisfaction",
-            ]}
-          />
-        </Grid>
-
-        {/* Card 5: Inclusive and Supportive Work Environment */}
-        <Grid item xs={12} md={6}>
-          <BenefitCard
-            iconSrc="/assets/icons/inclusive.png" // Replace with actual path to the icon
-            title="Inclusive And Supportive Work Environment"
-            description="Vuoir program creates a cooperative and welcoming work climate where each team member's talents are recognized."
-            benefits={[
+            ],
+          },
+          {
+            iconSrc: "/assets/icons/inclusive.png",
+            title: "Inclusive And Supportive Work Environment",
+            description:
+              "Vuoir program creates a cooperative and welcoming work climate where each team member's talents are recognized.",
+            benefits: [
               "Increased Productivity",
               "Enhanced Reputation",
               "Reduced Conflict",
               "Work-Life Balance",
               "Increased Morale",
-            ]}
-          />
-        </Grid>
+            ],
+          },
+        ].map((benefit, index) => (
+          <Grid
+            item
+            xs={12}
+            md={index < 3 ? 4 : 6}
+            key={index}
+            data-aos="zoom-in"
+          >
+            <BenefitCard
+              iconSrc={benefit.iconSrc}
+              title={benefit.title}
+              description={benefit.description}
+              benefits={benefit.benefits}
+            />
+          </Grid>
+        ))}
       </Grid>
     </Box>
   );
