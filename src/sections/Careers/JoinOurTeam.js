@@ -54,8 +54,7 @@ const JoinOurTeam = () => {
     <Box
       sx={{
         position: "relative", // Make sure this is relative for absolute children
-        height: "80vh",
-        // width: "100vw", // Full width
+        height: "100vh",
         overflow: "hidden",
         display: "flex",
         justifyContent: "center",

@@ -59,7 +59,7 @@ const OverlayTextBox = styled(Box)(({ theme }) => ({
 
 const FinancialEmpowermentSection = () => {
   return (
-    <SectionContainer data-aos="zoom-out">
+    <SectionContainer data-aos="zoom-in">
       <Grid container spacing={0}>
         {/* Image Section */}
         <Grid item xs={12}>

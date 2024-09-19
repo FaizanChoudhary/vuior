@@ -88,7 +88,13 @@ const WhyJoinVuoir = () => {
       </Box>
 
       {/* Grid Layout for Cards */}
-      <Grid container spacing={4} mt={2}>
+      <Grid
+        container
+        alignItems="center"
+        justifyContent="center"
+        spacing={4}
+        mt={2}
+      >
         {[
           {
             iconSrc: "/assets/icons/remote.png",
@@ -156,13 +162,7 @@ const WhyJoinVuoir = () => {
             ],
           },
         ].map((benefit, index) => (
-          <Grid
-            item
-            xs={12}
-            md={index < 3 ? 4 : 6}
-            key={index}
-            data-aos="zoom-in"
-          >
+          <Grid item xs={12} md={4} key={index} data-aos="zoom-in">
             <BenefitCard
               iconSrc={benefit.iconSrc}
               title={benefit.title}
