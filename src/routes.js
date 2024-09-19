@@ -12,6 +12,7 @@ const AboutUsPage = Loadable(lazy(() => import("./pages/AboutUsPage")));
 const ContactUsPage = Loadable(lazy(() => import("./pages/ContactUsPage")));
 const LoanProgramPage = Loadable(lazy(() => import("./pages/LoanProgramPage")));
 const HouseHoldPage = Loadable(lazy(() => import("./pages/HouseHoldPage")));
+const JobListingPage = Loadable(lazy(() => import("./pages/JobListingPage")));
 // const PrivacyPolicy = Loadable(lazy(() => import("./pages/PrivacyPolicy")));
 // const TermsOfService = Loadable(lazy(() => import("./pages/TermsOfService")));
 // const CookiePolicy = Loadable(lazy(() => import("./pages/CookiePolicy")));
@@ -37,7 +38,8 @@ const routes = [
         element: <HouseHoldPage />,
       },
 
-      //   { path: "/privacy-policy", element: <PrivacyPolicy /> },
+      { path: "/careers/jobs", element: <JobListingPage /> },
+      // { path: "/privacy-policy", element: <PrivacyPolicy /> },
       //   { path: "/terms-of-service", element: <TermsOfService /> },
       //   { path: "/cookie-policy", element: <CookiePolicy /> },
       //   {

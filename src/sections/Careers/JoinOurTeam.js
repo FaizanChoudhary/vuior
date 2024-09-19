@@ -1,6 +1,5 @@
-import React from "react";
+import FiberManualRecordIcon from "@mui/icons-material/FiberManualRecord";
 import {
-  Typography,
   Box,
   Button,
   List,
@@ -8,13 +7,15 @@ import {
   ListItemIcon,
   ListItemText,
   Stack,
+  Typography,
 } from "@mui/material";
-import FiberManualRecordIcon from "@mui/icons-material/FiberManualRecord";
 import { styled } from "@mui/system";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, EffectFade } from "swiper/modules";
+import React from "react";
+import { useNavigate } from "react-router-dom";
 import "swiper/css";
 import "swiper/css/effect-fade";
+import { Autoplay, EffectFade } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
 
 // Custom background swiper for sliding images
 const BackgroundSwiper = styled(Swiper)(({ theme }) => ({
@@ -50,6 +51,7 @@ const GlassContainer = styled(Stack)(({ theme }) => ({
 }));
 
 const JoinOurTeam = () => {
+  const navigate = useNavigate();
   return (
     <Box
       sx={{
@@ -133,6 +135,7 @@ const JoinOurTeam = () => {
               transition: "transform 0.4s ease",
             },
           }}
+          onClick={() => navigate("/careers/jobs")}
         >
           Apply Now &rarr;
         </Button>
