@@ -252,15 +252,12 @@ const InquirySupportSection = () => {
                   variant="contained"
                   color="primary"
                   sx={{
-                    backgroundColor: "#23AB84",
-                    paddingX: 4,
-                    paddingY: 1.5,
+                    backgroundColor: "#064E3B",
                     borderRadius: "20px",
                     fontWeight: "bold",
-                    transition: "transform 0.3s ease",
                     "&:hover": {
-                      backgroundColor: "#064E3B",
-                      transform: "translateY(-3px)",
+                      transform: "scale(1.05)",
+                      transition: "transform 0.2s ease",
                     },
                   }}
                 >
