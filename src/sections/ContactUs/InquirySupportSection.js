@@ -85,12 +85,14 @@ const InquirySupportSection = () => {
   return (
     <Box
       sx={{
-        padding: { xs: 4, md: 6 },
-        backgroundImage: 'url("/assets/contact-us.webp")', // Add your background image path
+        // padding: { xs: 4, md: 6 },
+        backgroundImage: 'url("/assets/contact-us.jpg")', // Add your background image path
         backgroundSize: "cover", // Ensures the image covers the entire section
         backgroundPosition: "center",
         position: "relative",
         marginTop: "70px !important",
+        px: { xs: 4, md: 6, lg: 20 },
+        py: 5,
         zIndex: 1,
         display: "flex",
         flexDirection: "column",
@@ -98,6 +100,17 @@ const InquirySupportSection = () => {
         justifyContent: "center",
       }}
     >
+      <Box
+        sx={{
+          position: "absolute",
+          top: 0,
+          left: 0,
+          right: 0,
+          bottom: 0,
+          backgroundColor: "rgba(0, 0, 0, 0.3)", // Dark overlay for contrast
+          zIndex: -1,
+        }}
+      />
       {/* Section Title */}
       <Box data-aos="fade-up" sx={{ textAlign: "center", marginBottom: 4 }}>
         <Typography
