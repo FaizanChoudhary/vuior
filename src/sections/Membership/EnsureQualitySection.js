@@ -5,23 +5,42 @@ const EnsureQualitySection = () => {
   return (
     <Box
       sx={{
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
         padding: { xs: 4, md: 6 },
         backgroundColor: "#EEF9F6", // Light green background
         textAlign: "center",
       }}
     >
       {/* Title */}
+      <Box data-aos="fade-up" sx={{ textAlign: "center", marginBottom: 4 }}>
+        <Typography
+          variant="h4"
+          fontWeight="bold"
+          color="primary"
+          fontSize={{ xs: 24, md: 30 }}
+        >
+          How We Ensure Quality
+        </Typography>
+        <Box
+          sx={{
+            width: "90%",
+            borderBottom: "3px solid #23AB84",
+            margin: "0",
+          }}
+        />
+      </Box>
       <Typography
         variant="h4"
         component="h1"
         gutterBottom
         sx={{ fontWeight: "bold", color: "#064E3B", fontSize: 30 }}
-      >
-        How We Ensure Quality
-      </Typography>
+      ></Typography>
 
       {/* Description */}
       <Typography
+        data-aos="fade-up"
         variant="body1"
         component="p"
         gutterBottom
@@ -37,6 +56,7 @@ const EnsureQualitySection = () => {
 
       {/* Call-to-Action Button */}
       <Button
+        data-aos="fade-up"
         variant="contained"
         color="primary"
         sx={{

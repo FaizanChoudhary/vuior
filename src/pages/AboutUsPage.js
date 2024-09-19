@@ -5,17 +5,18 @@ import OurProgramsSection from "../sections/Programs/OurProgramsSection";
 import EnsureQualitySection from "../sections/Membership/EnsureQualitySection";
 import JoinUsSection from "../sections/AboutUs/JoinUsSection";
 import ConsultationForm from "../sections/Home/ConsultationForm";
+import { Stack } from "@mui/material";
 
 const AboutUsPage = () => {
   return (
-    <div>
+    <Stack spacing={1}>
       <AboutVuoirSection />
       <OurCommitmentSection />
       <OurProgramsSection />
       <EnsureQualitySection />
       <JoinUsSection />
       <ConsultationForm />
-    </div>
+    </Stack>
   );
 };
 

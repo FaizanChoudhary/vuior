@@ -62,42 +62,44 @@ const StepNumber = styled(Box)(({ theme }) => ({
   fontWeight: 600,
 }));
 
-const StepCard = ({ stepNumber, title, description, imgSrc, alt }) => (
-  <StepCardContainer data-aos="zoom-in" data-aos-duration="500">
-    <Box
-      sx={{
-        position: "relative",
-        width: "100%",
-        justifyContent: "center",
-        display: "flex",
-      }}
-    >
-      <img
-        src={imgSrc}
-        alt={alt}
-        style={{
+const StepCard = ({ stepNumber, title, description, imgSrc, alt }) => {
+  return (
+    <StepCardContainer data-aos="zoom-in" data-aos-duration="500">
+      <Box
+        sx={{
+          position: "relative",
           width: "100%",
+          justifyContent: "center",
+          display: "flex",
         }}
-      />
-      {/* Step number positioned half on the image, half outside */}
-      <StepNumber>{stepNumber}</StepNumber>
-    </Box>
-    <Typography variant="h5" my={7} color="primary" fontSize={24}>
-      {title}
-    </Typography>
-
-    {/* Title appears below the number */}
-
-    {/* Overlay for description */}
-    <Overlay className="overlay">
-      <Typography variant="h4" gutterBottom fontSize={30}>
+      >
+        <img
+          src={imgSrc}
+          alt={alt}
+          style={{
+            width: "100%",
+          }}
+        />
+        {/* Step number positioned half on the image, half outside */}
+        {stepNumber && <StepNumber>{stepNumber}</StepNumber>}
+      </Box>
+      <Typography variant="h5" my={7} color="primary" fontSize={24}>
         {title}
       </Typography>
-      <Typography variant="h6" fontSize={14}>
-        {description}
-      </Typography>
-    </Overlay>
-  </StepCardContainer>
-);
+
+      {/* Title appears below the number */}
+
+      {/* Overlay for description */}
+      <Overlay className="overlay">
+        <Typography variant="h4" gutterBottom fontSize={30}>
+          {title}
+        </Typography>
+        <Typography variant="h6" fontSize={14}>
+          {description}
+        </Typography>
+      </Overlay>
+    </StepCardContainer>
+  );
+};
 
 export default StepCard;

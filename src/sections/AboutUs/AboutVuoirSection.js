@@ -1,12 +1,48 @@
 import React from "react";
 import { Grid, Typography, Box, Button } from "@mui/material";
+import { styled } from "@mui/system";
+
+// Section container similar to FinancialFreedomSection
+const SectionContainer = styled(Box)(({ theme }) => ({
+  backgroundColor: "#e6f4f1",
+  marginTop: "70px !important",
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+}));
+
+// Image container with gradient overlay
+const ImageContainer = styled(Box)(({ theme }) => ({
+  display: "flex",
+  justifyContent: "center",
+  position: "relative",
+  img: {
+    width: "100%",
+    height: "auto",
+    objectFit: "cover",
+    [theme.breakpoints.down("sm")]: {
+      width: "100%",
+      height: "auto",
+    },
+  },
+  "&::after": {
+    content: '""',
+    position: "absolute",
+    top: 0,
+    left: 0,
+    bottom: 0,
+    right: "50%",
+    background: "linear-gradient(to left, transparent, #e6f4f1 100%)",
+    zIndex: 1,
+  },
+}));
 
 const AboutVuoirSection = () => {
   return (
-    <Box sx={{ padding: { xs: 4, md: 6 }, backgroundColor: "#fff" }}>
-      <Grid container spacing={4} alignItems="center">
+    <SectionContainer>
+      <Grid container alignItems="center">
         {/* Left Section - Text */}
-        <Grid item xs={12} md={6}>
+        <Grid item xs={12} md={6} data-aos="fade-up" sx={{ padding: 5 }}>
           <Typography
             variant="h4"
             component="h1"
@@ -28,10 +64,12 @@ const AboutVuoirSection = () => {
             color="primary"
             sx={{
               backgroundColor: "#064E3B",
-              paddingX: 4,
-              paddingY: 1,
               borderRadius: "20px",
               fontWeight: "bold",
+              "&:hover": {
+                transform: "scale(1.05)",
+                transition: "transform 0.2s ease",
+              },
             }}
           >
             Join For Free
@@ -39,22 +77,16 @@ const AboutVuoirSection = () => {
         </Grid>
 
         {/* Right Section - Image */}
-        <Grid item xs={12} md={6}>
-          <Box
-            component="img"
-            src="/assets/welcome_about_us.png" // Replace with actual image path
-            alt="About Vuoir"
-            sx={{
-              width: "100%",
-              height: "auto",
-              borderRadius: "16px",
-              boxShadow: 3,
-              objectFit: "cover",
-            }}
-          />
+        <Grid item xs={12} md={6} data-aos="fade-up">
+          <ImageContainer>
+            <img
+              src="/assets/welcome_about_us.png" // Replace with actual image path
+              alt="About Vuoir"
+            />
+          </ImageContainer>
         </Grid>
       </Grid>
-    </Box>
+    </SectionContainer>
   );
 };
 
