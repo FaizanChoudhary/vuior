@@ -95,21 +95,21 @@ const JoinUsSection = () => {
           <Step
             number="1"
             title="Free Membership"
-            description="Joining vuoir is free. Simply sign up to become a member and gain access to our household bill consolidation program and loan program. Enjoy the benefits of simplified bill management, group-negotiated discounts, and a variety of loan options tailored to your needs."
+            description="Joining Vuio is free. Simply sign up to become a member and gain access to our household bill consolidation program and loan program. Enjoy the benefits of simplified bill management, group-negotiated discounts, and a variety of loan options tailored to your needs."
           />
 
           {/* Step 2 */}
           <Step
             number="2"
             title="Minimum Account Balance"
-            description="To keep your membership active, maintain a minimum account balance of $25. This ensures continuous access to all vuoir benefits and services."
+            description="To keep your membership active, maintain a minimum account balance of $25. This ensures continuous access to all Vuio benefits and services."
           />
 
           {/* Step 3 */}
           <Step
             number="3"
             title="Building a Community"
-            description="At vuoir, we believe in building a strong, supportive community. Our programs are designed not just to meet your financial needs, but to foster a sense of belonging and ownership."
+            description="At Vuio, we believe in building a strong, supportive community. Our programs are designed not just to meet your financial needs, but to foster a sense of belonging and ownership. We are dedicated to creating a community where every member feels valued, supported, and empowered to achieve their financial goals.Join Vuio today and experience the difference of a member-owned, customer-focused financial services provider committed to your success."
             isLast
           />
         </Grid>

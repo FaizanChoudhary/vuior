@@ -131,10 +131,10 @@ const InquirySupportSection = () => {
         />
       </Box>
 
-      <Grid container spacing={4} alignItems="flex-start">
+      <Grid data-aos="fade-up" container spacing={4} alignItems="flex-start">
         {/* Left Section - Contact Information */}
         <Grid item xs={12} md={5}>
-          <Box data-aos="fade-up" sx={{ marginBottom: 4 }}>
+          <Box sx={{ marginBottom: 4 }}>
             <Typography
               variant="h4"
               fontWeight="bold"

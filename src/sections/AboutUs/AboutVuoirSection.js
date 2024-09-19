@@ -51,11 +51,11 @@ const AboutVuoirSection = () => {
             About Vuoir
           </Typography>
           <Typography variant="body1" sx={{ marginBottom: 3 }}>
-            Welcome to vuoir, a member-owned financial services provider
+            Welcome to Vuio, a member-owned financial services provider
             dedicated to helping individuals and families achieve financial
-            stability and success. At vuoir, we pride ourselves on offering
+            stability and success. At Vuio, we pride ourselves on offering
             innovative, customer-focused programs that respond to the evolving
-            needs of our members.
+            needs of our members
           </Typography>
 
           {/* Join For Free Button */}
