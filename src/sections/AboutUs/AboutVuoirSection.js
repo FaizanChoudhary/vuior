@@ -15,13 +15,13 @@ const SectionContainer = styled(Box)(({ theme }) => ({
 const ImageContainer = styled(Box)(({ theme }) => ({
   display: "flex",
   justifyContent: "center",
-  position: "relative",
+  position: "relative", // For positioning gradient overlay
   img: {
     width: "100%",
-    height: "auto",
+    height: "80vh",
     objectFit: "cover",
-    [theme.breakpoints.down("sm")]: {
-      width: "100%",
+    [theme.breakpoints.down("md")]: {
+      width: "100%", // Adjust width for small screens
       height: "auto",
     },
   },
@@ -31,9 +31,9 @@ const ImageContainer = styled(Box)(({ theme }) => ({
     top: 0,
     left: 0,
     bottom: 0,
-    right: "50%",
+    right: "50%", // Start gradient from the center for fade effect
     background: "linear-gradient(to left, transparent, #e6f4f1 100%)",
-    zIndex: 1,
+    zIndex: 1, // Ensure gradient is over the image
   },
 }));
 

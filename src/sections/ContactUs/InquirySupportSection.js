@@ -26,10 +26,9 @@ const ContactInfoItem = ({ iconSrc, label, value }) => (
         justifyContent: "center",
         alignItems: "center",
         borderRadius: "50%",
-        width: 50,
-        height: 50,
+        width: 70,
+        height: 70,
         marginRight: 2,
-        backgroundColor: "#23AB84",
         padding: 1,
       }}
     >
@@ -37,7 +36,7 @@ const ContactInfoItem = ({ iconSrc, label, value }) => (
         component="img"
         src={iconSrc}
         alt={label}
-        sx={{ width: "70%", height: "70%", objectFit: "contain" }}
+        sx={{ width: "100%", height: "100%", objectFit: "contain" }}
       />
     </Box>
     <Box>
@@ -53,8 +52,8 @@ const ContactInfoItem = ({ iconSrc, label, value }) => (
 
 // Glassmorphism style box for the form
 const GlassBox = styled(Box)(({ theme }) => ({
-  backdropFilter: "blur(10px)",
-  background: "rgba(255, 255, 255, 0.1)",
+  backdropFilter: "blur(20px)", // Increased blur for glassmorphism effect
+  background: "rgba(255, 255, 255, 0.2)", // More transparency
   borderRadius: "16px",
   padding: theme.spacing(4),
   boxShadow: "0px 8px 32px rgba(0, 0, 0, 0.1)",
@@ -64,28 +63,49 @@ const GlassBox = styled(Box)(({ theme }) => ({
   },
 }));
 
+const StyledTextField = styled(TextField)(({ theme }) => ({
+  backgroundColor: "#fff",
+  borderRadius: "12px",
+  "& .MuiOutlinedInput-root": {
+    borderRadius: "12px",
+    "& fieldset": {
+      border: "none", // Remove the border
+    },
+    "&:hover fieldset": {
+      border: "none", // Remove the border on hover
+    },
+    "&.Mui-focused fieldset": {
+      border: "none", // Remove the border when focused
+    },
+  },
+}));
+
 // Main Component for Inquiry and Support Section
 const InquirySupportSection = () => {
   return (
     <Box
       sx={{
         padding: { xs: 4, md: 6 },
-        background: "linear-gradient(135deg, #F3F4F6 30%, #E0F2F1 100%)",
+        backgroundImage: 'url("/assets/contact-us.webp")', // Add your background image path
+        backgroundSize: "cover", // Ensures the image covers the entire section
+        backgroundPosition: "center",
+        position: "relative",
         marginTop: "70px !important",
+        zIndex: 1,
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
         justifyContent: "center",
-        position: "relative",
       }}
     >
-      <Box data-aos="fade-up" sx={{ marginBottom: 4 }}>
+      {/* Section Title */}
+      <Box data-aos="fade-up" sx={{ textAlign: "center", marginBottom: 4 }}>
         <Typography
           variant="h4"
           fontWeight="bold"
           color="primary"
-          fontSize={{ xs: 28, md: 34 }}
-          sx={{ color: "#064E3B", mb: 1 }}
+          fontSize={{ xs: 24, md: 30 }}
+          sx={{ color: "#fff" }} // Text color is white for better visibility
         >
           Inquiry and Support
         </Typography>
@@ -98,20 +118,20 @@ const InquirySupportSection = () => {
         />
       </Box>
 
-      <Grid container spacing={4} alignItems="flex-start" data-aos="fade-up">
+      <Grid container spacing={4} alignItems="flex-start">
         {/* Left Section - Contact Information */}
         <Grid item xs={12} md={5}>
           <Box data-aos="fade-up" sx={{ marginBottom: 4 }}>
             <Typography
               variant="h4"
               fontWeight="bold"
-              sx={{ color: "#064E3B", fontSize: { xs: 22, md: 26 }, mb: 1 }}
+              sx={{ color: "#fff", fontSize: { xs: 18, md: 24 } }} // White text for contrast
             >
               Contact Information
             </Typography>
             <Box
               sx={{
-                width: "30%",
+                width: "50%",
                 height: "4px",
                 backgroundColor: "#23AB84",
               }}
@@ -144,7 +164,7 @@ const InquirySupportSection = () => {
               variant="h5"
               gutterBottom
               align="center"
-              sx={{ mb: 3, color: "#064E3B" }}
+              sx={{ mb: 3, color: "#fff" }}
             >
               Have Any Questions?
             </Typography>
@@ -154,17 +174,16 @@ const InquirySupportSection = () => {
                 <Grid item xs={12} md={4}>
                   <Typography
                     variant="body1"
-                    sx={{ fontWeight: "bold", color: "#064E3B" }}
+                    sx={{ fontWeight: "bold", color: "#fff" }}
                   >
                     Full Name
                   </Typography>
                 </Grid>
                 <Grid item xs={12} md={8}>
-                  <TextField
+                  <StyledTextField
                     fullWidth
                     variant="outlined"
                     placeholder="Enter your name"
-                    sx={{ backgroundColor: "#fff", borderRadius: "12px" }}
                   />
                 </Grid>
 
@@ -172,13 +191,13 @@ const InquirySupportSection = () => {
                 <Grid item xs={12} md={4}>
                   <Typography
                     variant="body1"
-                    sx={{ fontWeight: "bold", color: "#064E3B" }}
+                    sx={{ fontWeight: "bold", color: "#fff" }}
                   >
                     Phone Number
                   </Typography>
                 </Grid>
                 <Grid item xs={12} md={8}>
-                  <TextField
+                  <StyledTextField
                     fullWidth
                     variant="outlined"
                     placeholder="Enter your phone"
@@ -190,13 +209,13 @@ const InquirySupportSection = () => {
                 <Grid item xs={12} md={4}>
                   <Typography
                     variant="body1"
-                    sx={{ fontWeight: "bold", color: "#064E3B" }}
+                    sx={{ fontWeight: "bold", color: "#fff" }}
                   >
                     Email
                   </Typography>
                 </Grid>
                 <Grid item xs={12} md={8}>
-                  <TextField
+                  <StyledTextField
                     fullWidth
                     variant="outlined"
                     placeholder="Enter your email"
@@ -208,13 +227,13 @@ const InquirySupportSection = () => {
                 <Grid item xs={12} md={4}>
                   <Typography
                     variant="body1"
-                    sx={{ fontWeight: "bold", color: "#064E3B" }}
+                    sx={{ fontWeight: "bold", color: "#fff" }}
                   >
                     Your Message
                   </Typography>
                 </Grid>
                 <Grid item xs={12} md={8}>
-                  <TextField
+                  <StyledTextField
                     fullWidth
                     multiline
                     rows={4}
