@@ -40,7 +40,7 @@ const BackgroundSwiper = styled(Swiper)(({ theme }) => ({
 const GlassContainer = styled(Stack)(({ theme }) => ({
   background: "rgba(255, 255, 255, 0.5)",
   borderRadius: "15px",
-  padding: theme.spacing(4),
+  padding: 10,
   backdropFilter: "blur(10px)",
   boxShadow: "0px 10px 20px rgba(0, 0, 0, 0.3)",
   zIndex: 1, // Ensure this is above the swiper
@@ -54,7 +54,7 @@ const JoinOurTeam = () => {
     <Box
       sx={{
         position: "relative", // Make sure this is relative for absolute children
-        height: "100vh",
+        height: "80vh",
         overflow: "hidden",
         display: "flex",
         justifyContent: "center",
