@@ -23,7 +23,7 @@ const BackgroundSwiper = styled(Swiper)(({ theme }) => ({
   left: 0,
   width: "100%",
   height: "100%",
-  zIndex: -1, // Ensure swiper stays behind the content
+  zIndex: -1,
   "& .swiper-slide img": {
     width: "100%",
     height: "100%",
@@ -32,7 +32,7 @@ const BackgroundSwiper = styled(Swiper)(({ theme }) => ({
     transition: "opacity 2s ease-in-out",
   },
   "& .swiper-slide-active img": {
-    opacity: 1, // Only the active slide is fully visible
+    opacity: 1,
   },
 }));
 
@@ -43,7 +43,7 @@ const GlassContainer = styled(Stack)(({ theme }) => ({
   padding: 10,
   backdropFilter: "blur(10px)",
   boxShadow: "0px 10px 20px rgba(0, 0, 0, 0.3)",
-  zIndex: 1, // Ensure this is above the swiper
+  zIndex: 1,
   width: "100%",
   maxWidth: "800px",
   position: "absolute",
@@ -53,14 +53,13 @@ const JoinOurTeam = () => {
   return (
     <Box
       sx={{
-        position: "relative", // Make sure this is relative for absolute children
+        position: "relative",
         height: "80vh",
         overflow: "hidden",
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
         marginTop: "70px !important",
-        // Hide any overflow from the background swiper
       }}
     >
       {/* Background Image Swiper */}
@@ -85,7 +84,6 @@ const JoinOurTeam = () => {
 
       {/* Foreground Content */}
       <GlassContainer data-aos="fade-up">
-        {/* Heading */}
         <Typography
           variant="h4"
           sx={{
@@ -111,8 +109,8 @@ const JoinOurTeam = () => {
             "Community Engagement Manager",
             "Strategic Partnerships Manager",
           ].map((job, index) => (
-            <ListItem key={index}>
-              <ListItemIcon>
+            <ListItem key={index} sx={{ paddingY: 0.5 }}>
+              <ListItemIcon sx={{ minWidth: 20 }}>
                 <FiberManualRecordIcon
                   sx={{ color: "#064E3B", fontSize: 12 }}
                 />
@@ -131,8 +129,8 @@ const JoinOurTeam = () => {
             width: "100%",
             "&:hover": {
               backgroundColor: "#00332d",
-              transform: "scale(1.05)",
-              transition: "transform 0.3s ease",
+              transform: "scale(1.01)",
+              transition: "transform 0.4s ease",
             },
           }}
         >
