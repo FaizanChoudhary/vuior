@@ -4,29 +4,36 @@ import { styled } from "@mui/system";
 
 // Custom Container for the section
 const SectionContainer = styled(Box)(({ theme }) => ({
-  padding: theme.spacing(8, 4),
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
-  backgroundColor: "#ffffff",
-  [theme.breakpoints.down("md")]: {
-    padding: theme.spacing(6, 2),
-  },
+  backgroundColor: "#e6f4f1",
+  marginTop: "70px !important",
 }));
 
-// Custom Image Container
+// Custom Image Container with gradient overlay
 const ImageContainer = styled(Box)(({ theme }) => ({
-  borderRadius: "12px",
+  position: "relative",
   overflow: "hidden",
   display: "flex",
   justifyContent: "center",
   img: {
     width: "100%",
-    height: "auto",
+    height: "80vh",
     objectFit: "cover",
     [theme.breakpoints.down("md")]: {
-      display: "none", // Hide image on small screens
+      height: "80vh", // Adjust height for larger screens
     },
+  },
+  "&::after": {
+    content: '""',
+    position: "absolute",
+    top: 0,
+    left: 0,
+    bottom: 0,
+    right: "50%", // Start gradient from the center for fade effect
+    background: "linear-gradient(to left, transparent, #e6f4f1 100%)",
+    zIndex: 1, // Ensure gradient is over the image
   },
 }));
 
@@ -36,10 +43,10 @@ const ApplyButton = styled(Button)(({ theme }) => ({
   color: "#fff",
   padding: theme.spacing(1.5, 3),
   marginTop: theme.spacing(4),
+  borderRadius: "25px",
   "&:hover": {
     backgroundColor: "#0F4A3F",
   },
-  borderRadius: "25px",
 }));
 
 // Footer Links
@@ -56,9 +63,9 @@ const FooterLinks = styled(Box)(({ theme }) => ({
 const HouseholdBillConsolidation = () => {
   return (
     <SectionContainer>
-      <Grid container spacing={4} alignItems="center">
+      <Grid container alignItems="center">
         {/* Left Section: Text Content */}
-        <Grid item xs={12} md={6}>
+        <Grid item xs={12} md={6} data-aos="fade-up" sx={{ padding: 5 }}>
           <Typography variant="h4" gutterBottom sx={{ fontWeight: "bold" }}>
             Vuior{" "}
             <span style={{ color: "#00bfa5" }}>
@@ -105,7 +112,7 @@ const HouseholdBillConsolidation = () => {
         </Grid>
 
         {/* Right Section: Image */}
-        <Grid item xs={12} md={6}>
+        <Grid item xs={12} md={6} data-aos="fade-up">
           <ImageContainer>
             <img
               src="/assets/house_holder_image.png"

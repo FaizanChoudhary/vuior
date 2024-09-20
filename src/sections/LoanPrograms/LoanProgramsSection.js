@@ -1,13 +1,47 @@
 import React from "react";
 import { Grid, Typography, Box, Button } from "@mui/material";
+import { styled } from "@mui/system";
 
-// Main Component for the Loan Programs Section
+// Section container with background color and spacing
+const SectionContainer = styled(Box)(({ theme }) => ({
+  backgroundColor: "#e6f4f1",
+  marginTop: "70px !important",
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+}));
+
+// Image container with gradient overlay
+const ImageContainer = styled(Box)(({ theme }) => ({
+  display: "flex",
+  justifyContent: "center",
+  position: "relative", // For positioning gradient overlay
+  img: {
+    width: "100%",
+    height: "80vh",
+    objectFit: "cover",
+    [theme.breakpoints.down("md")]: {
+      height: "80vh", // Adjust height for larger screens
+    },
+  },
+  "&::after": {
+    content: '""',
+    position: "absolute",
+    top: 0,
+    left: 0,
+    bottom: 0,
+    right: "50%", // Start gradient from the center for fade effect
+    background: "linear-gradient(to left, transparent, #e6f4f1 100%)",
+    zIndex: 1, // Ensure gradient is over the image
+  },
+}));
+
 const LoanProgramsSection = () => {
   return (
-    <Box sx={{ padding: { xs: 4, md: 6 }, backgroundColor: "#fff" }}>
-      <Grid container spacing={4} alignItems="center">
+    <SectionContainer>
+      <Grid container alignItems="center">
         {/* Left Section - Text Content */}
-        <Grid item xs={12} md={6}>
+        <Grid item xs={12} md={6} data-aos="fade-up" sx={{ padding: 5 }}>
           <Typography
             variant="h4"
             sx={{ fontWeight: "bold", color: "#064E3B", marginBottom: 2 }}
@@ -37,7 +71,10 @@ const LoanProgramsSection = () => {
               paddingY: 1,
               borderRadius: "20px",
               fontWeight: "bold",
-              marginBottom: 2,
+              "&:hover": {
+                transform: "scale(1.05)",
+                transition: "transform 0.2s ease",
+              },
             }}
           >
             Apply Now &rarr;
@@ -61,22 +98,16 @@ const LoanProgramsSection = () => {
         </Grid>
 
         {/* Right Section - Image */}
-        <Grid item xs={12} md={6}>
-          <Box
-            component="img"
-            src="/assets/loanprograming.png" // Replace with actual image path
-            alt="Loan Programs"
-            sx={{
-              width: "100%",
-              height: "auto",
-              borderRadius: "16px",
-              objectFit: "cover",
-              boxShadow: 3,
-            }}
-          />
+        <Grid item xs={12} md={6} data-aos="fade-up">
+          <ImageContainer>
+            <img
+              src="/assets/loanprograming.png" // Replace with actual image path
+              alt="Loan Programs"
+            />
+          </ImageContainer>
         </Grid>
       </Grid>
-    </Box>
+    </SectionContainer>
   );
 };
 

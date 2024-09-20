@@ -7,11 +7,8 @@ import {
   Button,
   List,
   ListItem,
+  Grid,
 } from "@mui/material";
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import "swiper/css/pagination";
-import { Pagination } from "swiper/modules";
 
 // Loan Offer Card Component
 const LoanOfferCard = ({ title, description, iconSrc }) => {
@@ -22,9 +19,14 @@ const LoanOfferCard = ({ title, description, iconSrc }) => {
         boxShadow: "0px 8px 16px rgba(0, 0, 0, 0.1)",
         padding: 2,
         textAlign: "left",
-        backgroundColor: "#FFFFFF",
-        maxWidth: 320, // Ensure card size consistency
+        backgroundColor: "#F9F9F9", // Light background
+        minHeight: 370,
         margin: "auto",
+        transition: "transform 0.3s, box-shadow 0.3s",
+        "&:hover": {
+          transform: "scale(1.05)",
+          boxShadow: "0px 16px 32px rgba(0, 0, 0, 0.2)",
+        },
       }}
     >
       <CardContent>
@@ -34,14 +36,17 @@ const LoanOfferCard = ({ title, description, iconSrc }) => {
           src={iconSrc}
           alt={title}
           sx={{
-            width: 50,
-            height: 50,
+            width: 60,
+            height: 60,
             marginBottom: 2,
+            borderRadius: "50%", // Make the icon circular
+            backgroundColor: "#EAEAEA", // Background color for the icon
+            padding: 1,
           }}
         />
 
         {/* Loan Title */}
-        <Typography variant="h6" sx={{ fontWeight: "bold", marginBottom: 2 }}>
+        <Typography variant="h5" sx={{ fontWeight: "600", marginBottom: 1 }}>
           {title}
         </Typography>
 
@@ -50,7 +55,12 @@ const LoanOfferCard = ({ title, description, iconSrc }) => {
           {description.map((item, index) => (
             <ListItem
               key={index}
-              sx={{ paddingLeft: 0, display: "list-item", color: "#4A4A4A" }}
+              sx={{
+                paddingLeft: 0,
+                display: "list-item",
+                color: "#4A4A4A",
+                marginBottom: 1,
+              }} // Add margin for spacing
             >
               {item}
             </ListItem>
@@ -62,11 +72,14 @@ const LoanOfferCard = ({ title, description, iconSrc }) => {
           variant="contained"
           color="primary"
           sx={{
-            backgroundColor: "#064E3B",
+            background: "linear-gradient(90deg, #064E3B 0%, #23AB84 100%)",
             paddingX: 4,
             paddingY: 1,
             borderRadius: "20px",
             fontWeight: "bold",
+            "&:hover": {
+              background: "linear-gradient(90deg, #23AB84 0%, #064E3B 100%)",
+            },
           }}
         >
           View Details →
@@ -159,41 +172,52 @@ const LoanProgramOffers = () => {
   ];
 
   return (
-    <Box sx={{ padding: { xs: 4, md: 6 }, backgroundColor: "#fff" }}>
-      <Typography
-        variant="h4"
-        sx={{
-          fontWeight: "bold",
-          color: "#064E3B",
-          marginBottom: 4,
-          textAlign: "center",
-        }}
-      >
-        Loan Program Offers
-      </Typography>
+    <Box
+      sx={{
+        padding: { xs: 4, md: 6 },
+        backgroundColor: "#fff",
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+      }}
+    >
+      <Box data-aos="fade-up">
+        <Typography
+          variant="h4"
+          fontWeight="bold"
+          color="primary"
+          fontSize={30}
+        >
+          Loan Program Offers
+        </Typography>
+        <Box
+          sx={{
+            width: "90%",
+            borderBottom: "3px solid #23AB84",
+          }}
+        />
+      </Box>
 
-      {/* Swiper Component for Horizontal Scroll with Pagination */}
-      <Swiper
-        spaceBetween={20}
-        slidesPerView={1.2}
-        pagination={{ clickable: true }}
-        modules={[Pagination]} // Importing and using Pagination module
-        breakpoints={{
-          640: { slidesPerView: 1.5 },
-          768: { slidesPerView: 2.5 },
-          1024: { slidesPerView: 3.5 },
-        }}
-      >
+      {/* Grid Component for Loan Offers */}
+      <Grid container spacing={2} justifyContent="center" sx={{ marginTop: 4 }}>
         {loanOffers.map((offer, index) => (
-          <SwiperSlide key={index}>
+          <Grid
+            item
+            key={index}
+            xs={12}
+            sm={6}
+            md={4}
+            lg={3}
+            data-aos="zoom-in"
+          >
             <LoanOfferCard
               title={offer.title}
               description={offer.description}
               iconSrc={offer.iconSrc}
             />
-          </SwiperSlide>
+          </Grid>
         ))}
-      </Swiper>
+      </Grid>
     </Box>
   );
 };

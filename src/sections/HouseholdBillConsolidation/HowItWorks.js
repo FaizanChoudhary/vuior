@@ -10,7 +10,7 @@ const SectionContainer = styled(Box)(({ theme }) => ({
   position: "relative",
   alignItems: "center",
   backgroundColor: "#e6f4f1", // Light green background for the section
-  padding: `${theme.spacing(8)} ${theme.spacing(20)}`, // paddingY, paddingX
+  padding: theme.spacing(8), // paddingY, paddingX
   [theme.breakpoints.down("sm")]: {
     padding: `${theme.spacing(3)} ${theme.spacing(2)}`, // smaller paddingY, paddingX for small screens
   },
@@ -19,31 +19,47 @@ const SectionContainer = styled(Box)(({ theme }) => ({
 const steps = [
   {
     stepNumber: 1,
-    title: "Sign Up",
+    title: "Free Sign Up For Users",
     description:
-      'Joining Vuoir is simple. Click on the "Join Now" button to start your membership application.',
+      "Join us for free and easy to use household bill consolidation program. Simply sign up on our secure platform to get started.",
     imgSrc: "/assets/freesignup.png",
     alt: "Sign Up",
   },
   {
     stepNumber: 2,
-    title: "Fund Your Account",
+    title: "Bill Assessment",
     description:
-      "Fund your account with a minimum balance of $25 to activate your membership.",
+      "Our team of expert and professional members will review your existing household bills, including utilities, insurance, and many more to identify potential areas for saving.",
     imgSrc: "/assets/billassesment.png",
     alt: "Fund Your Account",
   },
   {
     stepNumber: 3,
-    title: "Enjoy The Benefits",
+    title: "Negotiation",
     description:
-      "Start taking advantage of Vuoir's programs and services immediately after funding your account.",
+      "We negotiate with your bill providers to secure lower rates, reduce fees and better terms. Our main purpose is to maximize your saving.",
     imgSrc: "/assets/negotiation.png",
     alt: "Enjoy the Benefits",
   },
+  {
+    stepNumber: 4,
+    title: "Single Monthly Payment",
+    description:
+      "Your consolidated bills are combined into a single monthly payment. You’ll make one payment to us and we'll distribute the funds to your bill providers on your behalf.",
+    imgSrc: "/assets/monthypayment.png",
+    alt: "Payment",
+  },
+  {
+    stepNumber: 5,
+    title: "Access To Line Of Credit",
+    description:
+      "Our qualified participants gain access to a $5000 line of credit, which can be used for household expenses or unexpected bills.",
+    imgSrc: "/assets/lineofcredit.png",
+    alt: "Crdeit",
+  },
 ];
 
-const HowToBecomeMember = () => {
+const HowItWorks = () => {
   return (
     <SectionContainer>
       <Box data-aos="fade-up">
@@ -53,7 +69,7 @@ const HowToBecomeMember = () => {
           color="primary"
           fontSize={30}
         >
-          How To Become A Member
+          How it Works
         </Typography>
         <Box
           sx={{
@@ -65,7 +81,7 @@ const HowToBecomeMember = () => {
 
       <Grid container spacing={4} justifyContent="center" mt={2}>
         {steps.map((step, index) => (
-          <Grid item xs={12} lg={4} key={index}>
+          <Grid item xs={12} lg={3} key={index}>
             <StepCard
               stepNumber={step.stepNumber}
               title={step.title}
@@ -80,4 +96,4 @@ const HowToBecomeMember = () => {
   );
 };
 
-export default HowToBecomeMember;
+export default HowItWorks;
