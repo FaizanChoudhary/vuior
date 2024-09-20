@@ -4,28 +4,16 @@ import { styled } from "@mui/system";
 
 // Container with a two-tone background
 const SectionContainer = styled(Box)(({ theme }) => ({
+  backgroundImage: 'url("/assets/join_empowerment.png")', // Add your background image path
+  backgroundSize: "cover", // Ensures the image covers the entire section
+  backgroundPosition: "center",
   position: "relative",
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
   height: "80vh",
-  // background: "linear-gradient(to right, #e0f2f1, #b2dfdb)",
   overflow: "hidden",
-}));
-
-// Image container with modern styling
-const ImageBox = styled(Box)(({ theme }) => ({
-  position: "relative",
-  width: "100%",
-  height: "100%",
-  overflow: "hidden",
-  boxShadow: theme.shadows[5],
-  "& img": {
-    width: "100%",
-    height: "100%",
-    objectFit: "cover",
-    filter: "brightness(50%)", // Darken the image for better text visibility
-  },
+  zIndex: 1,
 }));
 
 const OverlayTextBox = styled(Box)(({ theme }) => ({
@@ -59,28 +47,21 @@ const OverlayTextBox = styled(Box)(({ theme }) => ({
 
 const FinancialEmpowermentSection = () => {
   return (
-    <SectionContainer data-aos="zoom-in">
-      <Grid container spacing={0}>
-        {/* Image Section */}
-        <Grid item xs={12}>
-          <ImageBox>
-            <img
-              src="/assets/join_empowerment.png"
-              alt="Financial Empowerment"
-            />
-          </ImageBox>
-        </Grid>
-        {/* <Grid item xs={12} lg={6}>
-          <ImageBox>
-            <img
-              src="/assets/join_empowerment.png"
-              alt="Financial Empowerment"
-            />
-          </ImageBox>
-        </Grid> */}
-
+    <SectionContainer>
+      <Box
+        sx={{
+          position: "absolute",
+          top: 0,
+          left: 0,
+          right: 0,
+          bottom: 0,
+          backgroundColor: "rgba(0, 0, 0, 0.3)", // Dark overlay for contrast
+          zIndex: -1,
+        }}
+      />
+      <Grid container>
         {/* Text Section */}
-        <Grid item xs={12}>
+        <Grid item xs={12} data-aos="zoom-in">
           <OverlayTextBox>
             <Typography
               variant="h4"

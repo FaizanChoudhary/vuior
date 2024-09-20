@@ -27,7 +27,7 @@ const ContactInfoItem = ({ iconSrc, label, value }) => (
         alignItems: "center",
         borderRadius: "50%",
         width: 70,
-        height: 70,
+        height: 50,
         marginRight: 2,
         padding: 1,
       }}
@@ -55,9 +55,8 @@ const GlassBox = styled(Box)(({ theme }) => ({
   backdropFilter: "blur(20px)", // Increased blur for glassmorphism effect
   background: "rgba(255, 255, 255, 0.2)", // More transparency
   borderRadius: "16px",
-  padding: theme.spacing(2),
+  padding: theme.spacing(4),
   boxShadow: "0px 8px 32px rgba(0, 0, 0, 0.1)",
-  border: "1px solid rgba(255, 255, 255, 0.18)",
   [theme.breakpoints.down("sm")]: {
     padding: theme.spacing(2),
   },
@@ -90,8 +89,8 @@ const InquirySupportSection = () => {
         backgroundSize: "cover", // Ensures the image covers the entire section
         backgroundPosition: "center",
         position: "relative",
-        height: "80vh",
-        // marginTop: "70px !important",
+        // height: "80vh",
+        marginTop: "50px !important",
         px: { xs: 4, md: 6, lg: 20 },
         py: 5,
         zIndex: 1,
@@ -132,9 +131,9 @@ const InquirySupportSection = () => {
         />
       </Box>
 
-      <Grid data-aos="fade-up" container spacing={4} alignItems="flex-start">
+      <Grid container spacing={4} alignItems="flex-start">
         {/* Left Section - Contact Information */}
-        <Grid item xs={12} md={5}>
+        <Grid item xs={12} md={4} data-aos="fade-up">
           <Box sx={{ marginBottom: 4 }}>
             <Typography
               variant="h4"
@@ -172,17 +171,17 @@ const InquirySupportSection = () => {
         </Grid>
 
         {/* Right Section - Inquiry Form */}
-        <Grid item xs={12} md={7} px={15}>
-          <GlassBox>
+        <Grid item xs={12} md={8}>
+          <GlassBox data-aos="fade-up">
             <Typography
               variant="h5"
               align="center"
-              sx={{ mb: 1, color: "#fff" }}
+              sx={{ mb: 2, color: "#fff" }}
             >
               Have Any Questions?
             </Typography>
             <form>
-              <Grid container spacing={1} alignItems="center">
+              <Grid container spacing={2} alignItems="center">
                 {/* Full Name */}
                 <Grid item xs={12} md={3}>
                   <Typography
@@ -249,7 +248,7 @@ const InquirySupportSection = () => {
                   <StyledTextField
                     fullWidth
                     multiline
-                    rows={3}
+                    rows={4}
                     variant="outlined"
                     placeholder="Enter your message"
                     sx={{ backgroundColor: "#fff", borderRadius: "12px" }}
