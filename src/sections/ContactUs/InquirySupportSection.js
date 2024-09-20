@@ -55,7 +55,7 @@ const GlassBox = styled(Box)(({ theme }) => ({
   backdropFilter: "blur(20px)", // Increased blur for glassmorphism effect
   background: "rgba(255, 255, 255, 0.2)", // More transparency
   borderRadius: "16px",
-  padding: theme.spacing(4),
+  padding: theme.spacing(2),
   boxShadow: "0px 8px 32px rgba(0, 0, 0, 0.1)",
   border: "1px solid rgba(255, 255, 255, 0.18)",
   [theme.breakpoints.down("sm")]: {
@@ -90,7 +90,8 @@ const InquirySupportSection = () => {
         backgroundSize: "cover", // Ensures the image covers the entire section
         backgroundPosition: "center",
         position: "relative",
-        marginTop: "70px !important",
+        height: "80vh",
+        // marginTop: "70px !important",
         px: { xs: 4, md: 6, lg: 20 },
         py: 5,
         zIndex: 1,
@@ -171,20 +172,19 @@ const InquirySupportSection = () => {
         </Grid>
 
         {/* Right Section - Inquiry Form */}
-        <Grid item xs={12} md={7}>
+        <Grid item xs={12} md={7} px={15}>
           <GlassBox>
             <Typography
               variant="h5"
-              gutterBottom
               align="center"
-              sx={{ mb: 3, color: "#fff" }}
+              sx={{ mb: 1, color: "#fff" }}
             >
               Have Any Questions?
             </Typography>
             <form>
-              <Grid container spacing={3} alignItems="center">
+              <Grid container spacing={1} alignItems="center">
                 {/* Full Name */}
-                <Grid item xs={12} md={4}>
+                <Grid item xs={12} md={3}>
                   <Typography
                     variant="body1"
                     sx={{ fontWeight: "bold", color: "#fff" }}
@@ -192,7 +192,7 @@ const InquirySupportSection = () => {
                     Full Name
                   </Typography>
                 </Grid>
-                <Grid item xs={12} md={8}>
+                <Grid item xs={12} md={9}>
                   <StyledTextField
                     fullWidth
                     variant="outlined"
@@ -201,7 +201,7 @@ const InquirySupportSection = () => {
                 </Grid>
 
                 {/* Phone Number */}
-                <Grid item xs={12} md={4}>
+                <Grid item xs={12} md={3}>
                   <Typography
                     variant="body1"
                     sx={{ fontWeight: "bold", color: "#fff" }}
@@ -209,7 +209,7 @@ const InquirySupportSection = () => {
                     Phone Number
                   </Typography>
                 </Grid>
-                <Grid item xs={12} md={8}>
+                <Grid item xs={12} md={9}>
                   <StyledTextField
                     fullWidth
                     variant="outlined"
@@ -219,7 +219,7 @@ const InquirySupportSection = () => {
                 </Grid>
 
                 {/* Email */}
-                <Grid item xs={12} md={4}>
+                <Grid item xs={12} md={3}>
                   <Typography
                     variant="body1"
                     sx={{ fontWeight: "bold", color: "#fff" }}
@@ -227,7 +227,7 @@ const InquirySupportSection = () => {
                     Email
                   </Typography>
                 </Grid>
-                <Grid item xs={12} md={8}>
+                <Grid item xs={12} md={9}>
                   <StyledTextField
                     fullWidth
                     variant="outlined"
@@ -237,7 +237,7 @@ const InquirySupportSection = () => {
                 </Grid>
 
                 {/* Message */}
-                <Grid item xs={12} md={4}>
+                <Grid item xs={12} md={3}>
                   <Typography
                     variant="body1"
                     sx={{ fontWeight: "bold", color: "#fff" }}
@@ -245,11 +245,11 @@ const InquirySupportSection = () => {
                     Your Message
                   </Typography>
                 </Grid>
-                <Grid item xs={12} md={8}>
+                <Grid item xs={12} md={9}>
                   <StyledTextField
                     fullWidth
                     multiline
-                    rows={4}
+                    rows={3}
                     variant="outlined"
                     placeholder="Enter your message"
                     sx={{ backgroundColor: "#fff", borderRadius: "12px" }}
@@ -259,7 +259,7 @@ const InquirySupportSection = () => {
 
               {/* Submit Button */}
               <Box
-                sx={{ display: "flex", justifyContent: "center", marginTop: 4 }}
+                sx={{ display: "flex", justifyContent: "center", marginTop: 2 }}
               >
                 <Button
                   variant="contained"
