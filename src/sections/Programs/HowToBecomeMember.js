@@ -11,8 +11,8 @@ const SectionContainer = styled(Box)(({ theme }) => ({
   alignItems: "center",
   backgroundColor: "#e6f4f1", // Light green background for the section
   padding: `${theme.spacing(8)} ${theme.spacing(20)}`, // paddingY, paddingX
-  [theme.breakpoints.down("sm")]: {
-    padding: `${theme.spacing(3)} ${theme.spacing(2)}`, // smaller paddingY, paddingX for small screens
+  [theme.breakpoints.down("md")]: {
+    padding: theme.spacing(3), // smaller paddingY, paddingX for small screens
   },
 }));
 
@@ -65,7 +65,7 @@ const HowToBecomeMember = () => {
 
       <Grid container spacing={4} justifyContent="center" mt={2}>
         {steps.map((step, index) => (
-          <Grid item xs={12} lg={4} key={index}>
+          <Grid item xs={12} lg={4} key={index} sx={{ display: "flex" }}>
             <StepCard
               stepNumber={step.stepNumber}
               title={step.title}

@@ -5,17 +5,18 @@ import {
   TextField,
   Button,
   Typography,
-  Card,
-  CardContent,
+  Accordion,
+  AccordionSummary,
+  AccordionDetails,
   Container,
   InputAdornment,
-  Pagination,
+  // Pagination,
   Paper,
 } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
-import LocationOnIcon from "@mui/icons-material/LocationOn";
-import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import { styled } from "@mui/system";
+import { jobs } from "../shared/constants"; // Assuming jobs is your array of job listings
 
 // Styled search bar container
 const SearchBarContainer = styled(Paper)(({ theme }) => ({
@@ -27,17 +28,6 @@ const SearchBarContainer = styled(Paper)(({ theme }) => ({
   margin: "auto",
   display: "flex",
   alignItems: "center",
-}));
-
-// Styled job card
-const JobCard = styled(Card)(({ theme }) => ({
-  boxShadow: "0 4px 10px rgba(0,0,0,0.1)",
-  borderRadius: "16px",
-  transition: "transform 0.3s ease",
-  "&:hover": {
-    transform: "scale(1.02)",
-    boxShadow: "0 8px 20px rgba(0,0,0,0.15)",
-  },
 }));
 
 // Search Button
@@ -54,18 +44,16 @@ const SearchButton = styled(Button)(({ theme }) => ({
 const JobListingPage = () => {
   const [searchTerm, setSearchTerm] = useState("");
 
-  // Dummy job data
-  const dummyJobs = [
-    { title: "Software Engineer", location: "Remote" },
-    { title: "Product Manager", location: "New York" },
-    { title: "Data Analyst", location: "San Francisco" },
-    { title: "UX Designer", location: "Austin" },
-  ];
+  // Filter jobs based on search term in title and description
+  const filteredJobs = jobs.filter((job) => {
+    const titleMatch =
+      job.title && job.title.toLowerCase().includes(searchTerm.toLowerCase());
+    const descriptionMatch =
+      job.description &&
+      job.description.toLowerCase().includes(searchTerm.toLowerCase());
 
-  // Filter jobs based on search term
-  const filteredJobs = dummyJobs.filter((job) =>
-    job.title.toLowerCase().includes(searchTerm.toLowerCase())
-  );
+    return titleMatch || descriptionMatch;
+  });
 
   const AboutUs = () => {
     return (
@@ -76,15 +64,14 @@ const JobListingPage = () => {
         <Box display="flex" alignItems="center" mb={2}>
           <img
             src="/assets/black-logo.png"
-            alt="Vuior Logo"
+            alt="Vuio Logo"
             style={{ width: "150px", marginRight: "10px" }}
           />
         </Box>
         <Typography variant="body1" color="text.secondary">
-          Vuior is a member-owned organization committed to diversity, equity,
-          and inclusion. They offer various financial programs and services,
-          including loans, insurance, and bill consolidation, tailored to meet
-          their members' needs.
+          Vuio is a community-driven company focused on financial empowerment.
+          We offer innovative solutions and support individuals in achieving
+          their financial goals.
         </Typography>
       </Paper>
     );
@@ -137,34 +124,119 @@ const JobListingPage = () => {
               ),
             }}
           />
-          <SearchButton
-            variant="contained"
-            sx={{ ml: 2 }}
-            endIcon={<ArrowForwardIcon />}
-          >
+          <SearchButton variant="contained" sx={{ ml: 2 }}>
             Search
           </SearchButton>
         </SearchBarContainer>
 
         {/* Job Listings Section */}
         <Grid container spacing={3} mt={3}>
-          <Grid container item xs={12} md={7} spacing={3}>
+          <Grid container item xs={12} spacing={3}>
             {filteredJobs.length > 0 ? (
               filteredJobs.map((job, index) => (
                 <Grid item xs={12} key={index}>
-                  <JobCard>
-                    <CardContent>
-                      <Typography variant="h6" sx={{ fontWeight: "bold" }}>
+                  <Accordion>
+                    <AccordionSummary
+                      expandIcon={<ExpandMoreIcon />}
+                      aria-controls={`panel${index}-content`}
+                      id={`panel${index}-header`}
+                    >
+                      <Typography variant="h6" sx={{ flexGrow: 1 }}>
                         {job.title}
                       </Typography>
-                      <Box display="flex" alignItems="center" sx={{ mt: 1 }}>
-                        <LocationOnIcon color="action" sx={{ mr: 1 }} />
+                      <Box display="flex" alignItems="center">
                         <Typography variant="body2" color="text.secondary">
-                          {job.location}
+                          {job.salary}
                         </Typography>
                       </Box>
-                    </CardContent>
-                  </JobCard>
+                    </AccordionSummary>
+                    <AccordionDetails>
+                      <Typography
+                        variant="body1"
+                        fontWeight="bold"
+                        sx={{ mt: 1 }}
+                      >
+                        About Us:
+                      </Typography>
+                      <Typography variant="body2" color="black" sx={{ mt: 1 }}>
+                        {job.about}
+                      </Typography>
+                      <Typography
+                        variant="body1"
+                        fontWeight="bold"
+                        sx={{ mt: 1 }}
+                      >
+                        Job Summary:
+                      </Typography>
+                      <Typography variant="body2" color="black" sx={{ mt: 1 }}>
+                        {job.summary}
+                      </Typography>
+                      <Typography
+                        variant="body1"
+                        fontWeight="bold"
+                        sx={{ mt: 1 }}
+                      >
+                        Objectives of the Role:
+                      </Typography>
+                      <ul>
+                        {job.objectives.map((benefit, idx) => (
+                          <li key={idx}>
+                            <Typography variant="body2" color="black">
+                              {benefit}
+                            </Typography>
+                          </li>
+                        ))}
+                      </ul>
+                      <Typography
+                        variant="body1"
+                        fontWeight="bold"
+                        sx={{ mt: 1 }}
+                      >
+                        Role Responsibilities:
+                      </Typography>
+                      <ul>
+                        {job.responsibilities.map((resp, idx) => (
+                          <li key={idx}>
+                            <Typography variant="body2" color="black">
+                              {resp}
+                            </Typography>
+                          </li>
+                        ))}
+                      </ul>
+                      <Typography
+                        variant="body1"
+                        fontWeight="bold"
+                        sx={{ mt: 1 }}
+                      >
+                        Daily & Weekly Tasks:
+                      </Typography>
+                      <ul>
+                        {job.tasks.map((resp, idx) => (
+                          <li key={idx}>
+                            <Typography variant="body2" color="black">
+                              {resp}
+                            </Typography>
+                          </li>
+                        ))}
+                      </ul>
+                      <Typography
+                        variant="body1"
+                        fontWeight="bold"
+                        sx={{ mt: 1 }}
+                      >
+                        Benefits:
+                      </Typography>
+                      <ul>
+                        {job.benefits.map((benefit, idx) => (
+                          <li key={idx}>
+                            <Typography variant="body2" color="black">
+                              {benefit}
+                            </Typography>
+                          </li>
+                        ))}
+                      </ul>
+                    </AccordionDetails>
+                  </Accordion>
                 </Grid>
               ))
             ) : (
@@ -172,13 +244,13 @@ const JobListingPage = () => {
                 No jobs found
               </Typography>
             )}
-            <Grid item xs={12}>
+            {/* <Grid item xs={12}>
               <Box mt={3} display="flex" justifyContent="center">
                 <Pagination count={5} color="primary" />
               </Box>
-            </Grid>
+            </Grid> */}
           </Grid>
-          <Grid item xs={12} md={5}>
+          <Grid item xs={12}>
             {/* About Us Section */}
             <AboutUs />
           </Grid>

@@ -74,9 +74,10 @@ const MemberBenefits = ({ isHouseHoldProgramPage }) => {
           <Grid
             item
             xs={12}
-            sm={6}
-            md={isHouseHoldProgramPage ? 4 : 3}
+            md={4}
+            lg={isHouseHoldProgramPage ? 4 : 3}
             key={index}
+            sx={{ display: "flex" }} // Make grid item a flex container
           >
             <StepCard
               title={benefit.title}

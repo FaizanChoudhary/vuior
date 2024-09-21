@@ -3,6 +3,7 @@ import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import { styled } from "@mui/system";
 import BGTopRight from "../../components/BGTopRight";
 import BGBottomLeft from "../../components/BGBottomLeft";
+import { useNavigate } from "react-router-dom";
 
 // Styling for the container
 const ProgramsContainer = styled(Box)(({ theme }) => ({
@@ -12,8 +13,8 @@ const ProgramsContainer = styled(Box)(({ theme }) => ({
   position: "relative",
   alignItems: "center",
   padding: `${theme.spacing(8)} ${theme.spacing(20)}`, // paddingY, paddingX
-  [theme.breakpoints.down("sm")]: {
-    padding: `${theme.spacing(3)} ${theme.spacing(2)}`, // smaller paddingY, paddingX for small screens
+  [theme.breakpoints.down("md")]: {
+    padding: theme.spacing(3), // smaller paddingY, paddingX for small screens
   },
 }));
 
@@ -90,6 +91,7 @@ const LearnMoreButton = styled(Button)(({ theme }) => ({
 }));
 
 const ProgramsSection = () => {
+  const navigate = useNavigate();
   return (
     <ProgramsContainer>
       <BGTopRight src="/assets/backgrounds/bg1-top-right.png" />
@@ -143,7 +145,11 @@ const ProgramsSection = () => {
                   rates, and quick approval. With in-house and special
                   financing, we ensure personalized solutions for every member.
                 </Typography>
-                <LearnMoreButton variant="contained" color="primary">
+                <LearnMoreButton
+                  variant="contained"
+                  color="primary"
+                  onClick={() => navigate("/programs/loan-programs")}
+                >
                   Learn More <ArrowForwardIcon sx={{ ml: 1 }} />
                 </LearnMoreButton>
               </OverlayContent>
@@ -183,7 +189,11 @@ const ProgramsSection = () => {
                   inclusion, focusing on your needs and building a strong,
                   supportive community. Schedule a free consultation today!
                 </Typography>
-                <LearnMoreButton variant="contained" color="primary">
+                <LearnMoreButton
+                  variant="contained"
+                  color="primary"
+                  onClick={() => navigate("/programs/household-programs")}
+                >
                   Learn More <ArrowForwardIcon sx={{ ml: 1 }} />
                 </LearnMoreButton>
               </OverlayContent>

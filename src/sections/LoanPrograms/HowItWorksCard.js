@@ -60,7 +60,7 @@ const HowItWorks = () => {
       {/* Responsive Grid */}
       <Grid container spacing={4} mt={1}>
         {steps.map((step, index) => (
-          <Grid item xs={12} sm={6} md={4} key={index}>
+          <Grid item xs={12} md={4} key={index} sx={{ display: "flex" }}>
             <StepCard
               title={step.title}
               description={step.description}

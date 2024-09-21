@@ -35,7 +35,7 @@ const OurCommitmentSection = () => {
 
       {/* Grid Layout for Commitment Cards */}
       <Grid container spacing={4}>
-        <Grid item xs={12} md={4}>
+        <Grid item xs={12} md={4} sx={{ display: "flex" }}>
           <StepCard
             title="Member-Owned Model"
             description="When you become a member of Vuio, you effectively become a part owner. This unique model ensures that our members have a voice in the organization and a stake in our collective success. Your membership means more than just access to services; it means being part of a community that values your input and prioritizes your financial well-being."
@@ -44,7 +44,7 @@ const OurCommitmentSection = () => {
           />
         </Grid>
 
-        <Grid item xs={12} md={4}>
+        <Grid item xs={12} md={4} sx={{ display: "flex" }}>
           <StepCard
             title="Diversity, Equity, And Inclusion"
             description="Vuio is committed to fostering a diverse, equitable, and inclusive environment. We believe that embracing diversity strengthens our community and enhances our ability to serve all members effectively. Our DEI initiatives ensure that every member feels valued and supported, regardless of their background."
@@ -53,7 +53,7 @@ const OurCommitmentSection = () => {
           />
         </Grid>
 
-        <Grid item xs={12} md={4}>
+        <Grid item xs={12} md={4} sx={{ display: "flex" }}>
           <StepCard
             title="Customer-Focused Approach"
             description="At Vuio, our members are at the heart of everything we do. We focus on understanding and meeting your needs, creating lifelong relationships, and building a supportive community. Our customer-focused model ensures that we provide personalized support and services designed to help you achieve your financial goals."

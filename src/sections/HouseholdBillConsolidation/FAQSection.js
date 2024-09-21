@@ -40,7 +40,7 @@ const faqs = [
       "Eligibility requirements include providing proof of residence, proof of income, and information about your current bills. We welcome all credit profiles and offer flexible payment options.",
   },
   {
-    id: "panel4",
+    id: "panel5",
     question: "What types of bills can be consolidated ?",
     answer:
       "You can consolidate various household bills, including Mortgage/Rent, Utilities, Internet/Cable, Phone/Cellular, Insurance, and Transportation expenses.",

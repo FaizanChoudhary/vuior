@@ -19,17 +19,20 @@ const LoanOfferCard = ({ title, description, iconSrc }) => {
         boxShadow: "0px 8px 16px rgba(0, 0, 0, 0.1)",
         padding: 2,
         textAlign: "left",
+        width: "100%",
         backgroundColor: "#F9F9F9", // Light background
-        minHeight: 370,
-        margin: "auto",
+        display: "flex",
+        flexDirection: "column", // Aligns content in column
+        justifyContent: "space-between", // Push the button to the bottom
+        minHeight: { xs: "auto", md: 350, lg: 400 }, // Optional, to enforce a minimum height for larger screens
         transition: "transform 0.3s, box-shadow 0.3s",
         "&:hover": {
-          transform: "scale(1.05)",
+          transform: "scale(1.02)",
           boxShadow: "0px 16px 32px rgba(0, 0, 0, 0.2)",
         },
       }}
     >
-      <CardContent>
+      <CardContent sx={{ flexGrow: 1 }}>
         {/* Loan Icon */}
         <Box
           component="img"
@@ -66,8 +69,10 @@ const LoanOfferCard = ({ title, description, iconSrc }) => {
             </ListItem>
           ))}
         </List>
+      </CardContent>
 
-        {/* View Details Button */}
+      {/* View Details Button */}
+      <Box sx={{ marginTop: 2 }}>
         <Button
           variant="contained"
           color="primary"
@@ -84,7 +89,7 @@ const LoanOfferCard = ({ title, description, iconSrc }) => {
         >
           View Details →
         </Button>
-      </CardContent>
+      </Box>
     </Card>
   );
 };
@@ -199,16 +204,19 @@ const LoanProgramOffers = () => {
       </Box>
 
       {/* Grid Component for Loan Offers */}
+      {/* Grid Component for Loan Offers */}
       <Grid container spacing={2} justifyContent="center" sx={{ marginTop: 4 }}>
         {loanOffers.map((offer, index) => (
           <Grid
             item
             key={index}
             xs={12}
-            sm={6}
             md={4}
             lg={3}
             data-aos="zoom-in"
+            sx={{
+              display: "flex", // Ensures that all Grid items stretch to equal height
+            }}
           >
             <LoanOfferCard
               title={offer.title}

@@ -81,7 +81,7 @@ const HowItWorks = () => {
 
       <Grid container spacing={4} justifyContent="center" mt={2}>
         {steps.map((step, index) => (
-          <Grid item xs={12} lg={3} key={index}>
+          <Grid item xs={12} md={4} lg={3} key={index} sx={{ display: "flex" }}>
             <StepCard
               stepNumber={step.stepNumber}
               title={step.title}

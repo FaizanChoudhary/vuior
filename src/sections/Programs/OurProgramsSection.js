@@ -11,8 +11,8 @@ const SectionContainer = styled(Box)(({ theme }) => ({
   position: "relative",
   alignItems: "center",
   padding: `${theme.spacing(8)} ${theme.spacing(20)}`, // paddingY, paddingX
-  [theme.breakpoints.down("sm")]: {
-    padding: `${theme.spacing(3)} ${theme.spacing(2)}`, // smaller paddingY, paddingX for small screens
+  [theme.breakpoints.down("md")]: {
+    padding: theme.spacing(3), // smaller paddingY, paddingX for small screens
   },
 }));
 

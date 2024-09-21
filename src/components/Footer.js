@@ -12,7 +12,7 @@ const FooterContainer = styled(Box)(({ theme }) => ({
   padding: theme.spacing(6),
   [theme.breakpoints.down("sm")]: {
     padding: theme.spacing(3),
-    textAlign: "center", // Center align for smaller screens
+    // textAlign: "center", // Center align for smaller screens
   },
 }));
 
