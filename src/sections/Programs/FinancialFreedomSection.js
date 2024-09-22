@@ -5,7 +5,7 @@ import { styled } from "@mui/system";
 const SectionContainer = styled(Box)(({ theme }) => ({
   backgroundColor: "#e6f4f1",
   // padding: theme.spacing(4),
-  marginTop: "70px !important",
+  marginTop: "60px !important",
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
@@ -47,7 +47,7 @@ const FinancialFreedomSection = () => {
           xs={12}
           md={6}
           data-aos="fade-up"
-          sx={{ padding: 10, fontSize: 30 }}
+          sx={{ padding: { xs: 5, sm: 10 }, fontSize: 30 }}
         >
           <Typography variant="h4" gutterBottom>
             Get Financial Freedom With Our Expertise Debt Relief Programs

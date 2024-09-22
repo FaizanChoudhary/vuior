@@ -5,7 +5,7 @@ import { styled } from "@mui/system";
 // Section container similar to FinancialFreedomSection
 const SectionContainer = styled(Box)(({ theme }) => ({
   backgroundColor: "#e6f4f1",
-  marginTop: "70px !important",
+  marginTop: "60px !important",
   display: "flex",
   alignItems: "center",
   justifyContent: "center",

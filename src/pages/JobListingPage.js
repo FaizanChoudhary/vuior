@@ -28,6 +28,10 @@ const SearchBarContainer = styled(Paper)(({ theme }) => ({
   margin: "auto",
   display: "flex",
   alignItems: "center",
+  [theme.breakpoints.down("sm")]: {
+    flexDirection: "column",
+    gap: 10,
+  },
 }));
 
 // Search Button

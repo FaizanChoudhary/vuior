@@ -14,6 +14,9 @@ const SectionContainer = styled(Box)(({ theme }) => ({
   height: "80vh",
   overflow: "hidden",
   zIndex: 1,
+  [theme.breakpoints.down("md")]: {
+    minHeight: "800px",
+  },
 }));
 
 const OverlayTextBox = styled(Box)(({ theme }) => ({
@@ -25,24 +28,24 @@ const OverlayTextBox = styled(Box)(({ theme }) => ({
   background: "rgba(255, 255, 255, 0.8)",
   borderRadius: "16px",
   boxShadow: theme.shadows[5],
-  maxWidth: "90%", // Make the max width responsive
+  // maxWidth: "90%", // Make the max width responsive
   textAlign: "center",
   zIndex: 1,
   backdropFilter: "blur(10px)", // Adding a blur effect
 
   // Responsive styles
-  [theme.breakpoints.up("sm")]: {
-    padding: theme.spacing(5),
-    maxWidth: "100%",
-  },
-  [theme.breakpoints.up("md")]: {
-    padding: theme.spacing(6),
-    maxWidth: "70%",
-  },
-  [theme.breakpoints.up("lg")]: {
-    padding: theme.spacing(7),
-    maxWidth: "60%",
-  },
+  // [theme.breakpoints.up("sm")]: {
+  //   padding: theme.spacing(5),
+  //   maxWidth: "100%",
+  // },
+  // // [theme.breakpoints.up("md")]: {
+  // //   padding: theme.spacing(6),
+  // //   maxWidth: "70%",
+  // // },
+  // [theme.breakpoints.up("lg")]: {
+  //   padding: theme.spacing(7),
+  //   maxWidth: "60%",
+  // },
 }));
 
 const FinancialEmpowermentSection = () => {

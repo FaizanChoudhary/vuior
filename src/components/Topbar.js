@@ -12,24 +12,38 @@ const Topbar = () => {
       direction="row"
       justifyContent="space-between"
       alignItems="center"
-      sx={{ px: { xs: 2, md: 5 }, py: "10px", backgroundColor: "#ffffff" }}
+      sx={{
+        px: { xs: 2, md: 5 },
+        py: { xs: "15px", sm: "10px" },
+        backgroundColor: "#ffffff",
+      }}
     >
       {/* Address and Phone Number Section */}
-      <Stack direction="row" spacing={2} alignItems="center">
+      <Stack
+        direction={{ xs: "column", sm: "row" }}
+        spacing={{ xs: 1, sm: 2 }}
+        alignItems={{ Xs: "flex-start", sm: "center" }}
+      >
         <Stack direction="row" spacing={1} alignItems="center">
-          <LocationOnIcon color="primary" />
+          <LocationOnIcon
+            color="primary"
+            sx={{ fontSize: { xs: "15px", sm: "30px" } }}
+          />
           <Typography
             variant="body2"
-            sx={{ fontSize: { xs: "10px", md: "14px" } }}
+            sx={{ fontSize: { xs: "9px", sm: "14px" } }}
           >
             70240 Avenue of the Moon, California
           </Typography>
         </Stack>
         <Stack direction="row" spacing={1} alignItems="center">
-          <PhoneIcon color="primary" />
+          <PhoneIcon
+            color="primary"
+            sx={{ fontSize: { xs: "15px", sm: "30px" } }}
+          />
           <Typography
             variant="body2"
-            sx={{ fontSize: { xs: "10px", sm: "14px" } }}
+            sx={{ fontSize: { xs: "9px", sm: "14px" } }}
           >
             (833) 569-3941
           </Typography>
@@ -43,13 +57,13 @@ const Topbar = () => {
           aria-label="Twitter"
           href="https://twitter.com"
           sx={{
-            transition: "transform 0.3s ease", // Transition for smooth zoom
+            transition: "transform 0.3s ease",
             "&:hover": {
-              transform: "scale(1.2)", // Zoom in on hover
+              transform: "scale(1.2)",
             },
           }}
         >
-          <TwitterIcon />
+          <TwitterIcon sx={{ fontSize: { xs: "15px", sm: "30px" } }} />
         </IconButton>
         <IconButton
           color="primary"
@@ -62,7 +76,7 @@ const Topbar = () => {
             },
           }}
         >
-          <InstagramIcon />
+          <InstagramIcon sx={{ fontSize: { xs: "15px", sm: "30px" } }} />
         </IconButton>
         <IconButton
           color="primary"
@@ -75,7 +89,7 @@ const Topbar = () => {
             },
           }}
         >
-          <LinkedInIcon />
+          <LinkedInIcon sx={{ fontSize: { xs: "15px", sm: "30px" } }} />
         </IconButton>
       </Stack>
     </Stack>

@@ -20,7 +20,7 @@ const ConsultationContainer = styled(Box)(({ theme }) => ({
   position: "relative",
   height: "80vh", // Full viewport height
   // width: "100vw", // Full viewport width
-  marginTop: "70px !important",
+  marginTop: "60px !important",
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
@@ -63,6 +63,10 @@ const FormContainer = styled(Stack)(({ theme }) => ({
   position: "absolute",
   [theme.breakpoints.up("md")]: {
     right: "5vw",
+  },
+  [theme.breakpoints.down("sm")]: {
+    maxWidth: "300px", // Control form width
+    padding: theme.spacing(2),
   },
 }));
 

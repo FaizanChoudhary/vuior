@@ -48,6 +48,12 @@ const GlassContainer = styled(Stack)(({ theme }) => ({
   width: "100%",
   maxWidth: "800px",
   position: "absolute",
+  [theme.breakpoints.down("md")]: {
+    maxWidth: "600px", // Apply padding only on small screens and below
+  },
+  [theme.breakpoints.down("sm")]: {
+    maxWidth: "350px", // Apply padding only on small screens and below
+  },
 }));
 
 const JoinOurTeam = () => {
@@ -61,7 +67,7 @@ const JoinOurTeam = () => {
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
-        marginTop: "70px !important",
+        marginTop: "60px !important",
       }}
     >
       {/* Background Image Swiper */}
@@ -117,7 +123,12 @@ const JoinOurTeam = () => {
                   sx={{ color: "#064E3B", fontSize: 12 }}
                 />
               </ListItemIcon>
-              <ListItemText primary={job} />
+              <ListItemText
+                primary={job}
+                primaryTypographyProps={{
+                  sx: { fontSize: { xs: "12px", sm: "16px" } },
+                }}
+              />
             </ListItem>
           ))}
         </List>
