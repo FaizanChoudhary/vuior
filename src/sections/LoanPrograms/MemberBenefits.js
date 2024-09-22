@@ -7,14 +7,14 @@ const MemberBenefits = ({ isHouseHoldProgramPage }) => {
     {
       title: "Ownership And Community",
       description:
-        "When You Become A Member Of Vuior, You Effectively Become A Part Owner. This Gives You A Voice In Our Organization And A Stake In Our Collective Success.",
+        "When You Become A Member Of VUIOR, You Effectively Become A Part Owner. This Gives You A Voice In Our Organization And A Stake In Our Collective Success.",
       imgSrc: "/assets/memberbenefits1.png", // Replace with actual image path
       alt: "memberbenefits1",
     },
     {
       title: "Commitment To Diversity, Equity, And Inclusion",
       description:
-        "Vuior Is Dedicated To Fostering A Diverse, Equitable, And Inclusive Environment. We Believe That Embracing Diversity Strengthens Our Community And Enhances Our Ability To Serve All Members Effectively.",
+        "VUIOR Is Dedicated To Fostering A Diverse, Equitable, And Inclusive Environment. We Believe That Embracing Diversity Strengthens Our Community And Enhances Our Ability To Serve All Members Effectively.",
       imgSrc: "/assets/memberbenefits2.png", // Replace with actual image path
       alt: "memberbenefits2",
     },
@@ -28,7 +28,7 @@ const MemberBenefits = ({ isHouseHoldProgramPage }) => {
     {
       title: "Continuous Improvement",
       description:
-        "Each Loan Plan Is Monitored By Vuior And Its Member Committees To Ensure That As Needs And Times Change, Vuior Member Loan Programs Respond By Delivering Relevant Coverage And Service.",
+        "Each Loan Plan Is Monitored By VUIOR And Its Member Committees To Ensure That As Needs And Times Change, VUIOR Member Loan Programs Respond By Delivering Relevant Coverage And Service.",
       imgSrc: "/assets/memberbenefits4.png", // Replace with actual image path
       alt: "memberbenefits3",
     },

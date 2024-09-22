@@ -23,12 +23,12 @@ const WelcomeMembershipSection = () => {
         <Grid item xs={12} md={6}>
           <Box sx={{ maxWidth: "500px" }}>
             <Typography variant="h4" gutterBottom sx={{ fontWeight: "bold" }}>
-              Welcome To Vuior Membership
+              Welcome To VUIOR Membership
             </Typography>
             <Typography variant="body1" gutterBottom>
-              At Vuior, we believe in empowering our members with the tools and
+              At VUIOR, we believe in empowering our members with the tools and
               support they need to achieve financial well-being. When you become
-              a member of Vuior, you effectively become a part-owner of our
+              a member of VUIOR, you effectively become a part-owner of our
               organization, gaining access to a wealth of benefits and services
               designed to help you thrive.
             </Typography>

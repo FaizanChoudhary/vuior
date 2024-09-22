@@ -92,7 +92,7 @@ const WhoWeAreSection = () => {
                 Our Work
               </Typography>
               <Typography variant="body1" sx={{ color: "#666", fontSize: 14 }}>
-                At Vuior, we work to empower people and families to attain
+                At VUIOR, we work to empower people and families to attain
                 financial independence by offering all-inclusive debt relief
                 options. With years of experience in the field, we are aware of
                 the difficulties associated with debt management and the

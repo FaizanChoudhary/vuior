@@ -139,7 +139,7 @@ const ProgramsSection = () => {
                   More About This Program
                 </Typography>
                 <Typography variant="body1" paragraph fontSize={14}>
-                  Unlock the financial support you need with Vuior's
+                  Unlock the financial support you need with VUIOR's
                   member-focused loan programs. Designed to cater to all credit
                   profiles, our loan options provide flexible terms, competitive
                   rates, and quick approval. With in-house and special
@@ -181,10 +181,10 @@ const ProgramsSection = () => {
                   More About This Program
                 </Typography>
                 <Typography variant="body1" paragraph fontSize={14}>
-                  Save up to 25% on your household bills with Vuior's
+                  Save up to 25% on your household bills with VUIOR's
                   group-negotiated discounts through top-tier providers. Our
                   member-driven program continuously adapts to meet your needs,
-                  delivering innovative and relevant services. Become a Vuior
+                  delivering innovative and relevant services. Become a VUIOR
                   member and experience our dedication to diversity, equity, and
                   inclusion, focusing on your needs and building a strong,
                   supportive community. Schedule a free consultation today!

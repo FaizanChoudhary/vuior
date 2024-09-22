@@ -3,7 +3,7 @@ export const jobs = [
   {
     title: "Sales Manager - Growth Division",
     about:
-      "At Vuio, we're dedicated to fostering a community that prioritizes financial empowerment. Our mission is to support individuals in achieving their financial goals through innovative solutions and unwavering support.",
+      "At VUIOR, we're dedicated to fostering a community that prioritizes financial empowerment. Our mission is to support individuals in achieving their financial goals through innovative solutions and unwavering support.",
     summary:
       "The Sales Manager - Growth Division will lead and develop a high-performing sales team, driving revenue targets and team development to new heights.",
     objectives: [
@@ -37,7 +37,7 @@ export const jobs = [
   {
     title: "Marketing Manager - Awareness Campaigns",
     about:
-      "Vuio is dedicated to creating a community where financial empowerment is accessible to all. Through innovative solutions and impactful campaigns, we strive to raise awareness and drive positive change.",
+      "VUIOR is dedicated to creating a community where financial empowerment is accessible to all. Through innovative solutions and impactful campaigns, we strive to raise awareness and drive positive change.",
     summary:
       "The Marketing Manager will develop and execute marketing strategies to increase brand awareness, engage target audiences, and drive growth through creative campaigns and digital initiatives.",
     objectives: [
@@ -71,9 +71,9 @@ export const jobs = [
   {
     title: "Recruiting Manager - Talent Acquisition",
     about:
-      "At Vuio, we believe in the power of community and the importance of empowering individuals to achieve their financial goals. As a Recruiting Manager, you'll play a crucial role in driving our growth and expanding our team.",
+      "At VUIOR, we believe in the power of community and the importance of empowering individuals to achieve their financial goals. As a Recruiting Manager, you'll play a crucial role in driving our growth and expanding our team.",
     summary:
-      "The Recruiting Manager will oversee recruitment efforts, implement scalable processes, and expand our team to meet increasing demands, driving Vuio's growth through effective talent acquisition.",
+      "The Recruiting Manager will oversee recruitment efforts, implement scalable processes, and expand our team to meet increasing demands, driving VUIOR's growth through effective talent acquisition.",
     objectives: [
       "Build and manage a high-performing recruiting team.",
       "Implement strategies to attract top talent and support company growth.",
@@ -105,7 +105,7 @@ export const jobs = [
   {
     title: "Debt Management Specialist - Team Lead",
     about:
-      "At Vuio, we're dedicated to empowering individuals to take control of their finances and achieve their goals. As a Debt Management Specialist, you'll play a vital role in helping our clients manage debt effectively and achieve financial empowerment.",
+      "At VUIOR, we're dedicated to empowering individuals to take control of their finances and achieve their goals. As a Debt Management Specialist, you'll play a vital role in helping our clients manage debt effectively and achieve financial empowerment.",
     summary:
       "The Debt Management Specialist will assist clients in managing debt, negotiate on their behalf, and provide financial guidance to help them achieve financial empowerment.",
     objectives: [
@@ -137,19 +137,19 @@ export const jobs = [
     ],
   },
   {
-    title: "Vuio Ambassador Program Manager",
+    title: "VUIOR Ambassador Program Manager",
     about:
-      "At Vuio, we're committed to making a positive impact in communities and empowering individuals to achieve financial success. As the Vuio Ambassador Program Manager, you'll play a key role in driving community engagement and promoting our mission.",
+      "At VUIOR, we're committed to making a positive impact in communities and empowering individuals to achieve financial success. As the VUIOR Ambassador Program Manager, you'll play a key role in driving community engagement and promoting our mission.",
     summary:
-      "The Vuio Ambassador Program Manager will manage and grow our ambassador program, engaging passionate individuals to make a positive impact on communities while promoting Vuio's mission.",
+      "The VUIOR Ambassador Program Manager will manage and grow our ambassador program, engaging passionate individuals to make a positive impact on communities while promoting VUIOR's mission.",
     objectives: [
-      "Recruit, train, and support ambassadors to represent Vuio in their communities.",
-      "Develop and implement strategies to increase awareness and engagement with the Vuio brand.",
+      "Recruit, train, and support ambassadors to represent VUIOR in their communities.",
+      "Develop and implement strategies to increase awareness and engagement with the VUIOR brand.",
       "Foster relationships with ambassadors and community partners to drive impact and growth.",
     ],
     responsibilities: [
       "Develop and execute recruitment strategies to attract ambassadors from diverse backgrounds and communities.",
-      "Provide training and resources to ambassadors to empower them to effectively promote Vuio's mission and services.",
+      "Provide training and resources to ambassadors to empower them to effectively promote VUIOR's mission and services.",
       "Coordinate ambassador activities and events to drive community engagement and awareness.",
       "Monitor ambassador performance and provide feedback and support as needed.",
       "Collaborate with internal teams to align ambassador activities with overall marketing and community engagement strategies.",
@@ -159,7 +159,7 @@ export const jobs = [
       "Provide ongoing support and training to ambassadors to ensure their success.",
       "Plan and coordinate ambassador-led events and initiatives to engage communities.",
       "Track and analyze ambassador performance and impact metrics.",
-      "Cultivate relationships with community partners and stakeholders to expand Vuio's reach.",
+      "Cultivate relationships with community partners and stakeholders to expand VUIOR's reach.",
     ],
     salary: "$120,000 - $160,000 per year",
     benefits: [
@@ -173,7 +173,7 @@ export const jobs = [
   {
     title: "Customer Service Manager - Excellence Team",
     about:
-      "At Vuio, we prioritize client satisfaction and are dedicated to providing exceptional customer service. As the Customer Service Manager, you'll play a crucial role in ensuring our clients receive the support they need to succeed.",
+      "At VUIOR, we prioritize client satisfaction and are dedicated to providing exceptional customer service. As the Customer Service Manager, you'll play a crucial role in ensuring our clients receive the support they need to succeed.",
     summary:
       "The Customer Service Manager will lead a team dedicated to delivering top-notch customer service, resolving issues, and enhancing customer satisfaction.",
     objectives: [
@@ -207,11 +207,11 @@ export const jobs = [
   {
     title: "Project Manager - Growth Initiatives",
     about:
-      "Vuio is committed to driving innovation and growth through strategic initiatives. As the Project Manager for Growth Initiatives, you'll lead projects that support our mission and drive our business forward.",
+      "VUIOR is committed to driving innovation and growth through strategic initiatives. As the Project Manager for Growth Initiatives, you'll lead projects that support our mission and drive our business forward.",
     summary:
       "The Project Manager will oversee and manage projects aimed at driving growth and innovation, ensuring successful completion on time and within budget.",
     objectives: [
-      "Plan and execute projects that align with Vuio's growth objectives.",
+      "Plan and execute projects that align with VUIOR's growth objectives.",
       "Manage project timelines, budgets, and resources to ensure successful completion.",
       "Collaborate with cross-functional teams to drive project success and achieve business goals.",
     ],
@@ -241,18 +241,18 @@ export const jobs = [
   {
     title: "Community Engagement Manager",
     about:
-      "Vuio is dedicated to fostering a sense of community and empowering individuals to achieve financial success. As the Community Engagement Manager, you'll play a key role in building and nurturing relationships within the community.",
+      "VUIOR is dedicated to fostering a sense of community and empowering individuals to achieve financial success. As the Community Engagement Manager, you'll play a key role in building and nurturing relationships within the community.",
     summary:
-      "The Community Engagement Manager will develop and implement strategies to engage and connect with the community, promoting Vuio's mission and services.",
+      "The Community Engagement Manager will develop and implement strategies to engage and connect with the community, promoting VUIOR's mission and services.",
     objectives: [
       "Build and maintain strong relationships with community members and organizations.",
-      "Develop and implement community engagement strategies to drive awareness and support for Vuio's mission.",
-      "Foster a sense of community and belonging among Vuio's clients and partners.",
+      "Develop and implement community engagement strategies to drive awareness and support for VUIOR's mission.",
+      "Foster a sense of community and belonging among VUIOR's clients and partners.",
     ],
     responsibilities: [
       "Develop and execute community engagement plans and initiatives.",
       "Build and maintain relationships with community organizations, leaders, and influencers.",
-      "Plan and coordinate community events and activities to promote Vuio's mission and services.",
+      "Plan and coordinate community events and activities to promote VUIOR's mission and services.",
       "Monitor and evaluate the effectiveness of community engagement efforts and make adjustments as needed.",
       "Collaborate with internal teams to align community engagement activities with overall business goals.",
     ],
@@ -275,11 +275,11 @@ export const jobs = [
   {
     title: "Strategic Partnerships Manager",
     about:
-      "At Vuio, we're committed to building strategic partnerships that drive mutual growth and success. As the Strategic Partnerships Manager, you'll play a crucial role in identifying and nurturing key partnerships.",
+      "At VUIOR, we're committed to building strategic partnerships that drive mutual growth and success. As the Strategic Partnerships Manager, you'll play a crucial role in identifying and nurturing key partnerships.",
     summary:
       "The Strategic Partnerships Manager will identify and cultivate strategic partnerships, working closely with partners to drive mutual growth and success.",
     objectives: [
-      "Identify and evaluate potential partners to drive growth and support Vuio's mission.",
+      "Identify and evaluate potential partners to drive growth and support VUIOR's mission.",
       "Develop and maintain strong relationships with partners to ensure mutual success.",
       "Collaborate with internal teams to align partnership activities with business objectives.",
     ],
@@ -291,7 +291,7 @@ export const jobs = [
       "Collaborate with internal teams to ensure alignment of partnership activities with overall business goals.",
     ],
     tasks: [
-      "Conduct research to identify potential partners and evaluate their fit with Vuio's goals.",
+      "Conduct research to identify potential partners and evaluate their fit with VUIOR's goals.",
       "Develop partnership proposals and negotiate terms with potential partners.",
       "Communicate regularly with partners to provide updates and address any issues.",
       "Monitor partnership performance and track key metrics to measure success.",

@@ -48,7 +48,7 @@ const EnsureQualitySection = () => {
         gutterBottom
         sx={{ marginBottom: 3, color: "#333", fontSize: 16 }}
       >
-        Each program at Vuio is carefully monitored by our dedicated member
+        Each program at VUIOR is carefully monitored by our dedicated member
         committees. These committees work tirelessly to ensure that as needs and
         times change, our programs respond by delivering innovative, relevant
         coverage and service that exceeds our members’ expectations. This

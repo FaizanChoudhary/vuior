@@ -15,15 +15,15 @@ const FaqsSection = styled(Box)(({ theme }) => ({
 const faqs = [
   {
     id: "panel1",
-    question: "What is Vuior's commitment to diversity, equity, and inclusion?",
+    question: "What is VUIOR's commitment to diversity, equity, and inclusion?",
     answer:
-      "Vuior is dedicated to fostering an inclusive environment where all members feel valued and supported. Our programs are designed to meet the diverse needs of our community, and we actively promote equity in all our practices.",
+      "VUIOR is dedicated to fostering an inclusive environment where all members feel valued and supported. Our programs are designed to meet the diverse needs of our community, and we actively promote equity in all our practices.",
   },
   {
     id: "panel2",
-    question: "What types of loans does Vuior offer?",
+    question: "What types of loans does VUIOR offer?",
     answer:
-      "Vuior offers a variety of loans, including Auto Loans, Mortgage Loans, Unemployment Loans, Student Loans, Travel Loans, Wedding Loans, Home Improvement Loans, Health Care Loans, Emergency Loans, and Personal Loans.",
+      "VUIOR offers a variety of loans, including Auto Loans, Mortgage Loans, Unemployment Loans, Student Loans, Travel Loans, Wedding Loans, Home Improvement Loans, Health Care Loans, Emergency Loans, and Personal Loans.",
   },
   {
     id: "panel3",
@@ -33,7 +33,7 @@ const faqs = [
   },
   {
     id: "panel4",
-    question: "How can I contact Vuior for more information?",
+    question: "How can I contact VUIOR for more information?",
     answer:
       "You can contact us through our website's contact form, email us at info@vuior.com, or call our customer service hotline at 1-800-123-4567. Our team is here to assist you with any questions or concerns.",
   },

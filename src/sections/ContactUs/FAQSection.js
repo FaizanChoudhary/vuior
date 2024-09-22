@@ -21,7 +21,7 @@ const faqs = [
   },
   {
     id: "How can I contact vuior for more information?",
-    question: "What types of loans does Vuior offer?",
+    question: "What types of loans does VUIOR offer?",
     answer:
       "You can contact us through our website's contact form, email us at info@vuior.com , or call our customer service hotline at 1-800-123-4567. Our team is here to assist you with any questions or concerns.",
   },

@@ -24,7 +24,7 @@ const faqs = [
     question:
       "How do you ensure compliance with US laws and regulations for this program?",
     answer:
-      "Vuior complies with all relevant regulations, including the Fair Debt Collection Practices Act (FDCPA) and the Federal Trade Commission (FTC) guidelines. We ensure that our bill consolidation services are transparent, fair, and in the best interest of our members.",
+      "VUIOR complies with all relevant regulations, including the Fair Debt Collection Practices Act (FDCPA) and the Federal Trade Commission (FTC) guidelines. We ensure that our bill consolidation services are transparent, fair, and in the best interest of our members.",
   },
   {
     id: "panel3",

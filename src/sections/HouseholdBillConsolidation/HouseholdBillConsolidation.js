@@ -56,7 +56,7 @@ const HouseholdBillConsolidation = () => {
         {/* Left Section: Text Content */}
         <Grid item xs={12} md={6} data-aos="fade-up" sx={{ padding: 5 }}>
           <Typography variant="h4" gutterBottom sx={{ fontWeight: "bold" }}>
-            Vuior{" "}
+            VUIOR{" "}
             <span style={{ color: "#00bfa5" }}>
               Household Bill Consolidation
             </span>{" "}
@@ -70,8 +70,8 @@ const HouseholdBillConsolidation = () => {
             best possible rates and services.
           </Typography>
           <Typography variant="body1" gutterBottom>
-            Each plan is monitored by Vuior and its member committees to ensure
-            that as needs and times change, Vuior Household Bill Consolidation
+            Each plan is monitored by VUIOR and its member committees to ensure
+            that as needs and times change, VUIOR Household Bill Consolidation
             programs respond by delivering innovative, relevant coverage and
             service that exceeds our members’ expectations.
           </Typography>

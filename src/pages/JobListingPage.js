@@ -10,7 +10,7 @@ import {
   AccordionDetails,
   Container,
   InputAdornment,
-  // Pagination,
+  Pagination,
   Paper,
 } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
@@ -47,6 +47,8 @@ const SearchButton = styled(Button)(({ theme }) => ({
 
 const JobListingPage = () => {
   const [searchTerm, setSearchTerm] = useState("");
+  const [page, setPage] = useState(1);
+  const jobsPerPage = 5;
 
   // Filter jobs based on search term in title and description
   const filteredJobs = jobs.filter((job) => {
@@ -59,6 +61,15 @@ const JobListingPage = () => {
     return titleMatch || descriptionMatch;
   });
 
+  // Calculate the jobs to display on the current page
+  const startIndex = (page - 1) * jobsPerPage;
+  const endIndex = startIndex + jobsPerPage;
+  const paginatedJobs = filteredJobs.slice(startIndex, endIndex);
+
+  const handlePageChange = (event, value) => {
+    setPage(value);
+  };
+
   const AboutUs = () => {
     return (
       <Paper elevation={3} sx={{ p: 3, mt: 4, backgroundColor: "#F7FAFC" }}>
@@ -68,12 +79,12 @@ const JobListingPage = () => {
         <Box display="flex" alignItems="center" mb={2}>
           <img
             src="/assets/black-logo.png"
-            alt="Vuio Logo"
+            alt="VUIOR Logo"
             style={{ width: "150px", marginRight: "10px" }}
           />
         </Box>
         <Typography variant="body1" color="text.secondary">
-          Vuio is a community-driven company focused on financial empowerment.
+          VUIOR is a community-driven company focused on financial empowerment.
           We offer innovative solutions and support individuals in achieving
           their financial goals.
         </Typography>
@@ -136,8 +147,8 @@ const JobListingPage = () => {
         {/* Job Listings Section */}
         <Grid container spacing={3} mt={3}>
           <Grid container item xs={12} spacing={3}>
-            {filteredJobs.length > 0 ? (
-              filteredJobs.map((job, index) => (
+            {paginatedJobs.length > 0 ? (
+              paginatedJobs.map((job, index) => (
                 <Grid item xs={12} key={index}>
                   <Accordion>
                     <AccordionSummary
@@ -239,6 +250,23 @@ const JobListingPage = () => {
                           </li>
                         ))}
                       </ul>
+                      <Button
+                        variant="contained"
+                        color="primary"
+                        sx={{
+                          backgroundColor: "#064E3B",
+                          paddingX: 4,
+                          paddingY: 1,
+                          borderRadius: "20px",
+                          fontWeight: "bold",
+                          "&:hover": {
+                            transform: "scale(1.02)",
+                            transition: "transform 0.4s ease",
+                          },
+                        }}
+                      >
+                        Apply Now
+                      </Button>
                     </AccordionDetails>
                   </Accordion>
                 </Grid>
@@ -248,11 +276,16 @@ const JobListingPage = () => {
                 No jobs found
               </Typography>
             )}
-            {/* <Grid item xs={12}>
+            <Grid item xs={12}>
               <Box mt={3} display="flex" justifyContent="center">
-                <Pagination count={5} color="primary" />
+                <Pagination
+                  count={Math.ceil(filteredJobs.length / jobsPerPage)}
+                  page={page}
+                  onChange={handlePageChange}
+                  color="primary"
+                />
               </Box>
-            </Grid> */}
+            </Grid>
           </Grid>
           <Grid item xs={12}>
             {/* About Us Section */}

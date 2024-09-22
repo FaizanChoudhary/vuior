@@ -108,7 +108,7 @@ const Footer = () => {
           >
             <img
               src="/assets/logo.png" // Replace with actual path to logo
-              alt="Vuior Logo"
+              alt="VUIOR Logo"
               style={{ width: "150px", marginBottom: "1rem" }}
             />
             <Typography variant="body1" gutterBottom fontSize={16}>

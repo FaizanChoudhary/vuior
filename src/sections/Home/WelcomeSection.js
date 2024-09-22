@@ -53,7 +53,7 @@ const WelcomeSection = () => {
               gutterBottom
               sx={{ color: "#0F4A3F", fontWeight: "bold", fontSize: 30 }}
             >
-              Welcome To Vuior!
+              Welcome To VUIOR!
             </Typography>
             <Typography
               variant="h5"
@@ -67,7 +67,7 @@ const WelcomeSection = () => {
               paragraph
               sx={{ color: "#666", fontSize: 14 }}
             >
-              Vuior is committed to helping individuals and families achieve
+              VUIOR is committed to helping individuals and families achieve
               financial stability through innovative debt management solutions
               and household bill consolidation programs. Join our community
               today and take the first step towards a brighter financial future.

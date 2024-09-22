@@ -130,7 +130,7 @@ const ConsultationForm = () => {
             Request A Free Consultation Call
           </Typography>
           <Typography variant="body1" gutterBottom fontSize={14}>
-            Schedule Your Free Consultation With Vuior Today And Save Up To 25%
+            Schedule Your Free Consultation With VUIOR Today And Save Up To 25%
             On Household Bills While Accessing Our Exclusive Loan Programs!
           </Typography>
         </Box>
