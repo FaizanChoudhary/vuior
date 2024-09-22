@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import { Box, Typography, Button } from "@mui/material";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
+import SecurePositionFormDialog from "../../components/SecurePositionFormDialog";
 
 const SecurePositionSection = () => {
+  const [open, setOpen] = useState(false);
+
   return (
     <Box
       sx={{
@@ -41,9 +44,13 @@ const SecurePositionSection = () => {
           alignItems: "center",
           justifyContent: "center",
         }}
+        onClick={() => setOpen(true)}
       >
         Apply Now <ArrowForwardIcon fontSize="small" sx={{ ml: 1 }} />
       </Button>
+      {open ? (
+        <SecurePositionFormDialog onClose={() => setOpen(false)} />
+      ) : null}
     </Box>
   );
 };

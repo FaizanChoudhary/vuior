@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import { Grid, Typography, Box, Button } from "@mui/material";
 import { styled } from "@mui/system";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
+import ProgramFormDialog from "../../components/ProgramFormDialog";
 
 // Section container with background color and spacing
 const SectionContainer = styled(Box)(({ theme }) => ({
@@ -38,6 +39,8 @@ const ImageContainer = styled(Box)(({ theme }) => ({
 }));
 
 const LoanProgramsSection = () => {
+  const [open, setOpen] = useState(false);
+
   return (
     <SectionContainer>
       <Grid container alignItems="center">
@@ -77,6 +80,7 @@ const LoanProgramsSection = () => {
                 transition: "transform 0.2s ease",
               },
             }}
+            onClick={() => setOpen(true)}
           >
             Apply Now <ArrowForwardIcon fontSize="small" sx={{ ml: 1 }} />
           </Button>
@@ -107,6 +111,7 @@ const LoanProgramsSection = () => {
           </ImageContainer>
         </Grid>
       </Grid>
+      {open ? <ProgramFormDialog handleClose={() => setOpen(false)} /> : null}
     </SectionContainer>
   );
 };

@@ -1,7 +1,8 @@
-import React from "react";
-import { Box, Typography, Button, Grid, Link } from "@mui/material";
+import React, { useState } from "react";
+import { Box, Typography, Button, Grid } from "@mui/material";
 import { styled } from "@mui/system";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
+import ProgramFormDialog from "../../components/ProgramFormDialog";
 
 // Custom Container for the section
 const SectionContainer = styled(Box)(({ theme }) => ({
@@ -39,17 +40,19 @@ const ImageContainer = styled(Box)(({ theme }) => ({
 }));
 
 // Footer Links
-const FooterLinks = styled(Box)(({ theme }) => ({
-  marginTop: theme.spacing(2),
-  display: "flex",
-  gap: theme.spacing(3),
-  [theme.breakpoints.down("sm")]: {
-    flexDirection: "column",
-    alignItems: "center",
-  },
-}));
+// const FooterLinks = styled(Box)(({ theme }) => ({
+//   marginTop: theme.spacing(2),
+//   display: "flex",
+//   gap: theme.spacing(3),
+//   [theme.breakpoints.down("sm")]: {
+//     flexDirection: "column",
+//     alignItems: "center",
+//   },
+// }));
 
 const HouseholdBillConsolidation = () => {
+  const [open, setOpen] = useState(false);
+
   return (
     <SectionContainer>
       <Grid container alignItems="center">
@@ -88,16 +91,18 @@ const HouseholdBillConsolidation = () => {
               fontWeight: "bold",
               display: "flex",
               alignItems: "center",
+              marginTop: 5,
               "&:hover": {
                 transform: "scale(1.05)",
                 transition: "transform 0.2s ease",
               },
             }}
+            onClick={() => setOpen(true)}
           >
             Apply Now <ArrowForwardIcon fontSize="small" sx={{ ml: 1 }} />
           </Button>
           {/* Footer Links */}
-          <FooterLinks>
+          {/* <FooterLinks>
             <Link
               href="#"
               underline="hover"
@@ -112,7 +117,7 @@ const HouseholdBillConsolidation = () => {
             >
               Terms And Condition
             </Link>
-          </FooterLinks>
+          </FooterLinks> */}
         </Grid>
 
         {/* Right Section: Image */}
@@ -125,6 +130,12 @@ const HouseholdBillConsolidation = () => {
           </ImageContainer>
         </Grid>
       </Grid>
+      {open ? (
+        <ProgramFormDialog
+          isHouseHoldProgramPage={true}
+          handleClose={() => setOpen(false)}
+        />
+      ) : null}
     </SectionContainer>
   );
 };
