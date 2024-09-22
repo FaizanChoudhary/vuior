@@ -17,7 +17,7 @@ const Topbar = () => {
       {/* Address and Phone Number Section */}
       <Stack direction="row" spacing={2} alignItems="center">
         <Stack direction="row" spacing={1} alignItems="center">
-          <LocationOnIcon />
+          <LocationOnIcon color="primary" />
           <Typography
             variant="body2"
             sx={{ fontSize: { xs: "10px", md: "14px" } }}
@@ -26,7 +26,7 @@ const Topbar = () => {
           </Typography>
         </Stack>
         <Stack direction="row" spacing={1} alignItems="center">
-          <PhoneIcon />
+          <PhoneIcon color="primary" />
           <Typography
             variant="body2"
             sx={{ fontSize: { xs: "10px", sm: "14px" } }}
@@ -42,6 +42,12 @@ const Topbar = () => {
           color="primary"
           aria-label="Twitter"
           href="https://twitter.com"
+          sx={{
+            transition: "transform 0.3s ease", // Transition for smooth zoom
+            "&:hover": {
+              transform: "scale(1.2)", // Zoom in on hover
+            },
+          }}
         >
           <TwitterIcon />
         </IconButton>
@@ -49,6 +55,12 @@ const Topbar = () => {
           color="primary"
           aria-label="Instagram"
           href="https://instagram.com"
+          sx={{
+            transition: "transform 0.3s ease",
+            "&:hover": {
+              transform: "scale(1.2)",
+            },
+          }}
         >
           <InstagramIcon />
         </IconButton>
@@ -56,6 +68,12 @@ const Topbar = () => {
           color="primary"
           aria-label="LinkedIn"
           href="https://linkedin.com"
+          sx={{
+            transition: "transform 0.3s ease",
+            "&:hover": {
+              transform: "scale(1.2)",
+            },
+          }}
         >
           <LinkedInIcon />
         </IconButton>

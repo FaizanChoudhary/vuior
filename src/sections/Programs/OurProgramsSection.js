@@ -11,8 +11,8 @@ const SectionContainer = styled(Box)(({ theme }) => ({
   position: "relative",
   alignItems: "center",
   padding: `${theme.spacing(8)} ${theme.spacing(20)}`, // paddingY, paddingX
-  [theme.breakpoints.down("sm")]: {
-    padding: `${theme.spacing(3)} ${theme.spacing(2)}`, // smaller paddingY, paddingX for small screens
+  [theme.breakpoints.down("md")]: {
+    padding: theme.spacing(3), // smaller paddingY, paddingX for small screens
   },
 }));
 
@@ -113,13 +113,12 @@ const OurProgramsSection = () => {
               gutterBottom
               sx={{ lineHeight: 1.8, fontSize: 14 }}
             >
-              Save up to 25% on your household bills with Vuoir's
-              group-negotiated discounts through top-tier providers. Our
-              member-driven program continuously adapts to meet your needs,
-              delivering innovative and relevant services. Become a Vuoir member
-              and experience our dedication to diversity, equity, and inclusion,
-              focusing on your needs and building a strong, supportive
-              community. Schedule a free consultation today!
+              Simplify your financial life by consolidating your household bills
+              into a single, manageable monthly payment. Through partnerships
+              with highly-rated, best-in-class carriers and providers, we offer
+              group-negotiated discounts to help you save money and reduce
+              financial stress. Our program is designed to provide innovative,
+              relevant coverage and service that exceeds your expectations.
             </Typography>
             <Button
               variant="contained"
@@ -143,7 +142,7 @@ const OurProgramsSection = () => {
         <CardContainer data-aos="fade-up">
           {/* Image on the right */}
           <ImageContainer>
-            <img src="/assets/loan_program.png" alt="Loan Programs" />
+            <img src="/assets/loan_prg.jpg" alt="Loan Programs" />
           </ImageContainer>
 
           {/* Text on the left */}
@@ -160,12 +159,14 @@ const OurProgramsSection = () => {
               gutterBottom
               sx={{ lineHeight: 1.8, fontSize: 14 }}
             >
-              Unlock the financial support you need with Vuoir's member-focused
-              loan programs. Designed to cater to all credit profiles, our loan
-              options provide flexible terms, competitive rates, and quick
-              approval. With in-house and special financing, we ensure
-              personalized solutions for every member. Join Vuoir and take
-              advantage of our commitment to diversity, equity, and inclusion.
+              Access a variety of loan options tailored to meet your specific
+              needs. Our loan program includes auto loans, mortgage loans,
+              personal loans, student loans, travel loans, wedding loans, home
+              improvement loans, health care loans, emergency loans, and more.
+              We offer in-house financing and special financing options,
+              welcoming applicants from all credit backgrounds. Our loans are
+              available to both members and non-members, although non-members
+              must become members to take full advantage of our benefits.
             </Typography>
             <Button
               variant="contained"

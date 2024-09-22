@@ -7,11 +7,12 @@ const MainLayout = Loadable(lazy(() => import("./layouts/MainLayout")));
 const Home = Loadable(lazy(() => import("./pages/HomePage")));
 const ProgramPage = Loadable(lazy(() => import("./pages/ProgramPage")));
 // const MembershipPage = Loadable(lazy(() => import("./pages/MembershipPage")));
-// const CareerPage = Loadable(lazy(() => import("./pages/CareerPage")));
-// const AboutUsPage = Loadable(lazy(() => import("./pages/AboutUsPage")));
-// const ContactUsPage = Loadable(lazy(() => import("./pages/ContactUsPage")));
-// const LoanProgramPage = Loadable(lazy(() => import("./pages/LoanProgramPage")));
-// const HouseHoldPage = Loadable(lazy(() => import("./pages/HouseHoldPage")));
+const CareerPage = Loadable(lazy(() => import("./pages/CareerPage")));
+const AboutUsPage = Loadable(lazy(() => import("./pages/AboutUsPage")));
+const ContactUsPage = Loadable(lazy(() => import("./pages/ContactUsPage")));
+const LoanProgramPage = Loadable(lazy(() => import("./pages/LoanProgramPage")));
+const HouseHoldPage = Loadable(lazy(() => import("./pages/HouseHoldPage")));
+const JobListingPage = Loadable(lazy(() => import("./pages/JobListingPage")));
 // const PrivacyPolicy = Loadable(lazy(() => import("./pages/PrivacyPolicy")));
 // const TermsOfService = Loadable(lazy(() => import("./pages/TermsOfService")));
 // const CookiePolicy = Loadable(lazy(() => import("./pages/CookiePolicy")));
@@ -28,16 +29,17 @@ const routes = [
       { path: "/", element: <Home /> },
       { path: "/programs", element: <ProgramPage /> },
       // { path: "/membership", element: <MembershipPage /> },
-      // { path: "/careers", element: <CareerPage /> },
-      // { path: "/about-us", element: <AboutUsPage /> },
-      // { path: "/contact-us", element: <ContactUsPage /> },
-      // { path: "/programs/loan-programs", element: <LoanProgramPage /> },
-      // {
-      //   path: "/programs/household-programs",
-      //   element: <HouseHoldPage />,
-      // },
+      { path: "/careers", element: <CareerPage /> },
+      { path: "/about-us", element: <AboutUsPage /> },
+      { path: "/contact-us", element: <ContactUsPage /> },
+      { path: "/programs/loan-programs", element: <LoanProgramPage /> },
+      {
+        path: "/programs/household-programs",
+        element: <HouseHoldPage />,
+      },
 
-      //   { path: "/privacy-policy", element: <PrivacyPolicy /> },
+      { path: "/careers/jobs", element: <JobListingPage /> },
+      // { path: "/privacy-policy", element: <PrivacyPolicy /> },
       //   { path: "/terms-of-service", element: <TermsOfService /> },
       //   { path: "/cookie-policy", element: <CookiePolicy /> },
       //   {

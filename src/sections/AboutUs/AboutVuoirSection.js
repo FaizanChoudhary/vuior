@@ -1,12 +1,48 @@
 import React from "react";
 import { Grid, Typography, Box, Button } from "@mui/material";
+import { styled } from "@mui/system";
+
+// Section container similar to FinancialFreedomSection
+const SectionContainer = styled(Box)(({ theme }) => ({
+  backgroundColor: "#e6f4f1",
+  marginTop: "70px !important",
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+}));
+
+// Image container with gradient overlay
+const ImageContainer = styled(Box)(({ theme }) => ({
+  display: "flex",
+  justifyContent: "center",
+  position: "relative", // For positioning gradient overlay
+  img: {
+    width: "100%",
+    height: "80vh",
+    objectFit: "cover",
+    [theme.breakpoints.down("md")]: {
+      width: "100%", // Adjust width for small screens
+      height: "auto",
+    },
+  },
+  "&::after": {
+    content: '""',
+    position: "absolute",
+    top: 0,
+    left: 0,
+    bottom: 0,
+    right: "50%", // Start gradient from the center for fade effect
+    background: "linear-gradient(to left, transparent, #e6f4f1 100%)",
+    zIndex: 1, // Ensure gradient is over the image
+  },
+}));
 
 const AboutVuoirSection = () => {
   return (
-    <Box sx={{ padding: { xs: 4, md: 6 }, backgroundColor: "#fff" }}>
-      <Grid container spacing={4} alignItems="center">
+    <SectionContainer>
+      <Grid container alignItems="center">
         {/* Left Section - Text */}
-        <Grid item xs={12} md={6}>
+        <Grid item xs={12} md={6} data-aos="fade-up" sx={{ padding: 5 }}>
           <Typography
             variant="h4"
             component="h1"
@@ -15,11 +51,11 @@ const AboutVuoirSection = () => {
             About Vuoir
           </Typography>
           <Typography variant="body1" sx={{ marginBottom: 3 }}>
-            Welcome to vuoir, a member-owned financial services provider
+            Welcome to Vuio, a member-owned financial services provider
             dedicated to helping individuals and families achieve financial
-            stability and success. At vuoir, we pride ourselves on offering
+            stability and success. At Vuio, we pride ourselves on offering
             innovative, customer-focused programs that respond to the evolving
-            needs of our members.
+            needs of our members
           </Typography>
 
           {/* Join For Free Button */}
@@ -28,10 +64,12 @@ const AboutVuoirSection = () => {
             color="primary"
             sx={{
               backgroundColor: "#064E3B",
-              paddingX: 4,
-              paddingY: 1,
               borderRadius: "20px",
               fontWeight: "bold",
+              "&:hover": {
+                transform: "scale(1.05)",
+                transition: "transform 0.2s ease",
+              },
             }}
           >
             Join For Free
@@ -39,22 +77,16 @@ const AboutVuoirSection = () => {
         </Grid>
 
         {/* Right Section - Image */}
-        <Grid item xs={12} md={6}>
-          <Box
-            component="img"
-            src="/assets/welcome_about_us.png" // Replace with actual image path
-            alt="About Vuoir"
-            sx={{
-              width: "100%",
-              height: "auto",
-              borderRadius: "16px",
-              boxShadow: 3,
-              objectFit: "cover",
-            }}
-          />
+        <Grid item xs={12} md={6} data-aos="fade-up">
+          <ImageContainer>
+            <img
+              src="/assets/welcome_about_us.png" // Replace with actual image path
+              alt="About Vuoir"
+            />
+          </ImageContainer>
         </Grid>
       </Grid>
-    </Box>
+    </SectionContainer>
   );
 };
 

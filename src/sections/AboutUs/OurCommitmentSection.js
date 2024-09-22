@@ -1,74 +1,64 @@
 import React from "react";
-import {
-  Grid,
-  Typography,
-  Box,
-  Card,
-  CardContent,
-  CardMedia,
-} from "@mui/material";
-
-// Custom Card Component
-const CommitmentCard = ({ imageSrc, title, description }) => (
-  <Card sx={{ boxShadow: 3, borderRadius: "16px", overflow: "hidden" }}>
-    <CardMedia
-      component="img"
-      height="200"
-      image={imageSrc}
-      alt={title}
-      sx={{ objectFit: "cover" }}
-    />
-    <CardContent sx={{ textAlign: "center", padding: 3 }}>
-      <Typography
-        variant="h6"
-        sx={{ fontWeight: "bold", color: "#064E3B", marginBottom: 2 }}
-      >
-        {title}
-      </Typography>
-      <Typography variant="body2" sx={{ color: "#555" }}>
-        {description}
-      </Typography>
-    </CardContent>
-  </Card>
-);
+import { Grid, Typography, Box } from "@mui/material";
+import StepCard from "../../components/StepCard";
 
 // Main Component for the "Our Commitment" Section
 const OurCommitmentSection = () => {
   return (
-    <Box sx={{ padding: { xs: 4, md: 6 }, backgroundColor: "#fff" }}>
+    <Box
+      sx={{
+        padding: { xs: 4, md: 6 },
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        backgroundColor: "#fff",
+      }}
+    >
       {/* Section Title */}
-      <Typography
-        variant="h4"
-        component="h1"
-        align="center"
-        sx={{ fontWeight: "bold", color: "#064E3B", marginBottom: 4 }}
-      >
-        Our Commitment
-      </Typography>
+      <Box data-aos="fade-up" sx={{ textAlign: "center", marginBottom: 4 }}>
+        <Typography
+          variant="h4"
+          fontWeight="bold"
+          color="primary"
+          fontSize={{ xs: 24, md: 30 }}
+        >
+          Our Commitment
+        </Typography>
+        <Box
+          sx={{
+            width: "90%",
+            borderBottom: "3px solid #23AB84",
+            margin: "0",
+          }}
+        />
+      </Box>
 
       {/* Grid Layout for Commitment Cards */}
       <Grid container spacing={4}>
-        <Grid item xs={12} md={4}>
-          <CommitmentCard
-            imageSrc="/assets/member.png" // Replace with the correct image path
+        <Grid item xs={12} md={4} sx={{ display: "flex" }}>
+          <StepCard
             title="Member-Owned Model"
-            description="When you become a member of Vuoir, you effectively become a part owner. This unique model ensures that our members have a voice in the organization and a stake in our collective success."
+            description="When you become a member of Vuio, you effectively become a part owner. This unique model ensures that our members have a voice in the organization and a stake in our collective success. Your membership means more than just access to services; it means being part of a community that values your input and prioritizes your financial well-being."
+            imgSrc="/assets/member.png"
+            alt="member"
           />
         </Grid>
 
-        <Grid item xs={12} md={4}>
-          <CommitmentCard
-            imageSrc="/assets/diversity.png" // Replace with the correct image path
+        <Grid item xs={12} md={4} sx={{ display: "flex" }}>
+          <StepCard
             title="Diversity, Equity, And Inclusion"
-            description="Vuoir is committed to fostering a diverse, equitable, and inclusive environment. We believe that embracing diversity strengthens our community and enhances our ability to serve all members effectively."
+            description="Vuio is committed to fostering a diverse, equitable, and inclusive environment. We believe that embracing diversity strengthens our community and enhances our ability to serve all members effectively. Our DEI initiatives ensure that every member feels valued and supported, regardless of their background."
+            imgSrc="/assets/diversity.png"
+            alt="diversity"
           />
         </Grid>
 
-        <Grid item xs={12} md={4}>
-          <CommitmentCard
-            imageSrc="/assets/customer.png" // Replace with the correct image path
+        <Grid item xs={12} md={4} sx={{ display: "flex" }}>
+          <StepCard
             title="Customer-Focused Approach"
-            description="At Vuoir, our members are at the heart of everything we do. We focus on understanding and meeting your needs, creating lifelong relationships, and building a supportive community."
+            description="At Vuio, our members are at the heart of everything we do. We focus on understanding and meeting your needs, creating lifelong relationships, and building a supportive community. Our customer-focused model ensures that we provide personalized support and services designed to help you achieve your financial goals."
+            imgSrc="/assets/customer.png"
+            alt="customer"
           />
         </Grid>
       </Grid>

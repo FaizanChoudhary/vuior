@@ -12,7 +12,7 @@ const FooterContainer = styled(Box)(({ theme }) => ({
   padding: theme.spacing(6),
   [theme.breakpoints.down("sm")]: {
     padding: theme.spacing(3),
-    textAlign: "center", // Center align for smaller screens
+    // textAlign: "center", // Center align for smaller screens
   },
 }));
 
@@ -131,7 +131,7 @@ const Footer = () => {
           <Box display="flex" flexDirection="column">
             <FooterLink to="/">Home</FooterLink>
             <FooterLink to="/programs">Programs</FooterLink>
-            <FooterLink to="/membership">Membership</FooterLink>
+            {/* <FooterLink to="/membership">Membership</FooterLink> */}
             <FooterLink to="/careers">Careers</FooterLink>
             <FooterLink to="/about-us">About Us</FooterLink>
             <FooterLink to="/contact-us">Contact Us</FooterLink>

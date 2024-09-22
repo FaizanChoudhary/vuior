@@ -1,21 +1,24 @@
 import React from "react";
-import OurCommitmentSection from "../sections/AboutUs/OurCommitmentSection";
 import HouseholdBillConsolidation from "../sections/HouseholdBillConsolidation/HouseholdBillConsolidation";
 import WhyChoose from "../sections/HouseholdBillConsolidation/WhyChooseCard";
 import HowToJoin from "../sections/LoanPrograms/HowToJoin";
 import EnsureQualitySection from "../sections/Membership/EnsureQualitySection";
-import FAQSection from "../sections/Programs/FAQSection";
+import { Stack } from "@mui/material";
+import MemberBenefits from "../sections/LoanPrograms/MemberBenefits";
+import HowItWorks from "../sections/HouseholdBillConsolidation/HowItWorks";
+import FAQSection from "../sections/HouseholdBillConsolidation/FAQSection";
 
 const HouseHoldPage = () => {
   return (
-    <div>
+    <Stack spacing={1}>
       <HouseholdBillConsolidation />
-      <OurCommitmentSection />
+      <MemberBenefits isHouseHoldProgramPage={true} />
       <WhyChoose />
+      <HowItWorks />
       <HowToJoin />
       <EnsureQualitySection />
       <FAQSection />
-    </div>
+    </Stack>
   );
 };
 

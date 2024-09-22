@@ -25,10 +25,9 @@ const Header = () => {
   const navItems = [
     { text: "Home", path: "/" },
     { text: "Programs", path: "/programs" },
-    { text: "Membership" },
-    { text: "Careers" },
-    { text: "About Us" },
-    { text: "Contact Us" },
+    { text: "Careers", path: "/careers" },
+    { text: "About Us", path: "/about-us" },
+    { text: "Contact Us", path: "/contact-us" },
   ];
 
   const handleScroll = () => {
@@ -48,15 +47,43 @@ const Header = () => {
 
   const drawerList = () => (
     <Box
-      sx={{ width: 250 }}
+      sx={{
+        width: 250,
+        backgroundColor: "#0F4A3F", // Background color for the drawer
+        height: "100%", // Full height
+        padding: 2, // Padding for the drawer
+      }}
       role="presentation"
       onClick={toggleDrawer(false)}
       onKeyDown={toggleDrawer(false)}
     >
+      <Box sx={{ mb: 2, display: "flex", justifyContent: "center" }}>
+        <img
+          src="/assets/logo.png" // Logo source
+          alt="Logo"
+          width={100} // Adjust width as needed
+          style={{ objectFit: "contain" }}
+        />
+      </Box>
       <List>
         {navItems.map((item, index) => (
-          <ListItem button component={Link} to={item.path} key={index}>
-            <ListItemText primary={item.text} sx={{ fontSize: 14 }} />
+          <ListItem
+            button
+            component={Link}
+            to={item.path}
+            key={index}
+            sx={{
+              "&:hover": {
+                backgroundColor: "#23AB84", // Background color on hover
+                color: "#fff",
+              },
+              padding: "10px 20px", // Padding for better spacing
+            }}
+          >
+            <ListItemText
+              primary={item.text}
+              sx={{ fontSize: 16, color: "#fff" }} // Text color
+            />
           </ListItem>
         ))}
       </List>
@@ -65,19 +92,18 @@ const Header = () => {
 
   return (
     <AppBar
-      position={isSticky ? "fixed" : "absolute"} // Make header sticky when required
+      position={isSticky ? "fixed" : "absolute"}
       sx={{
         height: "70px !important",
         backgroundColor: "#0F4A3F",
         padding: 1,
         zIndex: 1200,
         transition: "transform 0.7s ease, opacity 0.7s ease",
-        transform: isSticky ? "translateY(0)" : "translateY(-100%)", // Sliding effect when sticky
-        top: isSticky ? 0 : 130, // Adjust position when sticky
+        transform: isSticky ? "translateY(0)" : "translateY(-100%)",
+        top: isSticky ? 0 : 130,
       }}
     >
       <Toolbar sx={{ justifyContent: "space-between" }}>
-        {/* Left Section: Logo */}
         <Box display="flex" alignItems="center">
           <Box sx={{ width: 150, height: 50 }}>
             <img
@@ -90,48 +116,50 @@ const Header = () => {
           </Box>
         </Box>
 
-        {/* Navigation Links with hover and active effects */}
         <Box
           display={{ xs: "none", md: "flex", gap: 5, paddingBottom: 10 }}
           alignItems="center"
         >
-          {navItems.map((item, index) => (
-            <Typography
-              key={index}
-              component={Link}
-              to={item.path}
-              sx={{
-                color: location.pathname === item.path ? "#23AB84" : "#fff", // Green for active item
-                ml: 2,
-                cursor: "pointer",
-                fontSize: 14,
-                position: "relative", // Necessary for positioning the pseudo-element
-                fontWeight: location.pathname === item.path ? "bold" : "normal", // Bold for active item
-                textDecoration: "none",
-                transform:
-                  location.pathname === item.path ? "scale(1.2)" : "scale(1)", // Zoomed for active
-                transition: "transform 0.3s ease, color 0.3s ease", // Smooth transition for zoom and color
-                "&::after": {
-                  content: '""',
-                  position: "absolute",
-                  left: 0,
-                  bottom: "-4px", // Adjust the gap between the text and underline
-                  width: "100%",
-                  height: "2px", // Height of the underline
-                  backgroundColor: "#23AB84", // Color of the underline
-                  transform:
-                    location.pathname === item.path ? "scaleX(1)" : "scaleX(0)", // Show underline for active
-                  transformOrigin: "left",
-                  transition: "transform 0.3s ease", // Animation for the underline
-                },
-              }}
-            >
-              {item.text}
-            </Typography>
-          ))}
+          {navItems.map((item, index) => {
+            const isActive =
+              location.pathname === item.path ||
+              location.pathname.startsWith(item.path + "/");
+
+            return (
+              <Typography
+                key={index}
+                component={Link}
+                to={item.path}
+                sx={{
+                  color: isActive ? "#23AB84" : "#fff",
+                  ml: 2,
+                  cursor: "pointer",
+                  fontSize: 14,
+                  position: "relative",
+                  fontWeight: isActive ? "bold" : "normal",
+                  textDecoration: "none",
+                  transform: isActive ? "scale(1.2)" : "scale(1)",
+                  transition: "transform 0.3s ease, color 0.3s ease",
+                  "&::after": {
+                    content: '""',
+                    position: "absolute",
+                    left: 0,
+                    bottom: "-4px",
+                    width: "100%",
+                    height: "2px",
+                    backgroundColor: "#23AB84",
+                    transform: isActive ? "scaleX(1)" : "scaleX(0)",
+                    transformOrigin: "left",
+                    transition: "transform 0.3s ease",
+                  },
+                }}
+              >
+                {item.text}
+              </Typography>
+            );
+          })}
         </Box>
 
-        {/* Hamburger Menu for small screens */}
         <IconButton
           edge="start"
           color="inherit"
@@ -142,7 +170,6 @@ const Header = () => {
           <MenuIcon />
         </IconButton>
 
-        {/* Drawer for small screens */}
         <Drawer anchor="right" open={drawerOpen} onClose={toggleDrawer(false)}>
           {drawerList()}
         </Drawer>
