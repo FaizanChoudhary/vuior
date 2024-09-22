@@ -2,6 +2,7 @@ import { Box, Button, Typography } from "@mui/material";
 import { styled } from "@mui/system";
 import BGTopRight from "../../components/BGTopRight";
 import BGBottomLeft from "../../components/BGBottomLeft";
+import { useNavigate } from "react-router-dom";
 
 // Section container for the whole section background
 const SectionContainer = styled(Box)(({ theme }) => ({
@@ -67,6 +68,8 @@ const TextContent = styled(Box)(({ theme }) => ({
 }));
 
 const OurProgramsSection = () => {
+  const navigate = useNavigate();
+
   return (
     <SectionContainer>
       <BGTopRight src="/assets/backgrounds/bg1-top-right.png" />
@@ -130,6 +133,7 @@ const OurProgramsSection = () => {
                 },
                 transition: "transform 0.3s ease-in-out",
               }}
+              onClick={() => navigate("/programs/household-programs")}
             >
               Learn More
             </Button>
@@ -178,6 +182,7 @@ const OurProgramsSection = () => {
                 },
                 transition: "transform 0.3s ease-in-out",
               }}
+              onClick={() => navigate("/programs/loan-programs")}
             >
               Learn More
             </Button>

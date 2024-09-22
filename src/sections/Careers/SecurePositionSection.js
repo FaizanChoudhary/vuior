@@ -1,5 +1,6 @@
 import React from "react";
 import { Box, Typography, Button } from "@mui/material";
+import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 
 const SecurePositionSection = () => {
   return (
@@ -8,6 +9,9 @@ const SecurePositionSection = () => {
         padding: { xs: 4, md: 6 },
         backgroundColor: "#EEF9F6",
         textAlign: "center",
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
       }}
     >
       {/* Section Title */}
@@ -31,13 +35,14 @@ const SecurePositionSection = () => {
         color="primary"
         sx={{
           backgroundColor: "#064E3B",
-          paddingX: 4,
-          paddingY: 1,
           borderRadius: "20px",
           fontWeight: "bold",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
         }}
       >
-        Apply Now &rarr;
+        Apply Now <ArrowForwardIcon fontSize="small" sx={{ ml: 1 }} />
       </Button>
     </Box>
   );

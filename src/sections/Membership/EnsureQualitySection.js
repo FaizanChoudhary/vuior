@@ -1,7 +1,9 @@
 import React from "react";
 import { Box, Typography, Button } from "@mui/material";
+import { useNavigate } from "react-router-dom";
 
 const EnsureQualitySection = () => {
+  const navigate = useNavigate();
   return (
     <Box
       sx={{
@@ -66,6 +68,7 @@ const EnsureQualitySection = () => {
           borderRadius: "20px",
           fontWeight: "bold",
         }}
+        onClick={() => navigate("/")}
       >
         Join for Free
       </Button>

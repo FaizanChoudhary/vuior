@@ -1,6 +1,7 @@
 import React from "react";
 import { Box, Typography, Button, Grid, Link } from "@mui/material";
 import { styled } from "@mui/system";
+import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 
 // Custom Container for the section
 const SectionContainer = styled(Box)(({ theme }) => ({
@@ -34,18 +35,6 @@ const ImageContainer = styled(Box)(({ theme }) => ({
     right: "50%", // Start gradient from the center for fade effect
     background: "linear-gradient(to left, transparent, #e6f4f1 100%)",
     zIndex: 1, // Ensure gradient is over the image
-  },
-}));
-
-// Button styles
-const ApplyButton = styled(Button)(({ theme }) => ({
-  backgroundColor: "#064e3b",
-  color: "#fff",
-  padding: theme.spacing(1.5, 3),
-  marginTop: theme.spacing(4),
-  borderRadius: "25px",
-  "&:hover": {
-    backgroundColor: "#0F4A3F",
   },
 }));
 
@@ -88,10 +77,25 @@ const HouseholdBillConsolidation = () => {
           </Typography>
 
           {/* Apply Button */}
-          <ApplyButton variant="contained" endIcon={<span>&#10132;</span>}>
-            Apply Now
-          </ApplyButton>
-
+          <Button
+            variant="contained"
+            color="primary"
+            sx={{
+              backgroundColor: "#064E3B",
+              paddingX: 4,
+              paddingY: 1,
+              borderRadius: "20px",
+              fontWeight: "bold",
+              display: "flex",
+              alignItems: "center",
+              "&:hover": {
+                transform: "scale(1.05)",
+                transition: "transform 0.2s ease",
+              },
+            }}
+          >
+            Apply Now <ArrowForwardIcon fontSize="small" sx={{ ml: 1 }} />
+          </Button>
           {/* Footer Links */}
           <FooterLinks>
             <Link

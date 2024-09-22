@@ -16,6 +16,7 @@ import "swiper/css";
 import "swiper/css/effect-fade";
 import { Autoplay, EffectFade } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
+import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 
 // Custom background swiper for sliding images
 const BackgroundSwiper = styled(Swiper)(({ theme }) => ({
@@ -136,19 +137,23 @@ const JoinOurTeam = () => {
         {/* Apply Button */}
         <Button
           variant="contained"
+          color="primary"
           sx={{
             backgroundColor: "#064E3B",
-            paddingX: 3,
-            width: "100%",
+            paddingX: 4,
+            paddingY: 1,
+            borderRadius: "20px",
+            fontWeight: "bold",
+            display: "flex",
+            alignItems: "center",
             "&:hover": {
-              backgroundColor: "#00332d",
-              transform: "scale(1.01)",
+              transform: "scale(1.02)",
               transition: "transform 0.4s ease",
             },
           }}
           onClick={() => navigate("/careers/jobs")}
         >
-          Apply Now &rarr;
+          Apply Now <ArrowForwardIcon fontSize="small" sx={{ ml: 1 }} />
         </Button>
       </GlassContainer>
     </Box>

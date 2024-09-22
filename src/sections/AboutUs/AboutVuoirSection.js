@@ -1,6 +1,7 @@
 import React from "react";
 import { Grid, Typography, Box, Button } from "@mui/material";
 import { styled } from "@mui/system";
+import { useNavigate } from "react-router-dom";
 
 // Section container similar to FinancialFreedomSection
 const SectionContainer = styled(Box)(({ theme }) => ({
@@ -38,6 +39,8 @@ const ImageContainer = styled(Box)(({ theme }) => ({
 }));
 
 const AboutVuoirSection = () => {
+  const navigate = useNavigate();
+
   return (
     <SectionContainer>
       <Grid container alignItems="center">
@@ -71,6 +74,7 @@ const AboutVuoirSection = () => {
                 transition: "transform 0.2s ease",
               },
             }}
+            onClick={() => navigate("/")}
           >
             Join For Free
           </Button>

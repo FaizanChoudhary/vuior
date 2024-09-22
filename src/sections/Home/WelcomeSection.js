@@ -72,7 +72,12 @@ const WelcomeSection = () => {
               and household bill consolidation programs. Join our community
               today and take the first step towards a brighter financial future.
             </Typography>
-            <Button variant="contained" color="primary" sx={{ mt: 2 }}>
+            <Button
+              variant="contained"
+              color="primary"
+              sx={{ mt: 2 }}
+              onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+            >
               Sign Up Now
             </Button>
           </Box>

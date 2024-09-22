@@ -1,6 +1,7 @@
 import React from "react";
 import { Grid, Typography, Box, Button } from "@mui/material";
 import { styled } from "@mui/system";
+import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 
 // Section container with background color and spacing
 const SectionContainer = styled(Box)(({ theme }) => ({
@@ -51,7 +52,6 @@ const LoanProgramsSection = () => {
               Loan Programs
             </span>
           </Typography>
-
           <Typography variant="body1" sx={{ marginBottom: 4 }}>
             Vuoir’s Member Loan Programs are designed to provide flexible and
             accessible financial solutions to our members. Offered through
@@ -60,7 +60,6 @@ const LoanProgramsSection = () => {
             the financial support necessary for personal and professional
             growth.
           </Typography>
-
           {/* Apply Now Button */}
           <Button
             variant="contained"
@@ -71,17 +70,18 @@ const LoanProgramsSection = () => {
               paddingY: 1,
               borderRadius: "20px",
               fontWeight: "bold",
+              display: "flex",
+              alignItems: "center",
               "&:hover": {
                 transform: "scale(1.05)",
                 transition: "transform 0.2s ease",
               },
             }}
           >
-            Apply Now &rarr;
+            Apply Now <ArrowForwardIcon fontSize="small" sx={{ ml: 1 }} />
           </Button>
-
           {/* Privacy Policy and Terms Links */}
-          <Box sx={{ display: "flex", gap: 2, marginTop: 2, fontSize: 14 }}>
+          {/* <Box sx={{ display: "flex", gap: 2, marginTop: 2, fontSize: 14 }}>
             <Typography
               variant="body2"
               sx={{ cursor: "pointer", color: "#064E3B" }}
@@ -94,7 +94,7 @@ const LoanProgramsSection = () => {
             >
               Terms and Conditions
             </Typography>
-          </Box>
+          </Box> */}
         </Grid>
 
         {/* Right Section - Image */}
