@@ -34,7 +34,11 @@ const EligibilityCommitmentSection = ({ data }) => {
               component="img"
               src={data.eligibiltyImage}
               alt="Eligibility"
-              sx={{ width: "100%", height: "auto" }}
+              sx={{
+                width: "100%",
+                height: "auto",
+                maxHeight: "700px", // Prevents image from growing too tall
+              }}
             />
           </ImageContainer>
         </Grid>
