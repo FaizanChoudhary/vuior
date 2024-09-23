@@ -22,9 +22,9 @@ const HowItWorks = () => {
     },
     {
       number: "3",
-      title: "Membership Requirement",
+      title: "Quick Approval",
       description:
-        "While anyone can apply for our loans, becoming a vuior member is necessary to take full advantage of our programs. Membership is free to join, and maintaining an account balance of $25 ensures continuous access to all benefits.",
+        "Vuio streamlines the application process to deliver results quickly. Apply today and receive a decision in no time.",
       imgSrc: "/assets/loanworks3.png",
       alt: "loanworks3",
     },

@@ -30,9 +30,9 @@ const WhyChoose = () => {
     },
     {
       number: "4",
-      title: "Membership Requirement",
+      title: "Quick Approval",
       description:
-        "Anyone can apply for our household bill consolidation program. Membership is free, but maintaining an account balance of $25 is required to keep your membership active.",
+        "Vuio streamlines the application process to deliver results quickly. Apply today and receive a decision in no time.",
       imgSrc: "/assets/choose4.png",
       alt: "choose4",
     },
