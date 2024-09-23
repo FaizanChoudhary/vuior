@@ -20,7 +20,7 @@ import {
 } from "@mui/material";
 import CloseIcon from "@mui/icons-material/Close";
 
-const FormDialog = ({ isHouseHoldProgramPage, handleClose }) => {
+const ProgramFormDialog = ({ isHouseHoldProgramPage, handleClose }) => {
   const steps = isHouseHoldProgramPage
     ? ["YOUR INFO", "QUALIFYING QUESTIONS"]
     : ["YOUR INFO", "QUALIFYING QUESTIONS", "LOAN REGARDING"];
@@ -437,4 +437,4 @@ const FormDialog = ({ isHouseHoldProgramPage, handleClose }) => {
   );
 };
 
-export default FormDialog;
+export default ProgramFormDialog;

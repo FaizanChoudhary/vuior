@@ -27,7 +27,9 @@ const AccordionHeader = styled(Box)(({ theme }) => ({
 }));
 
 // Content for the accordion (answer part) with smooth height transition
-const AccordionContent = styled(Box)(({ expanded }) => ({
+const AccordionContent = styled(Box, {
+  shouldForwardProp: (prop) => prop !== "expanded",
+})(({ expanded }) => ({
   maxHeight: expanded ? "500px" : "0px",
   padding: expanded ? "16px" : "0px",
   backgroundColor: "#fff",

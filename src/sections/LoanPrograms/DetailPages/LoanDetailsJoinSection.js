@@ -1,7 +1,12 @@
 import { Box, Button, Typography } from "@mui/material";
-import React from "react";
+import React, { useState } from "react";
+import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
+import ProgramFormDialog from "../../../components/ProgramFormDialog";
+// import ProgramFormDialog from "../../components/ProgramFormDialog";
 
 const LoanDetailsJoinSection = () => {
+  const [open, setOpen] = useState(false);
+
   return (
     <Box
       sx={{
@@ -28,20 +33,26 @@ const LoanDetailsJoinSection = () => {
 
       {/* Call-to-Action Button */}
       <Button
-        data-aos="fade-up"
         variant="contained"
         color="primary"
         sx={{
+          backgroundColor: "#064E3B",
           paddingX: 4,
           paddingY: 1,
-          backgroundColor: "#064E3B",
           borderRadius: "20px",
           fontWeight: "bold",
+          display: "flex",
+          alignItems: "center",
+          "&:hover": {
+            transform: "scale(1.05)",
+            transition: "transform 0.2s ease",
+          },
         }}
-        // onClick={() => navigate("/")}
+        onClick={() => setOpen(true)}
       >
-        Apply now
+        Apply Now <ArrowForwardIcon fontSize="small" sx={{ ml: 1 }} />
       </Button>
+      {open ? <ProgramFormDialog handleClose={() => setOpen(false)} /> : null}
     </Box>
   );
 };

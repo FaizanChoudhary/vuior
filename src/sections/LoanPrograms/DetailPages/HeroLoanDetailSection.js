@@ -1,78 +1,122 @@
-import {
-  Box,
-  Grid,
-  List,
-  ListItem,
-  ListItemText,
-  Typography,
-} from "@mui/material";
+import { Box, Grid, Typography } from "@mui/material";
+import { styled } from "@mui/system";
 import React from "react";
 
-const HeroLoanDetailSection = () => {
-  return (
-    <Grid container spacing={2} justifyContent={"center"} alignItems="center">
-      <Grid item xs={12}>
-        <Typography variant="h4" component="h2" gutterBottom>
-          Travel Loan Program
-        </Typography>
-      </Grid>
-      {/* Text Section */}
-      <Grid item xs={12} md={6}>
-        <Typography variant="h6" component="h3" sx={{ mb: 2 }}>
-          About Program
-        </Typography>
-        <Typography variant="body1" sx={{ mb: 2 }}>
-          Our Travel Loan Program helps you finance your dream vacation or
-          essential travel needs. Whether it’s a family trip, a honeymoon, or a
-          necessary journey, vuior makes it financially feasible.
-        </Typography>
-        <Typography variant="h6" component="h3" sx={{ mb: 2 }}>
-          Program Highlights
-        </Typography>
-        <List>
-          <ListItem>
-            <ListItemText
-              primary="Flexible Loan Amounts"
-              secondary="Borrow what you need for your travel plans."
-            />
-          </ListItem>
-          <ListItem>
-            <ListItemText
-              primary="Competitive Rates"
-              secondary="Low interest rates to make travel affordable."
-            />
-          </ListItem>
-          <ListItem>
-            <ListItemText
-              primary="Quick Approval"
-              secondary="Fast processing to get you on your way without delay."
-            />
-          </ListItem>
-          <ListItem>
-            <ListItemText
-              primary="Flexible Repayment"
-              secondary="Choose repayment terms that fit your budget."
-            />
-          </ListItem>
-          <ListItem>
-            <ListItemText
-              primary="In-House and Special Financing"
-              secondary="vuior offers both in-house financing and special financing options to provide additional flexibility and support."
-            />
-          </ListItem>
-        </List>
-      </Grid>
+// Section container
+const SectionContainer = styled(Box)(({ theme }) => ({
+  backgroundColor: "#e6f4f1",
+  marginTop: "60px !important",
+  display: "flex",
+  flexDirection: "column",
+  alignItems: "center",
+  justifyContent: "center",
+}));
 
-      {/* Image Section */}
-      <Grid item xs={12} md={6}>
-        <Box
-          component="img"
-          // src={"/assets/loan/travelloan1.png"}
-          alt="Family with travel documents"
-          sx={{ width: "100%", borderRadius: 2 }}
-        />
+// Image container with gradient overlay
+const ImageContainer = styled(Box)(({ theme }) => ({
+  display: "flex",
+  justifyContent: "center",
+  position: "relative", // For positioning gradient overlay
+  img: {
+    width: "100%",
+    height: "80vh",
+    objectFit: "cover",
+    [theme.breakpoints.down("md")]: {
+      height: "auto",
+    },
+  },
+  "&::after": {
+    content: '""',
+    position: "absolute",
+    top: 0,
+    left: 0,
+    bottom: 0,
+    right: "50%", // Start gradient from the center for fade effect
+    background: "linear-gradient(to left, transparent, #e6f4f1 100%)",
+    zIndex: 1, // Ensure gradient is over the image
+  },
+}));
+
+const HeroLoanDetailSection = ({ data }) => {
+  return (
+    <SectionContainer>
+      <Grid container alignItems="center">
+        {/* Left Section - Text */}
+        <Grid item xs={12} md={6} data-aos="fade-up" sx={{ padding: 5 }}>
+          <Typography
+            fontWeight="bold"
+            color="primary"
+            fontSize={{ xs: 24, md: 36 }}
+            data-aos="fade-up"
+            mb={1}
+          >
+            {data.pageTitle}
+          </Typography>
+          <Typography variant="h6" color="primary" fontWeight="bold">
+            About Program
+          </Typography>
+          <Box
+            sx={{
+              width: "20%",
+              borderBottom: "3px solid #23AB84",
+              marginBottom: 3,
+            }}
+          />
+          <Typography variant="body1" sx={{ my: 2 }}>
+            {data.aboutDescription}
+          </Typography>
+
+          <Typography variant="h6" color="primary" fontWeight="bold">
+            Program Highlights
+          </Typography>
+          <Box
+            sx={{
+              width: "25%",
+              borderBottom: "3px solid #23AB84",
+              marginBottom: 2,
+            }}
+          />
+          <Box
+            sx={{
+              display: "flex",
+              flexDirection: "column",
+              gap: 2,
+              mt: 2,
+            }}
+          >
+            {data.highlights.map((highlight, index) => (
+              <Box
+                key={index}
+                sx={{
+                  display: "flex",
+                  flexDirection: "column",
+                }}
+              >
+                <Box sx={{ display: "flex", alignItems: "center" }}>
+                  <span style={{ marginRight: "0.5em" }}>•</span>
+                  <Typography variant="body1" fontWeight="bold">
+                    {highlight.title}
+                  </Typography>
+                </Box>
+                <Typography variant="body2" color="textSecondary">
+                  {highlight.description}
+                </Typography>
+              </Box>
+            ))}
+          </Box>
+        </Grid>
+
+        {/* Right Section - Image */}
+        <Grid item xs={12} md={6} data-aos="fade-up">
+          <ImageContainer>
+            <img
+              src={data.heroImage} // Use actual image path
+              alt="heroImage"
+            />
+          </ImageContainer>
+        </Grid>
       </Grid>
-    </Grid>
+    </SectionContainer>
   );
 };
 

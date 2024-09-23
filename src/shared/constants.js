@@ -309,9 +309,12 @@ export const jobs = [
 ];
 
 export const loanPrograms = {
-  travel: {
+  "travel-loans": {
     pageTitle: "Travel Loan Program",
     aboutTitle: "About Program",
+    heroImage: "/assets/travelloan1.png",
+    eligibiltyImage: "/assets/travelloan2.png",
+    communityImage: "/assets/travelloan3.png",
     aboutDescription:
       "Our Travel Loan Program helps you finance your dream vacation or essential travel needs. Whether it's a family trip, a honeymoon, or a necessary journey, vuior makes it financially feasible.",
     highlightsTitle: "Program Highlights",
@@ -355,9 +358,12 @@ export const loanPrograms = {
       "Make Your Travel Dreams Come True With Vuior’s Travel Loan Program. Apply Now!",
     buttonText: "Apply Now",
   },
-  personal: {
+  "personal-loans": {
     pageTitle: "Personal Loan Program",
     aboutTitle: "About Program",
+    heroImage: "/assets/personelloan1.png",
+    eligibiltyImage: "/assets/personelloan2.png",
+    communityImage: "/assets/personelloan3.png",
     aboutDescription:
       "The Vuior Personal Loan Program is designed to provide flexible financial solutions for various personal needs, such as debt consolidation, home improvements, or unexpected expenses. This program welcomes all credit profiles and focuses on quick and easy access to funds.",
     highlightsTitle: "Program Highlights",
@@ -403,9 +409,12 @@ export const loanPrograms = {
       "Take Control Of Your Financial Future With Vuior’s Personal Loan Program. Apply Now To Get Started!",
     buttonText: "Apply Now",
   },
-  student: {
+  "student-loans": {
     pageTitle: "Student Loan Program",
     aboutTitle: "About Program",
+    heroImage: "/assets/studentloan1.png",
+    eligibiltyImage: "/assets/studentloan2.png",
+    communityImage: "/assets/studentloan3.png",
     aboutDescription:
       "vuior’s Student Loan Program supports educational aspirations by providing funds for tuition, books, and living expenses. We aim to make higher education accessible and affordable for all.",
     highlightsTitle: "Program Highlights",
@@ -451,9 +460,12 @@ export const loanPrograms = {
       "Finance your education with vuior’s Student Loan Program. Apply now!",
     buttonText: "Apply Now",
   },
-  specialEvent: {
+  "special-event-loans": {
     pageTitle: "Special Event Loan Program",
     aboutTitle: "About Program",
+    heroImage: "/assets/specialevent1.png",
+    eligibiltyImage: "/assets/specialevent2.png",
+    communityImage: "/assets/specialevent3.png",
     aboutDescription:
       "The vuior Special Event Loan Program provides the funds needed to create memorable experiences for significant events such as weddings, anniversaries, or other special occasions.",
     highlightsTitle: "Program Highlights",
@@ -497,9 +509,12 @@ export const loanPrograms = {
       "Create your perfect event with Vuior’s Special Event Loan Program. Apply now!",
     buttonText: "Apply Now",
   },
-  homeImprovement: {
+  "home-improvement-loans": {
     pageTitle: "Home Improvement Loan Program",
     aboutTitle: "About Program",
+    heroImage: "/assets/homeimprovementloan1.png",
+    eligibiltyImage: "/assets/homeimprovementloan2.png",
+    communityImage: "/assets/homeimprovementloan3.png",
     aboutDescription:
       "Our Home Improvement Loan Program funds renovation and repair projects, helping you enhance your living space and increase your home's value.",
     highlightsTitle: "Program Highlights",
@@ -543,9 +558,12 @@ export const loanPrograms = {
       "Enhance your home with Vuior’s Home Improvement Loan Program. Apply now!",
     buttonText: "Apply Now",
   },
-  smallBusiness: {
+  "small-Business-loans": {
     pageTitle: "Small Business Loan Program",
     aboutTitle: "About Program",
+    heroImage: "/assets/smallbussiness1.png",
+    eligibiltyImage: "/assets/smallbussiness2.png",
+    communityImage: "/assets/smallbussiness3.png",
     aboutDescription:
       "The vuior Small Business Loan Program supports entrepreneurs and small business owners by providing the necessary funds to start, grow, or sustain their businesses. This program is designed to cater to diverse business needs and credit profiles.",
     highlightsTitle: "Program Highlights",
@@ -589,9 +607,12 @@ export const loanPrograms = {
       "Empower your business with Vuior’s Small Business Loan Program. Apply now to fuel your entrepreneurial journey!",
     buttonText: "Apply Now",
   },
-  emergency: {
+  "emergency-loans": {
     pageTitle: "Emergency Loan Program",
     aboutTitle: "About Program",
+    heroImage: "/assets/emergencyloan1.png",
+    eligibiltyImage: "/assets/emergencyloan2.png",
+    communityImage: "/assets/emergencyloan3.png",
     aboutDescription:
       "The vuior Emergency Loan Program is designed to provide quick financial relief during unexpected emergencies. Whether it’s medical expenses, urgent repairs, or other unforeseen costs, this program ensures that you can access funds promptly.",
     highlightsTitle: "Program Highlights",
@@ -634,9 +655,12 @@ export const loanPrograms = {
       "Get the financial support you need during emergencies with Vuior’s Emergency Loan Program. Apply now!",
     buttonText: "Apply Now",
   },
-  healthCare: {
+  "health-care-loans": {
     pageTitle: "Health Care Loan Program",
     aboutTitle: "About Program",
+    heroImage: "/assets/healthcare1.png",
+    eligibiltyImage: "/assets/healthcare2.png",
+    communityImage: "/assets/healthcare3.png",
     aboutDescription:
       "The vuior Health Care Loan Program is tailored to cover medical expenses, including treatments, surgeries, and other health-related costs. This program ensures that you can focus on your health without financial worries.",
     highlightsTitle: "Program Highlights",
@@ -680,9 +704,12 @@ export const loanPrograms = {
       "Focus on your health with the support of Vuior’s Health Care Loan Program. Apply now!",
     buttonText: "Apply Now",
   },
-  auto: {
+  "auto-loans": {
     pageTitle: "Auto Loan Program",
     aboutTitle: "About Program",
+    heroImage: "/assets/autoloan1.png",
+    eligibiltyImage: "/assets/autoloan2.png",
+    communityImage: "/assets/autoloan3.png",
     aboutDescription:
       "The vuior Auto Loan Program offers flexible financing options for purchasing new or used vehicles. Designed to cater to all credit profiles, this program ensures that members can own a reliable vehicle essential for personal and professional growth.",
     highlightsTitle: "Program Highlights",
@@ -729,9 +756,12 @@ export const loanPrograms = {
       "Drive your dream car today with vuior’s Auto Loan Program. Apply now to get started!",
     buttonText: "Apply Now",
   },
-  mortgage: {
+  "mortgage-loans": {
     pageTitle: "Mortgage Loan Program",
     aboutTitle: "About Program",
+    heroImage: "/assets/mortageloan1.png",
+    eligibiltyImage: "/assets/mortageloan2.png",
+    communityImage: "/assets/mortageloan3.png",
     aboutDescription:
       "The vuior Mortgage Loan Program is designed to help you purchase your dream home or refinance your existing mortgage. We offer a range of mortgage products to meet diverse needs, ensuring that everyone has the opportunity to secure homeownership.",
     highlightsTitle: "Program Highlights",

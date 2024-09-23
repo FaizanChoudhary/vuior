@@ -5,13 +5,17 @@ import EligibilityCommitmentSection from "../sections/LoanPrograms/DetailPages/E
 import CommunityMembershipSection from "../sections/LoanPrograms/DetailPages/CommunityMembershipSection";
 import LoanDetailsJoinSection from "../sections/LoanPrograms/DetailPages/LoanDetailsJoinSection";
 import { Stack } from "@mui/material";
+import { loanPrograms } from "../shared/constants";
+import { useParams } from "react-router-dom";
 
 const LoanProgramDetails = () => {
+  const { loanType } = useParams();
+  const programData = loanPrograms[loanType];
   return (
-    <Stack spacing={1} mt={10}>
-      <HeroLoanDetailSection />
-      <EligibilityCommitmentSection />
-      <CommunityMembershipSection />
+    <Stack>
+      <HeroLoanDetailSection data={programData} />
+      <EligibilityCommitmentSection data={programData} />
+      <CommunityMembershipSection data={programData} />
       <LoanDetailsJoinSection />
     </Stack>
   );

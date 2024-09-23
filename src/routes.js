@@ -37,7 +37,7 @@ const routes = [
       { path: "/contact-us", element: <ContactUsPage /> },
       { path: "/programs/loan-programs", element: <LoanProgramPage /> },
       {
-        path: "/programs/loan-programs/Travel-Loans",
+        path: "/programs/loan-programs/:loanType",
         element: <LoanProgramDetails />,
       },
       {

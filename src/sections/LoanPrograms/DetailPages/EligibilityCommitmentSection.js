@@ -1,58 +1,101 @@
-// EligibilityCommitmentSection.js
-import {
-  Box,
-  Grid,
-  List,
-  ListItem,
-  ListItemText,
-  Typography,
-} from "@mui/material";
+import { Box, Grid, Typography } from "@mui/material";
+import { styled } from "@mui/system";
 import React from "react";
 
-const EligibilityCommitmentSection = () => {
+// Styled components
+const SectionContainer = styled(Box)(({ theme }) => ({
+  marginTop: "60px",
+  padding: theme.spacing(5),
+  display: "flex",
+  flexDirection: "column",
+  alignItems: "center",
+  backgroundColor: "#f9f9f9", // Light background for contrast
+}));
+
+const ImageContainer = styled(Box)(({ theme }) => ({
+  borderRadius: "10px",
+  overflow: "hidden", // Ensures image stays within rounded corners
+}));
+
+const BulletPoint = styled(Box)(({ theme }) => ({
+  display: "flex",
+  alignItems: "center",
+  marginBottom: theme.spacing(1),
+}));
+
+const EligibilityCommitmentSection = ({ data }) => {
   return (
-    <Grid container spacing={4} alignItems="center">
-      {/* Image Section */}
-      <Grid item xs={12} md={6}>
-        <Box
-          component="img"
-          //   src={"/assets/loan/travelloan2.png"}
-          alt="Meeting with loan officer"
-          sx={{ width: "100%", borderRadius: 2 }}
-        />
-      </Grid>
+    <SectionContainer>
+      <Grid container spacing={4} alignItems="center">
+        {/* Image Section */}
+        <Grid item xs={12} md={6}>
+          <ImageContainer>
+            <Box
+              component="img"
+              src={data.eligibiltyImage}
+              alt="Eligibility"
+              sx={{ width: "100%", height: "auto" }}
+            />
+          </ImageContainer>
+        </Grid>
 
-      {/* Text Section */}
-      <Grid item xs={12} md={6}>
-        <Typography variant="h6" component="h3" gutterBottom>
-          Eligibility Requirements
-        </Typography>
-        <List>
-          <ListItem>
-            <ListItemText primary="Proof of income" />
-          </ListItem>
-          <ListItem>
-            <ListItemText primary="Proof of residence" />
-          </ListItem>
-          <ListItem>
-            <ListItemText primary="Minimum down payment (if applicable)" />
-          </ListItem>
-          <ListItem>
-            <ListItemText primary="Travel itinerary (if applicable)" />
-          </ListItem>
-        </List>
-
-        <Typography variant="h6" component="h3" gutterBottom sx={{ mt: 4 }}>
-          Commitment To Members
-        </Typography>
-        <Typography variant="body1">
-          Each loan is monitored by vuior and its member committees to ensure
-          that as needs and times change, the Travel Loan Program responds by
-          delivering innovative, relevant coverage and service that exceeds
-          vuior members’ expectations.
-        </Typography>
+        {/* Text Section */}
+        <Grid item xs={12} md={6}>
+          <Box data-aos="fade-up" sx={{ marginBottom: 4 }}>
+            <Typography
+              variant="h4"
+              fontWeight="bold"
+              color="primary"
+              fontSize={{ xs: 24, md: 30 }}
+            >
+              Eligibility Requirements
+            </Typography>
+            <Box
+              sx={{
+                width: "45%",
+                borderBottom: "3px solid #23AB84",
+                margin: "0",
+              }}
+            />
+          </Box>
+          <Box
+            sx={{
+              display: "flex",
+              flexDirection: "column",
+              gap: 1, // Spacing between items
+              my: 2, // Margin around the list
+            }}
+          >
+            {data.eligibilityRequirements.map((eligibility, index) => (
+              <BulletPoint key={index}>
+                <span style={{ marginRight: "0.5em", color: "#23AB84" }}>
+                  •
+                </span>
+                <Typography variant="body1">{eligibility}</Typography>
+              </BulletPoint>
+            ))}
+          </Box>
+          <Box data-aos="fade-up" sx={{ marginBottom: 4 }}>
+            <Typography
+              variant="h4"
+              fontWeight="bold"
+              color="primary"
+              fontSize={{ xs: 24, md: 30 }}
+            >
+              Commitment To Members
+            </Typography>
+            <Box
+              sx={{
+                width: "50%",
+                borderBottom: "3px solid #23AB84",
+                margin: "0",
+              }}
+            />
+          </Box>
+          <Typography variant="body1">{data.commitmentDescription}</Typography>
+        </Grid>
       </Grid>
-    </Grid>
+    </SectionContainer>
   );
 };
 

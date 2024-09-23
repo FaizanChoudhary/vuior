@@ -9,9 +9,11 @@ import {
   ListItem,
   Grid,
 } from "@mui/material";
+import { useNavigate } from "react-router-dom";
 
 // Loan Offer Card Component
-const LoanOfferCard = ({ title, description, iconSrc }) => {
+const LoanOfferCard = ({ title, description, iconSrc, loanType }) => {
+  const navigate = useNavigate();
   return (
     <Card
       sx={{
@@ -86,6 +88,7 @@ const LoanOfferCard = ({ title, description, iconSrc }) => {
               background: "linear-gradient(90deg, #23AB84 0%, #064E3B 100%)",
             },
           }}
+          onClick={() => navigate(`/programs/loan-programs/${loanType}`)}
         >
           View Details →
         </Button>
@@ -99,6 +102,7 @@ const LoanProgramOffers = () => {
   const loanOffers = [
     {
       title: "Auto Loans",
+      loanType: "auto-loans",
       description: [
         "Competitive rates for new and used vehicles",
         "Flexible repayment terms",
@@ -107,6 +111,7 @@ const LoanProgramOffers = () => {
     },
     {
       title: "Mortgage Loans",
+      loanType: "mortgage-loans",
       description: [
         "Home purchase and refinancing options",
         "Attractive interest rates and terms",
@@ -115,6 +120,7 @@ const LoanProgramOffers = () => {
     },
     {
       title: "Personal Loans",
+      loanType: "personal-loans",
       description: [
         "For a variety of personal expenses, including debt consolidation",
         "No collateral required",
@@ -123,6 +129,7 @@ const LoanProgramOffers = () => {
     },
     {
       title: "Student Loans",
+      loanType: "student-loans",
       description: [
         "Funding for education expenses",
         "Competitive rates and flexible repayment options",
@@ -131,6 +138,7 @@ const LoanProgramOffers = () => {
     },
     {
       title: "Travel Loans",
+      loanType: "travel-loans",
       description: [
         "Financing for your dream vacation",
         "Easy application process",
@@ -139,6 +147,7 @@ const LoanProgramOffers = () => {
     },
     {
       title: "Special Event Loan",
+      loanType: "special-event-loans",
       description: [
         "Cover expenses for your special day",
         "Flexible terms and attractive rates",
@@ -147,6 +156,7 @@ const LoanProgramOffers = () => {
     },
     {
       title: "Home Improvement Loans",
+      loanType: "home-improvement-loans",
       description: [
         "Finance renovations and home repairs",
         "Tailored repayment plans",
@@ -155,6 +165,7 @@ const LoanProgramOffers = () => {
     },
     {
       title: "Small Business Loans",
+      loanType: "small-Business-loans",
       description: [
         "Support for starting or expanding your business",
         "Flexible financing options",
@@ -163,11 +174,13 @@ const LoanProgramOffers = () => {
     },
     {
       title: "Emergency Loans",
+      loanType: "emergency-loans",
       description: ["Quick access to funds for emergencies", "Fast approval"],
       iconSrc: "/assets/icons/emergencyloan.png", // Replace with actual image path
     },
     {
       title: "Health Care Loans",
+      loanType: "health-care-loans",
       description: [
         "Cover medical expenses and treatments",
         "Manageable repayment terms",
@@ -220,6 +233,7 @@ const LoanProgramOffers = () => {
           >
             <LoanOfferCard
               title={offer.title}
+              loanType={offer.loanType}
               description={offer.description}
               iconSrc={offer.iconSrc}
             />
