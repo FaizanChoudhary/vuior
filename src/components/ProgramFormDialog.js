@@ -179,6 +179,7 @@ const FormDialog = ({ isHouseHoldProgramPage, handleClose }) => {
                     1. What type of loan are you interested in?
                   </Typography>
                   <Select
+                    size="small"
                     fullWidth
                     name="loanType"
                     value={formData.loanType}
@@ -194,6 +195,7 @@ const FormDialog = ({ isHouseHoldProgramPage, handleClose }) => {
                     2. How much down payment can you provide for the loan?
                   </Typography>
                   <Select
+                    size="small"
                     fullWidth
                     name="downPayment"
                     value={formData.downPayment}
@@ -252,6 +254,7 @@ const FormDialog = ({ isHouseHoldProgramPage, handleClose }) => {
                     5. How much monthly payment can you afford for the loan?
                   </Typography>
                   <Select
+                    size="small"
                     fullWidth
                     name="monthlyPayment"
                     value={formData.monthlyPayment}
@@ -267,6 +270,7 @@ const FormDialog = ({ isHouseHoldProgramPage, handleClose }) => {
                     6. How long have you been at your current job?
                   </Typography>
                   <Select
+                    size="small"
                     fullWidth
                     name="jobDuration"
                     value={formData.jobDuration}
@@ -282,6 +286,7 @@ const FormDialog = ({ isHouseHoldProgramPage, handleClose }) => {
                     7. Rate your credit score:
                   </Typography>
                   <Select
+                    size="small"
                     fullWidth
                     name="creditScore"
                     value={formData.creditScore}
@@ -298,6 +303,7 @@ const FormDialog = ({ isHouseHoldProgramPage, handleClose }) => {
                     8. What is your estimated monthly income?
                   </Typography>
                   <Select
+                    size="small"
                     fullWidth
                     name="monthlyIncome"
                     value={formData.monthlyIncome}
