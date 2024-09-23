@@ -50,7 +50,6 @@ const FAQSection = () => {
     <FaqsSection>
       <Grid container spacing={4}>
         {/* Left column - Image */}
-
         <Grid item xs={12} md={6}>
           <Box data-aos="fade-up">
             <img

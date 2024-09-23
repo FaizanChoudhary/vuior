@@ -307,3 +307,477 @@ export const jobs = [
     ],
   },
 ];
+
+export const loanPrograms = {
+  travel: {
+    pageTitle: "Travel Loan Program",
+    aboutTitle: "About Program",
+    aboutDescription:
+      "Our Travel Loan Program helps you finance your dream vacation or essential travel needs. Whether it's a family trip, a honeymoon, or a necessary journey, vuior makes it financially feasible.",
+    highlightsTitle: "Program Highlights",
+    highlights: [
+      {
+        title: "Flexible Loan Amounts",
+        description: "Borrow what you need for your travel plans.",
+      },
+      {
+        title: "Competitive Rates",
+        description: "Low interest rates to make travel affordable.",
+      },
+      {
+        title: "Quick Approval",
+        description: "Fast processing to get you on your way without delay.",
+      },
+      {
+        title: "Flexible Repayment",
+        description: "Choose repayment terms that fit your budget.",
+      },
+      {
+        title: "In-House and Special Financing",
+        description:
+          "vuior offers both in-house financing and special financing options to provide additional flexibility and support.",
+      },
+    ],
+    eligibilityTitle: "Eligibility Requirements",
+    eligibilityRequirements: [
+      "Proof of income",
+      "Proof of residence",
+      "Minimum down payment (if applicable)",
+      "Travel itinerary (if applicable)",
+    ],
+    commitmentTitle: "Commitment To Members",
+    commitmentDescription:
+      "Each loan is monitored by vuior and its member committees to ensure that as needs and times change, the Travel Loan Program responds by delivering innovative, relevant coverage and service that exceeds vuior members’ expectations.",
+    communityTitle: "Vuior Community And Membership",
+    communityDescription:
+      "Joining vuior is free and gives you access to our Travel Loan Program. Our community supports your travel aspirations by providing financial assistance and exclusive member benefits. Our commitment to diversity, equity, and inclusion ensures all members feel welcomed and supported.",
+    callToAction:
+      "Make Your Travel Dreams Come True With Vuior’s Travel Loan Program. Apply Now!",
+    buttonText: "Apply Now",
+  },
+  personal: {
+    pageTitle: "Personal Loan Program",
+    aboutTitle: "About Program",
+    aboutDescription:
+      "The Vuior Personal Loan Program is designed to provide flexible financial solutions for various personal needs, such as debt consolidation, home improvements, or unexpected expenses. This program welcomes all credit profiles and focuses on quick and easy access to funds.",
+    highlightsTitle: "Program Highlights",
+    highlights: [
+      {
+        title: "Flexible Terms",
+        description:
+          "Choose repayment plans that fit your budget and financial situation.",
+      },
+      {
+        title: "Competitive Interest Rates",
+        description:
+          "Enjoy competitive rates regardless of your credit history.",
+      },
+      {
+        title: "Quick Approval",
+        description:
+          "Streamlined application process for fast access to funds.",
+      },
+      {
+        title: "No Hidden Fees",
+        description: "Transparent loan terms with no hidden charges.",
+      },
+      {
+        title: "In-House and Special Financing",
+        description:
+          "Vuior offers both in-house financing and special financing options to provide additional flexibility and support.",
+      },
+    ],
+    eligibilityTitle: "Eligibility Requirements",
+    eligibilityRequirements: [
+      "Proof of income",
+      "Proof of residence",
+      "Minimum credit score (varies based on loan amount and credit profile)",
+    ],
+    commitmentTitle: "Commitment To Members",
+    commitmentDescription:
+      "Each loan is monitored by vuior and its member committees to ensure that as needs and times change, the Personal Loan Program responds by delivering innovative, relevant coverage and service that exceeds vuior members’ expectations.",
+    communityTitle: "Vuior Community And Membership",
+    communityDescription:
+      "When you become a member of vuior, you effectively become a part owner. Our commitment to diversity, equity, and inclusion, along with our customer-focused model, ensures we prioritize your needs, creating lifelong relationships and building a community. All credit profiles are welcome.",
+    callToAction:
+      "Take Control Of Your Financial Future With Vuior’s Personal Loan Program. Apply Now To Get Started!",
+    buttonText: "Apply Now",
+  },
+  student: {
+    pageTitle: "Student Loan Program",
+    aboutTitle: "About Program",
+    aboutDescription:
+      "vuior’s Student Loan Program supports educational aspirations by providing funds for tuition, books, and living expenses. We aim to make higher education accessible and affordable for all.",
+    highlightsTitle: "Program Highlights",
+    highlights: [
+      {
+        title: "Flexible Repayment Options",
+        description:
+          "Choose repayment plans that fit your post-graduation financial situation.",
+      },
+      {
+        title: "Competitive Interest Rates",
+        description: "Low rates to minimize your financial burden.",
+      },
+      {
+        title: "Deferment Options",
+        description:
+          "Possibility to defer payments while in school or during financial hardship.",
+      },
+      {
+        title: "No Cosigner Required",
+        description: "Accessible to students without the need for a cosigner.",
+      },
+      {
+        title: "In-House and Special Financing",
+        description:
+          "vuior offers both in-house financing and special financing options to provide additional flexibility and support.",
+      },
+    ],
+    eligibilityTitle: "Eligibility Requirements",
+    eligibilityRequirements: [
+      "Proof of enrollment in an accredited institution",
+      "Proof of residence",
+      "Minimum down payment (if required)",
+      "Academic transcripts (if applicable)",
+    ],
+    commitmentTitle: "Commitment To Members",
+    commitmentDescription:
+      "Each loan is monitored by vuior and its member committees to ensure that as needs and times change, the Student Loan Program responds by delivering innovative, relevant coverage and service that exceeds vuior members’ expectations.",
+    communityTitle: "Vuior Community And Membership",
+    communityDescription:
+      "Become a vuior member for free and gain access to our Student Loan Program. Our community is committed to supporting educational growth and providing financial resources to ensure your success. We embrace diversity, equity, and inclusion in all our initiatives.",
+    callToAction:
+      "Finance your education with vuior’s Student Loan Program. Apply now!",
+    buttonText: "Apply Now",
+  },
+  specialEvent: {
+    pageTitle: "Special Event Loan Program",
+    aboutTitle: "About Program",
+    aboutDescription:
+      "The vuior Special Event Loan Program provides the funds needed to create memorable experiences for significant events such as weddings, anniversaries, or other special occasions.",
+    highlightsTitle: "Program Highlights",
+    highlights: [
+      {
+        title: "Flexible Financing",
+        description: "Loans to cover all event-related expenses.",
+      },
+      {
+        title: "Competitive Rates",
+        description: "Affordable interest rates to ease financial pressure.",
+      },
+      {
+        title: "Customizable Terms",
+        description: "Choose loan terms that fit your repayment capabilities.",
+      },
+      {
+        title: "Fast Approval",
+        description: "Quick processing to ensure you have funds when needed.",
+      },
+      {
+        title: "In-House and Special Financing",
+        description:
+          "vuior offers both in-house financing and special financing options to provide additional flexibility and support.",
+      },
+    ],
+    eligibilityTitle: "Eligibility Requirements",
+    eligibilityRequirements: [
+      "Proof of income",
+      "Proof of residence",
+      "Minimum down payment (if required)",
+      "Event budget and plans (if applicable)",
+    ],
+    commitmentTitle: "Commitment To Members",
+    commitmentDescription:
+      "Each loan is monitored by vuior and its member committees to ensure that as needs and times change, the Special Event Loan Program responds by delivering innovative, relevant coverage and service that exceeds vuior members’ expectations.",
+    communityTitle: "Vuior Community And Membership",
+    communityDescription:
+      "Join vuior for free and take advantage of our Special Event Loan Program. Our community is dedicated to making your special moments unforgettable with financial support and resources. We prioritize diversity, equity, and inclusion in all our services.",
+    callToAction:
+      "Create your perfect event with Vuior’s Special Event Loan Program. Apply now!",
+    buttonText: "Apply Now",
+  },
+  homeImprovement: {
+    pageTitle: "Home Improvement Loan Program",
+    aboutTitle: "About Program",
+    aboutDescription:
+      "Our Home Improvement Loan Program funds renovation and repair projects, helping you enhance your living space and increase your home's value.",
+    highlightsTitle: "Program Highlights",
+    highlights: [
+      {
+        title: "Flexible Loan Amounts",
+        description: "Finance small or large home improvement projects.",
+      },
+      {
+        title: "Competitive Rates",
+        description: "Low interest rates to keep your projects affordable.",
+      },
+      {
+        title: "Quick Approval",
+        description: "Fast processing to start your projects without delay.",
+      },
+      {
+        title: "Flexible Repayment",
+        description: "Choose terms that suit your financial situation.",
+      },
+      {
+        title: "In-House and Special Financing",
+        description:
+          "vuior offers both in-house financing and special financing options to provide additional flexibility and support.",
+      },
+    ],
+    eligibilityTitle: "Eligibility Requirements",
+    eligibilityRequirements: [
+      "Proof of income",
+      "Proof of residence",
+      "Minimum down payment (if applicable)",
+      "Project plans and budget (if applicable)",
+    ],
+    commitmentTitle: "Commitment To Members",
+    commitmentDescription:
+      "Each loan is monitored by vuior and its member committees to ensure that as needs and times change, the Home Improvement Loan Program responds by delivering innovative, relevant coverage and service that exceeds vuior members’ expectations.",
+    communityTitle: "Vuior Community And Membership",
+    communityDescription:
+      "Become a vuior member for free and access our Home Improvement Loan Program. Our community supports your home improvement goals with financial assistance and expert advice. Our commitment to diversity, equity, and inclusion ensures all members feel valued and supported.",
+    callToAction:
+      "Enhance your home with Vuior’s Home Improvement Loan Program. Apply now!",
+    buttonText: "Apply Now",
+  },
+  smallBusiness: {
+    pageTitle: "Small Business Loan Program",
+    aboutTitle: "About Program",
+    aboutDescription:
+      "The vuior Small Business Loan Program supports entrepreneurs and small business owners by providing the necessary funds to start, grow, or sustain their businesses. This program is designed to cater to diverse business needs and credit profiles.",
+    highlightsTitle: "Program Highlights",
+    highlights: [
+      {
+        title: "Flexible Financing Options",
+        description: "Loans tailored to your business needs and growth plans.",
+      },
+      {
+        title: "Competitive Rates",
+        description: "Attractive interest rates to minimize financial burden.",
+      },
+      {
+        title: "Quick Access to Funds",
+        description:
+          "Fast approval and disbursement to support urgent business needs.",
+      },
+      {
+        title: "No Hidden Fees",
+        description: "Transparent terms with no hidden charges.",
+      },
+      {
+        title: "In-House and Special Financing",
+        description:
+          "vuior offers both in-house financing and special financing options to provide additional flexibility and support.",
+      },
+    ],
+    eligibilityTitle: "Eligibility Requirements",
+    eligibilityRequirements: [
+      "Proof of business income",
+      "Business registration documents",
+      "Minimum credit score (varies based on loan amount and business profile)",
+    ],
+    commitmentTitle: "Commitment To Members",
+    commitmentDescription:
+      "Each loan is monitored by vuior and its member committees to ensure that as needs and times change, the Small Business Loan Program responds by delivering innovative, relevant coverage and service that exceeds vuior members’ expectations.",
+    communityTitle: "Vuior Community And Membership",
+    communityDescription:
+      "Joining vuior gives you access to our Small Business Loan Program. Our commitment to diversity, equity, and inclusion ensures that all members feel valued and supported, fostering a community of growth and collaboration.",
+    callToAction:
+      "Empower your business with Vuior’s Small Business Loan Program. Apply now to fuel your entrepreneurial journey!",
+    buttonText: "Apply Now",
+  },
+  emergency: {
+    pageTitle: "Emergency Loan Program",
+    aboutTitle: "About Program",
+    aboutDescription:
+      "The vuior Emergency Loan Program is designed to provide quick financial relief during unexpected emergencies. Whether it’s medical expenses, urgent repairs, or other unforeseen costs, this program ensures that you can access funds promptly.",
+    highlightsTitle: "Program Highlights",
+    highlights: [
+      {
+        title: "Immediate Financial Support",
+        description: "Fast approval and disbursement to cover urgent expenses.",
+      },
+      {
+        title: "Flexible Repayment Terms",
+        description: "Options tailored to your financial recovery plan.",
+      },
+      {
+        title: "No Credit Check Required",
+        description: "Accessible to all members, regardless of credit history.",
+      },
+      {
+        title: "Competitive Interest Rates",
+        description: "Affordable rates to minimize financial stress.",
+      },
+      {
+        title: "In-House and Special Financing",
+        description:
+          "vuior offers both in-house financing and special financing options to provide additional flexibility and support.",
+      },
+    ],
+    eligibilityTitle: "Eligibility Requirements",
+    eligibilityRequirements: [
+      "Proof of residence",
+      "Minimum down payment (if applicable)",
+      "Explanation of emergency situation",
+    ],
+    commitmentTitle: "Commitment To Members",
+    commitmentDescription:
+      "Each loan is monitored by vuior and its member committees to ensure that as needs and times change, the Emergency Loan Program responds by delivering innovative, relevant coverage and service that exceeds vuior members’ expectations.",
+    communityTitle: "Vuior Community And Membership",
+    communityDescription:
+      "Membership with vuior is free and includes access to our Emergency Loan Program. Our community provides financial guidance and resources to help you navigate emergencies and secure your financial future. We prioritize diversity, equity, and inclusion in all our services.",
+    callToAction:
+      "Get the financial support you need during emergencies with Vuior’s Emergency Loan Program. Apply now!",
+    buttonText: "Apply Now",
+  },
+  healthCare: {
+    pageTitle: "Health Care Loan Program",
+    aboutTitle: "About Program",
+    aboutDescription:
+      "The vuior Health Care Loan Program is tailored to cover medical expenses, including treatments, surgeries, and other health-related costs. This program ensures that you can focus on your health without financial worries.",
+    highlightsTitle: "Program Highlights",
+    highlights: [
+      {
+        title: "Flexible Financing",
+        description: "Loans to cover a wide range of medical expenses.",
+      },
+      {
+        title: "Competitive Interest Rates",
+        description: "Affordable rates to ease financial pressure.",
+      },
+      {
+        title: "Quick Approval",
+        description: "Fast processing to ensure timely access to funds.",
+      },
+      {
+        title: "Customizable Terms",
+        description:
+          "Choose repayment plans that fit your financial capabilities.",
+      },
+      {
+        title: "In-House and Special Financing",
+        description:
+          "vuior offers both in-house financing and special financing options to provide additional flexibility and support.",
+      },
+    ],
+    eligibilityTitle: "Eligibility Requirements",
+    eligibilityRequirements: [
+      "Proof of income",
+      "Proof of residence",
+      "Medical bills or treatment plans (if applicable)",
+    ],
+    commitmentTitle: "Commitment To Members",
+    commitmentDescription:
+      "Each loan is monitored by vuior and its member committees to ensure that as needs and times change, the Health Care Loan Program responds by delivering innovative, relevant coverage and service that exceeds vuior members’ expectations.",
+    communityTitle: "Vuior Community And Membership",
+    communityDescription:
+      "Join vuior for free and take advantage of our Health Care Loan Program. Our community is dedicated to supporting your health and well-being with financial assistance and resources. We prioritize diversity, equity, and inclusion in all our services.",
+    callToAction:
+      "Focus on your health with the support of Vuior’s Health Care Loan Program. Apply now!",
+    buttonText: "Apply Now",
+  },
+  auto: {
+    pageTitle: "Auto Loan Program",
+    aboutTitle: "About Program",
+    aboutDescription:
+      "The vuior Auto Loan Program offers flexible financing options for purchasing new or used vehicles. Designed to cater to all credit profiles, this program ensures that members can own a reliable vehicle essential for personal and professional growth.",
+    highlightsTitle: "Program Highlights",
+    highlights: [
+      {
+        title: "Flexible Terms",
+        description:
+          "Choose loan terms that suit your budget and repayment ability.",
+      },
+      {
+        title: "Competitive Interest Rates",
+        description:
+          "Benefit from competitive rates, regardless of your credit history.",
+      },
+      {
+        title: "Quick Approval",
+        description: "Streamlined application process for fast approval.",
+      },
+      {
+        title: "No Hidden Fees",
+        description: "Transparent terms with no hidden charges.",
+      },
+      {
+        title: "In-House and Special Financing",
+        description:
+          "vuior offers both in-house financing and special financing options to provide additional flexibility and support.",
+      },
+    ],
+    eligibilityTitle: "Eligibility Requirements",
+    eligibilityRequirements: [
+      "Proof of income",
+      "Proof of residence",
+      "Minimum down payment (varies based on loan amount and credit profile)",
+      "Valid driver's license",
+      "Vehicle information (if applicable)",
+    ],
+    commitmentTitle: "Commitment To Members",
+    commitmentDescription:
+      "Each loan is monitored by vuior and its member committees to ensure that as needs and times change, the Auto Loan Program responds by delivering innovative, relevant coverage and service that exceeds vuior members’ expectations.",
+    communityTitle: "Vuior Community And Membership",
+    communityDescription:
+      "When you become a member of vuior, you effectively become a part owner. Our commitment to diversity, equity, and inclusion, along with our customer-focused model, ensures we prioritize your needs, creating lifelong relationships and building a community. All credit profiles are welcome.",
+    callToAction:
+      "Drive your dream car today with vuior’s Auto Loan Program. Apply now to get started!",
+    buttonText: "Apply Now",
+  },
+  mortgage: {
+    pageTitle: "Mortgage Loan Program",
+    aboutTitle: "About Program",
+    aboutDescription:
+      "The vuior Mortgage Loan Program is designed to help you purchase your dream home or refinance your existing mortgage. We offer a range of mortgage products to meet diverse needs, ensuring that everyone has the opportunity to secure homeownership.",
+    highlightsTitle: "Program Highlights",
+    highlights: [
+      {
+        title: "Variety of Options",
+        description:
+          "Fixed-rate, adjustable-rate, and interest-only mortgages available.",
+      },
+      {
+        title: "Competitive Rates",
+        description:
+          "Attractive interest rates to fit your financial situation.",
+      },
+      {
+        title: "Flexible Terms",
+        description:
+          "Customizable loan terms to match your repayment capacity.",
+      },
+      {
+        title: "Expert Guidance",
+        description:
+          "Professional support throughout the application and closing process.",
+      },
+      {
+        title: "In-House and Special Financing",
+        description:
+          "vuior offers both in-house financing and special financing options to provide additional flexibility and support.",
+      },
+    ],
+    eligibilityTitle: "Eligibility Requirements",
+    eligibilityRequirements: [
+      "Proof of income",
+      "Proof of residence",
+      "Minimum down payment (varies based on loan type and applicant’s credit profile)",
+      "Credit report",
+      "Property appraisal (if applicable)",
+    ],
+    commitmentTitle: "Commitment To Members",
+    commitmentDescription:
+      "Each loan is monitored by vuior and its member committees to ensure that as needs and times change, the Mortgage Loan Program responds by delivering innovative, relevant coverage and service that exceeds vuior members’ expectations.",
+    communityTitle: "Vuior Community And Membership",
+    communityDescription:
+      "Join vuior to access our Mortgage Loan Program. Membership is free, offering financial education, support, and exclusive loan products to help you achieve your homeownership goals. Our commitment to diversity, equity, and inclusion ensures that everyone feels valued and supported.",
+    callToAction:
+      "Turn your homeownership dreams into reality with vuior’s Mortgage Loan Program. Apply now!",
+    buttonText: "Apply Now",
+  },
+};

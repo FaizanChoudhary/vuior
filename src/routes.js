@@ -11,6 +11,9 @@ const CareerPage = Loadable(lazy(() => import("./pages/CareerPage")));
 const AboutUsPage = Loadable(lazy(() => import("./pages/AboutUsPage")));
 const ContactUsPage = Loadable(lazy(() => import("./pages/ContactUsPage")));
 const LoanProgramPage = Loadable(lazy(() => import("./pages/LoanProgramPage")));
+const LoanProgramDetails = Loadable(
+  lazy(() => import("./pages/LoanProgramDetails"))
+);
 const HouseHoldPage = Loadable(lazy(() => import("./pages/HouseHoldPage")));
 const JobListingPage = Loadable(lazy(() => import("./pages/JobListingPage")));
 // const PrivacyPolicy = Loadable(lazy(() => import("./pages/PrivacyPolicy")));
@@ -33,6 +36,10 @@ const routes = [
       { path: "/about-us", element: <AboutUsPage /> },
       { path: "/contact-us", element: <ContactUsPage /> },
       { path: "/programs/loan-programs", element: <LoanProgramPage /> },
+      {
+        path: "/programs/loan-programs/Travel-Loans",
+        element: <LoanProgramDetails />,
+      },
       {
         path: "/programs/household-programs",
         element: <HouseHoldPage />,
