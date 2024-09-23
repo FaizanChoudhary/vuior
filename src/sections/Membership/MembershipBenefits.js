@@ -60,7 +60,7 @@ const MembershipBenefits = () => {
           <BenefitCard
             iconSrc="/assets/icons/freeJoin.png" // Replace with the actual icon path
             title="Free To Join"
-            description="Becoming a member of vuoir is free. Simply sign up and fund your account with a minimum balance of $25 to keep your membership active."
+            description="Becoming a member of vuior is free. Simply sign up and fund your account with a minimum balance of $25 to keep your membership active."
           />
         </Grid>
 
@@ -68,7 +68,7 @@ const MembershipBenefits = () => {
           <BenefitCard
             iconSrc="/assets/icons/exclusive.png" // Replace with the actual icon path
             title="Exclusive Access"
-            description="Enjoy access to all of vuoir’s programs and services, including our household bill consolidation program and a variety of loan options."
+            description="Enjoy access to all of vuior’s programs and services, including our household bill consolidation program and a variety of loan options."
           />
         </Grid>
 

@@ -50,13 +50,13 @@ const LoanProgramsSection = () => {
             variant="h4"
             sx={{ fontWeight: "bold", color: "#064E3B", marginBottom: 2 }}
           >
-            Vuoir Member{" "}
+            Vuior Member{" "}
             <span style={{ color: "#064E3B", fontWeight: "bold" }}>
               Loan Programs
             </span>
           </Typography>
           <Typography variant="body1" sx={{ marginBottom: 4 }}>
-            Vuoir’s Member Loan Programs are designed to provide flexible and
+            Vuior’s Member Loan Programs are designed to provide flexible and
             accessible financial solutions to our members. Offered through
             partnerships with highly-rated, best-in-class institutions, our loan
             programs are tailored to meet a variety of needs, ensuring you have

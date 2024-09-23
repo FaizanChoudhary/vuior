@@ -51,7 +51,7 @@ const WhyJoinSection = () => {
         gutterBottom
         sx={{ marginBottom: 4, fontWeight: "bold", color: "#064E3B" }}
       >
-        Why Join Vuoir?
+        Why Join Vuior?
       </Typography>
 
       {/* Grid Layout for Cards */}
@@ -61,7 +61,7 @@ const WhyJoinSection = () => {
           <InfoCard
             imageSrc="/assets/join_section_image.png" // Correct image path
             title="Ownership And Community"
-            description="As a member of vuoir, you are not just a customer; you are a co-owner. This means you have a voice in how our organization operates and a stake in our success. We are committed to building a supportive community where every member can achieve their financial goals."
+            description="As a member of vuior, you are not just a customer; you are a co-owner. This means you have a voice in how our organization operates and a stake in our success. We are committed to building a supportive community where every member can achieve their financial goals."
           />
         </Grid>
 
@@ -80,7 +80,7 @@ const WhyJoinSection = () => {
           <InfoCard
             imageSrc="/assets/join_section_image.png" // Correct image path for this new card
             title="Diversity, Equity, And Inclusion"
-            description="Vuoir is dedicated to creating a diverse, equitable, and inclusive environment. We believe that diversity strengthens our community and drives innovation. Our commitment to DEI ensures that all members feel valued and respected, with equal access to our programs and opportunities."
+            description="Vuior is dedicated to creating a diverse, equitable, and inclusive environment. We believe that diversity strengthens our community and drives innovation. Our commitment to DEI ensures that all members feel valued and respected, with equal access to our programs and opportunities."
           />
         </Grid>
       </Grid>

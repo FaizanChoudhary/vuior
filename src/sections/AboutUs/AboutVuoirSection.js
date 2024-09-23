@@ -51,7 +51,7 @@ const AboutVuoirSection = () => {
             component="h1"
             sx={{ fontWeight: "bold", color: "#064E3B", marginBottom: 2 }}
           >
-            About Vuoir
+            About Vuior
           </Typography>
           <Typography variant="body1" sx={{ marginBottom: 3 }}>
             Welcome to VUIOR, a member-owned financial services provider
@@ -85,7 +85,7 @@ const AboutVuoirSection = () => {
           <ImageContainer>
             <img
               src="/assets/welcome_about_us.png" // Replace with actual image path
-              alt="About Vuoir"
+              alt="About Vuior"
             />
           </ImageContainer>
         </Grid>

@@ -28,7 +28,7 @@ const SecurePositionSection = () => {
 
       {/* Description */}
       <Typography variant="body1" sx={{ marginBottom: 3 }}>
-        Register For The Vuoir Mega Nationwide Hiring Event Now And Set The Time
+        Register For The Vuior Mega Nationwide Hiring Event Now And Set The Time
         On Your Calendar. This Is How Your Success Journey Starts!
       </Typography>
 

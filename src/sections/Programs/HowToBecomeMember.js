@@ -21,7 +21,7 @@ const steps = [
     stepNumber: 1,
     title: "Sign Up",
     description:
-      'Joining Vuoir is simple. Click on the "Join Now" button to start your membership application.',
+      'Joining Vuior is simple. Click on the "Join Now" button to start your membership application.',
     imgSrc: "/assets/freesignup.png",
     alt: "Sign Up",
   },
@@ -37,7 +37,7 @@ const steps = [
     stepNumber: 3,
     title: "Enjoy The Benefits",
     description:
-      "Start taking advantage of Vuoir's programs and services immediately after funding your account.",
+      "Start taking advantage of Vuior's programs and services immediately after funding your account.",
     imgSrc: "/assets/negotiation.png",
     alt: "Enjoy the Benefits",
   },

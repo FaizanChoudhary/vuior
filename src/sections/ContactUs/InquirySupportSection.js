@@ -160,7 +160,7 @@ const InquirySupportSection = () => {
           <ContactInfoItem
             iconSrc="/assets/icons/email.png"
             label="Email"
-            value="info@vuoir.com"
+            value="info@vuior.com"
           />
 
           <ContactInfoItem

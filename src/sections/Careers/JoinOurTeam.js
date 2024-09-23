@@ -114,7 +114,7 @@ const JoinOurTeam = () => {
             "Marketing Manager - Awareness Campaigns",
             "Recruiting Manager - Talent Acquisition",
             "Project Manager - Growth Initiatives",
-            "Vuoir Ambassador Program Manager",
+            "Vuior Ambassador Program Manager",
             "Community Engagement Manager",
             "Strategic Partnerships Manager",
           ].map((job, index) => (

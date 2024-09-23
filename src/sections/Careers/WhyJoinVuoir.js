@@ -55,7 +55,7 @@ const BenefitCard = ({ iconSrc, title, description, benefits }) => (
   </Box>
 );
 
-// Main Component for Why Join Vuoir Section
+// Main Component for Why Join Vuior Section
 const WhyJoinVuoir = () => {
   return (
     <Box
@@ -76,7 +76,7 @@ const WhyJoinVuoir = () => {
           fontSize={{ xs: 24, md: 30 }}
           sx={{ marginBottom: 1 }}
         >
-          Why Join Vuoir?
+          Why Join Vuior?
         </Typography>
         <Box
           sx={{
@@ -100,7 +100,7 @@ const WhyJoinVuoir = () => {
             iconSrc: "/assets/icons/remote.png",
             title: "Fully Remote Positions",
             description:
-              "Enjoy the freedom of working from anywhere while contributing to Vuoir’s success.",
+              "Enjoy the freedom of working from anywhere while contributing to Vuior’s success.",
             benefits: [
               "Reduced Commute",
               "Cost Savings",
@@ -126,7 +126,7 @@ const WhyJoinVuoir = () => {
             iconSrc: "/assets/icons/comprehensive.svg",
             title: "Comprehensive Benefits",
             description:
-              "Vuoir offers comprehensive benefits, including debt management plans to help you regain control of your finances.",
+              "Vuior offers comprehensive benefits, including debt management plans to help you regain control of your finances.",
             benefits: [
               "Lower Monthly Payments",
               "Reduced Interest Rates",
@@ -152,7 +152,7 @@ const WhyJoinVuoir = () => {
             iconSrc: "/assets/icons/inclusive.png",
             title: "Inclusive And Supportive Work Environment",
             description:
-              "Vuoir program creates a cooperative and welcoming work climate where each team member's talents are recognized.",
+              "Vuior program creates a cooperative and welcoming work climate where each team member's talents are recognized.",
             benefits: [
               "Increased Productivity",
               "Enhanced Reputation",
