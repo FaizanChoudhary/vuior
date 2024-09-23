@@ -57,7 +57,7 @@ const HeroLoanDetailSection = ({ data }) => {
           </Typography>
           <Box
             sx={{
-              width: "20%",
+              width: "15%",
               borderBottom: "3px solid #23AB84",
               marginBottom: 3,
             }}
@@ -71,7 +71,7 @@ const HeroLoanDetailSection = ({ data }) => {
           </Typography>
           <Box
             sx={{
-              width: "25%",
+              width: "20%",
               borderBottom: "3px solid #23AB84",
               marginBottom: 2,
             }}

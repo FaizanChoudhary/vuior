@@ -52,7 +52,7 @@ const EligibilityCommitmentSection = ({ data }) => {
             </Typography>
             <Box
               sx={{
-                width: "45%",
+                width: "35%",
                 borderBottom: "3px solid #23AB84",
                 margin: "0",
               }}
@@ -86,7 +86,7 @@ const EligibilityCommitmentSection = ({ data }) => {
             </Typography>
             <Box
               sx={{
-                width: "50%",
+                width: "40%",
                 borderBottom: "3px solid #23AB84",
                 margin: "0",
               }}

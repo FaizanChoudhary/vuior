@@ -25,7 +25,7 @@ const CommunityMembershipSection = ({ data }) => {
           </Typography>
           <Box
             sx={{
-              width: "75%",
+              width: "55%",
               borderBottom: "3px solid #23AB84",
               margin: "0",
             }}
