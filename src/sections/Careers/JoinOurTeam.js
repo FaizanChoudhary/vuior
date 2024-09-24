@@ -1,14 +1,5 @@
-// import FiberManualRecordIcon from "@mui/icons-material/FiberManualRecord";
-import {
-  Box,
-  Button,
-  // List,
-  // ListItem,
-  // ListItemIcon,
-  // ListItemText,
-  Stack,
-  Typography,
-} from "@mui/material";
+import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
+import { Box, Button, Stack, Typography } from "@mui/material";
 import { styled } from "@mui/system";
 import React from "react";
 import { useNavigate } from "react-router-dom";
@@ -16,7 +7,6 @@ import "swiper/css";
 import "swiper/css/effect-fade";
 import { Autoplay, EffectFade } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
-import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 
 // Custom background swiper for sliding images
 const BackgroundSwiper = styled(Swiper)(({ theme }) => ({
