@@ -5,7 +5,7 @@ import React from "react";
 // Section container similar to FinancialFreedomSection
 const SectionContainer = styled(Box)(({ theme }) => ({
   backgroundColor: "#e6f4f1",
-  marginTop: "60px !important",
+  marginTop: "-6px !important",
   display: "flex",
   alignItems: "center",
   justifyContent: "center",

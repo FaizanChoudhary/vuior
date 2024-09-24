@@ -1,11 +1,11 @@
-import FiberManualRecordIcon from "@mui/icons-material/FiberManualRecord";
+// import FiberManualRecordIcon from "@mui/icons-material/FiberManualRecord";
 import {
   Box,
   Button,
-  List,
-  ListItem,
-  ListItemIcon,
-  ListItemText,
+  // List,
+  // ListItem,
+  // ListItemIcon,
+  // ListItemText,
   Stack,
   Typography,
 } from "@mui/material";
@@ -68,7 +68,7 @@ const JoinOurTeam = () => {
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
-        marginTop: "60px !important",
+        marginTop: "-6px !important",
       }}
     >
       {/* Background Image Swiper */}

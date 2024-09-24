@@ -7,7 +7,7 @@ import ProgramFormDialog from "../../components/ProgramFormDialog";
 // Section container with background color and spacing
 const SectionContainer = styled(Box)(({ theme }) => ({
   backgroundColor: "#e6f4f1",
-  marginTop: "60px !important",
+  marginTop: "-6px !important",
   display: "flex",
   alignItems: "center",
   justifyContent: "center",

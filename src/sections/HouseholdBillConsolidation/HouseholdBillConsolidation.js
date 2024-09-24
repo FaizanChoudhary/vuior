@@ -10,7 +10,7 @@ const SectionContainer = styled(Box)(({ theme }) => ({
   alignItems: "center",
   justifyContent: "center",
   backgroundColor: "#e6f4f1",
-  marginTop: "60px !important",
+  marginTop: "-6px !important",
 }));
 
 // Custom Image Container with gradient overlay
