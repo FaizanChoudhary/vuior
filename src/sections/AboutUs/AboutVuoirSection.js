@@ -1,7 +1,6 @@
-import React from "react";
-import { Grid, Typography, Box, Button } from "@mui/material";
+import { Box, Button, Grid, Typography } from "@mui/material";
 import { styled } from "@mui/system";
-import { useNavigate } from "react-router-dom";
+import React from "react";
 
 // Section container similar to FinancialFreedomSection
 const SectionContainer = styled(Box)(({ theme }) => ({
@@ -39,7 +38,7 @@ const ImageContainer = styled(Box)(({ theme }) => ({
 }));
 
 const AboutVuoirSection = () => {
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
   return (
     <SectionContainer>

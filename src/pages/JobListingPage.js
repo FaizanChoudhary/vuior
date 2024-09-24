@@ -1,24 +1,24 @@
-import React, { useState } from "react";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import SearchIcon from "@mui/icons-material/Search";
 import {
-  Box,
-  Grid,
-  TextField,
-  Button,
-  Typography,
   Accordion,
-  AccordionSummary,
   AccordionDetails,
+  AccordionSummary,
+  Box,
+  Button,
   Container,
+  Grid,
   InputAdornment,
   Pagination,
   Paper,
+  TextField,
+  Typography,
 } from "@mui/material";
-import SearchIcon from "@mui/icons-material/Search";
-import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import { styled } from "@mui/system";
+import React, { useState } from "react";
+import SecurePositionFormDialog from "../components/SecurePositionFormDialog";
 import { jobs } from "../shared/constants"; // Assuming jobs is your array of job listings
 
-// Styled search bar container
 const SearchBarContainer = styled(Paper)(({ theme }) => ({
   padding: theme.spacing(2),
   marginTop: "-50px",
@@ -34,7 +34,6 @@ const SearchBarContainer = styled(Paper)(({ theme }) => ({
   },
 }));
 
-// Search Button
 const SearchButton = styled(Button)(({ theme }) => ({
   backgroundColor: "#064E3B",
   color: "#fff",
@@ -48,9 +47,17 @@ const SearchButton = styled(Button)(({ theme }) => ({
 const JobListingPage = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [page, setPage] = useState(1);
+  const [openDialog, setOpenDialog] = useState(false); // State to manage dialog visibility
   const jobsPerPage = 5;
 
-  // Filter jobs based on search term in title and description
+  const handleOpenDialog = () => {
+    setOpenDialog(true);
+  };
+
+  const handleCloseDialog = () => {
+    setOpenDialog(false);
+  };
+
   const filteredJobs = jobs.filter((job) => {
     const titleMatch =
       job.title && job.title.toLowerCase().includes(searchTerm.toLowerCase());
@@ -61,7 +68,6 @@ const JobListingPage = () => {
     return titleMatch || descriptionMatch;
   });
 
-  // Calculate the jobs to display on the current page
   const startIndex = (page - 1) * jobsPerPage;
   const endIndex = startIndex + jobsPerPage;
   const paginatedJobs = filteredJobs.slice(startIndex, endIndex);
@@ -124,7 +130,6 @@ const JobListingPage = () => {
         />
       </Box>
       <Container maxWidth="lg" sx={{ py: 4 }}>
-        {/* Search Bar */}
         <SearchBarContainer elevation={3}>
           <TextField
             fullWidth
@@ -144,7 +149,6 @@ const JobListingPage = () => {
           </SearchButton>
         </SearchBarContainer>
 
-        {/* Job Listings Section */}
         <Grid container spacing={3} mt={3}>
           <Grid container item xs={12} spacing={3}>
             {paginatedJobs.length > 0 ? (
@@ -166,6 +170,7 @@ const JobListingPage = () => {
                       </Box>
                     </AccordionSummary>
                     <AccordionDetails>
+                      {/* Job details */}
                       <Typography
                         variant="body1"
                         fontWeight="bold"
@@ -264,6 +269,7 @@ const JobListingPage = () => {
                             transition: "transform 0.4s ease",
                           },
                         }}
+                        onClick={handleOpenDialog} // Open dialog on button click
                       >
                         Apply Now
                       </Button>
@@ -288,11 +294,13 @@ const JobListingPage = () => {
             </Grid>
           </Grid>
           <Grid item xs={12}>
-            {/* About Us Section */}
             <AboutUs />
           </Grid>
         </Grid>
       </Container>
+
+      {/* Dialog for Job Application */}
+      {openDialog && <SecurePositionFormDialog onClose={handleCloseDialog} />}
     </>
   );
 };

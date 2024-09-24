@@ -1,8 +1,8 @@
+import React, { useState } from "react";
 import { Box, Button, Grid, TextField, Typography } from "@mui/material";
 import { styled } from "@mui/system";
-import React from "react";
+import emailjs from "emailjs-com"; // Import EmailJS
 
-// Contact Info Item with hover effect and icon styling
 const ContactInfoItem = ({ iconSrc, label, value }) => (
   <Box
     sx={{
@@ -50,10 +50,9 @@ const ContactInfoItem = ({ iconSrc, label, value }) => (
   </Box>
 );
 
-// Glassmorphism style box for the form
 const GlassBox = styled(Box)(({ theme }) => ({
-  backdropFilter: "blur(20px)", // Increased blur for glassmorphism effect
-  background: "rgba(255, 255, 255, 0.2)", // More transparency
+  backdropFilter: "blur(20px)",
+  background: "rgba(255, 255, 255, 0.2)",
   borderRadius: "16px",
   padding: theme.spacing(4),
   boxShadow: "0px 8px 32px rgba(0, 0, 0, 0.1)",
@@ -68,28 +67,64 @@ const StyledTextField = styled(TextField)(({ theme }) => ({
   "& .MuiOutlinedInput-root": {
     borderRadius: "12px",
     "& fieldset": {
-      border: "none", // Remove the border
+      border: "none",
     },
     "&:hover fieldset": {
-      border: "none", // Remove the border on hover
+      border: "none",
     },
     "&.Mui-focused fieldset": {
-      border: "none", // Remove the border when focused
+      border: "none",
     },
   },
 }));
 
-// Main Component for Inquiry and Support Section
 const InquirySupportSection = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    message: "",
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .send(
+        "service_r3sreim", // Replace with your EmailJS service ID
+        "template_jec6sw6", // Replace with your EmailJS template ID
+        formData,
+        "oIgG2V1yD_PdFdyB8" // Replace with your EmailJS public key
+      )
+      .then(
+        (result) => {
+          console.log("Email sent successfully:", result.text);
+          alert("Your inquiry has been submitted successfully!");
+        },
+        (error) => {
+          console.log("Failed to send email:", error.text);
+          alert("Failed to submit your inquiry. Please try again.");
+        }
+      );
+
+    setFormData({ name: "", email: "", phone: "", message: "" }); // Reset form fields after submission
+  };
+
   return (
     <Box
       sx={{
-        // padding: { xs: 4, md: 6 },
-        backgroundImage: 'url("/assets/contact-us.jpg")', // Add your background image path
-        backgroundSize: "cover", // Ensures the image covers the entire section
+        backgroundImage: 'url("/assets/contact-us.jpg")',
+        backgroundSize: "cover",
         backgroundPosition: "center",
         position: "relative",
-        // height: "80vh",
         marginTop: "50px !important",
         px: { xs: 4, md: 6, lg: 20 },
         py: 5,
@@ -107,18 +142,16 @@ const InquirySupportSection = () => {
           left: 0,
           right: 0,
           bottom: 0,
-          backgroundColor: "rgba(0, 0, 0, 0.3)", // Dark overlay for contrast
+          backgroundColor: "rgba(0, 0, 0, 0.3)",
           zIndex: -1,
         }}
       />
-      {/* Section Title */}
       <Box data-aos="fade-up" sx={{ textAlign: "center", marginBottom: 4 }}>
         <Typography
           variant="h4"
           fontWeight="bold"
-          color="primary"
           fontSize={{ xs: 24, md: 30 }}
-          sx={{ color: "#fff" }} // Text color is white for better visibility
+          sx={{ color: "#fff" }}
         >
           Inquiry and Support
         </Typography>
@@ -180,7 +213,7 @@ const InquirySupportSection = () => {
             >
               Have Any Questions?
             </Typography>
-            <form>
+            <form onSubmit={handleSubmit}>
               <Grid container spacing={2} alignItems="center">
                 {/* Full Name */}
                 <Grid item xs={12} md={3}>
@@ -196,6 +229,9 @@ const InquirySupportSection = () => {
                     fullWidth
                     variant="outlined"
                     placeholder="Enter your name"
+                    name="name"
+                    value={formData.name}
+                    onChange={handleChange}
                   />
                 </Grid>
 
@@ -213,7 +249,9 @@ const InquirySupportSection = () => {
                     fullWidth
                     variant="outlined"
                     placeholder="Enter your phone"
-                    sx={{ backgroundColor: "#fff", borderRadius: "12px" }}
+                    name="phone"
+                    value={formData.phone}
+                    onChange={handleChange}
                   />
                 </Grid>
 
@@ -231,7 +269,9 @@ const InquirySupportSection = () => {
                     fullWidth
                     variant="outlined"
                     placeholder="Enter your email"
-                    sx={{ backgroundColor: "#fff", borderRadius: "12px" }}
+                    name="email"
+                    value={formData.email}
+                    onChange={handleChange}
                   />
                 </Grid>
 
@@ -251,7 +291,9 @@ const InquirySupportSection = () => {
                     rows={4}
                     variant="outlined"
                     placeholder="Enter your message"
-                    sx={{ backgroundColor: "#fff", borderRadius: "12px" }}
+                    name="message"
+                    value={formData.message}
+                    onChange={handleChange}
                   />
                 </Grid>
               </Grid>
@@ -261,6 +303,7 @@ const InquirySupportSection = () => {
                 sx={{ display: "flex", justifyContent: "center", marginTop: 2 }}
               >
                 <Button
+                  type="submit"
                   variant="contained"
                   color="primary"
                   sx={{

@@ -1,9 +1,8 @@
+import { Box, Button, Typography } from "@mui/material";
 import React from "react";
-import { Box, Typography, Button } from "@mui/material";
-import { useNavigate } from "react-router-dom";
 
 const EnsureQualitySection = () => {
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
   return (
     <Box
       sx={{
