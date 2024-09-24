@@ -90,7 +90,7 @@ const LearnMoreButton = styled(Button)(({ theme }) => ({
   },
 }));
 
-const ProgramsSection = () => {
+const ProgramsSection = ({ isProgramPage, isAboutUsPage }) => {
   const navigate = useNavigate();
   return (
     <ProgramsContainer>
@@ -125,7 +125,13 @@ const ProgramsSection = () => {
           <ProgramCard>
             <CardImage
               component="img"
-              image="/assets/loan.jpg"
+              image={
+                isProgramPage
+                  ? "/assets/loan_prg.jpg"
+                  : isAboutUsPage
+                  ? "/assets/about_us_loan.jpg"
+                  : "/assets/loan.jpg"
+              }
               alt="Loan Programs"
             />
             <HeadingOnImage className="heading-on-image">
@@ -139,11 +145,20 @@ const ProgramsSection = () => {
                   More About This Program
                 </Typography>
                 <Typography variant="body1" paragraph fontSize={14}>
-                  Unlock the financial support you need with VUIOR's
+                  {isProgramPage || isAboutUsPage
+                    ? `Access a variety of loan options tailored to meet your specific
+              needs. Our loan program includes auto loans, mortgage loans,
+              personal loans, student loans, travel loans, wedding loans, home
+              improvement loans, health care loans, emergency loans, and more.
+              We offer in-house financing and special financing options,
+              welcoming applicants from all credit backgrounds. Our loans are
+              available to both members and non-members, although non-members
+              must become members to take full advantage of our benefits.`
+                    : `Unlock the financial support you need with VUIOR's
                   member-focused loan programs. Designed to cater to all credit
                   profiles, our loan options provide flexible terms, competitive
                   rates, and quick approval. With in-house and special
-                  financing, we ensure personalized solutions for every member.
+                  financing, we ensure personalized solutions for every member.`}
                 </Typography>
                 <LearnMoreButton
                   variant="contained"
@@ -167,7 +182,13 @@ const ProgramsSection = () => {
           <ProgramCard>
             <CardImage
               component="img"
-              image="/assets/Consolidation.webp"
+              image={
+                isProgramPage
+                  ? "/assets/loan_program.png"
+                  : isAboutUsPage
+                  ? "/assets/about_us_household.jpg"
+                  : "/assets/Consolidation.webp"
+              }
               alt="Household Bills Consolidation Program"
             />
             <HeadingOnImage className="heading-on-image">
@@ -181,13 +202,20 @@ const ProgramsSection = () => {
                   More About This Program
                 </Typography>
                 <Typography variant="body1" paragraph fontSize={14}>
-                  Save up to 25% on your household bills with VUIOR's
+                  {isProgramPage || isAboutUsPage
+                    ? `Simplify your financial life by consolidating your household bills
+              into a single, manageable monthly payment. Through partnerships
+              with highly-rated, best-in-class carriers and providers, we offer
+              group-negotiated discounts to help you save money and reduce
+              financial stress. Our program is designed to provide innovative,
+              relevant coverage and service that exceeds your expectations.`
+                    : `Save up to 25% on your household bills with VUIOR's
                   group-negotiated discounts through top-tier providers. Our
                   member-driven program continuously adapts to meet your needs,
                   delivering innovative and relevant services. Become a VUIOR
                   member and experience our dedication to diversity, equity, and
                   inclusion, focusing on your needs and building a strong,
-                  supportive community. Schedule a free consultation today!
+                  supportive community. Schedule a free consultation today!`}
                 </Typography>
                 <LearnMoreButton
                   variant="contained"

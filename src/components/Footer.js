@@ -1,7 +1,7 @@
 import InstagramIcon from "@mui/icons-material/Instagram";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import TwitterIcon from "@mui/icons-material/Twitter";
-import { Box, Grid, Typography } from "@mui/material";
+import { Box, Grid, IconButton, Typography } from "@mui/material";
 import { styled } from "@mui/system";
 import { NavLink } from "react-router-dom";
 
@@ -116,9 +116,48 @@ const Footer = () => {
             </Typography>
             {/* Social Media Icons */}
             <SocialMediaIcons>
-              <TwitterIcon />
-              <InstagramIcon />
-              <LinkedInIcon />
+              <IconButton
+                color="primary"
+                aria-label="Twitter"
+                href="https://x.com/vuiorhq"
+                target="blank"
+                sx={{
+                  transition: "transform 0.3s ease",
+                  "&:hover": {
+                    transform: "scale(1.2)",
+                  },
+                }}
+              >
+                <TwitterIcon />
+              </IconButton>
+              <IconButton
+                color="primary"
+                aria-label="Instagram"
+                href="https://www.instagram.com/vuiorhq"
+                target="blank"
+                sx={{
+                  transition: "transform 0.3s ease",
+                  "&:hover": {
+                    transform: "scale(1.2)",
+                  },
+                }}
+              >
+                <InstagramIcon />
+              </IconButton>
+              <IconButton
+                color="primary"
+                aria-label="LinkedIn"
+                href="https://www.linkedin.com/company/vuior-hq/?trk=blended-typeahead"
+                target="blank"
+                sx={{
+                  transition: "transform 0.3s ease",
+                  "&:hover": {
+                    transform: "scale(1.2)",
+                  },
+                }}
+              >
+                <LinkedInIcon />
+              </IconButton>
             </SocialMediaIcons>
           </Box>
         </Grid>

@@ -55,7 +55,8 @@ const Topbar = () => {
         <IconButton
           color="primary"
           aria-label="Twitter"
-          href="https://twitter.com"
+          href="https://x.com/vuiorhq"
+          target="blank"
           sx={{
             transition: "transform 0.3s ease",
             "&:hover": {
@@ -68,7 +69,8 @@ const Topbar = () => {
         <IconButton
           color="primary"
           aria-label="Instagram"
-          href="https://instagram.com"
+          href="https://www.instagram.com/vuiorhq"
+          target="blank"
           sx={{
             transition: "transform 0.3s ease",
             "&:hover": {
@@ -81,7 +83,8 @@ const Topbar = () => {
         <IconButton
           color="primary"
           aria-label="LinkedIn"
-          href="https://linkedin.com"
+          href="https://www.linkedin.com/company/vuior-hq/?trk=blended-typeahead"
+          target="blank"
           sx={{
             transition: "transform 0.3s ease",
             "&:hover": {

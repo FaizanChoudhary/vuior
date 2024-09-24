@@ -63,6 +63,7 @@ const EligibilityCommitmentSection = ({ data }) => {
             />
           </Box>
           <Box
+            data-aos="fade-up"
             sx={{
               display: "flex",
               flexDirection: "column",
@@ -96,7 +97,9 @@ const EligibilityCommitmentSection = ({ data }) => {
               }}
             />
           </Box>
-          <Typography variant="body1">{data.commitmentDescription}</Typography>
+          <Typography variant="body1" data-aos="fade-up">
+            {data.commitmentDescription}
+          </Typography>
         </Grid>
       </Grid>
     </SectionContainer>
