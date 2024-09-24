@@ -68,7 +68,10 @@ const EnsureQualitySection = () => {
           borderRadius: "20px",
           fontWeight: "bold",
         }}
-        onClick={() => navigate("/")}
+        // onClick={() => navigate("/")}
+        onClick={() =>
+          window.open("https://add.vuior.com/user/login", "_blank")
+        }
       >
         Join for Free
       </Button>

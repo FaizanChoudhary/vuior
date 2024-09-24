@@ -37,6 +37,9 @@ const WelcomeMembershipSection = () => {
               color="primary"
               size="large"
               sx={{ mt: 3, backgroundColor: "#0F4A3F", borderRadius: "25px" }}
+              onClick={() =>
+                window.open("https://add.vuior.com/user/login", "_blank")
+              }
             >
               Join For Free
             </Button>

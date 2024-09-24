@@ -80,9 +80,9 @@ const JoinOurTeam = () => {
         effect="fade"
         modules={[Autoplay, EffectFade]}
       >
-        <SwiperSlide>
+        {/* <SwiperSlide>
           <img src="/assets/welcome_career.jpg" alt="Career 1" />
-        </SwiperSlide>
+        </SwiperSlide> */}
         <SwiperSlide>
           <img src="/assets/welcome_career1.webp" alt="Career 2" />
         </SwiperSlide>
@@ -106,7 +106,7 @@ const JoinOurTeam = () => {
         </Typography>
 
         {/* Job Positions List */}
-        <List sx={{ marginBottom: 3 }}>
+        {/* <List sx={{ marginBottom: 3 }}>
           {[
             "Sales Manager - Growth Division",
             "Debt Management Specialist - Team Lead",
@@ -132,7 +132,25 @@ const JoinOurTeam = () => {
               />
             </ListItem>
           ))}
-        </List>
+        </List> */}
+        <Typography
+          sx={{
+            fontSize: { xs: "12px", sm: "16px" },
+            marginBottom: 3,
+            padding: { xs: 1, sm: 2, md: 4.5 },
+          }}
+        >
+          At Vuior, we're constantly seeking passionate and talented individuals
+          who are driven to make a difference. Our team thrives on innovation,
+          collaboration, and a commitment to excellence. Whether you're looking
+          to start your career or take it to the next level, we offer exciting
+          opportunities across various remote positions. With Vuior, you can
+          enjoy the flexibility of working from anywhere while benefiting from
+          competitive earning potential and numerous paths for career
+          development. Explore our current job openings and become part of a
+          dynamic team where your skills can grow and thrive. Apply today and
+          take the next step toward a rewarding future with Vuior!
+        </Typography>
 
         {/* Apply Button */}
         <Button

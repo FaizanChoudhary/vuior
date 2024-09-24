@@ -74,7 +74,10 @@ const AboutVuoirSection = () => {
                 transition: "transform 0.2s ease",
               },
             }}
-            onClick={() => navigate("/")}
+            // onClick={() => navigate("/")}
+            onClick={() =>
+              window.open("https://add.vuior.com/user/login", "_blank")
+            }
           >
             Join For Free
           </Button>

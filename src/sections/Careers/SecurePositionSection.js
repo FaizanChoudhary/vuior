@@ -1,10 +1,12 @@
-import React, { useState } from "react";
-import { Box, Typography, Button } from "@mui/material";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
+import { Box, Button, Typography } from "@mui/material";
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import SecurePositionFormDialog from "../../components/SecurePositionFormDialog";
 
 const SecurePositionSection = () => {
   const [open, setOpen] = useState(false);
+  const navigate = useNavigate();
 
   return (
     <Box
@@ -44,7 +46,8 @@ const SecurePositionSection = () => {
           alignItems: "center",
           justifyContent: "center",
         }}
-        onClick={() => setOpen(true)}
+        // onClick={() => setOpen(true)}
+        onClick={() => navigate("/careers/jobs")}
       >
         Apply Now <ArrowForwardIcon fontSize="small" sx={{ ml: 1 }} />
       </Button>

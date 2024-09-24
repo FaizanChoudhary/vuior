@@ -76,7 +76,10 @@ const WelcomeSection = () => {
               variant="contained"
               color="primary"
               sx={{ mt: 2 }}
-              onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+              // onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+              onClick={() =>
+                window.open("https://add.vuior.com/user/register", "_blank")
+              }
             >
               Sign Up Now
             </Button>
