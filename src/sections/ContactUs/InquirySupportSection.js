@@ -1,5 +1,13 @@
 import React, { useState } from "react";
-import { Box, Button, Grid, TextField, Typography } from "@mui/material";
+import {
+  Box,
+  Button,
+  Checkbox,
+  FormControlLabel,
+  Grid,
+  TextField,
+  Typography,
+} from "@mui/material";
 import { styled } from "@mui/system";
 import emailjs from "emailjs-com"; // Import EmailJS
 
@@ -85,6 +93,7 @@ const InquirySupportSection = () => {
     phone: "",
     message: "",
   });
+  const [consent, setConsent] = useState(false);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -298,6 +307,17 @@ const InquirySupportSection = () => {
                 </Grid>
               </Grid>
 
+              <FormControlLabel
+                control={
+                  <Checkbox
+                    checked={consent}
+                    onChange={(e) => setConsent(e.target.checked)}
+                    color="primary"
+                  />
+                }
+                label="By checking this I agree to receive automated promotional messages"
+                sx={{ mt: 2 }}
+              />
               {/* Submit Button */}
               <Box
                 sx={{ display: "flex", justifyContent: "center", marginTop: 2 }}

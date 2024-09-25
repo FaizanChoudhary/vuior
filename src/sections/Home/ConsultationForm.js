@@ -6,6 +6,8 @@ import {
   TextField,
   Typography,
   InputAdornment,
+  FormControlLabel,
+  Checkbox,
 } from "@mui/material";
 import { styled } from "@mui/system";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -116,6 +118,7 @@ const ConsultationForm = () => {
     email: "",
     phone: "",
   });
+  const [consent, setConsent] = useState(false);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -214,6 +217,17 @@ const ConsultationForm = () => {
                 </InputAdornment>
               ),
             }}
+          />
+          <FormControlLabel
+            control={
+              <Checkbox
+                checked={consent}
+                onChange={(e) => setConsent(e.target.checked)}
+                color="primary"
+              />
+            }
+            label="By checking this I agree to receive automated promotional messages"
+            sx={{ mt: 2 }}
           />
           <StyledButton
             type="submit"
