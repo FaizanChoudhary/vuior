@@ -820,3 +820,171 @@ export const loanPrograms = {
     buttonText: "Apply Now",
   },
 };
+
+export const termsofService = {
+  pageTitle: "Terms and Conditions",
+  navigationTitle: "VUIOR Terms and Conditions",
+  navigationSidebar: [
+    "Introduction",
+    "Eligibility",
+    "Membership",
+    "Use of the Website",
+    "Loan Programs",
+    "In-House and Special Financing",
+    "Privacy",
+    "Indemnification",
+    "Changes to Terms and Conditions",
+    "Governing Law",
+    "Contact Information",
+  ],
+  sections: [
+    {
+      title: "Introduction",
+      content: [
+        "Welcome to VUIOR! These Terms and Conditions govern your use of our website and services. By accessing or using our website, you agree to be bound by these Terms and Conditions.",
+      ],
+    },
+    {
+      title: "Eligibility",
+      content: [
+        "You must be at least 18 years old to use our website and services. By using our website, you represent and warrant that you meet this age requirement.",
+      ],
+    },
+    {
+      title: "Membership",
+      content: [
+        "When you become a member of VUIOR, you effectively become a part owner. Membership is free, but to maintain your active status, you must keep a minimum account balance of $25. This balance is required for verification and regulatory purposes.",
+      ],
+    },
+    {
+      title: "Use of the Website",
+      content: [
+        "You agree to use our website for lawful purposes only.",
+        "You must not use our website to engage in any fraudulent, unlawful, or harmful activity.",
+        "You must not use our website to transmit any harmful or malicious software.",
+      ],
+    },
+    {
+      title: "Loan Programs",
+      content: [
+        "Our loan programs are offered through partnerships with highly-rated, best-in-class institutions. Each loan program is monitored by VUIOR and its member committees to ensure that they respond to changing needs by delivering innovative, relevant coverage and services.",
+      ],
+    },
+    {
+      title: "In-House and Special Financing",
+      content: [
+        "VUIOR offers both in-house and special financing options to provide additional flexibility and support. All credit profiles are welcome.",
+      ],
+    },
+    {
+      title: "Privacy",
+      content: [
+        "Your use of our website is also governed by our Privacy Notice, which outlines how we collect, use, and protect your personal information.",
+      ],
+    },
+    {
+      title: "Indemnification",
+      content: [
+        "You agree to indemnify and hold VUIOR harmless from any claims, damages, or expenses arising from your use of our website or services.",
+      ],
+    },
+    {
+      title: "Changes to Terms and Conditions",
+      content: [
+        "We reserve the right to update these Terms and Conditions at any time. Changes will be effective immediately upon posting on our website. Your continued use of our website constitutes your acceptance of the revised Terms and Conditions.",
+      ],
+    },
+    {
+      title: "Governing Law",
+      content: [
+        "These Terms and Conditions are governed by the laws of the United States. Any disputes arising from these Terms and Conditions will be resolved in the courts of the United States.",
+      ],
+    },
+    {
+      title: "Contact Information",
+      content: [
+        "For any questions about these Terms and Conditions, please contact us at info@vuior.com.",
+      ],
+    },
+  ],
+};
+
+export const privacyPolicy = {
+  pageTitle: "Privacy Policy",
+  navigationTitle: "VUIOR Privacy Policy",
+  navigationSidebar: [
+    "Introduction",
+    "Information We Collect",
+    "How We Use Your Information",
+    "Sharing Your Information",
+    "Data Security",
+    "Your Rights",
+    "Cookies",
+    "Changes to This Privacy Notice",
+    "Contact Information",
+  ],
+  sections: [
+    {
+      title: "Introduction",
+      content: [
+        "VUIOR is committed to protecting your privacy. This Privacy Notice explains how we collect, use, and safeguard your personal information.",
+      ],
+    },
+    {
+      title: "Information We Collect",
+      content: [
+        "Personal Information: Name, email address, phone number, and other contact details.",
+        "Financial Information: Bank account details, credit information, and transaction history.",
+        "Usage Information: IP address, browser type, and pages visited.",
+      ],
+    },
+    {
+      title: "How We Use Your Information",
+      content: [
+        "With Service Providers: We share your information with third-party service providers who assist us in delivering our services.",
+        "For Legal Reasons: We may disclose your information if required by law or in response to legal requests.",
+      ],
+    },
+    {
+      title: "Sharing Your Information",
+      content: [
+        "To Provide Services: We use your information to deliver our services and manage your membership.",
+        "To Improve Our Services: We analyze usage data to enhance our website and services.",
+        "For Communication: We use your contact details to send you updates, newsletters, and promotional offers.",
+        "For Compliance: We use your information to comply with legal obligations and regulations.",
+      ],
+    },
+    {
+      title: "Data Security",
+      content: [
+        "We implement appropriate security measures to protect your personal information from unauthorized access, alteration, disclosure, or destruction.",
+      ],
+    },
+    {
+      title: "Your Rights",
+      content: [
+        "Access: You have the right to access the personal information we hold about you.",
+        "Correction: You can request the correction of inaccurate or incomplete information.",
+        "Deletion: You can request the deletion of your personal information, subject to legal obligations.",
+      ],
+    },
+    {
+      title: "Cookies",
+      content: [
+        "We use cookies to enhance your experience on our website. Cookies help us understand your preferences and improve our services.",
+      ],
+    },
+    {
+      title: "Changes to This Privacy Notice",
+      content: [
+        "We may update this Privacy Notice from time to time. Changes will be posted on our website and will take effect immediately upon posting.",
+      ],
+    },
+    {
+      title: "Contact Information",
+      content: [
+        "For any questions about this Privacy Notice or to exercise your rights, please contact us at info@vuior.com.",
+      ],
+    },
+  ],
+};

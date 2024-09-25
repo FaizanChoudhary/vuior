@@ -145,7 +145,7 @@ const InquirySupportSection = () => {
         backgroundSize: "cover",
         backgroundPosition: "center",
         position: "relative",
-        marginTop: "50px !important",
+        marginTop: "-6px !important",
         px: { xs: 4, md: 6, lg: 20 },
         py: 5,
         zIndex: 1,

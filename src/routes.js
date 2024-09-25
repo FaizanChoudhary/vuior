@@ -16,8 +16,8 @@ const LoanProgramDetails = Loadable(
 );
 const HouseHoldPage = Loadable(lazy(() => import("./pages/HouseHoldPage")));
 const JobListingPage = Loadable(lazy(() => import("./pages/JobListingPage")));
-// const PrivacyPolicy = Loadable(lazy(() => import("./pages/PrivacyPolicy")));
-// const TermsOfService = Loadable(lazy(() => import("./pages/TermsOfService")));
+const PrivacyPolicy = Loadable(lazy(() => import("./pages/PrivacyPolicy")));
+const TermsOfService = Loadable(lazy(() => import("./pages/TermsOfService")));
 // const CookiePolicy = Loadable(lazy(() => import("./pages/CookiePolicy")));
 // const DataProtectionPolicy = Loadable(
 //   lazy(() => import("./pages/DataProtectionPolicy"))
@@ -46,8 +46,8 @@ const routes = [
       },
 
       { path: "/careers/jobs", element: <JobListingPage /> },
-      // { path: "/privacy-policy", element: <PrivacyPolicy /> },
-      //   { path: "/terms-of-service", element: <TermsOfService /> },
+      { path: "/privacy-policy", element: <PrivacyPolicy /> },
+      { path: "/terms-of-service", element: <TermsOfService /> },
       //   { path: "/cookie-policy", element: <CookiePolicy /> },
       //   {
       //     path: "/data-protection-policy",
