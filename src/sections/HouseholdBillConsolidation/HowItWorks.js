@@ -19,7 +19,7 @@ const SectionContainer = styled(Box)(({ theme }) => ({
 const steps = [
   {
     stepNumber: 1,
-    title: "Free Sign Up For Users",
+    title: "Free Sign Up",
     description:
       "Join us for free and easy to use household bill consolidation program. Simply sign up on our secure platform to get started.",
     imgSrc: "/assets/freesignup.png",
@@ -49,14 +49,14 @@ const steps = [
     imgSrc: "/assets/monthypayment.png",
     alt: "Payment",
   },
-  {
-    stepNumber: 5,
-    title: "Access To Line Of Credit",
-    description:
-      "Our qualified participants gain access to a $5000 line of credit, which can be used for household expenses or unexpected bills.",
-    imgSrc: "/assets/lineofcredit.png",
-    alt: "Crdeit",
-  },
+  // {
+  //   stepNumber: 5,
+  //   title: "Access To Line Of Credit",
+  //   description:
+  //     "Our qualified participants gain access to a $5000 line of credit, which can be used for household expenses or unexpected bills.",
+  //   imgSrc: "/assets/lineofcredit.png",
+  //   alt: "Crdeit",
+  // },
 ];
 
 const HowItWorks = () => {

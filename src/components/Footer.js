@@ -204,10 +204,10 @@ const Footer = () => {
         >
           <LegalLink to="/privacy-policy">Privacy Policy</LegalLink>
           <LegalLink to="/terms-of-service">Terms of Service</LegalLink>
-          <LegalLink to="/cookie-policy">Cookie Policy</LegalLink>
+          {/* <LegalLink to="/cookie-policy">Cookie Policy</LegalLink>
           <LegalLink to="/data-protection-policy">
             Data Protection Policy
-          </LegalLink>
+          </LegalLink> */}
         </Box>
       </BottomLegal>
     </FooterContainer>

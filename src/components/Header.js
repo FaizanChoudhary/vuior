@@ -94,10 +94,11 @@ const Header = () => {
         variant="contained"
         color="secondary" // Use your desired highlight color
         sx={{
+          width: "90%",
           backgroundColor: "#23AB84", // Green color for highlight
           color: "#fff",
           fontWeight: "bold",
-          ml: 3, // Adjust margin for spacing between nav items and button
+          ml: { xs: 1, sm: 1.3 }, // Adjust margin for spacing between nav items and button
           padding: "6px 12px",
           "&:hover": {
             backgroundColor: "#1C8067", // Darker shade on hover

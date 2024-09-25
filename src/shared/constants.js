@@ -2,6 +2,7 @@
 export const jobs = [
   {
     title: "Sales Manager - Growth Division",
+    category: "Sales",
     about:
       "At VUIOR, we're dedicated to fostering a community that prioritizes financial empowerment. Our mission is to support individuals in achieving their financial goals through innovative solutions and unwavering support.",
     summary:
@@ -36,6 +37,7 @@ export const jobs = [
   },
   {
     title: "Marketing Manager - Awareness Campaigns",
+    category: "Marketing",
     about:
       "VUIOR is dedicated to creating a community where financial empowerment is accessible to all. Through innovative solutions and impactful campaigns, we strive to raise awareness and drive positive change.",
     summary:
@@ -70,6 +72,7 @@ export const jobs = [
   },
   {
     title: "Recruiting Manager - Talent Acquisition",
+    category: "Human Resources",
     about:
       "At VUIOR, we believe in the power of community and the importance of empowering individuals to achieve their financial goals. As a Recruiting Manager, you'll play a crucial role in driving our growth and expanding our team.",
     summary:
@@ -104,6 +107,7 @@ export const jobs = [
   },
   {
     title: "Debt Management Specialist - Team Lead",
+    category: "Debt Management",
     about:
       "At VUIOR, we're dedicated to empowering individuals to take control of their finances and achieve their goals. As a Debt Management Specialist, you'll play a vital role in helping our clients manage debt effectively and achieve financial empowerment.",
     summary:
@@ -138,6 +142,7 @@ export const jobs = [
   },
   {
     title: "VUIOR Ambassador Program Manager",
+    category: "Project Management",
     about:
       "At VUIOR, we're committed to making a positive impact in communities and empowering individuals to achieve financial success. As the VUIOR Ambassador Program Manager, you'll play a key role in driving community engagement and promoting our mission.",
     summary:
@@ -172,6 +177,7 @@ export const jobs = [
   },
   {
     title: "Customer Service Manager - Excellence Team",
+    category: "Customer Service",
     about:
       "At VUIOR, we prioritize client satisfaction and are dedicated to providing exceptional customer service. As the Customer Service Manager, you'll play a crucial role in ensuring our clients receive the support they need to succeed.",
     summary:
@@ -206,6 +212,7 @@ export const jobs = [
   },
   {
     title: "Project Manager - Growth Initiatives",
+    category: "Project Management",
     about:
       "VUIOR is committed to driving innovation and growth through strategic initiatives. As the Project Manager for Growth Initiatives, you'll lead projects that support our mission and drive our business forward.",
     summary:
@@ -240,6 +247,7 @@ export const jobs = [
   },
   {
     title: "Community Engagement Manager",
+    category: "Community Engagement",
     about:
       "VUIOR is dedicated to fostering a sense of community and empowering individuals to achieve financial success. As the Community Engagement Manager, you'll play a key role in building and nurturing relationships within the community.",
     summary:
@@ -274,6 +282,7 @@ export const jobs = [
   },
   {
     title: "Strategic Partnerships Manager",
+    category: "Strategic Partnerships",
     about:
       "At VUIOR, we're committed to building strategic partnerships that drive mutual growth and success. As the Strategic Partnerships Manager, you'll play a crucial role in identifying and nurturing key partnerships.",
     summary:

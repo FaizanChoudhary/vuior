@@ -95,6 +95,18 @@ const InquirySupportSection = () => {
   });
   const [consent, setConsent] = useState(false);
 
+  // Function to check if the form is valid
+  const isFormValid = () => {
+    const { name, email, phone, message } = formData;
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Email validation regex
+    return (
+      name.trim() !== "" &&
+      emailRegex.test(email) &&
+      phone.trim() !== "" &&
+      message.trim() !== ""
+    );
+  };
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prevData) => ({
@@ -116,7 +128,6 @@ const InquirySupportSection = () => {
       .then(
         (result) => {
           console.log("Email sent successfully:", result.text);
-          alert("Your inquiry has been submitted successfully!");
         },
         (error) => {
           console.log("Failed to send email:", error.text);
@@ -130,7 +141,7 @@ const InquirySupportSection = () => {
   return (
     <Box
       sx={{
-        backgroundImage: 'url("/assets/contact-us.jpg")',
+        backgroundImage: 'url("/assets/new/contact-us.jpg")',
         backgroundSize: "cover",
         backgroundPosition: "center",
         position: "relative",
@@ -207,7 +218,7 @@ const InquirySupportSection = () => {
 
           <ContactInfoItem
             iconSrc="/assets/icons/time.png"
-            label="Business Hours"
+            label="Business Hours 24/7"
             value="Monday – Saturday, 10 AM – 5 PM"
           />
         </Grid>
@@ -312,12 +323,22 @@ const InquirySupportSection = () => {
                   <Checkbox
                     checked={consent}
                     onChange={(e) => setConsent(e.target.checked)}
-                    color="primary"
+                    sx={{
+                      color: "white", // Checkbox border color when unchecked
+                      "&.Mui-checked": {
+                        color: "white", // Checkbox color when checked
+                      },
+                    }}
                   />
                 }
-                label="By checking this I agree to receive automated promotional messages"
-                sx={{ mt: 2 }}
+                label="By checking this box I agree to receive automated promotional messages. This agreement is not a condition of purchase. Message frequency varies. Reply STOP to opt out or HELP for help. Message & data rates apply."
+                sx={{
+                  mt: 2,
+                  color: "white",
+                  "& .MuiTypography-root": { fontSize: "0.75rem" },
+                }} // Adjust font size here
               />
+
               {/* Submit Button */}
               <Box
                 sx={{ display: "flex", justifyContent: "center", marginTop: 2 }}
@@ -335,6 +356,7 @@ const InquirySupportSection = () => {
                       transition: "transform 0.2s ease",
                     },
                   }}
+                  disabled={!isFormValid()} // Disable button if form is not valid
                 >
                   Submit
                 </Button>

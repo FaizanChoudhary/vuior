@@ -29,10 +29,10 @@ const SecurePositionSection = () => {
       </Typography>
 
       {/* Description */}
-      <Typography variant="body1" sx={{ marginBottom: 3 }}>
+      {/* <Typography variant="body1" sx={{ marginBottom: 3 }}>
         Register For The Vuior Mega Nationwide Hiring Event Now And Set The Time
         On Your Calendar. This Is How Your Success Journey Starts!
-      </Typography>
+      </Typography> */}
 
       {/* Apply Now Button */}
       <Button

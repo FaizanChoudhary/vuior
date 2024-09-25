@@ -46,7 +46,17 @@ const SearchButton = styled(Button)(({ theme }) => ({
   padding: theme.spacing(1.5, 3),
 }));
 
-const categories = ["All", "Sales", "Engineering", "Marketing"];
+const categories = [
+  { value: "All", label: "All Categories" },
+  { value: "Sales", label: "Sales" },
+  { value: "Marketing", label: "Marketing" },
+  { value: "Human Resources", label: "Human Resources" },
+  { value: "Debt Management", label: "Debt Management" },
+  { value: "Customer Service", label: "Customer Service" },
+  { value: "Project Management", label: "Project Management" },
+  { value: "Community Engagement", label: "Community Engagement" },
+  { value: "Strategic Partnerships", label: "Strategic Partnerships" },
+];
 
 const JobListingPage = () => {
   const [searchTerm, setSearchTerm] = useState("");
@@ -167,8 +177,8 @@ const JobListingPage = () => {
             }}
           >
             {categories.map((cat) => (
-              <MenuItem key={cat} value={cat}>
-                {cat}
+              <MenuItem key={cat.value} value={cat.value}>
+                {cat.label}
               </MenuItem>
             ))}
           </Select>

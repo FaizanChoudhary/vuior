@@ -57,7 +57,7 @@ const OurCommitmentSection = () => {
           <StepCard
             title="Customer-Focused Approach"
             description="At VUIOR, our members are at the heart of everything we do. We focus on understanding and meeting your needs, creating lifelong relationships, and building a supportive community. Our customer-focused model ensures that we provide personalized support and services designed to help you achieve your financial goals."
-            imgSrc="/assets/customer.png"
+            imgSrc="/assets/new/shutterstock_72345286.jpg"
             alt="customer"
           />
         </Grid>

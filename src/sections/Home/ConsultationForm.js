@@ -52,7 +52,7 @@ const BackgroundSwiper = styled(Swiper)(({ theme }) => ({
 const FormContainer = styled(Stack)(({ theme }) => ({
   background: "rgba(255, 255, 255, 0.8)",
   borderRadius: "15px",
-  padding: theme.spacing(4),
+  padding: theme.spacing(3),
   backdropFilter: "blur(10px)",
   boxShadow: "0px 10px 20px rgba(0, 0, 0, 0.3)",
   zIndex: 1,
@@ -120,6 +120,14 @@ const ConsultationForm = () => {
   });
   const [consent, setConsent] = useState(false);
 
+  // Function to check if the form is valid
+  const isFormValid = () => {
+    const { name, email, phone } = formData;
+    // Regex for email validation
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return name.trim() !== "" && emailRegex.test(email) && phone.trim() !== "";
+  };
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prevData) => ({
@@ -155,7 +163,7 @@ const ConsultationForm = () => {
     <ConsultationContainer>
       <BackgroundImageSwiper />
       <FormContainer data-aos="fade-up">
-        <Box textAlign="center" mb={2}>
+        <Box textAlign="center" mb={1}>
           <Typography variant="h4" gutterBottom fontSize={24}>
             Request A Free Consultation Call
           </Typography>
@@ -173,6 +181,7 @@ const ConsultationForm = () => {
           <StyledTextField
             label="Name"
             name="name"
+            required
             value={formData.name}
             onChange={handleChange}
             variant="outlined"
@@ -189,6 +198,8 @@ const ConsultationForm = () => {
           <StyledTextField
             label="Email"
             name="email"
+            required
+            type="email"
             value={formData.email}
             onChange={handleChange}
             variant="outlined"
@@ -205,6 +216,7 @@ const ConsultationForm = () => {
           <StyledTextField
             label="Phone Number"
             name="phone"
+            required
             value={formData.phone}
             onChange={handleChange}
             variant="outlined"
@@ -226,14 +238,16 @@ const ConsultationForm = () => {
                 color="primary"
               />
             }
-            label="By checking this I agree to receive automated promotional messages"
-            sx={{ mt: 2 }}
+            label="By checking this box I agree to receive automated promotional messages. This agreement is not a condition of purchase. Message frequency varies. Reply STOP to opt out or HELP for help. Message & data rates apply."
+            sx={{ mt: 2, "& .MuiTypography-root": { fontSize: "0.75rem" } }}
           />
+
           <StyledButton
             type="submit"
             variant="contained"
             fullWidth
             sx={{ mt: 2 }}
+            disabled={!isFormValid()} // Disable button if the form is not valid
           >
             Schedule a Call
           </StyledButton>

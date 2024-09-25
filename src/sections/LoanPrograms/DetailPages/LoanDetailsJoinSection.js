@@ -48,7 +48,10 @@ const LoanDetailsJoinSection = () => {
             transition: "transform 0.2s ease",
           },
         }}
-        onClick={() => setOpen(true)}
+        // onClick={() => setOpen(true)}
+        onClick={() =>
+          window.open("https://add.vuior.com/user/login", "_blank")
+        }
       >
         Apply Now <ArrowForwardIcon fontSize="small" sx={{ ml: 1 }} />
       </Button>
