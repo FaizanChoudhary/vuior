@@ -1,21 +1,21 @@
-import React, { useRef, useState, useEffect } from "react";
+import InfoIcon from "@mui/icons-material/Info";
 import {
-  Typography,
+  Box,
   Container,
-  Grid,
-  Paper,
   Divider,
+  Grid,
   IconButton,
   List,
   ListItem,
   ListItemText,
-  Box,
+  Paper,
+  Typography,
 } from "@mui/material";
-import InfoIcon from "@mui/icons-material/Info";
+import React, { useEffect, useRef } from "react";
 import { privacyPolicy } from "../shared/constants"; // Ensure the path is correct
 
 const PrivacyPolicy = () => {
-  const [activeSection, setActiveSection] = useState(0);
+  // const [activeSection, setActiveSection] = useState(0);
   const sectionRefs = useRef([]);
 
   useEffect(() => {
@@ -33,7 +33,7 @@ const PrivacyPolicy = () => {
         block: "start",
       });
     }
-    setActiveSection(index); // Set active section on click
+    // setActiveSection(index); // Set active section on click
   };
 
   return (
@@ -65,9 +65,9 @@ const PrivacyPolicy = () => {
                   sx={{
                     borderRadius: 2,
                     cursor: "pointer",
-                    color: activeSection === index ? "white" : "#0F4A3F",
-                    backgroundColor:
-                      activeSection === index ? "#0F4A3F" : "transparent",
+                    color: "#0F4A3F",
+                    // backgroundColor:
+                    //   activeSection === index ? "#0F4A3F" : "transparent",
                     "&:hover": { backgroundColor: "#0F4A3F", color: "white" },
                   }}
                 >

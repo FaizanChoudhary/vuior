@@ -86,6 +86,10 @@ const StyledButton = styled(Button)(({ theme }) => ({
     transform: "scale(1.05)",
     transition: "transform 0.3s ease",
   },
+  "&.Mui-disabled": {
+    backgroundColor: "#195a4d", // Slightly lighter shade of the main button color
+    color: "rgba(255, 255, 255, 0.7)", // Optional: Make the text slightly lighter too
+  },
 }));
 
 const BackgroundImageSwiper = () => (
