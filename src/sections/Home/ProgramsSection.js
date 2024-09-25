@@ -184,7 +184,7 @@ const ProgramsSection = ({ isProgramPage, isAboutUsPage }) => {
               component="img"
               image={
                 isProgramPage
-                  ? "/assets/loan_program.png"
+                  ? "/assets/program_household.jpg"
                   : isAboutUsPage
                   ? "/assets/about_us_household.jpg"
                   : "/assets/Consolidation.webp"

@@ -2,6 +2,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import {
   AppBar,
   Box,
+  Button,
   Drawer,
   IconButton,
   List,
@@ -88,6 +89,26 @@ const Header = () => {
           </ListItem>
         ))}
       </List>
+      {/* My Account Button */}
+      <Button
+        variant="contained"
+        color="secondary" // Use your desired highlight color
+        sx={{
+          backgroundColor: "#23AB84", // Green color for highlight
+          color: "#fff",
+          fontWeight: "bold",
+          ml: 3, // Adjust margin for spacing between nav items and button
+          padding: "6px 12px",
+          "&:hover": {
+            backgroundColor: "#1C8067", // Darker shade on hover
+          },
+        }}
+        onClick={() =>
+          window.open("https://add.vuior.com/user/login", "_blank")
+        }
+      >
+        My Account
+      </Button>
     </Box>
   );
 
@@ -165,6 +186,26 @@ const Header = () => {
                 </Typography>
               );
             })}
+            {/* My Account Button */}
+            <Button
+              variant="contained"
+              color="secondary" // Use your desired highlight color
+              sx={{
+                backgroundColor: "#23AB84", // Green color for highlight
+                color: "#fff",
+                fontWeight: "bold",
+                ml: 3, // Adjust margin for spacing between nav items and button
+                padding: "6px 12px",
+                "&:hover": {
+                  backgroundColor: "#1C8067", // Darker shade on hover
+                },
+              }}
+              onClick={() =>
+                window.open("https://add.vuior.com/user/login", "_blank")
+              }
+            >
+              My Account
+            </Button>
           </Box>
 
           <IconButton

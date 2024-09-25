@@ -30,7 +30,7 @@ const steps = [
     title: "Fund Your Account",
     description:
       "Fund your account with a minimum balance of $25 to activate your membership.",
-    imgSrc: "/assets/billassesment.png",
+    imgSrc: "/assets/fundaccount.png",
     alt: "Fund Your Account",
   },
   {
@@ -38,7 +38,7 @@ const steps = [
     title: "Enjoy The Benefits",
     description:
       "Start taking advantage of Vuior's programs and services immediately after funding your account.",
-    imgSrc: "/assets/negotiation.png",
+    imgSrc: "/assets/enjoythebenefits.jpg",
     alt: "Enjoy the Benefits",
   },
 ];
