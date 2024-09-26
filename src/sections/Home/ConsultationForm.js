@@ -1,23 +1,24 @@
-import React, { useState } from "react";
+import EmailIcon from "@mui/icons-material/Email";
+import PersonIcon from "@mui/icons-material/Person";
+import PhoneIcon from "@mui/icons-material/Phone";
 import {
   Box,
   Button,
+  Checkbox,
+  FormControlLabel,
+  InputAdornment,
   Stack,
   TextField,
   Typography,
-  InputAdornment,
-  FormControlLabel,
-  Checkbox,
 } from "@mui/material";
 import { styled } from "@mui/system";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, EffectFade } from "swiper/modules";
+import emailjs from "emailjs-com"; // Import EmailJS
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import "swiper/css";
 import "swiper/css/effect-fade";
-import PersonIcon from "@mui/icons-material/Person";
-import EmailIcon from "@mui/icons-material/Email";
-import PhoneIcon from "@mui/icons-material/Phone";
-import emailjs from "emailjs-com"; // Import EmailJS
+import { Autoplay, EffectFade } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
 
 const ConsultationContainer = styled(Box)(({ theme }) => ({
   position: "relative",
@@ -242,10 +243,32 @@ const ConsultationForm = () => {
                 color="primary"
               />
             }
-            label="By checking this box I agree to receive automated promotional messages. This agreement is not a condition of purchase. Message frequency varies. Reply STOP to opt out or HELP for help. Message & data rates apply."
-            sx={{ mt: 2, "& .MuiTypography-root": { fontSize: "0.75rem" } }}
+            label={
+              <Typography sx={{ fontSize: "0.75rem" }}>
+                By checking this box I agree to receive automated promotional
+                messages. This agreement is not a condition of purchase. Message
+                frequency varies. Reply STOP to opt out or HELP for help.
+                Message & data rates apply.{" "}
+                <Link
+                  to="/terms-of-service"
+                  underline="hover"
+                  sx={{ color: "#064e3b", fontWeight: "bold", fontSize: 14 }}
+                >
+                  Terms
+                </Link>{" "}
+                and{" "}
+                <Link
+                  to="/privacy-policy"
+                  underline="hover"
+                  sx={{ color: "#064e3b", fontWeight: "bold", fontSize: 14 }}
+                >
+                  Privacy Policy
+                </Link>
+                .
+              </Typography>
+            }
+            sx={{ mt: 2 }}
           />
-
           <StyledButton
             type="submit"
             variant="contained"
