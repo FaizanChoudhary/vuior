@@ -29,6 +29,9 @@ const ConsultationContainer = styled(Box)(({ theme }) => ({
   justifyContent: "center",
   overflow: "hidden",
   boxShadow: "rgba(99, 99, 99, 0.2) 0px 2px 8px 0px",
+  [theme.breakpoints.down("sm")]: {
+    height: "100vh",
+  },
 }));
 
 const BackgroundSwiper = styled(Swiper)(({ theme }) => ({
