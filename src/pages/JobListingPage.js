@@ -29,14 +29,16 @@ const SearchBarContainer = styled(Paper)(({ theme }) => ({
   width: "90%",
   margin: "auto",
   display: "flex",
+  flexWrap: "wrap",
   gap: 10,
   alignItems: "center",
   [theme.breakpoints.down("sm")]: {
     flexDirection: "column",
+    padding: theme.spacing(1),
   },
 }));
 
-const SearchButton = styled(Button)(({ theme }) => ({
+const ClearButton = styled(Button)(({ theme }) => ({
   backgroundColor: "#064E3B",
   color: "#fff",
   "&:hover": {
@@ -52,11 +54,22 @@ const sortOptions = [
   { value: "By Salary Limit", label: "By Salary Limit" },
 ];
 
+const salaryRanges = [
+  { label: "Salary Range", value: "" },
+  { label: "0 - 50,000", value: [0, 50000] },
+  { label: "50,000 - 100,000", value: [50000, 100000] },
+  { label: "100,000 - 150,000", value: [100000, 150000] },
+  { label: "150,000 or greater", value: [150000, Infinity] },
+];
+
 const JobListingPage = () => {
   const [searchTerm, setSearchTerm] = useState("");
-  const [sortOption, setSortOption] = useState("sort"); // New state for sorting
+  const [sortOption, setSortOption] = useState("sort");
   const [page, setPage] = useState(1);
   const [openDialog, setOpenDialog] = useState(false);
+  const [salaryRange, setSalaryRange] = useState("");
+  const [dateRange, setDateRange] = useState("");
+  const [location, setLocation] = useState("");
   const jobsPerPage = 5;
 
   const handleOpenDialog = () => {
@@ -68,34 +81,68 @@ const JobListingPage = () => {
   };
 
   const handleSortChange = (event) => {
-    setSortOption(event.target.value); // Set sorting option (By Date or By Salary)
+    setSortOption(event.target.value);
   };
 
-  const sortedJobs = jobs
-    .filter((job) => {
-      // Optionally apply search term filtering if needed
-      const titleMatch =
-        job.title && job.title.toLowerCase().includes(searchTerm.toLowerCase());
-      const descriptionMatch =
-        job.description &&
-        job.description.toLowerCase().includes(searchTerm.toLowerCase());
+  const handleSalaryChange = (event) => {
+    setSalaryRange(event.target.value);
+  };
 
-      return titleMatch || descriptionMatch;
+  const handleDateChange = (event) => {
+    setDateRange(event.target.value);
+  };
+
+  const handleLocationChange = (event) => {
+    setLocation(event.target.value);
+  };
+
+  const handleClearFilters = () => {
+    setSearchTerm("");
+    setSortOption("sort");
+    setSalaryRange("");
+    setDateRange("");
+    setLocation("");
+    setPage(1);
+  };
+
+  const filteredJobs = jobs
+    .filter((job) => {
+      const titleMatch = job.title
+        ?.toLowerCase()
+        .includes(searchTerm.toLowerCase());
+      const descriptionMatch = job.summary
+        ?.toLowerCase()
+        .includes(searchTerm.toLowerCase());
+
+      const salaryMatch = salaryRange
+        ? job.salary_min >= salaryRange[0] && job.salary_max <= salaryRange[1]
+        : job;
+      const dateMatch = dateRange
+        ? new Date(job.created_at) >= new Date(dateRange)
+        : true;
+      const locationMatch = location
+        ? job.location?.toLowerCase().includes(location.toLowerCase())
+        : true;
+
+      return (
+        (titleMatch || descriptionMatch) &&
+        salaryMatch &&
+        dateMatch &&
+        locationMatch
+      );
     })
     .sort((a, b) => {
       if (sortOption === "By Date") {
-        return new Date(b.created_at) - new Date(a.created_at); // Sort by newest date first
+        return new Date(b.created_at) - new Date(a.created_at);
       } else if (sortOption === "By Salary Limit") {
-        const salaryA = parseInt(a.salary.split("-")[1].replace(/[^\d]/g, "")); // Extract max salary
-        const salaryB = parseInt(b.salary.split("-")[1].replace(/[^\d]/g, ""));
-        return salaryB - salaryA; // Sort by highest salary first
+        return b.salary_max - a.salary_max;
       }
       return 0;
     });
 
   const startIndex = (page - 1) * jobsPerPage;
   const endIndex = startIndex + jobsPerPage;
-  const paginatedJobs = sortedJobs.slice(startIndex, endIndex);
+  const paginatedJobs = filteredJobs.slice(startIndex, endIndex);
 
   const handlePageChange = (event, value) => {
     setPage(value);
@@ -141,7 +188,7 @@ const JobListingPage = () => {
         <Typography
           variant="h3"
           color="white"
-          sx={{ fontWeight: "bold", zIndex: 2 }}
+          sx={{ fontWeight: "bold", zIndex: 2, textAlign: "center" }}
         >
           Secure Your Position Today!
         </Typography>
@@ -169,13 +216,12 @@ const JobListingPage = () => {
               ),
             }}
           />
+
           <Select
             value={sortOption}
             onChange={handleSortChange}
-            sx={{
-              width: { xs: "100%", md: "auto" },
-              minWidth: 200,
-            }}
+            sx={{ minWidth: 200, width: { xs: "100%", md: "auto" } }}
+            displayEmpty
           >
             {sortOptions.map((sortOption, index) => (
               <MenuItem key={index} value={sortOption.value}>
@@ -184,9 +230,41 @@ const JobListingPage = () => {
             ))}
           </Select>
 
-          <SearchButton variant="contained" sx={{ ml: 2 }}>
-            Search
-          </SearchButton>
+          <Select
+            value={salaryRange}
+            onChange={handleSalaryChange}
+            displayEmpty
+            sx={{ minWidth: 200, width: { xs: "100%", md: "auto" } }}
+          >
+            {salaryRanges.map((range, index) => (
+              <MenuItem key={index} value={range.value}>
+                {range.label}
+              </MenuItem>
+            ))}
+          </Select>
+
+          <TextField
+            label="Posted After"
+            type="date"
+            value={dateRange}
+            onChange={handleDateChange}
+            InputLabelProps={{ shrink: true }}
+            sx={{ minWidth: 200, width: { xs: "100%", md: "auto" } }}
+          />
+
+          <TextField
+            placeholder="Location"
+            value={location}
+            onChange={handleLocationChange}
+            sx={{ minWidth: 200, width: { xs: "100%", md: "auto" } }}
+          />
+
+          <ClearButton
+            onClick={handleClearFilters}
+            sx={{ width: { xs: "100%", md: "auto" } }}
+          >
+            Clear
+          </ClearButton>
         </SearchBarContainer>
 
         <Grid container spacing={3} mt={3}>
@@ -213,12 +291,12 @@ const JobListingPage = () => {
                           {job.created_at}
                         </Typography>
                         <Typography variant="caption" color="text.secondary">
-                          {job.salary}
+                          ${job.salary_min.toLocaleString()} - $
+                          {job.salary_max.toLocaleString()}
                         </Typography>
                       </Box>
                     </AccordionSummary>
                     <AccordionDetails>
-                      {/* Job details */}
                       <Typography
                         variant="body1"
                         fontWeight="bold"
@@ -303,11 +381,22 @@ const JobListingPage = () => {
                           </li>
                         ))}
                       </ul>
+                      <Typography
+                        variant="body1"
+                        fontWeight="bold"
+                        sx={{ mt: 1 }}
+                      >
+                        Location:
+                      </Typography>
+                      <Typography variant="body2" color="black">
+                        {job.location}
+                      </Typography>
                       <Button
                         variant="contained"
                         color="primary"
                         sx={{
                           backgroundColor: "#064E3B",
+                          mt: 1,
                           paddingX: 4,
                           paddingY: 1,
                           borderRadius: "20px",
@@ -317,7 +406,7 @@ const JobListingPage = () => {
                             transition: "transform 0.4s ease",
                           },
                         }}
-                        onClick={handleOpenDialog} // Open dialog on button click
+                        onClick={handleOpenDialog}
                       >
                         Apply Now
                       </Button>
@@ -333,7 +422,7 @@ const JobListingPage = () => {
             <Grid item xs={12}>
               <Box mt={3} display="flex" justifyContent="center">
                 <Pagination
-                  count={Math.ceil(sortedJobs.length / jobsPerPage)}
+                  count={Math.ceil(filteredJobs.length / jobsPerPage)}
                   page={page}
                   onChange={handlePageChange}
                   color="primary"
@@ -347,7 +436,6 @@ const JobListingPage = () => {
         </Grid>
       </Container>
 
-      {/* Dialog for Job Application */}
       {openDialog && <SecurePositionFormDialog onClose={handleCloseDialog} />}
     </>
   );

@@ -28,6 +28,9 @@ export const jobs = [
       "Develop and implement sales training programs to enhance team skills.",
     ],
     salary: "$150,000 - $200,000 per year",
+    salary_min: 150000,
+    salary_max: 200000,
+    location: "New York, NY",
     benefits: [
       "Competitive salary with performance-based bonuses.",
       "Comprehensive training and professional development opportunities.",
@@ -64,6 +67,9 @@ export const jobs = [
       "Stay informed about industry trends and best practices in marketing.",
     ],
     salary: "$120,000 - $160,000 per year",
+    salary_min: 120000,
+    salary_max: 160000,
+    location: "San Francisco, CA",
     benefits: [
       "Competitive salary with performance-based bonuses.",
       "Opportunities for professional development and growth.",
@@ -100,6 +106,9 @@ export const jobs = [
       "Track recruitment metrics and analyze data to identify areas for improvement.",
     ],
     salary: "$130,000 - $170,000 per year",
+    salary_min: 130000,
+    salary_max: 170000,
+    location: "70240 Avenue of the Moon, California",
     benefits: [
       "Competitive salary with performance-based bonuses.",
       "Opportunities for professional development and career growth.",
@@ -136,6 +145,9 @@ export const jobs = [
       "Stay up-to-date on industry trends and best practices in debt management.",
     ],
     salary: "$100,000 - $140,000 per year",
+    salary_min: 100000,
+    salary_max: 140000,
+    location: "70240 Avenue of the Moon, California",
     benefits: [
       "Competitive salary with performance-based bonuses.",
       "Opportunities for professional development and career advancement.",
@@ -172,6 +184,9 @@ export const jobs = [
       "Cultivate relationships with community partners and stakeholders to expand VUIOR's reach.",
     ],
     salary: "$120,000 - $160,000 per year",
+    salary_min: 120000,
+    salary_max: 160000,
+    location: "70240 Avenue of the Moon, California",
     benefits: [
       "Competitive salary with performance-based bonuses.",
       "Opportunities for professional development and career growth.",
@@ -208,6 +223,9 @@ export const jobs = [
       "Maintain accurate records of customer interactions and resolutions.",
     ],
     salary: "$110,000 - $150,000 per year",
+    salary_min: 110000,
+    salary_max: 150000,
+    location: "70240 Avenue of the Moon, California",
     benefits: [
       "Competitive salary with performance-based bonuses.",
       "Opportunities for professional development and career growth.",
@@ -244,6 +262,9 @@ export const jobs = [
       "Conduct post-project evaluations to identify lessons learned and areas for improvement.",
     ],
     salary: "$130,000 - $170,000 per year",
+    salary_min: 130000,
+    salary_max: 170000,
+    location: "70240 Avenue of the Moon, California",
     benefits: [
       "Competitive salary with performance-based bonuses.",
       "Opportunities for professional development and career growth.",
@@ -280,6 +301,9 @@ export const jobs = [
       "Stay informed about community trends and best practices in community engagement.",
     ],
     salary: "$120,000 - $160,000 per year",
+    salary_min: 120000,
+    salary_max: 160000,
+    location: "70240 Avenue of the Moon, California",
     benefits: [
       "Competitive salary with performance-based bonuses.",
       "Opportunities for professional development and career growth.",
@@ -316,6 +340,9 @@ export const jobs = [
       "Collaborate with internal teams to ensure alignment and support for partnership activities.",
     ],
     salary: "$130,000 - $170,000 per year",
+    salary_min: 130000,
+    salary_max: 170000,
+    location: "70240 Avenue of the Moon, California",
     benefits: [
       "Competitive salary with performance-based bonuses.",
       "Opportunities for professional development and career growth.",
