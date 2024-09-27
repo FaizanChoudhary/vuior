@@ -21,9 +21,9 @@ const HowToJoin = () => {
     },
     {
       number: 3,
-      title: "Apply For Loans",
+      title: "Apply For Bill Consolidation",
       description:
-        "Once you are a member, you can apply for any of our loan programs. Enjoy the benefits of flexible financing, no credit check, and competitive rates tailored to your needs.",
+        "Once you are a member, you can apply for our household bill consolidation program. Enjoy the benefits of group negotiated discounts, no credit checks, and comprehensive coverage for all your household bills.",
       imgSrc: "/assets/howtojoin3.png", // Replace with actual image path
     },
   ];

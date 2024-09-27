@@ -331,7 +331,8 @@ export const loanPrograms = {
     pageTitle: "Travel Loan Program",
     aboutTitle: "About Program",
     heroImage: "/assets/travelloan1.png",
-    eligibiltyImage: "/assets/travelloan2.png",
+    eligibiltyImage: "/assets/call-image.png",
+    // eligibiltyImage: "/assets/travelloan2.png",
     communityImage: "/assets/travelloan3.png",
     aboutDescription:
       "Our Travel Loan Program helps you finance your dream vacation or essential travel needs. Whether it's a family trip, a honeymoon, or a necessary journey, vuior makes it financially feasible.",
@@ -380,7 +381,8 @@ export const loanPrograms = {
     pageTitle: "Personal Loan Program",
     aboutTitle: "About Program",
     heroImage: "/assets/personelloan1.png",
-    eligibiltyImage: "/assets/personelloan2.png",
+    eligibiltyImage: "/assets/call-image.png",
+    // eligibiltyImage: "/assets/personelloan2.png",
     communityImage: "/assets/personelloan3.png",
     aboutDescription:
       "The Vuior Personal Loan Program is designed to provide flexible financial solutions for various personal needs, such as debt consolidation, home improvements, or unexpected expenses. This program welcomes all credit profiles and focuses on quick and easy access to funds.",
@@ -431,7 +433,8 @@ export const loanPrograms = {
     pageTitle: "Student Loan Program",
     aboutTitle: "About Program",
     heroImage: "/assets/studentloan1.png",
-    eligibiltyImage: "/assets/studentloan2.png",
+    eligibiltyImage: "/assets/call-image.png",
+    // eligibiltyImage: "/assets/studentloan2.png",
     communityImage: "/assets/studentloan3.png",
     aboutDescription:
       "vuior’s Student Loan Program supports educational aspirations by providing funds for tuition, books, and living expenses. We aim to make higher education accessible and affordable for all.",
@@ -482,7 +485,8 @@ export const loanPrograms = {
     pageTitle: "Special Event Loan Program",
     aboutTitle: "About Program",
     heroImage: "/assets/specialevent1.png",
-    eligibiltyImage: "/assets/specialevent2.png",
+    eligibiltyImage: "/assets/call-image.png",
+    // eligibiltyImage: "/assets/specialevent2.png",
     communityImage: "/assets/specialevent3.png",
     aboutDescription:
       "The vuior Special Event Loan Program provides the funds needed to create memorable experiences for significant events such as weddings, anniversaries, or other special occasions.",
@@ -531,7 +535,8 @@ export const loanPrograms = {
     pageTitle: "Home Improvement Loan Program",
     aboutTitle: "About Program",
     heroImage: "/assets/homeimprovementloan1.png",
-    eligibiltyImage: "/assets/homeimprovementloan2.png",
+    eligibiltyImage: "/assets/call-image.png",
+    // eligibiltyImage: "/assets/homeimprovementloan2.png",
     communityImage: "/assets/homeimprovementloan3.png",
     aboutDescription:
       "Our Home Improvement Loan Program funds renovation and repair projects, helping you enhance your living space and increase your home's value.",
@@ -580,7 +585,8 @@ export const loanPrograms = {
     pageTitle: "Small Business Loan Program",
     aboutTitle: "About Program",
     heroImage: "/assets/smallbussiness1.png",
-    eligibiltyImage: "/assets/smallbussiness2.png",
+    eligibiltyImage: "/assets/call-image.png",
+    // eligibiltyImage: "/assets/smallbussiness2.png",
     communityImage: "/assets/smallbussiness3.png",
     aboutDescription:
       "The vuior Small Business Loan Program supports entrepreneurs and small business owners by providing the necessary funds to start, grow, or sustain their businesses. This program is designed to cater to diverse business needs and credit profiles.",
@@ -629,7 +635,8 @@ export const loanPrograms = {
     pageTitle: "Emergency Loan Program",
     aboutTitle: "About Program",
     heroImage: "/assets/emergencyloan1.png",
-    eligibiltyImage: "/assets/emergencyloan2.png",
+    eligibiltyImage: "/assets/call-image.png",
+    // eligibiltyImage: "/assets/emergencyloan2.png",
     communityImage: "/assets/emergencyloan3.png",
     aboutDescription:
       "The vuior Emergency Loan Program is designed to provide quick financial relief during unexpected emergencies. Whether it’s medical expenses, urgent repairs, or other unforeseen costs, this program ensures that you can access funds promptly.",
@@ -677,7 +684,8 @@ export const loanPrograms = {
     pageTitle: "Health Care Loan Program",
     aboutTitle: "About Program",
     heroImage: "/assets/healthcare1.png",
-    eligibiltyImage: "/assets/healthcare2.png",
+    eligibiltyImage: "/assets/call-image.png",
+    // eligibiltyImage: "/assets/healthcare2.png",
     communityImage: "/assets/healthcare3.png",
     aboutDescription:
       "The vuior Health Care Loan Program is tailored to cover medical expenses, including treatments, surgeries, and other health-related costs. This program ensures that you can focus on your health without financial worries.",
@@ -726,7 +734,8 @@ export const loanPrograms = {
     pageTitle: "Auto Loan Program",
     aboutTitle: "About Program",
     heroImage: "/assets/autoloan1.png",
-    eligibiltyImage: "/assets/autoloan2.png",
+    eligibiltyImage: "/assets/call-image.png",
+    // eligibiltyImage: "/assets/autoloan2.png",
     communityImage: "/assets/autoloan3.png",
     aboutDescription:
       "The vuior Auto Loan Program offers flexible financing options for purchasing new or used vehicles. Designed to cater to all credit profiles, this program ensures that members can own a reliable vehicle essential for personal and professional growth.",
@@ -778,7 +787,8 @@ export const loanPrograms = {
     pageTitle: "Mortgage Loan Program",
     aboutTitle: "About Program",
     heroImage: "/assets/mortageloan1.png",
-    eligibiltyImage: "/assets/mortageloan2.png",
+    eligibiltyImage: "/assets/call-image.png",
+    // eligibiltyImage: "/assets/mortageloan2.png",
     communityImage: "/assets/mortageloan3.png",
     aboutDescription:
       "The vuior Mortgage Loan Program is designed to help you purchase your dream home or refinance your existing mortgage. We offer a range of mortgage products to meet diverse needs, ensuring that everyone has the opportunity to secure homeownership.",

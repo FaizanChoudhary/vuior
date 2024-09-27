@@ -17,16 +17,16 @@ const SectionContainer = styled(Box)(({ theme }) => ({
 }));
 
 const steps = [
+  // {
+  //   stepNumber: 1,
+  //   title: "Free Sign Up",
+  //   description:
+  //     "Join us for free and easy to use household bill consolidation program. Simply sign up on our secure platform to get started.",
+  //   imgSrc: "/assets/freesignup.png",
+  //   alt: "Sign Up",
+  // },
   {
     stepNumber: 1,
-    title: "Free Sign Up",
-    description:
-      "Join us for free and easy to use household bill consolidation program. Simply sign up on our secure platform to get started.",
-    imgSrc: "/assets/freesignup.png",
-    alt: "Sign Up",
-  },
-  {
-    stepNumber: 2,
     title: "Bill Assessment",
     description:
       "Our team of expert and professional members will review your existing household bills, including utilities, insurance, and many more to identify potential areas for saving.",
@@ -34,7 +34,7 @@ const steps = [
     alt: "Fund Your Account",
   },
   {
-    stepNumber: 3,
+    stepNumber: 2,
     title: "Negotiation",
     description:
       "We negotiate with your bill providers to secure lower rates, reduce fees and better terms. Our main purpose is to maximize your saving.",
@@ -42,7 +42,7 @@ const steps = [
     alt: "Enjoy the Benefits",
   },
   {
-    stepNumber: 4,
+    stepNumber: 3,
     title: "Single Monthly Payment",
     description:
       "Your consolidated bills are combined into a single monthly payment. You’ll make one payment to us and we'll distribute the funds to your bill providers on your behalf.",

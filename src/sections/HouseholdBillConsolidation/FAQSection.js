@@ -62,7 +62,7 @@ const FAQSection = () => {
         <Grid item xs={12} md={6}>
           <Box data-aos="fade-up">
             <img
-              src="/assets/householdfaq.png" // Path to your image
+              src="/assets/call-image.png" // Path to your image
               alt="FAQ"
               style={{
                 width: "100%",

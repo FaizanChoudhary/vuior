@@ -118,7 +118,7 @@ const JoinUsSection = () => {
         <Grid item xs={12} md={5}>
           <Box
             component="img"
-            src="/assets/join_us.png" // Replace with actual image path
+            src="/assets/call-image.png" // Replace with actual image path
             alt="Join Us"
             sx={{
               width: "100%",

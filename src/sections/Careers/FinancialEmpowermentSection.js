@@ -69,11 +69,14 @@ const FinancialEmpowermentSection = () => {
             <Typography
               variant="h4"
               component="h1"
-              sx={{ fontWeight: "bold", color: "#064E3B", marginBottom: 2 }}
+              sx={{ fontWeight: "bold", color: "#064E3B" }}
             >
-              Join Us In Driving The Financial Empowerment Revolution Forward
+              Join Our Team
             </Typography>
 
+            <Typography variant="body2" sx={{ marginBottom: 2, color: "#333" }}>
+              Call ((833) 569-3941) to explore open positions
+            </Typography>
             <Typography variant="body1" sx={{ marginBottom: 3, color: "#333" }}>
               Participate in a revolutionary movement aimed at improving
               financial stability, independence, and literacy for people and

@@ -19,7 +19,7 @@ const SectionContainer = styled(Box)(({ theme }) => ({
 const steps = [
   {
     stepNumber: 1,
-    title: "Sign Up",
+    title: "Free Membership",
     description:
       'Joining Vuior is simple. Click on the "Join Now" button to start your membership application.',
     imgSrc: "/assets/freesignup.png",
@@ -35,11 +35,11 @@ const steps = [
   },
   {
     stepNumber: 3,
-    title: "Enjoy The Benefits",
+    title: "Enjoy Benefits",
     description:
       "Start taking advantage of Vuior's programs and services immediately after funding your account.",
     imgSrc: "/assets/enjoythebenefits.jpg",
-    alt: "Enjoy the Benefits",
+    alt: "Enjoy Benefits",
   },
 ];
 

@@ -174,7 +174,7 @@ const InquirySupportSection = () => {
           fontSize={{ xs: 24, md: 30 }}
           sx={{ color: "#fff" }}
         >
-          Inquiry and Support
+          Contact Us
         </Typography>
         <Box
           sx={{
@@ -219,8 +219,8 @@ const InquirySupportSection = () => {
 
           <ContactInfoItem
             iconSrc="/assets/icons/time.png"
-            label="Business Hours 24/7"
-            value="Monday – Saturday, 10 AM – 5 PM"
+            label="Contact Us"
+            value="24/7 Customer Service"
           />
         </Grid>
 

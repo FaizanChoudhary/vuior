@@ -143,7 +143,7 @@ const JobListingPage = () => {
           color="white"
           sx={{ fontWeight: "bold", zIndex: 2 }}
         >
-          Secure Your Position
+          Secure Your Position Today!
         </Typography>
         <Box
           sx={{

@@ -53,7 +53,7 @@ const WelcomeSection = () => {
               gutterBottom
               sx={{ color: "#0F4A3F", fontWeight: "bold", fontSize: 30 }}
             >
-              Welcome To VUIOR!
+              Join For Free!
             </Typography>
             <Typography
               variant="h5"

@@ -101,7 +101,7 @@ const LoanOfferCard = ({ title, description, iconSrc, loanType }) => {
 const LoanProgramOffers = () => {
   const loanOffers = [
     {
-      title: "Auto Loans",
+      title: "Auto Loan",
       loanType: "auto-loans",
       description: [
         "Competitive rates for new and used vehicles",
@@ -110,7 +110,7 @@ const LoanProgramOffers = () => {
       iconSrc: "/assets/icons/autoloan.png", // Replace with actual image path
     },
     {
-      title: "Mortgage Loans",
+      title: "Mortgage Loan",
       loanType: "mortgage-loans",
       description: [
         "Home purchase and refinancing options",
@@ -119,7 +119,7 @@ const LoanProgramOffers = () => {
       iconSrc: "/assets/icons/mortageloan.png", // Replace with actual image path
     },
     {
-      title: "Personal Loans",
+      title: "Personal Loan",
       loanType: "personal-loans",
       description: [
         "For a variety of personal expenses, including debt consolidation",
@@ -128,7 +128,7 @@ const LoanProgramOffers = () => {
       iconSrc: "/assets/icons/personelloan.png", // Replace with actual image path
     },
     {
-      title: "Student Loans",
+      title: "Student Loan",
       loanType: "student-loans",
       description: [
         "Funding for education expenses",
@@ -137,7 +137,7 @@ const LoanProgramOffers = () => {
       iconSrc: "/assets/icons/studentloan.png", // Replace with actual image path
     },
     {
-      title: "Travel Loans",
+      title: "Travel Loan",
       loanType: "travel-loans",
       description: [
         "Financing for your dream vacation",
@@ -155,7 +155,7 @@ const LoanProgramOffers = () => {
       iconSrc: "/assets/icons/weddingloan.png", // Replace with actual image path
     },
     {
-      title: "Home Improvement Loans",
+      title: "Home Improvement Loan",
       loanType: "home-improvement-loans",
       description: [
         "Finance renovations and home repairs",
@@ -164,7 +164,7 @@ const LoanProgramOffers = () => {
       iconSrc: "/assets/icons/homeloan.png", // Replace with actual image path
     },
     {
-      title: "Small Business Loans",
+      title: "Small Business Loan",
       loanType: "small-Business-loans",
       description: [
         "Support for starting or expanding your business",
@@ -173,13 +173,13 @@ const LoanProgramOffers = () => {
       iconSrc: "/assets/icons/bussinessloan.png", // Replace with actual image path
     },
     {
-      title: "Emergency Loans",
+      title: "Emergency Loan",
       loanType: "emergency-loans",
       description: ["Quick access to funds for emergencies", "Fast approval"],
       iconSrc: "/assets/icons/emergencyloan.png", // Replace with actual image path
     },
     {
-      title: "Health Care Loans",
+      title: "Health Care Loan",
       loanType: "health-care-loans",
       description: [
         "Cover medical expenses and treatments",

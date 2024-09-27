@@ -145,7 +145,9 @@ const ProgramsSection = ({ isProgramPage, isAboutUsPage }) => {
                   More About This Program
                 </Typography>
                 <Typography variant="body1" paragraph fontSize={14}>
-                  {isProgramPage || isAboutUsPage
+                  {isProgramPage
+                    ? `Access a variety of loan options tailored to meet your specific needs. We offer in-house financing and special financing options, welcoming applicants from all credit backgrounds.`
+                    : isAboutUsPage
                     ? `Access a variety of loan options tailored to meet your specific
               needs. Our loan program includes auto loans, mortgage loans,
               personal loans, student loans, travel loans, wedding loans, home
