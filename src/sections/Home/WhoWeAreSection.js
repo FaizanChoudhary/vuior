@@ -66,7 +66,7 @@ const WhoWeAreSection = () => {
         <Grid item xs={12} lg={5}>
           <Box data-aos="fade-up">
             <img
-              src="/assets/family_image.png" // Path to your image
+              src="/assets/new/new1.jpeg" // Path to your image
               alt="Family"
               style={{
                 width: "100%",

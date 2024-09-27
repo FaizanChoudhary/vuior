@@ -4,7 +4,7 @@ import { styled } from "@mui/system";
 
 // Container with a two-tone background
 const SectionContainer = styled(Box)(({ theme }) => ({
-  backgroundImage: 'url("/assets/join_empowerment.png")', // Add your background image path
+  backgroundImage: 'url("/assets/new/join-team.jpg")', // Add your background image path
   backgroundSize: "cover", // Ensures the image covers the entire section
   backgroundPosition: "center",
   position: "relative",

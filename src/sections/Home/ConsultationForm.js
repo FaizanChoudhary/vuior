@@ -56,7 +56,7 @@ const BackgroundSwiper = styled(Swiper)(({ theme }) => ({
 const FormContainer = styled(Stack)(({ theme }) => ({
   background: "rgba(255, 255, 255, 0.8)",
   borderRadius: "15px",
-  padding: theme.spacing(3),
+  padding: theme.spacing(5),
   backdropFilter: "blur(10px)",
   boxShadow: "0px 10px 20px rgba(0, 0, 0, 0.3)",
   zIndex: 1,

@@ -37,7 +37,8 @@ const EligibilityCommitmentSection = ({ data }) => {
               sx={{
                 width: "100%",
                 height: "auto",
-                maxHeight: "700px", // Prevents image from growing too tall
+                maxHeight: "700px",
+                objectFit: "contain",
               }}
             />
           </ImageContainer>

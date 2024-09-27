@@ -59,7 +59,7 @@ const FAQSection = () => {
               style={{
                 width: "100%",
                 maxHeight: 500,
-                objectFit: "cover",
+                objectFit: "contain",
                 borderRadius: "15px",
               }}
             />

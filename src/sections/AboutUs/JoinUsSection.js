@@ -124,7 +124,7 @@ const JoinUsSection = () => {
               width: "100%",
               borderRadius: "16px",
               boxShadow: 3,
-              objectFit: "cover",
+              objectFit: "contain",
             }}
           />
         </Grid>

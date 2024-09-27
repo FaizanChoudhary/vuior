@@ -89,7 +89,7 @@ const WelcomeSection = () => {
         {/* Right Column - Image */}
         <Grid item xs={12} md={6}>
           <ImageContainer data-aos="fade-up">
-            <img src="/assets/welcome_image.png" alt="Financial Empowerment" />
+            <img src="/assets/new/join-us.png" alt="Financial Empowerment" />
           </ImageContainer>
         </Grid>
       </Grid>

@@ -86,7 +86,7 @@ const AboutVuoirSection = () => {
         <Grid item xs={12} md={6} data-aos="fade-up">
           <ImageContainer>
             <img
-              src="/assets/new/Perfect-Family.jpg" // Replace with actual image path
+              src="/assets/new/black-family.jpeg" // Replace with actual image path
               alt="About Vuior"
             />
           </ImageContainer>
