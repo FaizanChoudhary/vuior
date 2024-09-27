@@ -175,7 +175,7 @@ const ConsultationForm = () => {
           <Typography variant="h4" gutterBottom fontSize={24}>
             Request A Free Consultation Call
           </Typography>
-          <Typography variant="body1" gutterBottom fontSize={14}>
+          <Typography variant="body1" gutterBottom fontSize={10}>
             Schedule Your Free Consultation With VUIOR Today And Save Up To 25%
             On Household Bills While Accessing Our Exclusive Loan Programs!
           </Typography>
@@ -247,7 +247,7 @@ const ConsultationForm = () => {
               />
             }
             label={
-              <Typography sx={{ fontSize: "0.75rem" }}>
+              <Typography sx={{ fontSize: 10 }}>
                 By checking this box I agree to receive automated promotional
                 messages. This agreement is not a condition of purchase. Message
                 frequency varies. Reply STOP to opt out or HELP for help.
