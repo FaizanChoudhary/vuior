@@ -24,28 +24,27 @@ const OverlayTextBox = styled(Box)(({ theme }) => ({
   top: "50%",
   left: "50%",
   transform: "translate(-50%, -50%)",
-  padding: theme.spacing(4),
+  padding: theme.spacing(2), // Adjust padding for mobile
   background: "rgba(255, 255, 255, 0.8)",
   borderRadius: "16px",
   boxShadow: theme.shadows[5],
-  // maxWidth: "90%", // Make the max width responsive
   textAlign: "center",
   zIndex: 1,
-  backdropFilter: "blur(10px)", // Adding a blur effect
+  backdropFilter: "blur(10px)",
 
   // Responsive styles
-  // [theme.breakpoints.up("sm")]: {
-  //   padding: theme.spacing(5),
-  //   maxWidth: "100%",
-  // },
-  // // [theme.breakpoints.up("md")]: {
-  // //   padding: theme.spacing(6),
-  // //   maxWidth: "70%",
-  // // },
-  // [theme.breakpoints.up("lg")]: {
-  //   padding: theme.spacing(7),
-  //   maxWidth: "60%",
-  // },
+  [theme.breakpoints.down("sm")]: {
+    padding: theme.spacing(2), // Reduce padding on small screens
+    width: "90%", // Set a responsive width to prevent overflow
+  },
+  [theme.breakpoints.up("md")]: {
+    padding: theme.spacing(4),
+    maxWidth: "80%", // Fine-tune maxWidth for medium screens
+  },
+  [theme.breakpoints.up("lg")]: {
+    padding: theme.spacing(5),
+    maxWidth: "60%", // Fine-tune maxWidth for larger screens
+  },
 }));
 
 const FinancialEmpowermentSection = () => {
@@ -74,17 +73,19 @@ const FinancialEmpowermentSection = () => {
               Join Our Team
             </Typography>
 
-            <Typography variant="body2" sx={{ marginBottom: 2, color: "#333" }}>
+            {/* <Typography variant="body2" sx={{ marginBottom: 2, color: "#333" }}>
               Call ((833) 569-3941) to explore open positions
-            </Typography>
-            <Typography variant="body1" sx={{ marginBottom: 3, color: "#333" }}>
-              Participate in a revolutionary movement aimed at improving
-              financial stability, independence, and literacy for people and
-              communities. Help us propel the financial empowerment revolution
-              forward by providing individuals with the tools and knowledge to
-              take charge of their financial destiny. Together, we can remove
-              obstacles to monetary achievement and build a thriving, equitable
-              community.
+            </Typography> */}
+            <Typography
+              variant="body1"
+              sx={{
+                marginBottom: { sm: 2 },
+                color: "#333",
+                fontSize: 20,
+                mt: 2,
+              }}
+            >
+              Call ((833) 569-3941) to explore open positions
             </Typography>
           </OverlayTextBox>
         </Grid>

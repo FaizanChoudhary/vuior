@@ -52,13 +52,14 @@ const FAQSection = () => {
         {/* Left column - Image */}
         <Grid item xs={12} md={6}>
           <Box data-aos="fade-up">
-            <img
+            <Box
+              component={"img"}
               src="/assets/call-image.png" // Path to your image
               alt="FAQ"
-              style={{
+              sx={{
                 width: "100%",
                 maxHeight: 500,
-                objectFit: "contain",
+                objectFit: { xs: "contain", lg: "cover" },
                 borderRadius: "15px",
               }}
             />

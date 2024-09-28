@@ -92,15 +92,10 @@ const WhoWeAreSection = () => {
                 Our Work
               </Typography>
               <Typography variant="body1" sx={{ color: "#666", fontSize: 14 }}>
-                At VUIOR, we work to empower people and families to attain
-                financial independence by offering all-inclusive debt relief
-                options. With years of experience in the field, we are aware of
-                the difficulties associated with debt management and the
-                negative effects it may have on one's quality of life. Each
-                client receives individualized attention from our team of
-                knowledgeable counselors as they evaluate their particular
-                financial circumstances and create a personalized debt
-                management plan.
+                At Vuior, we provide solutions for managing household bills and
+                accessing flexible loan options. Our programs are designed to
+                help members simplify their finances and access the best rates
+                available.
               </Typography>
             </Box>
           </InfoBox>
@@ -117,8 +112,8 @@ const WhoWeAreSection = () => {
                 Our Mission
               </Typography>
               <Typography variant="body1" sx={{ color: "#666", fontSize: 14 }}>
-                Empower individuals and families to achieve financial stability
-                by consolidating household bills and providing access to credit.
+                To empower our members by offering accessible financial
+                solutions that promote stability and growth.
               </Typography>
             </Box>
           </InfoBox>
@@ -135,8 +130,8 @@ const WhoWeAreSection = () => {
                 Our Vision
               </Typography>
               <Typography variant="body1" sx={{ color: "#666", fontSize: 14 }}>
-                To become a trusted partner in your financial journey, fostering
-                a community where financial well-being is accessible to all.
+                To build a community-driven platform where financial management
+                is straightforward, inclusive, and supportive for everyone.
               </Typography>
             </Box>
           </InfoBox>

@@ -117,14 +117,14 @@ const JoinUsSection = () => {
         {/* Right Section - Image */}
         <Grid item xs={12} md={5}>
           <Box
-            component="img"
-            src="/assets/call-image.png" // Replace with actual image path
-            alt="Join Us"
+            component={"img"}
+            src="/assets/call-image.png" // Path to your image
+            alt="FAQ"
             sx={{
               width: "100%",
-              borderRadius: "16px",
-              boxShadow: 3,
-              objectFit: "contain",
+              maxHeight: 500,
+              objectFit: { xs: "contain", lg: "cover" },
+              borderRadius: "15px",
             }}
           />
         </Grid>

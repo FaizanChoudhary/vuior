@@ -4,7 +4,7 @@ import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import ProgramFormDialog from "../../../components/ProgramFormDialog";
 // import ProgramFormDialog from "../../components/ProgramFormDialog";
 
-const LoanDetailsJoinSection = () => {
+const LoanDetailsJoinSection = ({ data }) => {
   const [open, setOpen] = useState(false);
 
   return (
@@ -26,8 +26,7 @@ const LoanDetailsJoinSection = () => {
           color="primary"
           fontSize={{ xs: 16, md: 24 }}
         >
-          Take control of your financial future with Vuior’s Personal Loan
-          Program. Apply now to get started!
+          {data.callToAction}
         </Typography>
       </Box>
 

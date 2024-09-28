@@ -31,14 +31,14 @@ const EligibilityCommitmentSection = ({ data }) => {
         <Grid item xs={12} md={6}>
           <ImageContainer>
             <Box
-              component="img"
+              component={"img"}
               src={data.eligibiltyImage}
               alt="Eligibility"
               sx={{
                 width: "100%",
-                height: "auto",
-                maxHeight: "700px",
-                objectFit: "contain",
+                maxHeight: 540,
+                objectFit: { xs: "contain", lg: "cover" },
+                borderRadius: "15px",
               }}
             />
           </ImageContainer>

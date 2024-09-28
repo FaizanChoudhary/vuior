@@ -219,7 +219,7 @@ const InquirySupportSection = () => {
 
           <ContactInfoItem
             iconSrc="/assets/icons/time.png"
-            label="Contact Us"
+            label="Customer Service"
             value="24/7 Customer Service"
           />
         </Grid>

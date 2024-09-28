@@ -148,14 +148,7 @@ const ProgramsSection = ({ isProgramPage, isAboutUsPage }) => {
                   {isProgramPage
                     ? `Access a variety of loan options tailored to meet your specific needs. We offer in-house financing and special financing options, welcoming applicants from all credit backgrounds.`
                     : isAboutUsPage
-                    ? `Access a variety of loan options tailored to meet your specific
-              needs. Our loan program includes auto loans, mortgage loans,
-              personal loans, student loans, travel loans, wedding loans, home
-              improvement loans, health care loans, emergency loans, and more.
-              We offer in-house financing and special financing options,
-              welcoming applicants from all credit backgrounds. Our loans are
-              available to both members and non-members, although non-members
-              must become members to take full advantage of our benefits.`
+                    ? `As a Vuior member, access flexible loans with competitive rates and fast approval. No credit checks and simple applications to support your financial needs.`
                     : `Unlock the financial support you need with VUIOR's
                   member-focused loan programs. Designed to cater to all credit
                   profiles, our loan options provide flexible terms, competitive

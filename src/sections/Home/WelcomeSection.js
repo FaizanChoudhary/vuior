@@ -21,8 +21,7 @@ const ImageContainer = styled(Box)(({ theme }) => ({
   position: "relative",
   img: {
     width: "100%",
-    height: "auto",
-    maxHeight: "600px",
+    maxHeight: "400px",
     objectFit: "cover",
     [theme.breakpoints.down("sm")]: {
       maxHeight: "300px",
@@ -53,7 +52,7 @@ const WelcomeSection = () => {
               gutterBottom
               sx={{ color: "#0F4A3F", fontWeight: "bold", fontSize: 30 }}
             >
-              Join For Free!
+              Welcome to Vuior!
             </Typography>
             <Typography
               variant="h5"
@@ -81,7 +80,7 @@ const WelcomeSection = () => {
                 window.open("https://add.vuior.com/user/register", "_blank")
               }
             >
-              Sign Up Now
+              Join For Free
             </Button>
           </Box>
         </Grid>

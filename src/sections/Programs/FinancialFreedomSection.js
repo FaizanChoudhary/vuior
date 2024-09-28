@@ -50,18 +50,14 @@ const FinancialFreedomSection = () => {
           sx={{ padding: { xs: 5, sm: 10 }, fontSize: 30 }}
         >
           <Typography variant="h4" gutterBottom>
-            Get Financial Freedom With Our Expertise Debt Relief Programs
+            Simplifying Finances For Members
           </Typography>
           <Typography variant="body1" gutterBottom fontSize={16}>
-            Achieve financial freedom by utilizing our professional debt
-            reduction solutions, which are intended to lessen your financial
-            obligations and clear the path to a stable future. Our skilled
-            experts provide individualized solutions, such as debt
-            consolidation, creditor negotiation, and thorough financial
-            counselling, that are catered to your particular financial
-            circumstances. We give you the instruments and tactics required to
-            properly manage and pay down your debt, together with continuing
-            guidance and instruction to guarantee long-term success.
+            Vuior helps members manage household bills and access flexible
+            loans. Our Bill Consolidation Program offers group discounts and
+            simplified payments, while our Loan Program provides in-house
+            financing options. Join Vuio today and take control of your
+            financial future.
           </Typography>
         </Grid>
 

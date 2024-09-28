@@ -16,7 +16,7 @@ const LoanProgramDetails = () => {
       <HeroLoanDetailSection data={programData} />
       <EligibilityCommitmentSection data={programData} />
       <CommunityMembershipSection data={programData} />
-      <LoanDetailsJoinSection />
+      <LoanDetailsJoinSection data={programData} />
     </Stack>
   );
 };
